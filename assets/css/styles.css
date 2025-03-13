@@ -992,6 +992,38 @@ ul {
 .mt-32 {
   margin-top: 32px;
 }
+.newsroom_section .container-fluid {
+  position: relative;
+}
+
+/* Position the left column sticky */
+.sticky-column {
+  position: sticky;
+  top: 150px; /* Adjust the top position as needed */
+  height: fit-content; /* Allow height to adjust to content */
+  align-self: flex-start; /* Align to the top */
+}
+
+/* Set a min-height for the right column to ensure scrollability */
+.scrollable-column {
+  min-height: 100vh; /* Ensure it's tall enough to scroll */
+}
+
+/* Add some padding to newsroom cards for better spacing */
+.newsroom_card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f8f9fa; /* Optional: add a light background */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sticky-column {
+    position: relative; /* Don't make sticky on mobile */
+    top: 0;
+  }
+}
 @media (max-width: 768px) {
   .newsroom_section {
     background: #fff;
