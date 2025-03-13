@@ -455,17 +455,17 @@ ul {
 }
 .carousel-item {
   position: relative;
-  height: 89vh;
+  height: 90vh;
 }
 .carousel-item img {
   width: 100%;
-  height: 89vh;
+  height: 90vh;
   object-fit: cover;
   /* float: inline-end; */
 }
 .carousel-item .ai_img_class {
   width: 1512px;
-  height: 89vh;
+  height: 90vh;
   object-fit: cover;
   /* float: inline-end; */
   right: -150px;
@@ -530,8 +530,12 @@ ul {
 .custom-indicators-bg {
   background: rgba(0, 0, 0, 0.185);
   backdrop-filter: blur(5px);
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 50px;
 }
 .custom-indicators {
   display: flex;
@@ -596,6 +600,56 @@ ul {
 .search_icon .fa-search {
   color: #fff;
   font-size: 20px;
+}
+.progress-indicators {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  gap: 120px;
+  margin: 0 auto;
+}
+
+.progress-item {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  padding: 15px 10px;
+  transition: all 0.3s ease;
+}
+
+.progress-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.1s linear;
+}
+
+.progress-item.active .progress-bar {
+  animation: progressAnimation 8s linear; 
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -996,25 +1050,22 @@ ul {
   position: relative;
 }
 
-/* Position the left column sticky */
 .sticky-column {
   position: sticky;
-  top: 150px; /* Adjust the top position as needed */
-  height: fit-content; /* Allow height to adjust to content */
-  align-self: flex-start; /* Align to the top */
+  top: 150px;
+  height: fit-content;
+  align-self: flex-start;
 }
 
-/* Set a min-height for the right column to ensure scrollability */
 .scrollable-column {
-  min-height: 100vh; /* Ensure it's tall enough to scroll */
+  min-height: 100vh;
 }
 
-/* Add some padding to newsroom cards for better spacing */
 .newsroom_card {
   margin-bottom: 20px;
   padding: 20px;
-  background: #f8f9fa; /* Optional: add a light background */
-  border-radius: 8px; /* Optional: rounded corners */
+  background: #f8f9fa;
+  border-radius: 8px;
 }
 
 /* Responsive adjustments */

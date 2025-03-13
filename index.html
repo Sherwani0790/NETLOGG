@@ -875,8 +875,8 @@
       </div>
     </div>
     <!-- Carousal Slider Section -->
-    <section class="section_1">
-      <!--  -->
+    <!-- <section class="section_1">
+      
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -967,6 +967,129 @@
           <button data-bs-target="#carouselExample" data-bs-slide-to="3">
             Global Data Center
           </button>
+        </div>
+      </div>
+    </section> -->
+    <section class="section_1">
+      <div
+        id="carouselExample"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="ai_img_class"
+              src="assets/img/main-slider/slider-1.png"
+              alt="Slide 1"
+            />
+            <div class="carousel-caption">
+              <h1>Netlogg Named A Leader In Global GenAI Services</h1>
+              <p class="width_568px">
+                Netlogg has been named a Leader in the 2024 ISG Provider Lens™
+                global Generative AI Services report.
+              </p>
+
+              <a href="#">
+                <span> Explore More </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/main-slider/slider-2.png" alt="Slide 2" />
+            <div class="carousel-caption">
+              <h1>Netlogg Digital Transformation</h1>
+              <p class="width_720px">
+                Netlogg empowers you to shape the future and unlock new value by
+                reimagining and executing transformative solutins accross your
+                entire enterprise.
+              </p>
+              <a href="#">
+                <span> Explore More </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item vedio_tag_class_active">
+            <video autoplay muted loop class="video_tag_class">
+              <source
+                src="assets/img/main-slider/slider-3.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="carousel-caption">
+              <h1>NetLogg Global Recognised For Digital Experience Services</h1>
+              <p>Leader in 2024 Gartner* Magic Quadrant™</p>
+              <a href="#">
+                <span> Explore More </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/main-slider/slider-4.png" alt="Slide 4" />
+            <div class="carousel-caption">
+              <h1>
+                Trusted, Reliable, And Resilient Global Data Center Provider
+              </h1>
+              <p class="width_720px">
+                Global leader in secure, scalable and sustainable data center
+                solutions, trusted for reliability,resilience, and responsible
+                innovation.
+              </p>
+              <a href="#">
+                <span> Explore More </span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-indicators-bg">
+        <div class="progress-indicators">
+          <div
+            class="progress-item active"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="0"
+          >
+            <span class="progress-label">Awards & Recognitions</span>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-0"></div>
+            </div>
+          </div>
+          <div
+            class="progress-item"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="1"
+          >
+            <span class="progress-label">Netlogg Digital Transformation</span>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-1"></div>
+            </div>
+          </div>
+          <div
+            class="progress-item"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="2"
+          >
+            <span class="progress-label">Global Leader</span>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-2"></div>
+            </div>
+          </div>
+          <div
+            class="progress-item"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="3"
+          >
+            <span class="progress-label">Global Data Center</span>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-3"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1692,14 +1815,14 @@
       });
 
       // script for step progressbar slider
-      document.addEventListener("DOMContentLoaded", function () {
-        var carousel = document.getElementById("carouselExample");
-        var indicators = document.querySelectorAll(".custom-indicators button");
-        carousel.addEventListener("slid.bs.carousel", function (event) {
-          indicators.forEach((btn) => btn.classList.remove("active"));
-          indicators[event.to].classList.add("active");
-        });
-      });
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   var carousel = document.getElementById("carouselExample");
+      //   var indicators = document.querySelectorAll(".custom-indicators button");
+      //   carousel.addEventListener("slid.bs.carousel", function (event) {
+      //     indicators.forEach((btn) => btn.classList.remove("active"));
+      //     indicators[event.to].classList.add("active");
+      //   });
+      // });
     </script>
     <!-- script for step progressbar slider -->
     <script type="text/javascript">
@@ -1756,5 +1879,79 @@
     </script>
     <!-- script for step progressbar slider End -->
     <!-- What we do script -->
+    <!-- script for section 1 -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.getElementById("carouselExample");
+        const progressItems = document.querySelectorAll(".progress-item");
+        const progressBars = document.querySelectorAll(".progress-bar");
+        const slideInterval = 8000; // 8 seconds per slide
+        let currentSlide = 0;
+        let slideTimer;
+
+        // Initialize Bootstrap carousel with specific interval
+        const bsCarousel = new bootstrap.Carousel(carousel, {
+          interval: slideInterval,
+          pause: false,
+        });
+
+        // Function to reset and start progress bar animation
+        function startProgressBar(index) {
+          // Reset all progress bars
+          progressBars.forEach((bar) => {
+            bar.style.width = "0";
+            bar.style.animation = "none";
+          });
+
+          // Remove active class from all indicators
+          progressItems.forEach((item) => item.classList.remove("active"));
+
+          // Add active class to current indicator
+          progressItems[index].classList.add("active");
+
+          // Reset and start animation for current progress bar
+          const currentBar = progressBars[index];
+          currentBar.style.animation = "none";
+          // Trigger reflow
+          void currentBar.offsetWidth;
+          currentBar.style.animation = `progressAnimation ${
+            slideInterval / 1000
+          }s linear`;
+        }
+
+        // Function to handle slide change
+        function goToSlide(index) {
+          bsCarousel.to(index);
+        }
+
+        // Event listener for carousel slide event
+        carousel.addEventListener("slide.bs.carousel", function (event) {
+          currentSlide = event.to;
+          startProgressBar(currentSlide);
+        });
+
+        // Add click event listeners to progress items
+        progressItems.forEach((item, index) => {
+          item.addEventListener("click", function () {
+            goToSlide(index);
+          });
+        });
+
+        // Start first progress bar
+        startProgressBar(0);
+
+        // Handle when progress bar completes
+        progressBars.forEach((bar, index) => {
+          bar.addEventListener("animationend", function () {
+            // When animation ends, go to next slide
+            const nextSlide = (index + 1) % progressItems.length;
+            setTimeout(() => {
+              goToSlide(nextSlide);
+            }, 100);
+          });
+        });
+      });
+    </script>
+    <!-- script for section 1 End -->
   </body>
 </html>
