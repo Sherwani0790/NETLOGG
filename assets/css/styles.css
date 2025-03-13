@@ -45,7 +45,8 @@ ul {
   list-style: none;
 }
 .navbar {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); */
+  background: linear-gradient(to bottom, rgb(0 0 0 / 76%), rgb(0 0 0 / 37%));
   transition: all 0.5s;
   z-index: 997;
   padding: 32px;
@@ -84,6 +85,7 @@ ul {
   background-color: #f9f9f9;
   width: 100%;
   height: 700px;
+  top: 115px;
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -628,6 +630,7 @@ ul {
     color: #000;
   }
 }
+
 /* what_we_do_section End */
 /* Section 2 */
 .solution_section {
@@ -782,6 +785,99 @@ ul {
   }
 }
 /* Section 2 End */
+/* Why Netlogg Section */
+.why_netlogg_section {
+  background: #fff;
+  padding: 100px;
+}
+.netLogg-title {
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+}
+.netLogg_card {
+  display: flex;
+  width: 100%;
+  height: 373px;
+  padding: 36px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #ededed;
+  margin-top: 60px;
+}
+.netLogg_card img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+.netLogg_card .count {
+  color: #161616;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 43.5px;
+}
+.netLogg_card .desc {
+  color: #262b3f;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* .container {
+  max-width: 1200px;
+  margin: auto;
+} */
+
+/* Why Netlogg Section End */
+/* Key Alliance */
+.key-alliance_section {
+  background: #fff;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.logo-slider {
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 130px;
+  animation: scroll 15s linear infinite;
+}
+
+.logo-slider .slide img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slider-track {
+  width: calc(100% * 1);
+}
+.key-alliance_section p {
+  color: #000;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* Key Alliance End */
 /* Section Career */
 .career_section {
   position: relative;
@@ -867,18 +963,26 @@ ul {
   width: 50%;
   margin: 0 auto;
 }
-.form-floating > .form-control,
+/* .form-floating > .form-control,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select {
   height: auto;
   line-height: 1.25;
+} */
+textarea.form-control {
+  height: 150px !important;
+}
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none !important;
+  border: 1px solid #18181b !important;
 }
 textarea {
   resize: none;
 }
 .form-control,
 .form-select {
-  border: 1px solid #18181b !important;
+  border: 1px solid #dbdbdb !important;
 }
 .submit_button {
   background: #000;
