@@ -1222,7 +1222,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 col-12">
+          <div class="col-md-6 col-12 mbl_margin">
             <div class="d-flex flex-column">
               <div class="newsroom_card">
                 <h1>Netlogg's Latest Milestones</h1>
@@ -1575,6 +1575,49 @@
 
     <!-- /* Jquery library */ -->
     <script type="text/javascript">
+      // for desktop script
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector(".dropbtn");
+          const dropdownContent = dropdown.querySelector(".dropdown-content");
+
+          button.addEventListener("click", function (event) {
+            event.stopPropagation();
+
+            // Close all dropdowns except the one clicked
+            dropdowns.forEach((drop) => {
+              const content = drop.querySelector(".dropdown-content");
+              const btn = drop.querySelector(".dropbtn");
+
+              if (drop !== dropdown) {
+                content.classList.remove("show");
+                btn.classList.remove("active");
+              }
+            });
+
+            // Toggle active dropdown
+            dropdownContent.classList.toggle("show");
+            button.classList.toggle("active");
+          });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          dropdowns.forEach((dropdown) => {
+            const content = dropdown.querySelector(".dropdown-content");
+            const btn = dropdown.querySelector(".dropbtn");
+            if (!dropdown.contains(event.target)) {
+              content.classList.remove("show");
+              btn.classList.remove("active");
+            }
+          });
+        });
+      });
+      // for desktop script End
+      //
       $(document).ready(function () {
         $("#mobile_menu_trigger").click(function () {
           $("#mobile_menu_container").toggleClass("open");

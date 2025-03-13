@@ -91,14 +91,15 @@ ul {
   z-index: 1;
   padding: 48px;
   opacity: 0;
-  transform: translateY(-20px);
+  /* transform: translateY(-20px); */
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   pointer-events: none;
 }
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover  */
+.dropdown-content {
   opacity: 1;
-  transform: translateY(0);
+  /* transform: translateY(0); */
   pointer-events: auto;
 }
 
@@ -158,6 +159,25 @@ ul {
 }
 .card_height {
   height: 225px;
+}
+
+.dropbtn.active {
+  border-bottom: 2px solid #fff;
+  background: #ffffff26;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.dropdown-content {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  pointer-events: none;
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 /* Desktop  End */
 /* Mobile */
@@ -830,10 +850,39 @@ ul {
   font-weight: 400;
   line-height: normal;
 }
-/* .container {
-  max-width: 1200px;
-  margin: auto;
-} */
+@media (max-width: 768px) {
+  .why_netlogg_section {
+    padding: 30px;
+  }
+  .netLogg-title {
+    font-size: 22px;
+  }
+  .why_netlogg_section .d-flex {
+    flex-direction: column;
+  }
+  .netLogg_card .count {
+    font-size: 22px;
+  }
+  .netLogg_card .desc {
+    font-size: 16px;
+  }
+  .netLogg_card {
+    display: flex;
+    width: 100%;
+    height: 260px;
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid #ededed;
+    margin-top: 20px;
+  }
+  .netLogg_card img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+}
 
 /* Why Netlogg Section End */
 
@@ -898,8 +947,48 @@ ul {
   color: #000;
   text-decoration: underline;
 }
-.mt-32{
+.mt-32 {
   margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .newsroom_section {
+    background: #fff;
+    padding: 30px 20px;
+  }
+  .newsroom_section .newsroom_title {
+    font-size: 22px;
+  }
+  .newsroom_section {
+  }
+  .newsroom_section .newsroom_card {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ededed;
+  }
+  .newsroom_section .newsroom_card h1 {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.5px;
+  }
+  .newsroom_section .newsroom_card p {
+    margin-top: 12px;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .mbl_margin {
+    margin-top: 20px;
+  }
+  .width_587px {
+    width: 100%;
+  }
+  .newsroom_section img {
+    width: 100%;
+  }
 }
 /* NewsRoom Section End */
 
@@ -946,6 +1035,20 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 768px) {
+  .key-alliance_section p {
+    font-size: 22px;
+  }
+  .logo-slider {
+    padding: 0;
+  }
+  .slider-track {
+    gap: 20px;
+  }
+  .logo-slider .slide img {
+    height: 40px;
+  }
 }
 /* Key Alliance End */
 /* Section Career */
