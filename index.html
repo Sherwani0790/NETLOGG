@@ -1977,17 +1977,14 @@
         let i = 0;
         for (const carouselIndicator of carouselIndicators) {
           carouselIndicator.style.width = 0;
-          // Add transition property for smooth animation
           carouselIndicator.style.transition = "width 0.05s linear";
         }
         clearInterval(intervalID);
         carousel.pause();
 
-        // Decrease interval for smoother animation (using 20ms instead of 50ms)
         intervalID = setInterval(function () {
           i++;
 
-          // Ensure smoother increments
           if (i <= 100) {
             myCarousel.querySelector(
               ".carousel-indicators .active span"
@@ -1995,12 +1992,11 @@
           }
 
           if (i >= 100) {
-            // Small delay before next slide for smoother transition
             setTimeout(() => {
               carousel.next();
             }, 70);
           }
-        }, 20); // Smaller interval makes animation smoother
+        }, 20);
       }
 
       function updateCarouselCount(index) {

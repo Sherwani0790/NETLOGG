@@ -642,7 +642,7 @@ ul {
 }
 
 .progress-item.active .progress-bar {
-  animation: progressAnimation 8s linear; 
+  animation: progressAnimation 8s linear;
 }
 
 @keyframes progressAnimation {
@@ -682,7 +682,7 @@ ul {
     text-align: left;
   }
   .carousel-caption p {
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -907,6 +907,12 @@ ul {
     line-height: 24px;
     background: #000;
     /* border: 1px solid #fff; */
+  }
+  .width-515px {
+    width: 335px;
+  }
+  .carousel-caption a {
+    margin: 0;
   }
 }
 /* Section 2 End */
