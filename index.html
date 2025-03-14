@@ -1065,9 +1065,9 @@
             data-bs-target="#carouselExample"
             data-bs-slide-to="1"
           >
-          <div class="progress-container">
-            <div class="progress-bar" id="progress-1"></div>
-          </div>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-1"></div>
+            </div>
             <span class="progress-label">Netlogg Digital Transformation</span>
           </div>
           <div
@@ -1075,9 +1075,9 @@
             data-bs-target="#carouselExample"
             data-bs-slide-to="2"
           >
-          <div class="progress-container">
-            <div class="progress-bar" id="progress-2"></div>
-          </div>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-2"></div>
+            </div>
             <span class="progress-label">Global Leader</span>
           </div>
           <div
@@ -1085,9 +1085,9 @@
             data-bs-target="#carouselExample"
             data-bs-slide-to="3"
           >
-          <div class="progress-container">
-            <div class="progress-bar" id="progress-3"></div>
-          </div>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-3"></div>
+            </div>
             <span class="progress-label">Global Data Center</span>
           </div>
         </div>
@@ -1825,7 +1825,7 @@
       // });
     </script>
     <!-- script for step progressbar slider -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       const myCarousel = document.getElementById("carouselExampleIndicators2");
       const countDisplay = document.querySelector(".count_carousal");
       const totalSlides = document.querySelectorAll(".item_total_count").length;
@@ -1869,14 +1869,13 @@
         countDisplay.textContent = `${index + 1} / ${totalSlides}`;
       }
 
-      // Initialize count display on load
       updateCarouselCount(0);
 
       myCarousel.addEventListener("slide.bs.carousel", function (e) {
         updateCarouselCount(e.to);
       });
       // i = 0; -> just in case
-    </script>
+    </script> -->
     <!-- script for step progressbar slider End -->
     <!-- What we do script -->
     <!-- script for section 1 -->
@@ -1950,6 +1949,68 @@
             }, 100);
           });
         });
+      });
+    </script>
+
+    <!-- Solution slider Script -->
+    <script>
+      const myCarousel = document.getElementById("carouselExampleIndicators2");
+      const countDisplay = document.querySelector(".count_carousal");
+      const totalSlides = document.querySelectorAll(".item_total_count").length;
+      const carouselIndicators = myCarousel.querySelectorAll(
+        ".carousel-indicators button span"
+      );
+      let intervalID;
+
+      const carousel = new bootstrap.Carousel(myCarousel);
+
+      window.addEventListener("load", function () {
+        fillCarouselIndicator(1);
+      });
+
+      myCarousel.addEventListener("slide.bs.carousel", function (e) {
+        let index = e.to;
+        fillCarouselIndicator(++index);
+      });
+
+      function fillCarouselIndicator(index) {
+        let i = 0;
+        for (const carouselIndicator of carouselIndicators) {
+          carouselIndicator.style.width = 0;
+          // Add transition property for smooth animation
+          carouselIndicator.style.transition = "width 0.05s linear";
+        }
+        clearInterval(intervalID);
+        carousel.pause();
+
+        // Decrease interval for smoother animation (using 20ms instead of 50ms)
+        intervalID = setInterval(function () {
+          i++;
+
+          // Ensure smoother increments
+          if (i <= 100) {
+            myCarousel.querySelector(
+              ".carousel-indicators .active span"
+            ).style.width = i + "%";
+          }
+
+          if (i >= 100) {
+            // Small delay before next slide for smoother transition
+            setTimeout(() => {
+              carousel.next();
+            }, 70);
+          }
+        }, 20); // Smaller interval makes animation smoother
+      }
+
+      function updateCarouselCount(index) {
+        countDisplay.textContent = `${index + 1} / ${totalSlides}`;
+      }
+
+      updateCarouselCount(0);
+
+      myCarousel.addEventListener("slide.bs.carousel", function (e) {
+        updateCarouselCount(e.to);
       });
     </script>
     <!-- script for section 1 End -->

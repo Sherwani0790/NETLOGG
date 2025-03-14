@@ -793,6 +793,10 @@ ul {
   background: #fff;
   border-radius: inherit;
   cursor: default;
+  transition: width 0.05s linear;
+}
+#carouselExampleIndicators2 .carousel-item {
+  transition: transform 0.6s ease-in-out;
 }
 #carouselExampleIndicators2 .carousel-indicators {
   position: absolute;
