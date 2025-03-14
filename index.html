@@ -1888,7 +1888,6 @@
         });
       });
       // for desktop script End
-      //
 
       // accordian script
       $(document).ready(function () {
@@ -2083,31 +2082,26 @@
     <!-- Industry we serve -->
     <script>
       const cardContainer = document.querySelector(".card-container");
-      const cards = cardContainer.querySelectorAll(".card"); // Get only cards inside card-container
+      const cards = cardContainer.querySelectorAll(".card");
       const indicator = document.querySelector(".indicator");
       const prevBtn = document.getElementById("prev");
       const nextBtn = document.getElementById("next");
       const count = document.querySelector(".count");
 
       let currentIndex = 0;
-      const totalCards = cards.length; // Now correctly counts only cards inside card-container
+      const totalCards = cards.length;
 
       function updateCarousel() {
-        const cardWidth = cards[0].offsetWidth; // Get dynamic card width
+        const cardWidth = cards[0].offsetWidth;
 
-        // Move Cards
         cardContainer.style.transform = `translateX(-${
           currentIndex * cardWidth
         }px)`;
-
-        // Update Indicator Position
         indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
 
-        // Highlight Active Card
         cards.forEach((card) => card.classList.remove("active"));
         cards[currentIndex].classList.add("active");
 
-        // Update Count
         count.textContent = `${currentIndex + 1}/${totalCards}`;
       }
 
@@ -2125,7 +2119,6 @@
         }
       });
 
-      // Initial update
       updateCarousel();
       window.addEventListener("resize", updateCarousel);
     </script>
