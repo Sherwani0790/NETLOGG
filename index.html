@@ -1267,7 +1267,7 @@
     <!-- Solutions Section End-->
 
     <!-- Industries we serve Section -->
-    <section class="what_we_do_section">
+    <section class="industry_section">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-12">
@@ -2081,104 +2081,11 @@
         window.addEventListener("resize", updateCarousel);
       });
     </script>
-    <!--
-     <script>
-      const cardContainer = document.querySelector(".card-container");
-      const cards = cardContainer.querySelectorAll(".card");
-      const indicator = document.querySelector(".indicator");
-      const prevBtn = document.getElementById("prev");
-      const nextBtn = document.getElementById("next");
-      const count = document.querySelector(".count");
-
-      let currentIndex = 0;
-      const totalCards = cards.length;
-
-      function updateCarousel() {
-        const cardWidth = cards[0].offsetWidth;
-
-        cardContainer.style.transform = `translateX(-${
-          currentIndex * cardWidth
-        }px)`;
-        indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
-
-        cards.forEach((card) => card.classList.remove("active"));
-        cards[currentIndex].classList.add("active");
-
-        count.textContent = `${currentIndex + 1}/${totalCards}`;
-      }
-
-      nextBtn.addEventListener("click", () => {
-        if (currentIndex < totalCards - 1) {
-          currentIndex++;
-          updateCarousel();
-        }
-      });
-
-      prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-        }
-      });
-
-      updateCarousel();
-      window.addEventListener("resize", updateCarousel);
-    </script> -->
     <!-- Industry we serve End -->
 
     <!-- What we do -->
 
-    <!-- <script>
-      const whatWeDoCardContainer = document.querySelector(
-        ".whatWeDoCard-container"
-      );
-      const whatWeDoCardCards =
-        whatWeDoCardContainer.querySelectorAll(".whatWeDoCard-card");
-      const whatWeDoCardIndicator = document.querySelector(
-        ".whatWeDoCard-Indicator-bar"
-      );
-      const whatWeDoCardPrevBtn = document.getElementById("whatWeDoCard-prev");
-      const whatWeDoCardNextBtn = document.getElementById("whatWeDoCard-next");
-      const whatWeDoCardCount = document.querySelector(".whatWeDoCard-Count");
-
-      let whatWeDoCardCurrentIndex = 0;
-      const whatWeDoCardTotalCards = whatWeDoCardCards.length;
-
-      function whatWeDoCardUpdateCarousel() {
-        const whatWeDoCardWidth = whatWeDoCardCards[0].offsetWidth;
-        whatWeDoCardContainer.style.transform = `translateX(-${
-          whatWeDoCardCurrentIndex * whatWeDoCardWidth
-        }px)`;
-        whatWeDoCardIndicator.style.left = `${
-          (100 / whatWeDoCardTotalCards) * whatWeDoCardCurrentIndex
-        }%`;
-
-        whatWeDoCardCards.forEach((card) => card.classList.remove("active"));
-        whatWeDoCardCards[whatWeDoCardCurrentIndex].classList.add("active");
-
-        whatWeDoCardCount.textContent = `${
-          whatWeDoCardCurrentIndex + 1
-        }/${whatWeDoCardTotalCards}`;
-      }
-
-      whatWeDoCardNextBtn.addEventListener("click", () => {
-        if (whatWeDoCardCurrentIndex < whatWeDoCardTotalCards - 1) {
-          whatWeDoCardCurrentIndex++;
-          whatWeDoCardUpdateCarousel();
-        }
-      });
-
-      whatWeDoCardPrevBtn.addEventListener("click", () => {
-        if (whatWeDoCardCurrentIndex > 0) {
-          whatWeDoCardCurrentIndex--;
-          whatWeDoCardUpdateCarousel();
-        }
-      });
-
-      whatWeDoCardUpdateCarousel();
-      window.addEventListener("resize", whatWeDoCardUpdateCarousel);
-    </script> -->
-    <script>
+    <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", () => {
         const cardContainer = document.querySelector(".whatWeDoCard-container");
         const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
@@ -2190,14 +2097,21 @@
         let currentIndex = 0;
         const totalCards = cards.length;
 
+        function isMobile() {
+          return window.innerWidth <= 768; // Adjust breakpoint as needed
+        }
+
         function updateCarousel() {
           const cardWidth = cards[0].offsetWidth;
 
-          // Move images only if not at the last card
-          if (currentIndex < totalCards) {
+          if (isMobile()) {
+            // Move both images and indicator on mobile
             cardContainer.style.transform = `translateX(-${
               currentIndex * cardWidth
             }px)`;
+          } else {
+            // On desktop, only move the indicator
+            cardContainer.style.transform = `translateX(0)`; // Keep images static
           }
 
           // Move the indicator
