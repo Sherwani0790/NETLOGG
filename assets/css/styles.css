@@ -38,6 +38,9 @@ body::-webkit-scrollbar-thumb:hover {
   row-gap: 8px;
   column-gap: 8px;
 }
+.bold {
+  font-weight: 600 !important;
+}
 /* Navbar */
 /* Desktop */
 
@@ -187,7 +190,7 @@ ul {
   display: none;
 }
 @media (max-width: 768px) {
-  .navbar{
+  .navbar {
     padding: 12px;
   }
   #mobile_menu_trigger {
@@ -735,7 +738,7 @@ ul {
 }
 .all_cap_button:hover {
   color: #000;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 @media (max-width: 768px) {
@@ -1738,7 +1741,7 @@ ul {
 }
 .news_explore_button:hover {
   color: #000;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .mt-32 {
   margin-top: 32px;
