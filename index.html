@@ -1123,58 +1123,89 @@
         </div>
 
         <!-- What we do Cards -->
-
-        <div class="carousel-wrapper">
-          <div class="card-container">
-            <div class="card active">
-              <img src="assets/img/industries/1.jpeg" alt="Due Diligence" />
-              <div class="card-overlay">
-                <div class="card-title">Due Diligence</div>
-                <div class="card-text">
-                  Driving innovation in financial services with secure, scalable
-                  solutions that enhance banking operations and customer
-                  experiences.
+        <div class="whatWeDoCard-Wrapper">
+          <div class="whatWeDoCard-container">
+            <div class="whatWeDoCard-card active">
+              <img src="assets/img/what-we-do/1.png" alt="Blockchain" />
+              <div class="whatWeDoCard-card-overlay">
+                <div class="whatWeDoCard-card-title-small">Blockchain</div>
+                <div class="whatWeDoCard-card-title">
+                  Decentralized Solutions for the Future
+                </div>
+                <div class="whatWeDoCard-card-text">
+                  Transform business operations with secure, transparent, and
+                  decentralized blockchain solutions that improve data integrity
+                  and streamline transactions.
                 </div>
               </div>
+              <a class="whatWeDoCard-card-button">
+                Explore More &nbsp; <i class="fa fa-chevron-right"></i>
+              </a>
             </div>
-            <div class="card">
-              <img
-                src="assets/img/industries/2.jpeg"
-                alt="Telecommunications"
-              />
-              <div class="card-overlay">
-                <div class="card-title">Telecommunications</div>
-                <div class="card-text">
-                  Empowering telecom providers with reliable infrastructure and
-                  advanced technologies to optimize connectivity and service
-                  delivery.
+            <div class="whatWeDoCard-card">
+              <img src="assets/img/what-we-do/2.png" alt="Generative AI" />
+              <div class="whatWeDoCard-card-overlay">
+                <div class="whatWeDoCard-card-title-small">Generative AI</div>
+                <div class="whatWeDoCard-card-title">AI-Powered Innovation</div>
+                <div class="whatWeDoCard-card-text">
+                  Unlock the power of advanced AI to create innovative
+                  solutions, automate processes, and enhance decision-making
+                  with cutting-edge generative technologies.
                 </div>
               </div>
+              <a class="whatWeDoCard-card-button">
+                Explore More &nbsp; <i class="fa fa-chevron-right"></i>
+              </a>
             </div>
-            <div class="card">
-              <img src="assets/img/industries/3.jpeg" alt="Fintech & Banking" />
-              <div class="card-overlay">
-                <div class="card-title">Fintech & Banking</div>
-                <div class="card-text">
-                  Driving innovation in financial services with secure, scalable
-                  solutions that enhance banking operations and customer
-                  experiences.
+            <div class="whatWeDoCard-card">
+              <img src="assets/img/what-we-do/3.png" alt="Due Diligence" />
+              <div class="whatWeDoCard-card-overlay">
+                <div class="whatWeDoCard-card-title-small">Due Diligence</div>
+                <div class="whatWeDoCard-card-title">
+                  Insight-Driven Risk & Opportunity Assessment
+                </div>
+                <div class="whatWeDoCard-card-text">
+                  Make informed decisions with comprehensive due diligence
+                  services that assess risks, identify opportunities, and
+                  provide insights for strategic investments.
                 </div>
               </div>
+              <a class="whatWeDoCard-card-button">
+                Explore More &nbsp; <i class="fa fa-chevron-right"></i>
+              </a>
+            </div>
+            <div class="whatWeDoCard-card">
+              <img src="assets/img/what-we-do/4.png" alt="Fintech & Banking" />
+              <div class="whatWeDoCard-card-overlay">
+                <div class="whatWeDoCard-card-title-small">
+                  Digital Infrastructure
+                </div>
+                <div class="whatWeDoCard-card-title">
+                  Scalable & Secure Digital Foundations
+                </div>
+                <div class="whatWeDoCard-card-text">
+                  Build a robust, scalable, and secure digital backbone for your
+                  organization, supporting seamless connectivity, cloud
+                  services, and system integration.
+                </div>
+              </div>
+              <a class="whatWeDoCard-card-button">
+                Explore More &nbsp; <i class="fa fa-chevron-right"></i>
+              </a>
             </div>
           </div>
         </div>
         <!-- Indicator -->
         <div class="dp-flex justify-content-between align-items-center">
-          <div class="industry_indicator-container">
-            <div class="indicator"></div>
+          <div class="whatWeDoCard-Indicator">
+            <div class="whatWeDoCard-Indicator-bar"></div>
           </div>
-          <div class="industry_controls">
-            <button id="prev" class="industries_leftarrow_button">
+          <div class="whatWeDoCard-Controls">
+            <button id="whatWeDoCard-prev" class="whatWeDo_leftarrow_button">
               <i class="fa fa-arrow-left"></i>
             </button>
-            <div class="count">1 / 3</div>
-            <button id="next" class="industries_rightarrow_button">
+            <div class="whatWeDoCard-Count">1 / 4</div>
+            <button id="whatWeDoCard-next" class="whatWeDo_rightarrow_button">
               <i class="fa fa-arrow-right"></i>
             </button>
           </div>
@@ -1361,9 +1392,9 @@
         <div class="carousel-wrapper">
           <div class="card-container">
             <div class="card active">
-              <img src="assets/img/industries/1.jpeg" alt="Due Diligence" />
+              <img src="assets/img/industries/1.jpeg" alt="Fintech & Banking" />
               <div class="card-overlay">
-                <div class="card-title">Due Diligence</div>
+                <div class="card-title">Fintech & Banking</div>
                 <div class="card-text">
                   Driving innovation in financial services with secure, scalable
                   solutions that enhance banking operations and customer
@@ -2106,9 +2137,9 @@
       function updateCarousel() {
         const cardWidth = cards[0].offsetWidth;
 
-        cardContainer.style.transform = `translateX(-${
-          currentIndex * cardWidth
-        }px)`;
+          // cardContainer.style.transform = `translateX(-${
+          //   currentIndex * cardWidth
+          // }px)`;
         indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
 
         cards.forEach((card) => card.classList.remove("active"));
@@ -2135,5 +2166,60 @@
       window.addEventListener("resize", updateCarousel);
     </script>
     <!-- Industry we serve End -->
+
+    <!-- What we do -->
+
+    <script>
+      const whatWeDoCardContainer = document.querySelector(
+        ".whatWeDoCard-container"
+      );
+      const whatWeDoCardCards =
+        whatWeDoCardContainer.querySelectorAll(".whatWeDoCard-card");
+      const whatWeDoCardIndicator = document.querySelector(
+        ".whatWeDoCard-Indicator-bar"
+      );
+      const whatWeDoCardPrevBtn = document.getElementById("whatWeDoCard-prev");
+      const whatWeDoCardNextBtn = document.getElementById("whatWeDoCard-next");
+      const whatWeDoCardCount = document.querySelector(".whatWeDoCard-Count");
+
+      let whatWeDoCardCurrentIndex = 0;
+      const whatWeDoCardTotalCards = whatWeDoCardCards.length;
+
+      function whatWeDoCardUpdateCarousel() {
+        const whatWeDoCardWidth = whatWeDoCardCards[0].offsetWidth;
+        whatWeDoCardContainer.style.transform = `translateX(-${
+          whatWeDoCardCurrentIndex * whatWeDoCardWidth
+        }px)`;
+        whatWeDoCardIndicator.style.left = `${
+          (100 / whatWeDoCardTotalCards) * whatWeDoCardCurrentIndex
+        }%`;
+
+        whatWeDoCardCards.forEach((card) => card.classList.remove("active"));
+        whatWeDoCardCards[whatWeDoCardCurrentIndex].classList.add("active");
+
+        whatWeDoCardCount.textContent = `${
+          whatWeDoCardCurrentIndex + 1
+        }/${whatWeDoCardTotalCards}`;
+      }
+
+      whatWeDoCardNextBtn.addEventListener("click", () => {
+        if (whatWeDoCardCurrentIndex < whatWeDoCardTotalCards - 1) {
+          whatWeDoCardCurrentIndex++;
+          whatWeDoCardUpdateCarousel();
+        }
+      });
+
+      whatWeDoCardPrevBtn.addEventListener("click", () => {
+        if (whatWeDoCardCurrentIndex > 0) {
+          whatWeDoCardCurrentIndex--;
+          whatWeDoCardUpdateCarousel();
+        }
+      });
+
+      whatWeDoCardUpdateCarousel();
+      window.addEventListener("resize", whatWeDoCardUpdateCarousel);
+    </script>
+
+    <!-- What we do End -->
   </body>
 </html>
