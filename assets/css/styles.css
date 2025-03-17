@@ -1501,9 +1501,12 @@ ul {
 
   .whatWeDoCard-card img {
     width: 350px;
-    /* height: 400px; */
+    height: 400px;
   }
-
+  .whatWeDoCard-card:hover img {
+    transform: translateY(150px) scale(2.1);
+    filter: blur(6px);
+  }
   .whatWeDoCard-card-overlay {
     width: 295px;
     height: 145px;
@@ -1529,6 +1532,36 @@ ul {
   .whatWeDoCard-card-button {
     right: 10px;
     font-size: 14px;
+  }
+  .whatWeDo_leftarrow_button,
+  .whatWeDo_rightarrow_button {
+    border: 0;
+    background: transparent;
+    z-index: 1;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  .whatWeDoCard-Count {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .whatWeDoCard-Controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    margin-right: 0px;
+    border-radius: 88px;
   }
 }
 /* What we do Section End */
