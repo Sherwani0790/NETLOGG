@@ -1479,6 +1479,7 @@
         </div>
       </div>
     </section>
+    
     <!-- customer Success Story End -->
 
     <!-- NewsRoom Section -->
@@ -2236,5 +2237,186 @@
       });
     </script>
     <!-- What we do End -->
+    <script>
+      $(document).ready(function() {
+      // Define carousel content - update these with your actual content
+      const carouselItems = [
+          {
+              image: "assets/img/customer-service/1.png",
+              playButton: "assets/img/customer-service/PlayButton.png", // Default play button
+              title: "Customer Success Stories",
+              description: "See how Netlogg's consulting-led, AI-powered strategies help clients achieve their ambitions and drive measurable success."
+          },
+          {
+              image: "assets/img/bg-imgs/newsroom-img.jpeg",
+              playButton: "assets/img/customer-service/PlayButton.png", // Second play button (create or use your own)
+              title: "Client Transformations",
+              description: "Discover how our enterprise-level solutions transform business operations and drive sustainable growth for our clients."
+          },
+          {
+              image: "assets/img/career/1.jpeg",
+              playButton: "assets/img/customer-service/PlayButton.png", // Third play button (create or use your own)
+              title: "Partnership Results",
+              description: "Our collaborative approach delivers measurable outcomes that help organizations reach their strategic objectives."
+          }
+      ];
+      
+      let currentIndex = 0;
+      const totalItems = carouselItems.length;
+      let isAnimating = false; // Flag to prevent rapid clicking
+      let autoSlideInterval; // Variable to store the interval ID
+      const autoSlideDelay = 5000; // Time between auto-slides in milliseconds (5 seconds)
+      
+      // Update the counter display
+      function updateCounter() {
+          $('.csr_count').text(`${currentIndex + 1}/${totalItems}`);
+      }
+      
+      // Update the content with smooth transitions
+      function updateContent() {
+          if (isAnimating) return; // Prevent animation overlap
+          isAnimating = true;
+          
+          // Fade out content
+          $('.customer_success_img .main_img, .customer_success_img .play_button, .width-431px h5, .width-431px p').addClass('fade-out');
+          
+          // Wait for fade-out to complete
+          setTimeout(function() {
+              // Change the main image
+              $('.customer_success_img .main_img').attr('src', carouselItems[currentIndex].image);
+              
+              // Change the play button image
+              $('.customer_success_img .play_button').attr('src', carouselItems[currentIndex].playButton);
+              
+              // Change the text content
+              $('.width-431px h5').text(carouselItems[currentIndex].title);
+              $('.width-431px p').text(carouselItems[currentIndex].description);
+              
+              // Update the counter
+              updateCounter();
+              
+              // Fade in new content
+              $('.customer_success_img .main_img, .customer_success_img .play_button, .width-431px h5, .width-431px p').removeClass('fade-out');
+              
+              // Reset animation flag after transition completes
+              setTimeout(function() {
+                  isAnimating = false;
+              }, 500);
+          }, 500);
+      }
+      
+      // Move to next slide
+      function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalItems;
+          updateContent();
+      }
+      
+      // Move to previous slide
+      function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+          updateContent();
+      }
+      
+      // Start auto-slide function
+      function startAutoSlide() {
+          // Clear any existing interval first
+          stopAutoSlide();
+          
+          // Set up new interval
+          autoSlideInterval = setInterval(function() {
+              nextSlide();
+          }, autoSlideDelay);
+      }
+      
+      // Stop auto-slide function
+      function stopAutoSlide() {
+          if (autoSlideInterval) {
+              clearInterval(autoSlideInterval);
+          }
+      }
+      
+      // Initialize carousel
+      updateContent(); // Set initial content
+      startAutoSlide(); // Start auto-slide
+      
+      // Previous button click handler
+      $('.csr_leftarrow_button').click(function() {
+          stopAutoSlide(); // Stop auto-sliding when user interacts
+          prevSlide();
+          startAutoSlide(); // Restart auto-slide after user interaction
+      });
+      
+      // Next button click handler
+      $('.csr_rightarrow_button').click(function() {
+          stopAutoSlide(); // Stop auto-sliding when user interacts
+          nextSlide();
+          startAutoSlide(); // Restart auto-slide after user interaction
+      });
+      
+      // Pause auto-slide when user hovers over the carousel
+      $('.customer_success_section').hover(
+          function() { stopAutoSlide(); },
+          function() { startAutoSlide(); }
+      );
+      
+      // Optional: Add play button click functionality
+      $('.play_button').click(function() {
+          // Add your video play functionality here
+          // alert("Video for slide " + (currentIndex + 1) + " would play here");
+      });
+  });
+        // $(document).ready(function () {
+        //   const carouselItems = [
+        //     {
+        //       image: "assets/img/customer-service/1.png",
+        //       title: "Customer Success Stories",
+        //       description:
+        //         "See how Netlogg's consulting-led, AI-powered strategies help clients achieve their ambitions and drive measurable success.",
+        //     },
+        //     {
+        //       image: "assets/img/bg-imgs/newsroom-img.jpeg",
+        //       title: "Client Transformations",
+        //       description:
+        //         "Discover how our enterprise-level solutions transform business operations and drive sustainable growth for our clients.",
+        //     },
+        //     {
+        //       image: "assets/img/career/1.jpeg",
+        //       title: "Partnership Results",
+        //       description:
+        //         "Our collaborative approach delivers measurable outcomes that help organizations reach their strategic objectives.",
+        //     },
+        //   ];
+  
+        //   let currentIndex = 0;
+        //   const totalItems = carouselItems.length;
+        //   function updateCounter() {
+        //     $(".csr_count").text(`${currentIndex + 1}/${totalItems}`);
+        //   }
+  
+        //   function updateContent() {
+        //     $(".customer_success_img .main_img").attr(
+        //       "src",
+        //       carouselItems[currentIndex].image
+        //     );
+  
+        //     $(".width-431px h5").text(carouselItems[currentIndex].title);
+        //     $(".width-431px p").text(carouselItems[currentIndex].description);
+  
+        //     updateCounter();
+        //   }
+  
+        //   updateContent();
+  
+        //   $(".csr_leftarrow_button").click(function () {
+        //     currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        //     updateContent();
+        //   });
+  
+        //   $(".csr_rightarrow_button").click(function () {
+        //     currentIndex = (currentIndex + 1) % totalItems;
+        //     updateContent();
+        //   });
+        // });
+      </script>
   </body>
 </html>

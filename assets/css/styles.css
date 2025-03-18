@@ -1502,7 +1502,6 @@ ul {
   background: #000;
   height: 85vh;
   position: relative;
-
 }
 .overlay_csr_bg {
   position: absolute;
@@ -1519,6 +1518,7 @@ ul {
   line-height: 67px;
   color: #fff;
   margin-bottom: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .width-431px {
   width: 431px;
@@ -1527,6 +1527,7 @@ ul {
   margin-top: 195px;
 }
 .customer_success_section p {
+  transition: opacity 0.5s ease-in-out;
   color: #fff;
   font-weight: 400;
   font-size: 18px;
@@ -1538,12 +1539,20 @@ ul {
   position: relative;
 }
 .customer_success_img .main_img {
+  transition: opacity 0.5s ease-in-out;
   height: 450px;
   width: 670px;
   object-fit: cover;
   position: relative;
 }
+/* .customer_success_img .play_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-310%, -50%);
+} */
 .customer_success_img .play_button {
+  transition: opacity 0.5s ease-in-out;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1554,6 +1563,7 @@ ul {
   width: 100px;
   height: 100px;
   object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
 }
 .csr_next_prev {
   margin-top: 32px;
@@ -1580,6 +1590,14 @@ ul {
   height: 50px;
   border-radius: 50%;
   border: 0;
+}
+.fade-out {
+  opacity: 0;
+}
+
+/* Fade-in class for transitions */
+.fade-in {
+  opacity: 1;
 }
 @media (max-width: 768px) {
   .customer_success_section {
