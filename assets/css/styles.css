@@ -1502,9 +1502,7 @@ ul {
   background: #000;
   height: 85vh;
   position: relative;
-  /* background-image: url(../img/customer-service/Whirl.png); */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+
 }
 .overlay_csr_bg {
   position: absolute;
@@ -1613,6 +1611,9 @@ ul {
   }
   .margin-top-195px {
     margin-top: 30px;
+  }
+  .overlay_csr_bg {
+    display: none;
   }
 }
 /* Customer Success Story Section End */
