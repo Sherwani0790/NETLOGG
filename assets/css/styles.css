@@ -1501,11 +1501,19 @@ ul {
   padding: 100px 96px;
   background: #000;
   height: 85vh;
+  position: relative;
   /* background-image: url(../img/customer-service/Whirl.png); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 }
-.csr_overlay {
+.overlay_csr_bg {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+.overlay_csr_bg img {
+  width: 1512px;
+  height: 720px;
 }
 .customer_success_section h5 {
   font-size: 54px;
