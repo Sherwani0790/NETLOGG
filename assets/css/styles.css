@@ -2164,4 +2164,11 @@ textarea {
   .newsroom_section .newsroom_card p {
     width: 570px;
   }
+  .footer_extension .footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    column-gap: 20px;
+  }
 }

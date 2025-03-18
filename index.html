@@ -2189,32 +2189,28 @@
         const totalCards = cards.length;
 
         function isMobile() {
-          return window.innerWidth <= 768; // Adjust breakpoint as needed
+          return window.innerWidth <= 768;
         }
 
         function updateCarousel() {
           const cardWidth = cards[0].offsetWidth;
-
-          if (isMobile()) {
-            // Move both images and indicator on mobile
-            cardContainer.style.transform = `translateX(-${
+          cardContainer.style.transform = `translateX(-${
               currentIndex * cardWidth
             }px)`;
-          } else {
-            // On desktop, only move the indicator
-            cardContainer.style.transform = `translateX(0)`; // Keep images static
-          }
+          // if (isMobile()) {
+          //   cardContainer.style.transform = `translateX(-${
+          //     currentIndex * cardWidth
+          //   }px)`;
+          // } else {
+          //   cardContainer.style.transform = `translateX(0)`;
+          // }
 
-          // Move the indicator
           indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
 
-          // Update active state
           cards.forEach((card) => card.classList.remove("active"));
           if (currentIndex < totalCards) {
             cards[currentIndex].classList.add("active");
           }
-
-          // Update count
           count.textContent = `${currentIndex + 1}/${totalCards}`;
         }
 
