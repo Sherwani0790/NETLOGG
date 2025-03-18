@@ -1000,6 +1000,19 @@ ul {
   );
   backdrop-filter: blur(16px);
 }
+/* .carousel-wrapper .card.telcom_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ); 
+} */
 
 .carousel-wrapper .card-title {
   color: #fff;
@@ -1206,7 +1219,7 @@ ul {
   position: absolute;
   top: 20px;
   left: 0;
-  width: 470px;
+  width: 370px;
   height: 180px;
   padding: 24px;
   opacity: 1;
