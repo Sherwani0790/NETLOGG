@@ -52,7 +52,7 @@ ul {
   background: linear-gradient(to bottom, rgb(0 0 0 / 76%), rgb(0 0 0 / 37%));
   transition: all 0.5s;
   z-index: 997;
-  padding: 32px;
+  padding: 32px 96px;
   top: 0;
   position: sticky;
   backdrop-filter: blur(5px);
@@ -482,7 +482,7 @@ ul {
 .carousel-caption {
   position: absolute;
   top: 30%;
-  left: 4%;
+  left: 6%;
   text-align: left;
 }
 .carousel-caption h1 {
@@ -706,7 +706,7 @@ ul {
 .what_we_do_section {
   background: #fff;
   height: 85vh;
-  padding: 100px 44px 44px 44px;
+  padding: 100px 96px 44px 96px;
 }
 .what_we_do_section h1 {
   font-weight: 400;
@@ -946,7 +946,7 @@ ul {
 .industry_section {
   background: #fff;
   height: 70vh;
-  padding: 100px 44px 44px 44px;
+  padding: 100px 96px 44px 96px;
 }
 .industry_section h1 {
   font-weight: 400;
@@ -974,7 +974,7 @@ ul {
 
 .carousel-wrapper .card {
   position: relative;
-  width: 580px;
+  width: 560px;
   height: 500px;
   border: none;
   overflow: hidden;
@@ -989,7 +989,7 @@ ul {
 }
 
 .carousel-wrapper .card img {
-  width: 580px;
+  width: 560px;
   height: 610px;
   object-fit: cover;
 }
@@ -1202,7 +1202,7 @@ ul {
 
 .whatWeDoCard-card {
   position: relative;
-  width: 440px;
+  width: 420px;
   height: 540px;
   border: none;
   overflow: hidden;
@@ -1213,7 +1213,7 @@ ul {
 }
 
 .whatWeDoCard-card img {
-  width: 440px;
+  width: 420px;
   height: 680px;
   object-fit: cover;
   transition: transform 0.6s ease, filter 0.6s ease;
@@ -1502,7 +1502,7 @@ ul {
 }
 .newsroom_section {
   background: #fff;
-  padding: 100px 60px;
+  padding: 100px 96px;
 }
 .newsroom_section .newsroom_title {
   color: #000;
@@ -1772,7 +1772,7 @@ ul {
 /* Reach out section */
 
 .reachout_section {
-  background: #f9f9f9;
+  background: #fff;
   padding: 50px 0;
 }
 .reachout_section h1 {
@@ -1846,10 +1846,8 @@ textarea {
 
 /* Footer */
 .footer {
-  background: #1e2222;
-  /* background-color: #121212; */
-  color: #fff;
-  padding: 40px 20px;
+  background: #f7f7f7;
+  padding: 40px 96px 5px 96px;
 }
 .social-small {
   font-size: 16px;
@@ -1863,47 +1861,49 @@ textarea {
   padding-top: 20px;
 }
 .footer h5 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 .footer a {
-  color: #ddd;
+  color: #1a1a1a;
   text-decoration: none;
   font-size: 14px;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   transition: 0.3s;
+  font-weight: 400;
+  width: max-content;
 }
 .footer a:hover {
-  color: #fff;
+  color: #000 !important;
+  text-decoration: underline;
 }
 .footer .social {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-.footer .divider {
-  border-top: 1px solid #444;
+.footer-divider {
+  border-top: 1px solid #eaeaea;
   margin: 20px 0;
 }
-.footer_extension {
-  background: #000;
-  padding: 30px 20px;
+.footer_extension,
+.footer_copyright {
+  background: #f7f7f7;
+  padding: 0px 96px 5px 96px;
 }
 .footer_extension a {
-  color: #ddd;
+  color: #8e8e8e;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   display: block;
   margin-bottom: 6px;
   transition: 0.3s;
 }
-.footer a:hover {
-  color: #fff;
-}
 .footer_extension .footer-links {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1915,9 +1915,23 @@ textarea {
   text-align: right;
   column-gap: 50px;
 }
+.footer_copyright {
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: 400;
+}
 @media (max-width: 768px) {
+  .footer {
+    background: #f7f7f7;
+    padding: 40px 16px 5px 16px;
+  }
+  .footer_extension,
+  .footer_copyright {
+    background: #f7f7f7;
+    padding: 0px 16px 5px 15px;
+  }
   .footer h5 {
-    font-size: 14px;
+    font-size: 20px;
   }
   .footer a {
     font-size: 12px;
@@ -1934,6 +1948,18 @@ textarea {
   .footer-social {
     justify-content: center !important;
     padding-top: 20px;
+  }
+  .footer_extension a {
+    color: #8e8e8e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 12px;
+    transition: 0.3s;
+  }
+  .footer_copyright p {
+    text-align: center;
   }
 }
 /* Footer End */
