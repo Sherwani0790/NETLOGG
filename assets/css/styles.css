@@ -1545,12 +1545,6 @@ ul {
   object-fit: cover;
   position: relative;
 }
-/* .customer_success_img .play_button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-310%, -50%);
-} */
 .customer_success_img .play_button {
   transition: opacity 0.5s ease-in-out;
   position: absolute;
