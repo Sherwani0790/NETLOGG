@@ -1164,217 +1164,7 @@ ul {
 /* Industry we serve  Section End */
 
 /* What we do Section */
-/* .whatWeDoCard-Wrapper {
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  margin-top: 40px;
-}
 
-.whatWeDoCard-Wrapper .whatWeDoCard-container {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.4s ease-in-out;
-}
-
-.whatWeDoCard-Wrapper .whatWeDoCard-card {
-  position: relative;
-  width: 580px;
-  height: 540px;
-  border: none;
-  overflow: hidden;
-  border-radius: 0px;
-  flex-shrink: 0;
-  transition: border 0.3s ease-in-out;
-  border: 2px solid transparent;
-}
-
-.card.active {
-  
-}
-
-.whatWeDoCard-Wrapper .whatWeDoCard-card img {
-  width: 580px;
-  height: 680px;
-  object-fit: cover;
-}
-
-.whatWeDoCard-Wrapper .whatWeDoCard-card-overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 470px;
-  height: 180px;
-  padding: 24px 24px 32px 24px;
-}
-
-.whatWeDoCard-Wrapper .whatWeDoCard-card-title {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 37px;
-}
-
-.whatWeDoCard-Wrapper .whatWeDoCard-card-text {
-  margin-top: 12px;
-  color: #fefefe;
-  font-size: 16px;
-  font-weight: 400;
-}
-.whatWeDoCard-Indicator {
-  width: 85%;
-  position: relative;
-  height: 4px;
-  background: lightgray;
-  margin: 10px auto;
-}
-
-.whatWeDoCard-Indicator .whatWeDoCard-Indicator-bar {
-  height: 4px;
-  width: calc(100% / 4);
-  background: black;
-  position: absolute;
-  transition: left 0.3s ease-in-out;
-}
-
-.whatWeDoCard-Controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 10px;
-  border-radius: 88px;
-  margin-right: 40px;
-}
-
-.whatWeDo_leftarrow_button,
-.whatWeDo_rightarrow_button {
-  border: 0;
-  background: transparent;
-  z-index: 1;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.whatWeDoCard-Count {
-  background: black;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-.whatWeDoCard-card-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  border: 0;
-  background: transparent;
-  z-index: 1;
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
-}
-.whatWeDoCard-card-button:hover {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  border: 0;
-  background: transparent;
-  z-index: 1;
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-}
-@media (max-width: 768px) {
-  .whatWeDoCard-Wrapper .whatWeDoCard-container {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.4s ease-in-out;
-    flex-wrap: nowrap;
-  }
-  .whatWeDoCard-Wrapper .whatWeDoCard-card img {
-    width: 350px;
-    height: 400px;
-    object-fit: cover;
-  }
-  .whatWeDoCard-Wrapper .whatWeDoCard-card {
-    position: relative;
-    width: 320px;
-    height: 350px;
-    border: none;
-    overflow: hidden;
-    border-radius: 10px;
-    flex-shrink: 0;
-    transition: border 0.3s ease-in-out;
-    border: 2px solid transparent;
-  }
-  .whatWeDoCard-Wrapper .whatWeDoCard-card-overlay {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 295px;
-    height: 145px;
-    padding: 5px 15px 5px 15px;
-  }
-  .whatWeDoCard-Wrapper .whatWeDoCard-card-title {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 37px;
-  }
-  .whatWeDoCard-Wrapper .whatWeDoCard-card-text {
-    margin-top: 7px;
-    color: #fefefe;
-    font-size: 12px;
-    font-weight: 400;
-  }
-  .whatWeDoCard-card-button {
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-    border: 0;
-    background: transparent;
-    z-index: 1;
-    color: #fff;
-  }
-  .whatWeDo_leftarrow_button,
-  .whatWeDo_rightarrow_button {
-    border: 0;
-    background: transparent;
-    z-index: 1;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-  }
-  .whatWeDoCard-Count {
-    background: black;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-  }
-  .whatWeDoCard-Controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-top: 5px;
-    margin-right: 0px;
-    border-radius: 88px;
-  }
-} */
 .whatWeDoCard-Wrapper {
   position: relative;
   margin: auto;
@@ -1434,6 +1224,7 @@ ul {
   font-size: 18px;
   font-weight: 400;
   line-height: 37px;
+  transition: none;
 }
 .whatWeDoCard-card-title {
   color: #fff;
@@ -1441,6 +1232,7 @@ ul {
   font-weight: 600;
   line-height: 37px;
   width: 302px;
+  transition: none;
 }
 
 .whatWeDoCard-card-text {
@@ -1683,6 +1475,9 @@ ul {
 /* Why Netlogg Section End */
 
 /* NewsRoom Section */
+.net_log_card_bg {
+  background: #f7f7f7;
+}
 .newsroom_section {
   background: #fff;
   padding: 100px 60px;
@@ -1702,10 +1497,17 @@ ul {
   height: 100%;
   object-fit: cover;
 }
-.newsroom_section .newsroom_card {
+.newsroom_section .newsroom_card p {
   width: 768px;
+}
+.padding-64 {
   padding: 64px;
-  border: 1px solid #ededed;
+}
+.custom-border-newsroom {
+  border-left: 1px solid #ededed;
+}
+.custom-border-bottom-newsroom {
+  border-bottom: 1px solid #ededed;
 }
 .newsroom_section .newsroom_card h1 {
   color: #000;
@@ -1762,10 +1564,10 @@ ul {
 }
 
 .newsroom_card {
-  margin-bottom: 20px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
+  background: #fff;
+  /* margin-bottom: 20px; */
+  /* padding: 20px; */
+  /* border-radius: 8px; */
 }
 
 /* Responsive adjustments */
@@ -1788,7 +1590,7 @@ ul {
   .newsroom_section .newsroom_card {
     width: 100%;
     padding: 20px;
-    border: 1px solid #ededed;
+    /* border: 1px solid #ededed; */
   }
   .newsroom_section .newsroom_card h1 {
     color: #000;
@@ -1804,6 +1606,7 @@ ul {
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
+    width: 100%;
   }
   .mbl_margin {
     margin-top: 20px;
@@ -1983,8 +1786,8 @@ textarea {
   border: 1px solid #dbdbdb !important;
 }
 .submit_button {
-  background: #000;
-  border: 1px solid #000;
+  background: #1b1aff;
+  border: 1px solid #1b1aff;
   color: #fff;
   padding: 10px 20px;
   text-align: center;
@@ -1999,8 +1802,8 @@ textarea {
 }
 .submit_button:hover {
   background: transparent;
-  border: 1px solid #000;
-  color: #000;
+  border: 1px solid #1b1aff;
+  color: #1b1aff;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
