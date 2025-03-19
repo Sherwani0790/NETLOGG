@@ -742,6 +742,7 @@ ul {
   text-decoration: none;
   width: max-content;
   transition: 0.3s all ease-in-out;
+  white-space: nowrap;
 }
 .button_arrow_right,
 .button_arrow_left {
@@ -918,13 +919,13 @@ ul {
   #carouselExampleIndicators2 .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 50px;
+    bottom: 30px;
     left: 0;
     z-index: 2;
     display: flex;
     justify-content: center;
     padding: 0;
-    margin-right: 0%;
+    margin-right: 40%;
     margin-bottom: 1rem;
     margin-left: 0%;
     list-style: none;
@@ -946,10 +947,14 @@ ul {
     height: 30px;
   }
   .right_left_count {
-    left: 36%;
+    /* left: 36%;
     bottom: 15px;
     z-index: 1;
-    right: 0;
+    right: 0; */
+    left: auto;
+    bottom: 30px;
+    z-index: 1;
+    right: 25px;
   }
 
   .count_carousal {
@@ -973,6 +978,21 @@ ul {
   }
   .carousel-caption a {
     margin: 0;
+  }
+  .solution_section .solutions_heading {
+    width: 350px;
+    color: #fff;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .solution_section .solutions_p {
+    color: #fefefe;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
   }
 }
 /* Section 2 End */
@@ -1139,6 +1159,9 @@ ul {
     font-size: 14px;
     line-height: 25.6px;
     color: #000;
+  }
+  .carousel-wrapper {
+    overflow-x: auto;
   }
   .carousel-wrapper .card-container {
     display: flex;
@@ -1390,7 +1413,9 @@ ul {
     width: 320px;
     height: 350px;
   }
-
+  .whatWeDoCard-Wrapper {
+    overflow-x: auto;
+  }
   .whatWeDoCard-card img {
     width: 350px;
     height: 400px;
@@ -1671,6 +1696,13 @@ ul {
   .overlay_csr_bg {
     display: none;
   }
+  .csr_leftarrow_button,
+  .csr_rightarrow_button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+  }
 }
 /* Customer Success Story Section End */
 
@@ -1773,17 +1805,17 @@ ul {
   }
   .newsroom_section .newsroom_card h1 {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24.5px;
   }
   .newsroom_section .newsroom_card p {
     margin-top: 12px;
     color: #000;
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 22px;
     width: 100%;
   }
