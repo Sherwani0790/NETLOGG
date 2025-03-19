@@ -1003,6 +1003,7 @@ ul {
   background: #fff;
   height: 100%;
   padding: 100px 96px 44px 96px;
+  overflow: hidden;
 }
 .industry_section h1 {
   font-weight: 300;
