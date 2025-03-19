@@ -186,15 +186,23 @@ ul {
 }
 /* Desktop  End */
 /* Mobile */
-
-#mobile_menu_trigger {
+.for_mobile_only {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+#mobile_menu_trigger,
+#mobile_menu_search,
+#mobile_menu_globe {
   display: none;
 }
 @media (max-width: 768px) {
   .navbar {
     padding: 12px;
   }
-  #mobile_menu_trigger {
+  #mobile_menu_trigger,
+  #mobile_menu_search,
+  #mobile_menu_globe {
     display: block;
   }
   .for_desktop {
@@ -309,7 +317,7 @@ ul {
   bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #fafafa;
+  background-color: #fff;
   border-top: 1px solid #f4f4f4;
   padding: 16px;
 }
@@ -354,7 +362,7 @@ ul {
   width: 100%;
   top: 0;
   bottom: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   left: 100%;
   z-index: 1;
   padding: 0;
@@ -372,7 +380,7 @@ ul {
   width: 100%;
   top: 0;
   bottom: 0;
-  background-color: #fafafa;
+  background-color: #fff;
   left: 100%;
   z-index: 2;
   padding: 0;
@@ -386,24 +394,19 @@ ul {
 }
 
 #mobile_menu span.mobile_menu_back {
-  background-color: #fafafa;
+  background-color: #fff;
   width: 30%;
   /* text-align: right; */
 }
 #mobile_menu span.mobile_menu_back:hover {
-  color: #03a9f4;
+  color: #000;
+  font-weight: 400;
 }
 #mobile_menu span.mobile_menu_back:hover i {
-  color: #03a9f4;
+  color: #000;
+  /* font-weight: 400; */
 }
-#mobile_menu a.sale {
-  color: #cb2525;
-  font-weight: 600;
-}
-#mobile_menu a.sale i {
-  position: static;
-  color: #cb2525;
-}
+
 .mbl_nav_img {
   width: 350px;
   height: 200px;
@@ -424,7 +427,7 @@ ul {
   border: 0;
 }
 #mobile_menu .accordion-header {
-  background: #fafafa;
+  background: #fff;
   padding: 0;
   cursor: pointer;
   display: flex;
@@ -435,7 +438,7 @@ ul {
 #mobile_menu .accordion-content {
   display: none;
   padding: 15px 20px;
-  background: #fafafa;
+  background: #fff;
 }
 .chevron {
   transition: transform 0.3s ease;
@@ -1508,7 +1511,8 @@ ul {
     font-size: 22px;
   }
   .why_netlogg_section .d-flex {
-    flex-direction: column;
+    flex-direction: row;
+    overflow: auto;
   }
   .netLogg_card .count {
     font-size: 22px;
@@ -1518,8 +1522,8 @@ ul {
   }
   .netLogg_card {
     display: flex;
-    width: 100%;
-    height: 260px;
+    min-width: 290px;
+    height: 250px;
     padding: 20px 20px;
     flex-direction: column;
     align-items: flex-start;
@@ -1929,10 +1933,17 @@ ul {
     width: 100%;
   }
   .career_section .career_inner p {
-    font-size: 22px;
+    font-size: 18px;
+    margin-top: 5px;
   }
   .career-img {
     height: 100%;
+  }
+  .career_section .career_inner .joinus_button {
+    padding: 7px 12px;
+  }
+  .career_section .career_inner .joinus_button:hover {
+    padding: 7px 12px;
   }
 }
 /* Section Career End */
@@ -2008,6 +2019,10 @@ textarea {
   .width-50-auto {
     width: 93%;
     margin: 0 auto;
+  }
+  .reachout_section h3 {
+    font-size: 18px;
+    line-height: 24.5px;
   }
 }
 /* Reach out section End */
@@ -2088,6 +2103,76 @@ textarea {
   font-size: 14px;
   font-weight: 300;
 }
+.footer_desktop {
+  display: block;
+}
+.footer_mobile {
+  display: none;
+}
+
+/* For mobile Footer */
+.custom-accordian .accordion {
+  /* background-color: transparent;
+  color: rgb(198 198 198 / 90%) !important;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  transition: 0.5s ease-in-out; */
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  padding: 16px 7px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.5s ease-in-out;
+}
+
+.custom-accordian .accordion.active {
+  color: #000a1c;
+}
+
+.custom-accordian .panel {
+  padding: 0 8px;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.custom-accordian .panel ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.custom-accordian .panel ul li {
+  padding: 5px 0px;
+}
+
+.custom-accordian .panel ul li a {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27px;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  color: #000;
+  /* color: #8e8e8e; */
+}
+
+.custom-accordian .panel ul li a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* For mobile Footer End */
+
 @media (max-width: 768px) {
   .footer {
     background: #f7f7f7;
@@ -2118,16 +2203,25 @@ textarea {
     padding-top: 20px;
   }
   .footer_extension a {
-    color: #8e8e8e;
+    color: #8e8e8e !important;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     transition: 0.3s;
+  }
+  .footer_extension a:hover {
+    text-decoration: underline;
   }
   .footer_copyright p {
     text-align: center;
+  }
+  .footer_desktop {
+    display: none;
+  }
+  .footer_mobile {
+    display: block;
   }
 }
 /* Footer End */

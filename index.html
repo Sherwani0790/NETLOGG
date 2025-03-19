@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
     <title>NETLOGG</title>
     <meta content="" name="description" />
@@ -514,9 +515,26 @@
             </div>
           </div>
         </div>
-        <button type="button" id="mobile_menu_trigger" class="">
-          <img src="assets/img/Logo/hamburgerIcon.svg" alt="" />
-        </button>
+        <div class="for_mobile_only">
+          <div>
+            <a href="#" id="mobile_menu_search" class="search_icon">
+              <img src="assets/img/Logo/searchIcon.svg" alt="" />
+            </a>
+          </div>
+          <div>
+            <a href="#" id="mobile_menu_globe" class="globe_icon">
+              <img src="assets/img/Logo/globe.svg" alt="" />
+            </a>
+          </div>
+          <div>
+            <a href="#" id="mobile_menu_globe" class="globe_icon">
+              <img src="assets/img/Logo/contactMobile.svg" alt="" />
+            </a>
+          </div>
+          <button type="button" id="mobile_menu_trigger" class="">
+            <img src="assets/img/Logo/hamburgerIcon.svg" alt="" />
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -1678,8 +1696,8 @@
           here with Netlogg.
         </p>
         <a href="#" class="joinus_button"
-          ><span> Join Us </span> &nbsp; 
-        <img src="assets/img/Logo/smallArrowRight.svg">
+          ><span> Join Us </span> &nbsp;
+          <img src="assets/img/Logo/smallArrowRight.svg" />
         </a>
       </div>
     </section>
@@ -1782,155 +1800,311 @@
     <!-- Reach out section End-->
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container-fluid">
-        <!-- <div class="row">
-          <div class="col-12">
-            <div class="social-small">Social</div>
-            <div class="social">Follow us for the latest updates</div>
-          </div>
-        </div>
-
-        <div class="divider"></div> -->
-
-        <div class="row">
-          <!-- Industries -->
-          <div class="col-md-3 col-sm-6">
-            <h5>What we do</h5>
-            <a href="#">Generative AI</a>
-            <a href="#">Blockchain</a>
-            <a href="#">Digital Infrastructure</a>
-            <a href="#">Due Diligence</a>
-            <a href="#">Application Development</a>
-            <a href="#">Data Analytics</a>
-            <a href="#">Cloud Consulting</a>
-            <a href="#">Cybersecurity</a>
-            <a href="#">Internet of Things (IoT)</a>
-            <a href="#">Salesforce</a>
-            <a href="#">Data and AI</a>
-            <a href="#">Emerging Technology</a>
-            <a href="#">Finance and Risk Management</a>
-            <a href="#">Strategic Managed Services</a>
-            <a href="#">Network Services</a>
-            <a href="#">Business Process Services</a>
-            <a href="#">Supply chain</a>
-            <a href="#">Managed IT Services</a>
-            <a href="#">Enterprise Applications</a>
-          </div>
-
-          <!-- Services -->
-          <div class="col-md-3 col-sm-6">
-            <h5>Industries</h5>
-            <a href="#">Fintech & Banking</a>
-            <a href="#">Telecommunication</a>
-            <a href="#">Education</a>
-            <a href="#">Automotive</a>
-            <a href="#">Aerospace and Defense</a>
-            <a href="#">Fintech & Banking</a>
-            <a href="#">Energy</a>
-            <a href="#">Healthcare</a>
-            <a href="#">High Tech</a>
-            <a href="#">Industrial</a>
-            <a href="#">Life Sciences</a>
-            <a href="#">Retail & eCommerce</a>
-            <a href="#">Real Estate</a>
-            <a href="#">Oil & Gas</a>
-            <a href="#">Media & Entertainment</a>
-            <a href="#">Manufacturing</a>
-            <a href="#">Insurance</a>
-            <a href="#">Travel & Logistics</a>
-          </div>
-
-          <!-- Products and Platforms -->
-          <div class="col-md-3 col-sm-6">
-            <h5>Solutions</h5>
-            <a href="#">AI ready data centres</a>
-            <a href="#">High Performance Computing (HPC)</a>
-            <a href="#">Build to suit data centres</a>
-            <a href="#">Colocation data centres</a>
-          </div>
-
-          <!-- Insights & More Info -->
-          <div class="col-md-3 col-sm-6">
-            <h5>Company</h5>
-            <a href="#">About us</a>
-            <a href="#">Our History</a>
-            <a href="#">Awards & Recognitiions</a>
-            <a href="#">Careers</a>
-            <a href="#">Global Presence</a>
-            <a href="#">Leadership</a>
-            <a href="#">Board of Directors</a>
-            <a href="#">Newsroom</a>
-            <a href="#">Events</a>
-            <a href="#">Diversity, Equity and Inclusion</a>
-            <a href="#">Corporate Sustainability</a>
-            <a href="#">Social Responsibility</a>
-            <a href="#">Strategic Alliances</a>
-            <a href="#">Awards</a>
-            <a href="#">Our Partners</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-divider"></div>
-    </footer>
-    <section class="footer_extension">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-2">
-            <div class="footer-logo">
-              <a href="index.html">
-                <img
-                  src="assets/img/footerLogos/FooterLogo.png"
-                  alt="NETLOGG"
-                />
-              </a>
+    <!-- For Desktop -->
+    <div class="footer_desktop">
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Industries -->
+            <div class="col-md-3 col-sm-6">
+              <h5>What we do</h5>
+              <a href="#">Generative AI</a>
+              <a href="#">Blockchain</a>
+              <a href="#">Digital Infrastructure</a>
+              <a href="#">Due Diligence</a>
+              <a href="#">Application Development</a>
+              <a href="#">Data Analytics</a>
+              <a href="#">Cloud Consulting</a>
+              <a href="#">Cybersecurity</a>
+              <a href="#">Internet of Things (IoT)</a>
+              <a href="#">Salesforce</a>
+              <a href="#">Data and AI</a>
+              <a href="#">Emerging Technology</a>
+              <a href="#">Finance and Risk Management</a>
+              <a href="#">Strategic Managed Services</a>
+              <a href="#">Network Services</a>
+              <a href="#">Business Process Services</a>
+              <a href="#">Supply chain</a>
+              <a href="#">Managed IT Services</a>
+              <a href="#">Enterprise Applications</a>
             </div>
-          </div>
 
-          <div class="col-12 col-md-7">
-            <div class="footer-links">
-              <a href="#">Privacy Notice</a>
-              <a href="#">Cookie Policy</a>
-              <!-- <a href="#">Accessibility Declaration</a>
-              <a href="#">Disclaimer</a> -->
-              <a href="#">Security</a>
-              <a href="#">Policy</a>
-              <!-- <a href="#">California Notice at Collection</a> -->
-              <a href="#">Customize cookies</a>
+            <!-- Services -->
+            <div class="col-md-3 col-sm-6">
+              <h5>Industries</h5>
+              <a href="#">Fintech & Banking</a>
+              <a href="#">Telecommunication</a>
+              <a href="#">Education</a>
+              <a href="#">Automotive</a>
+              <a href="#">Aerospace and Defense</a>
+              <a href="#">Energy</a>
+              <a href="#">Healthcare</a>
+              <a href="#">High Tech</a>
+              <a href="#">Industrial</a>
+              <a href="#">Life Sciences</a>
+              <a href="#">Retail & eCommerce</a>
+              <a href="#">Real Estate</a>
+              <a href="#">Oil & Gas</a>
+              <a href="#">Media & Entertainment</a>
+              <a href="#">Manufacturing</a>
+              <a href="#">Insurance</a>
+              <a href="#">Travel & Logistics</a>
             </div>
-          </div>
-          <div class="col-12 col-md-3 text-end">
-            <div class="footer-social">
-              <a href="#"
-                ><img src="assets/img/footerLogos/FacebookLogo.svg" class=""
-              /></a>
-              <a href="#"
-                ><img src="assets/img/footerLogos/InstagramLogo.svg" class=""
-              /></a>
-              <a href="#"
-                ><img src="assets/img/footerLogos/LinkedinLogo.svg" class=""
-              /></a>
-              <a href="#"
-                ><img src="assets/img/footerLogos/XLogo.svg" class=""
-              /></a>
-              <a href="#"
-                ><img src="assets/img/footerLogos/YoutubeLogo.svg" class=""
-              /></a>
+
+            <!-- Products and Platforms -->
+            <div class="col-md-3 col-sm-6">
+              <h5>Solutions</h5>
+              <a href="#">AI ready data centres</a>
+              <a href="#">High Performance Computing (HPC)</a>
+              <a href="#">Build to suit data centres</a>
+              <a href="#">Colocation data centres</a>
+            </div>
+
+            <!-- Insights & More Info -->
+            <div class="col-md-3 col-sm-6">
+              <h5>Company</h5>
+              <a href="#">About us</a>
+              <a href="#">Our History</a>
+              <a href="#">Awards & Recognitiions</a>
+              <a href="#">Careers</a>
+              <a href="#">Global Presence</a>
+              <a href="#">Leadership</a>
+              <a href="#">Board of Directors</a>
+              <a href="#">Newsroom</a>
+              <a href="#">Events</a>
+              <a href="#">Diversity, Equity and Inclusion</a>
+              <a href="#">Corporate Sustainability</a>
+              <a href="#">Social Responsibility</a>
+              <a href="#">Strategic Alliances</a>
+              <a href="#">Awards</a>
+              <a href="#">Our Partners</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-divider"></div>
-    </section>
-    <section class="footer_copyright">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <p>© 2025 Netlogg - All rights Reserved</p>
+        <div class="footer-divider"></div>
+      </footer>
+      <section class="footer_extension">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-2">
+              <div class="footer-logo">
+                <a href="index.html">
+                  <img
+                    src="assets/img/footerLogos/FooterLogo.png"
+                    alt="NETLOGG"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-7">
+              <div class="footer-links">
+                <a href="#">Privacy Notice</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Security</a>
+                <a href="#">Policy</a>
+                <a href="#">Customize cookies</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 text-end">
+              <div class="footer-social">
+                <a href="#"
+                  ><img src="assets/img/footerLogos/FacebookLogo.svg" class=""
+                /></a>
+                <a href="#"
+                  ><img src="assets/img/footerLogos/InstagramLogo.svg" class=""
+                /></a>
+                <a href="#"
+                  ><img src="assets/img/footerLogos/LinkedinLogo.svg" class=""
+                /></a>
+                <a href="#"
+                  ><img src="assets/img/footerLogos/XLogo.svg" class=""
+                /></a>
+                <a href="#"
+                  ><img src="assets/img/footerLogos/YoutubeLogo.svg" class=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+      </section>
+      <section class="footer_copyright">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <p>© 2025 Netlogg - All rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- For Desktop End -->
+
+    <!-- For Mobile  -->
+    <div class="footer_mobile">
+      <div class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Top -->
+            <div class="col-md-12">
+              <div class="custom-accordian">
+                <!-- 1st Panel -->
+                <button class="accordion dp-flex justify-content-between">
+                  What we do
+                  <i class="bi bi-chevron-down chevron"></i>
+                </button>
+                <div class="panel">
+                  <ul>
+                    <li><a href="">Generative AI</a></li>
+                    <li><a href="">Blockchain</a></li>
+                    <li><a href="">Digital Infrastructure</a></li>
+                    <li><a href="">Due Diligence</a></li>
+                    <li><a href="">Application Development</a></li>
+                    <li><a href="">Data Analytics</a></li>
+                    <li><a href="">Cloud Consulting</a></li>
+                    <li><a href="">Cybersecurity</a></li>
+                    <li><a href="">Internet of Things (IoT)</a></li>
+                    <li><a href="">Salesforce</a></li>
+                    <li><a href="">Data and AI</a></li>
+                    <li><a href="">Emerging Technology</a></li>
+                    <li><a href="">Finance and Risk Management</a></li>
+                    <li><a href="">Strategic Managed Services</a></li>
+                    <li><a href="">Network Services</a></li>
+                    <li><a href="">Business Process Services</a></li>
+                    <li><a href="">Supply chain</a></li>
+                    <li><a href="">Managed IT Services</a></li>
+                    <li><a href="">Enterprise Applications</a></li>
+                  </ul>
+                </div>
+                <!-- 1st Panel End -->
+                <!-- 2nd Panel -->
+                <button class="accordion dp-flex justify-content-between">
+                  Industries
+                  <i class="bi bi-chevron-down chevron"></i>
+                </button>
+                <div class="panel">
+                  <ul>
+                    <li><a href="">Fintech & Banking</a></li>
+                    <li><a href="">Telecommunication</a></li>
+                    <li><a href="">Education</a></li>
+                    <li><a href="">Automotive</a></li>
+                    <li><a href="">Aerospace and Defense</a></li>
+                    <li><a href="">Energy</a></li>
+                    <li><a href="">Healthcare</a></li>
+                    <li><a href="">High Tech</a></li>
+                    <li><a href="">Industrial</a></li>
+                    <li><a href="">Life Sciences</a></li>
+                    <li><a href="">Retail & eCommerce</a></li>
+                    <li><a href="">Real Estate</a></li>
+                    <li><a href="">Oil & Gas</a></li>
+                    <li><a href="">Media & Entertainment</a></li>
+                    <li><a href="">Manufacturing</a></li>
+                    <li><a href="">Insurance</a></li>
+                    <li><a href="">Travel & Logistics</a></li>
+                  </ul>
+                </div>
+                <!-- 2nd Panel End -->
+                <!-- 3rd Panel -->
+                <button class="accordion dp-flex justify-content-between">
+                  Solutions
+                  <i class="bi bi-chevron-down chevron"></i>
+                </button>
+                <div class="panel">
+                  <ul>
+                    <li><a href="">AI ready data centres</a></li>
+                    <li><a href="">High Performance Computing (HPC)</a></li>
+                    <li><a href="">Build to suit data centres</a></li>
+                    <li><a href="">Colocation data centres</a></li>
+                  </ul>
+                </div>
+                <!-- 3rd Panel End -->
+                <!-- 4th Panel -->
+                <button class="accordion dp-flex justify-content-between">
+                  Company
+                  <i class="bi bi-chevron-down chevron"></i>
+                </button>
+                <div class="panel">
+                  <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Our History</a></li>
+                    <li><a href="">Awards & Recognitiions</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Global Presence</a></li>
+                    <li><a href="">Leadership</a></li>
+                    <li><a href="">Board of Directors</a></li>
+                    <li><a href="">Newsroom</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Diversity, Equity and Inclusion</a></li>
+                    <li><a href="">Corporate Sustainability</a></li>
+                    <li><a href="">Social Responsibility</a></li>
+                    <li><a href="">Strategic Alliances</a></li>
+                    <li><a href="">Awards</a></li>
+                    <li><a href="">Our Partners</a></li>
+                  </ul>
+                </div>
+                <!-- 4rth Panel End -->
+              </div>
+              <div class="footer-divider"></div>
+            </div>
+            <!-- Mid -->
+            <div class="footer_extension">
+              <div class="col-12 col-md-2">
+                <div class="footer-logo mt-2">
+                  <a href="index.html">
+                    <img
+                      src="assets/img/footerLogos/FooterLogo.png"
+                      alt="NETLOGG"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="footer-links">
+                  <a href="">Privacy Notice</a>
+                  <a href="">Cookie Policy</a>
+                  <a href="">Security</a>
+                  <a href="">Policy</a>
+                  <a href="">Customize cookies</a>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 text-end">
+                <div class="footer-social">
+                  <a
+                    ><img
+                      src="assets/img/footerLogos/FacebookLogo.svg"
+                      class=""
+                  /></a>
+                  <a
+                    ><img
+                      src="assets/img/footerLogos/InstagramLogo.svg"
+                      class=""
+                  /></a>
+                  <a
+                    ><img
+                      src="assets/img/footerLogos/LinkedinLogo.svg"
+                      class=""
+                  /></a>
+                  <a><img src="assets/img/footerLogos/XLogo.svg" class="" /></a>
+                  <a
+                    ><img src="assets/img/footerLogos/YoutubeLogo.svg" class=""
+                  /></a>
+                </div>
+              </div>
+              <div class="footer-divider"></div>
+            </div>
+            <!-- Last -->
+            <div class="col-md-12">
+              <div class="footer_copyright">
+                <p>© 2025 Netlogg - All rights Reserved</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- For Mobile End -->
+
     <!-- Footer End -->
 
     <!-- /* Jquery library */ -->
@@ -2461,5 +2635,39 @@
       // });
     </script>
     <!-- CSR script End-->
+
+    <!-- Footer For mobile Accordian script -->
+    <script>
+      const accordions = document.querySelectorAll(".accordion");
+
+      accordions.forEach((accordion) => {
+        accordion.addEventListener("click", function () {
+          // Close other accordions
+          accordions.forEach((item) => {
+            if (item !== this && item.classList.contains("active")) {
+              item.classList.remove("active");
+              item.nextElementSibling.style.maxHeight = null;
+              item
+                .querySelector(".chevron")
+                .classList.replace("bi-chevron-up", "bi-chevron-down");
+            }
+          });
+
+          // Toggle current accordion
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          const chevron = this.querySelector(".chevron");
+
+          if (this.classList.contains("active")) {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            chevron.classList.replace("bi-chevron-down", "bi-chevron-up");
+          } else {
+            panel.style.maxHeight = null;
+            chevron.classList.replace("bi-chevron-up", "bi-chevron-down");
+          }
+        });
+      });
+    </script>
+    <!-- Footer For mobile Accordian script End -->
   </body>
 </html>
