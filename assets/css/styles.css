@@ -1160,9 +1160,9 @@ ul {
     line-height: 25.6px;
     color: #000;
   }
-  .carousel-wrapper {
+  /* .carousel-wrapper {
     overflow-x: auto;
-  }
+  } */
   .carousel-wrapper .card-container {
     display: flex;
     gap: 10px;
@@ -1413,9 +1413,9 @@ ul {
     width: 320px;
     height: 350px;
   }
-  .whatWeDoCard-Wrapper {
+  /* .whatWeDoCard-Wrapper {
     overflow-x: auto;
-  }
+  } */
   .whatWeDoCard-card img {
     width: 350px;
     height: 400px;

@@ -1252,7 +1252,7 @@
                 </div>
               </div>
             </div>
-          <div class="carousel-item item_total_count">
+            <div class="carousel-item item_total_count">
               <div class="row">
                 <div class="col-md-5 col-12">
                   <div class="carousel-caption">
@@ -2343,19 +2343,16 @@
 
         let currentIndex = 0;
         const totalCards = cards.length;
+        let isDragging = false;
+        let startX, currentTranslate, prevTranslate, animationID;
 
         function updateCarousel() {
-          const isMobile = window.innerWidth <= 768; // Define mobile breakpoint
           const cardWidth = cards[0].offsetWidth;
+          cardContainer.style.transform = `translateX(-${
+            currentIndex * cardWidth
+          }px)`;
 
-          if (isMobile) {
-            // Move both images & indicator on mobile
-            cardContainer.style.transform = `translateX(-${
-              currentIndex * cardWidth
-            }px)`;
-          }
-
-          // Always move indicator
+          // Move indicator
           indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
 
           // Update active class
@@ -2366,19 +2363,75 @@
           count.textContent = `${currentIndex + 1}/${totalCards}`;
         }
 
-        nextBtn.addEventListener("click", () => {
+        function nextSlide() {
           if (currentIndex < totalCards - 1) {
             currentIndex++;
             updateCarousel();
           }
-        });
+        }
 
-        prevBtn.addEventListener("click", () => {
+        function prevSlide() {
           if (currentIndex > 0) {
             currentIndex--;
             updateCarousel();
           }
-        });
+        }
+
+        function isMobile() {
+          return window.innerWidth <= 768;
+        }
+
+        function touchStart(event) {
+          if (!isMobile()) return; // Enable dragging only on mobile
+
+          isDragging = true;
+          startX = event.type.includes("touch")
+            ? event.touches[0].clientX
+            : event.clientX;
+          prevTranslate = currentIndex * -cards[0].offsetWidth;
+          animationID = requestAnimationFrame(animation);
+        }
+
+        function touchMove(event) {
+          if (!isDragging || !isMobile()) return;
+          const currentPosition = event.type.includes("touch")
+            ? event.touches[0].clientX
+            : event.clientX;
+          const movedBy = currentPosition - startX;
+          currentTranslate = prevTranslate + movedBy;
+          cardContainer.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function touchEnd() {
+          if (!isMobile()) return; // Restrict for mobile only
+
+          isDragging = false;
+          cancelAnimationFrame(animationID);
+
+          const movedDistance = currentTranslate - prevTranslate;
+          const cardWidth = cards[0].offsetWidth;
+
+          if (movedDistance < -50 && currentIndex < totalCards - 1) {
+            currentIndex++;
+          } else if (movedDistance > 50 && currentIndex > 0) {
+            currentIndex--;
+          }
+
+          updateCarousel();
+        }
+
+        function animation() {
+          if (isDragging) requestAnimationFrame(animation);
+        }
+
+        // Button Events (For Desktop)
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        // Dragging Events (For Mobile Only)
+        cardContainer.addEventListener("touchstart", touchStart);
+        cardContainer.addEventListener("touchmove", touchMove);
+        cardContainer.addEventListener("touchend", touchEnd);
 
         updateCarousel();
         window.addEventListener("resize", updateCarousel);
@@ -2389,6 +2442,61 @@
     <!-- What we do -->
 
     <script type="text/javascript">
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const cardContainer = document.querySelector(".whatWeDoCard-container");
+      //   const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
+      //   const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
+      //   const prevBtn = document.getElementById("whatWeDoCard-prev");
+      //   const nextBtn = document.getElementById("whatWeDoCard-next");
+      //   const count = document.querySelector(".whatWeDoCard-Count");
+
+      //   let currentIndex = 0;
+      //   const totalCards = cards.length;
+
+      //   function isMobile() {
+      //     return window.innerWidth <= 768;
+      //   }
+
+      //   function updateCarousel() {
+      //     const cardWidth = cards[0].offsetWidth;
+      //     cardContainer.style.transform = `translateX(-${
+      //       currentIndex * cardWidth
+      //     }px)`;
+      //     // if (isMobile()) {
+      //     //   cardContainer.style.transform = `translateX(-${
+      //     //     currentIndex * cardWidth
+      //     //   }px)`;
+      //     // } else {
+      //     //   cardContainer.style.transform = `translateX(0)`;
+      //     // }
+
+      //     indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
+
+      //     cards.forEach((card) => card.classList.remove("active"));
+      //     if (currentIndex < totalCards) {
+      //       cards[currentIndex].classList.add("active");
+      //     }
+      //     count.textContent = `${currentIndex + 1}/${totalCards}`;
+      //   }
+
+      //   nextBtn.addEventListener("click", () => {
+      //     if (currentIndex < totalCards - 1) {
+      //       currentIndex++;
+      //       updateCarousel();
+      //     }
+      //   });
+
+      //   prevBtn.addEventListener("click", () => {
+      //     if (currentIndex > 0) {
+      //       currentIndex--;
+      //       updateCarousel();
+      //     }
+      //   });
+
+      //   updateCarousel();
+      //   window.addEventListener("resize", updateCarousel);
+      // });
+
       document.addEventListener("DOMContentLoaded", () => {
         const cardContainer = document.querySelector(".whatWeDoCard-container");
         const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
@@ -2399,6 +2507,11 @@
 
         let currentIndex = 0;
         const totalCards = cards.length;
+        let isDragging = false;
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID = null;
 
         function isMobile() {
           return window.innerWidth <= 768;
@@ -2409,13 +2522,6 @@
           cardContainer.style.transform = `translateX(-${
             currentIndex * cardWidth
           }px)`;
-          // if (isMobile()) {
-          //   cardContainer.style.transform = `translateX(-${
-          //     currentIndex * cardWidth
-          //   }px)`;
-          // } else {
-          //   cardContainer.style.transform = `translateX(0)`;
-          // }
 
           indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
 
@@ -2426,19 +2532,81 @@
           count.textContent = `${currentIndex + 1}/${totalCards}`;
         }
 
-        nextBtn.addEventListener("click", () => {
+        function nextSlide() {
           if (currentIndex < totalCards - 1) {
             currentIndex++;
             updateCarousel();
           }
-        });
+        }
 
-        prevBtn.addEventListener("click", () => {
+        function prevSlide() {
           if (currentIndex > 0) {
             currentIndex--;
             updateCarousel();
           }
-        });
+        }
+
+        function touchStart(event) {
+          if (!isMobile()) return;
+          isDragging = true;
+          startX = event.type.includes("touch")
+            ? event.touches[0].clientX
+            : event.clientX;
+          prevTranslate = currentIndex * -cards[0].offsetWidth;
+          animationID = requestAnimationFrame(animation);
+        }
+
+        function touchMove(event) {
+          if (!isDragging || !isMobile()) return;
+          const currentPosition = event.type.includes("touch")
+            ? event.touches[0].clientX
+            : event.clientX;
+          const movedBy = currentPosition - startX;
+          currentTranslate = prevTranslate + movedBy;
+          cardContainer.style.transform = `translateX(${currentTranslate}px)`;
+
+          // Move indicator dynamically
+          let percentageMoved =
+            Math.abs(movedBy / cards[0].offsetWidth) * (100 / totalCards);
+          indicator.style.left = `${
+            (100 / totalCards) * currentIndex + percentageMoved
+          }%`;
+        }
+
+        function touchEnd() {
+          if (!isMobile()) return;
+          isDragging = false;
+          cancelAnimationFrame(animationID);
+
+          const movedDistance = currentTranslate - prevTranslate;
+          const cardWidth = cards[0].offsetWidth;
+
+          if (movedDistance < -50 && currentIndex < totalCards - 1) {
+            currentIndex++;
+          } else if (movedDistance > 50 && currentIndex > 0) {
+            currentIndex--;
+          }
+
+          updateCarousel();
+        }
+
+        function animation() {
+          if (isDragging) requestAnimationFrame(animation);
+        }
+
+        // Button Events (For Desktop)
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        // Mouse & Touch Dragging (For Mobile Only)
+        cardContainer.addEventListener("touchstart", touchStart);
+        cardContainer.addEventListener("touchmove", touchMove);
+        cardContainer.addEventListener("touchend", touchEnd);
+
+        cardContainer.addEventListener("mousedown", touchStart);
+        cardContainer.addEventListener("mousemove", touchMove);
+        cardContainer.addEventListener("mouseup", touchEnd);
+        cardContainer.addEventListener("mouseleave", touchEnd);
 
         updateCarousel();
         window.addEventListener("resize", updateCarousel);
@@ -2584,59 +2752,6 @@
         // Optional: Add play button click functionality
         $(".play_button").click(function () {});
       });
-
-      // $(document).ready(function () {
-      //   const carouselItems = [
-      //     {
-      //       image: "assets/img/customer-service/1.png",
-      //       title: "Customer Success Stories",
-      //       description:
-      //         "See how Netlogg's consulting-led, AI-powered strategies help clients achieve their ambitions and drive measurable success.",
-      //     },
-      //     {
-      //       image: "assets/img/bg-imgs/newsroom-img.jpeg",
-      //       title: "Client Transformations",
-      //       description:
-      //         "Discover how our enterprise-level solutions transform business operations and drive sustainable growth for our clients.",
-      //     },
-      //     {
-      //       image: "assets/img/career/1.jpeg",
-      //       title: "Partnership Results",
-      //       description:
-      //         "Our collaborative approach delivers measurable outcomes that help organizations reach their strategic objectives.",
-      //     },
-      //   ];
-
-      //   let currentIndex = 0;
-      //   const totalItems = carouselItems.length;
-      //   function updateCounter() {
-      //     $(".csr_count").text(`${currentIndex + 1}/${totalItems}`);
-      //   }
-
-      //   function updateContent() {
-      //     $(".customer_success_img .main_img").attr(
-      //       "src",
-      //       carouselItems[currentIndex].image
-      //     );
-
-      //     $(".width-431px h5").text(carouselItems[currentIndex].title);
-      //     $(".width-431px p").text(carouselItems[currentIndex].description);
-
-      //     updateCounter();
-      //   }
-
-      //   updateContent();
-
-      //   $(".csr_leftarrow_button").click(function () {
-      //     currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-      //     updateContent();
-      //   });
-
-      //   $(".csr_rightarrow_button").click(function () {
-      //     currentIndex = (currentIndex + 1) % totalItems;
-      //     updateContent();
-      //   });
-      // });
     </script>
     <!-- CSR script End-->
 
