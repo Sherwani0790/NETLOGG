@@ -278,6 +278,20 @@ ul {
   font-size: 20px;
   cursor: pointer;
 }
+.mobile_menu_back_btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 95px;
+  text-align: center;
+  height: 57px;
+  line-height: 57px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.mobile_menu_back_btn .mbl_arrow_left{
+  font-size: 13px;
+}
 
 #mobile_menu_image_links {
   width: auto;
