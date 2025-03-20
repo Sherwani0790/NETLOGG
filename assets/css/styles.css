@@ -545,14 +545,22 @@ ul {
   transition: 0.3s all ease-in-out;
 }
 .custom-indicators-bg {
-  background: rgba(0, 0, 0, 0.185);
+  /* background: rgba(0, 0, 0, 0.185);
   backdrop-filter: blur(5px);
   width: 89%;
   margin: 0 auto;
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 70px;
+  bottom: 70px; */
+  background: rgba(0, 0, 0, 0.185);
+    backdrop-filter: blur(5px);
+    width: 87%;
+    margin: 0 auto;
+    position: absolute;
+    right: 35px;
+    left: 0;
+    bottom: 70px;
 }
 .custom-indicators {
   display: flex;
@@ -697,7 +705,7 @@ ul {
   .carousel-caption {
     position: absolute;
     top: 45%;
-    left: 8%;
+    left: 7%;
     text-align: left;
   }
   .carousel-caption p {
@@ -767,7 +775,7 @@ ul {
 @media (max-width: 768px) {
   .what_we_do_section {
     height: auto;
-    padding: 50px 20px;
+    padding: 50px 16px;
   }
   .what_we_do_section h1 {
     font-weight: 400;
@@ -804,7 +812,7 @@ ul {
 .solution_section .solutions_small_text {
   font-size: 16px !important;
   font-weight: 300 !important;
-  margin: 0 !important;
+  /* margin: 0 !important; */
   color: #fefefe !important;
 }
 .solution_section .solutions_heading {
@@ -866,7 +874,7 @@ ul {
   padding: 0;
   margin-right: 20%;
   margin-bottom: 1rem;
-  margin-left: 5.5%;
+  margin-left: 5.6%;
   list-style: none;
 }
 .right_left_count {
@@ -928,7 +936,7 @@ ul {
   #carouselExampleIndicators2 .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 30px;
+    bottom: 20px;
     left: 0;
     z-index: 2;
     display: flex;
@@ -936,7 +944,7 @@ ul {
     padding: 0;
     margin-right: 40%;
     margin-bottom: 1rem;
-    margin-left: 9.5%;
+    margin-left: 7.5%;
     list-style: none;
   }
   #carouselExampleIndicators2 .carousal_left {
@@ -956,12 +964,8 @@ ul {
     height: 30px;
   }
   .right_left_count {
-    /* left: 36%;
-    bottom: 15px;
-    z-index: 1;
-    right: 0; */
     left: auto;
-    bottom: 30px;
+    bottom: 20px;
     z-index: 1;
     right: 25px;
   }
@@ -985,9 +989,6 @@ ul {
   .width-515px {
     width: 330px;
   }
-  .carousel-caption a {
-    margin: 0;
-  }
   .solution_section .solutions_heading {
     width: 350px;
     color: #fff;
@@ -1002,6 +1003,33 @@ ul {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+  }
+  .solution_section .carousel-caption a {
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    width: 151px;
+    padding: 10px 18px 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    text-decoration: none;
+    margin-top:20px;
+    transition: 0.3s all ease-in-out;
+  }
+ .solution_section .carousel-caption a:hover {
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    width: 161px;
+    padding: 10px 18px 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    text-decoration: none;
+    margin-top: 20px;
   }
 }
 /* Section 2 End */
@@ -1539,7 +1567,7 @@ ul {
 }
 @media (max-width: 768px) {
   .why_netlogg_section {
-    padding: 20px;
+    padding: 12px 12px 100px 12px;
   }
   .netLogg-title {
     font-size: 22px;

@@ -552,11 +552,11 @@
           <li class="has_submenu">
             <span>Who we are <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <li>
+              <!-- <li>
                 <span class="mobile_menu_back"
                   ><i class="fa fa-arrow-left"></i> Back</span
                 >
-              </li>
+              </li> -->
               <li>
                 <h4>Who We Are</h4>
               </li>
@@ -600,11 +600,11 @@
           <li class="has_submenu">
             <span>What we do <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <li>
+              <!-- <li>
                 <span class="mobile_menu_back"
                   ><i class="fa fa-arrow-left"></i> Back</span
                 >
-              </li>
+              </li> -->
               <li>
                 <h4>What We Do</h4>
               </li>
@@ -653,11 +653,11 @@
           <li class="has_submenu">
             <span>Industries <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <li>
+              <!-- <li>
                 <span class="mobile_menu_back"
                   ><i class="fa fa-arrow-left"></i> Back</span
                 >
-              </li>
+              </li> -->
               <li>
                 <h4>Industries</h4>
               </li>
@@ -696,80 +696,16 @@
               <li><a href="#">Automotive </a></li>
             </ul>
           </li>
-          <!-- <li class="has_submenu">
-            <span>Industries <i class="fa fa-chevron-right"></i></span>
-            <ul class="submenu">
-              <li>
-                <span class="mobile_menu_back"
-                  ><i class="fa fa-arrow-left"></i> Back</span
-                >
-              </li>
-              <li class="sub_sub_menu">
-                <span>Spotlight <i class="fa fa-chevron-right"></i></span>
-                <ul>
-                  <li>
-                    <span class="mobile_menu_back"
-                      ><i class="fa fa-arrow-left"></i> Back</span
-                    >
-                  </li>
-                  <li class="sub_sub_menu">
-                    <span
-                      >Aerospace and Defense <i class="fa fa-chevron-right"></i
-                    ></span>
-                    <ul>
-                      <li>
-                        <span class="mobile_menu_back"
-                          ><i class="fa fa-arrow-left"></i> Back</span
-                        >
-                      </li>
-                      <li class="sub_sub_menu">
-                        <span
-                          >Life Sciences <i class="fa fa-chevron-right"></i
-                        ></span>
-                        <ul>
-                          <li>
-                            <span class="mobile_menu_back"
-                              ><i class="fa fa-arrow-left"></i> Back</span
-                            >
-                          </li>
-                          <li>
-                            <a href="#">Insurance</a>
-                          </li>
-                          <li>
-                            <a href="#">Travel & Logistics</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Retail & eCommerce</a></li>
-                      <li><a href="#">Real Estate</a></li>
-                      <li><a href="#">Oil & Gas</a></li>
-                      <li><a href="#">Media & Entertainment</a></li>
-                      <li><a href="#">Manufacturing</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Fintech & Banking</a></li>
-                  <li><a href="#">Energy</a></li>
-                  <li><a href="#">Healthcare</a></li>
-                  <li><a href="#">High Tech</a></li>
-                  <li><a href="#">Industrial</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Fintech & Banking</a></li>
-              <li><a href="#">Telecommunication </a></li>
-              <li><a href="#">Education</a></li>
-              <li><a href="#">Automotive </a></li>
-            </ul>
-          </li> -->
           <!-- Industries End -->
           <!-- Solutions -->
           <li class="has_submenu">
             <span>Solutions <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <li>
+              <!-- <li>
                 <span class="mobile_menu_back"
                   ><i class="fa fa-arrow-left"></i> Back</span
                 >
-              </li>
+              </li> -->
               <li>
                 <div class="row">
                   <!-- <div class="col-12 pb-5">
@@ -856,11 +792,11 @@
           <li class="has_submenu">
             <span>Insights <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <li>
+              <!-- <li>
                 <span class="mobile_menu_back"
                   ><i class="fa fa-arrow-left"></i> Back</span
                 >
-              </li>
+              </li> -->
               <li>
                 <h4>Insights</h4>
               </li>
@@ -1242,8 +1178,7 @@
                       <img src="assets/img/Logo/smallArrowRight.svg" />
                     </a>
                   </div>
-                  <!-- </div>
-                <div class="col-md-7 col-12"> -->
+
                   <img
                     class="solution_img_1"
                     src="assets/img/data-center/1.jpeg"
@@ -1923,7 +1858,7 @@
     <!-- For Mobile  -->
     <div class="footer_mobile">
       <div class="footer">
-        <div class="container-fluid">
+        <div class="">
           <div class="row">
             <!-- Top -->
             <div class="col-md-12">
@@ -2151,41 +2086,120 @@
       });
       // accordian script End
 
-      $(document).ready(function () {
+      // $(document).ready(function () {
+      //   $("#mobile_menu_trigger").click(function () {
+      //     $("#mobile_menu_container").toggleClass("open");
+      //   });
+
+      //   $(
+      //     "#mobile_menu_container, .mobile_menu_close, .mobile_menu_close i"
+      //   ).on("click", function (e) {
+      //     if (e.target === this) {
+      //       $("#mobile_menu_container").toggleClass("open");
+      //       /* $('#mobile_menu_container_inner').toggleClass('open'); */
+      //     }
+      //   });
+
+      //   $(document).on(
+      //     "click",
+      //     "#mobile_menu .has_submenu > span",
+      //     function () {
+      //       $("+ .submenu", $(this)).addClass("open");
+      //     }
+      //   );
+
+      //   $(document).on(
+      //     "click",
+      //     "#mobile_menu .sub_sub_menu > span",
+      //     function () {
+      //       $("+ ul", $(this)).addClass("open");
+      //     }
+      //   );
+
+      //   $(document).on("click", "#mobile_menu .mobile_menu_back", function () {
+      //     $(this).closest("ul").removeClass("open");
+      //   });
+      // });
+
+     </script>
+     <!-- Mobile menu Script for navigation bar -->
+      <script>
+         $(document).ready(function () {
+        // Toggle mobile menu when trigger is clicked
         $("#mobile_menu_trigger").click(function () {
-          $("#mobile_menu_container").toggleClass("open");
+          $("#mobile_menu_container").addClass("open");
+          $(".mobile_menu_close i")
+            .removeClass("fa-arrow-left")
+            .addClass("fa-close");
         });
 
-        $(
-          "#mobile_menu_container, .mobile_menu_close, .mobile_menu_close i"
-        ).on("click", function (e) {
-          if (e.target === this) {
-            $("#mobile_menu_container").toggleClass("open");
-            /* $('#mobile_menu_container_inner').toggleClass('open'); */
+        // Handle close button click
+        $(".mobile_menu_close").on("click", function () {
+          // Check if any submenu is open
+          if ($("#mobile_menu .submenu.open").length > 0) {
+            // If a submenu is open, act as a back button
+            $("#mobile_menu .submenu.open").last().removeClass("open");
+
+            // If no more open submenus, show the close icon
+            if ($("#mobile_menu .submenu.open").length === 0) {
+              $(".mobile_menu_close i")
+                .removeClass("fa-arrow-left")
+                .addClass("fa-close");
+            }
+          } else {
+            // If no submenu is open, close the entire menu
+            $("#mobile_menu_container").removeClass("open");
           }
         });
 
+        // Handle clicks outside the menu content area to close the menu
+        $("#mobile_menu_container").on("click", function (e) {
+          if (e.target === this) {
+            $("#mobile_menu_container").removeClass("open");
+          }
+        });
+
+        // Open submenu when parent item is clicked
         $(document).on(
           "click",
           "#mobile_menu .has_submenu > span",
           function () {
             $("+ .submenu", $(this)).addClass("open");
+            // Change close icon to back icon
+            $(".mobile_menu_close i")
+              .removeClass("fa-close")
+              .addClass("fa-arrow-left");
           }
         );
 
+        // Open nested submenu (sub_sub_menu)
         $(document).on(
           "click",
           "#mobile_menu .sub_sub_menu > span",
           function () {
             $("+ ul", $(this)).addClass("open");
+            // Ensure back icon is showing
+            $(".mobile_menu_close i")
+              .removeClass("fa-close")
+              .addClass("fa-arrow-left");
           }
         );
 
+        // Handle back button in submenu
         $(document).on("click", "#mobile_menu .mobile_menu_back", function () {
           $(this).closest("ul").removeClass("open");
+
+          // If no more open submenus, change back to close icon
+          if ($("#mobile_menu .submenu.open").length === 0) {
+            $(".mobile_menu_close i")
+              .removeClass("fa-arrow-left")
+              .addClass("fa-close");
+          }
         });
       });
-    </script>
+    
+      </script>
+     <!-- Mobile menu Script for navigation bar End -->
     <!-- script for step progressbar slider -->
 
     <!-- script for section 1 -->
@@ -2247,8 +2261,8 @@
       });
     </script>
 
-      <!-- What we do -->
-      <script>
+    <!-- What we do -->
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", () => {
           const cardContainer = document.querySelector(".whatWeDoCard-container");
           const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
@@ -2437,125 +2451,125 @@
           // Recalculate on resize
           window.addEventListener("resize", updateCarousel);
         });
-      </script>
-  
-      <!-- <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-          const cardContainer = document.querySelector(".whatWeDoCard-container");
-          const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
-          const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
-          const prevBtn = document.getElementById("whatWeDoCard-prev");
-          const nextBtn = document.getElementById("whatWeDoCard-next");
-          const count = document.querySelector(".whatWeDoCard-Count");
-  
-          let currentIndex = 0;
-          const totalCards = cards.length;
-          let isDragging = false;
-          let startX = 0;
-          let currentTranslate = 0;
-          let prevTranslate = 0;
-          let animationID = null;
-  
-          function isMobile() {
-            return window.innerWidth <= 768;
+      </script> -->
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", () => {
+        const cardContainer = document.querySelector(".whatWeDoCard-container");
+        const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
+        const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
+        const prevBtn = document.getElementById("whatWeDoCard-prev");
+        const nextBtn = document.getElementById("whatWeDoCard-next");
+        const count = document.querySelector(".whatWeDoCard-Count");
+
+        let currentIndex = 0;
+        const totalCards = cards.length;
+        let isDragging = false;
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID = null;
+
+        function isMobile() {
+          return window.innerWidth <= 768;
+        }
+
+        function updateCarousel() {
+          const cardWidth = cards[0].offsetWidth;
+          cardContainer.style.transform = `translateX(-${
+            currentIndex * cardWidth
+          }px)`;
+
+          indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
+
+          cards.forEach((card) => card.classList.remove("active"));
+          if (currentIndex < totalCards) {
+            cards[currentIndex].classList.add("active");
           }
-  
-          function updateCarousel() {
-            const cardWidth = cards[0].offsetWidth;
-            cardContainer.style.transform = `translateX(-${
-              currentIndex * cardWidth
-            }px)`;
-  
-            indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
-  
-            cards.forEach((card) => card.classList.remove("active"));
-            if (currentIndex < totalCards) {
-              cards[currentIndex].classList.add("active");
-            }
-            count.textContent = `${currentIndex + 1}/${totalCards}`;
-          }
-  
-          function nextSlide() {
-            if (currentIndex < totalCards - 1) {
-              currentIndex++;
-              updateCarousel();
-            }
-          }
-  
-          function prevSlide() {
-            if (currentIndex > 0) {
-              currentIndex--;
-              updateCarousel();
-            }
-          }
-  
-          function touchStart(event) {
-            if (!isMobile()) return;
-            isDragging = true;
-            startX = event.type.includes("touch")
-              ? event.touches[0].clientX
-              : event.clientX;
-            prevTranslate = currentIndex * -cards[0].offsetWidth;
-            animationID = requestAnimationFrame(animation);
-          }
-  
-          function touchMove(event) {
-            if (!isDragging || !isMobile()) return;
-            const currentPosition = event.type.includes("touch")
-              ? event.touches[0].clientX
-              : event.clientX;
-            const movedBy = currentPosition - startX;
-            currentTranslate = prevTranslate + movedBy;
-            cardContainer.style.transform = `translateX(${currentTranslate}px)`;
-  
-            // Move indicator dynamically
-            let percentageMoved =
-              Math.abs(movedBy / cards[0].offsetWidth) * (100 / totalCards);
-            indicator.style.left = `${
-              (100 / totalCards) * currentIndex + percentageMoved
-            }%`;
-          }
-  
-          function touchEnd() {
-            if (!isMobile()) return;
-            isDragging = false;
-            cancelAnimationFrame(animationID);
-  
-            const movedDistance = currentTranslate - prevTranslate;
-            const cardWidth = cards[0].offsetWidth;
-  
-            if (movedDistance < -50 && currentIndex < totalCards - 1) {
-              currentIndex++;
-            } else if (movedDistance > 50 && currentIndex > 0) {
-              currentIndex--;
-            }
-  
+          count.textContent = `${currentIndex + 1}/${totalCards}`;
+        }
+
+        function nextSlide() {
+          if (currentIndex < totalCards - 1) {
+            currentIndex++;
             updateCarousel();
           }
-  
-          function animation() {
-            if (isDragging) requestAnimationFrame(animation);
+        }
+
+        function prevSlide() {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
           }
-  
-          // Button Events (For Desktop)
-          nextBtn.addEventListener("click", nextSlide);
-          prevBtn.addEventListener("click", prevSlide);
-  
-          // Mouse & Touch Dragging (For Mobile Only)
-          cardContainer.addEventListener("touchstart", touchStart);
-          cardContainer.addEventListener("touchmove", touchMove);
-          cardContainer.addEventListener("touchend", touchEnd);
-  
-          cardContainer.addEventListener("mousedown", touchStart);
-          cardContainer.addEventListener("mousemove", touchMove);
-          cardContainer.addEventListener("mouseup", touchEnd);
-          cardContainer.addEventListener("mouseleave", touchEnd);
-  
+        }
+
+        function touchStart(event) {
+          if (!isMobile()) return;
+          isDragging = true;
+          startX = event.type.includes("touch")
+            ? event.touches[0].clientX
+            : event.clientX;
+          prevTranslate = currentIndex * -cards[0].offsetWidth;
+          animationID = requestAnimationFrame(animation);
+        }
+
+        function touchMove(event) {
+          if (!isDragging || !isMobile()) return;
+          const currentPosition = event.type.includes("touch")
+            ? event.touches[0].clientX
+            : event.clientX;
+          const movedBy = currentPosition - startX;
+          currentTranslate = prevTranslate + movedBy;
+          cardContainer.style.transform = `translateX(${currentTranslate}px)`;
+
+          // Move indicator dynamically
+          let percentageMoved =
+            Math.abs(movedBy / cards[0].offsetWidth) * (100 / totalCards);
+          indicator.style.left = `${
+            (100 / totalCards) * currentIndex + percentageMoved
+          }%`;
+        }
+
+        function touchEnd() {
+          if (!isMobile()) return;
+          isDragging = false;
+          cancelAnimationFrame(animationID);
+
+          const movedDistance = currentTranslate - prevTranslate;
+          const cardWidth = cards[0].offsetWidth;
+
+          if (movedDistance < -50 && currentIndex < totalCards - 1) {
+            currentIndex++;
+          } else if (movedDistance > 50 && currentIndex > 0) {
+            currentIndex--;
+          }
+
           updateCarousel();
-          window.addEventListener("resize", updateCarousel);
-        });
-      </script> -->
-      <!-- What we do End -->
+        }
+
+        function animation() {
+          if (isDragging) requestAnimationFrame(animation);
+        }
+
+        // Button Events (For Desktop)
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        // Mouse & Touch Dragging (For Mobile Only)
+        cardContainer.addEventListener("touchstart", touchStart);
+        cardContainer.addEventListener("touchmove", touchMove);
+        cardContainer.addEventListener("touchend", touchEnd);
+
+        cardContainer.addEventListener("mousedown", touchStart);
+        cardContainer.addEventListener("mousemove", touchMove);
+        cardContainer.addEventListener("mouseup", touchEnd);
+        cardContainer.addEventListener("mouseleave", touchEnd);
+
+        updateCarousel();
+        window.addEventListener("resize", updateCarousel);
+      });
+    </script>
+    <!-- What we do End -->
 
     <!-- Solution slider Script -->
     <script>
@@ -2617,7 +2631,7 @@
     <!-- script for section 1 End -->
 
     <!-- Industry we serve -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", () => {
         const cardContainer = document.querySelector(".card-container");
         const cards = cardContainer.querySelectorAll(".card");
@@ -2721,8 +2735,8 @@
         updateCarousel();
         window.addEventListener("resize", updateCarousel);
       });
-    </script> -->
-    <script>
+    </script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", () => {
         const cardContainer = document.querySelector(".card-container");
         const cards = cardContainer.querySelectorAll(".card");
@@ -2914,10 +2928,8 @@
         // Handle window resize
         window.addEventListener("resize", updateCarousel);
       });
-    </script>
+    </script> -->
     <!-- Industry we serve End -->
-
-  
 
     <!-- CSR script -->
     <script>
