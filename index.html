@@ -2125,77 +2125,70 @@
      <!-- Mobile menu Script for navigation bar -->
       <script>
          $(document).ready(function () {
-        // Toggle mobile menu when trigger is clicked
-        $("#mobile_menu_trigger").click(function () {
-          $("#mobile_menu_container").addClass("open");
-          $(".mobile_menu_close i")
-            .removeClass("fa-arrow-left")
-            .addClass("fa-close");
-        });
+  // First, let's modify the HTML structure to include both buttons
+  // We'll add this code on initialization to ensure the structure is correct
+  if ($(".mobile_menu_back_btn").length === 0) {
+    $(".mobile_menu_top").prepend('<div class="mobile_menu_back_btn" style="display: none;"><i class="fa fa-arrow-left mbl_arrow_left"></i> &nbsp;Back</div>');
+  }
+  
+  // Toggle mobile menu when trigger is clicked
+  $("#mobile_menu_trigger").click(function () {
+    $("#mobile_menu_container").addClass("open");
+    $(".mobile_menu_back_btn").hide(); // Hide back button initially
+    $(".mobile_menu_close").show(); // Ensure close button is visible
+  });
 
-        // Handle close button click
-        $(".mobile_menu_close").on("click", function () {
-          // Check if any submenu is open
-          if ($("#mobile_menu .submenu.open").length > 0) {
-            // If a submenu is open, act as a back button
-            $("#mobile_menu .submenu.open").last().removeClass("open");
+  // Handle close button click (always closes the entire menu)
+  $(".mobile_menu_close").on("click", function () {
+    $("#mobile_menu_container").removeClass("open");
+    // Reset any open submenus when closing the entire menu
+    $("#mobile_menu .submenu.open").removeClass("open");
+  });
 
-            // If no more open submenus, show the close icon
-            if ($("#mobile_menu .submenu.open").length === 0) {
-              $(".mobile_menu_close i")
-                .removeClass("fa-arrow-left")
-                .addClass("fa-close");
-            }
-          } else {
-            // If no submenu is open, close the entire menu
-            $("#mobile_menu_container").removeClass("open");
-          }
-        });
+  // Handle back button click (navigates back one level)
+  $(".mobile_menu_back_btn").on("click", function () {
+    // Find the last open submenu and close it
+    $("#mobile_menu .submenu.open").last().removeClass("open");
+    
+    // If no more open submenus, hide the back button
+    if ($("#mobile_menu .submenu.open").length === 0) {
+      $(this).hide();
+    }
+  });
 
-        // Handle clicks outside the menu content area to close the menu
-        $("#mobile_menu_container").on("click", function (e) {
-          if (e.target === this) {
-            $("#mobile_menu_container").removeClass("open");
-          }
-        });
+  // Handle clicks outside the menu content area to close the menu
+  $("#mobile_menu_container").on("click", function (e) {
+    if (e.target === this) {
+      $("#mobile_menu_container").removeClass("open");
+      $("#mobile_menu .submenu.open").removeClass("open");
+      $(".mobile_menu_back_btn").hide();
+    }
+  });
 
-        // Open submenu when parent item is clicked
-        $(document).on(
-          "click",
-          "#mobile_menu .has_submenu > span",
-          function () {
-            $("+ .submenu", $(this)).addClass("open");
-            // Change close icon to back icon
-            $(".mobile_menu_close i")
-              .removeClass("fa-close")
-              .addClass("fa-arrow-left");
-          }
-        );
+  // Open submenu when parent item is clicked
+  $(document).on("click", "#mobile_menu .has_submenu > span", function () {
+    $("+ .submenu", $(this)).addClass("open");
+    // Show back button when submenu is opened
+    $(".mobile_menu_back_btn").show();
+  });
 
-        // Open nested submenu (sub_sub_menu)
-        $(document).on(
-          "click",
-          "#mobile_menu .sub_sub_menu > span",
-          function () {
-            $("+ ul", $(this)).addClass("open");
-            // Ensure back icon is showing
-            $(".mobile_menu_close i")
-              .removeClass("fa-close")
-              .addClass("fa-arrow-left");
-          }
-        );
+  // Open nested submenu (sub_sub_menu)
+  $(document).on("click", "#mobile_menu .sub_sub_menu > span", function () {
+    $("+ ul", $(this)).addClass("open");
+    // Ensure back button is showing
+    $(".mobile_menu_back_btn").show();
+  });
 
-        // Handle back button in submenu
-        $(document).on("click", "#mobile_menu .mobile_menu_back", function () {
-          $(this).closest("ul").removeClass("open");
+  // Handle back links inside the menu (as an alternative to the back button)
+  $(document).on("click", "#mobile_menu .mobile_menu_back", function () {
+    $(this).closest("ul").removeClass("open");
+    
+    // If no more open submenus, hide the back button
+    if ($("#mobile_menu .submenu.open").length === 0) {
+      $(".mobile_menu_back_btn").hide();
+    }
+  });
 
-          // If no more open submenus, change back to close icon
-          if ($("#mobile_menu .submenu.open").length === 0) {
-            $(".mobile_menu_close i")
-              .removeClass("fa-arrow-left")
-              .addClass("fa-close");
-          }
-        });
       });
     
       </script>
