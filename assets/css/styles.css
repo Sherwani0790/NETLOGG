@@ -791,6 +791,10 @@ ul {
   background: #000a1c;
   position: relative;
 }
+.solution_img_1{
+  object-position: 500px;
+  background: #0d0f0e;
+}
 #carouselExampleIndicators2 .carousel-item {
   height: 85vh;
 }
@@ -917,6 +921,10 @@ ul {
   /* border: 1px solid #fff; */
 }
 @media (max-width: 768px) {
+  .solution_img_1{
+    object-position: center;
+    background: #0d0f0e;
+  }
   #carouselExampleIndicators2 .carousel-indicators {
     position: absolute;
     right: 0;
