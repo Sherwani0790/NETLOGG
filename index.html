@@ -1045,7 +1045,6 @@
                 <a class="all_cap_button dp-flex align-items-center" href="#">
                   <span> Explore All Capabilities </span>
                   <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                  <!-- <i class="fa fa-arrow-right"></i> -->
                 </a>
               </div>
             </div>
@@ -1125,14 +1124,12 @@
             </div>
           </div>
         </div>
-        <!-- Indicator -->
         <div class="dp-flex justify-content-between align-items-center">
           <div class="whatWeDoCard-Indicator">
             <div class="whatWeDoCard-Indicator-bar"></div>
           </div>
           <div class="whatWeDoCard-Controls">
             <button id="whatWeDoCard-prev" class="whatWeDo_leftarrow_button">
-              <!-- <i class="fa fa-arrow-left"></i> -->
               <img
                 class="button_arrow_left"
                 src="assets/img/Logo/prevIcon.svg"
@@ -1146,7 +1143,6 @@
                 src="assets/img/Logo/nextIcon.svg"
                 alt=""
               />
-              <!-- <i class="fa fa-arrow-right"></i> -->
             </button>
           </div>
         </div>
@@ -1248,7 +1244,11 @@
                   </div>
                   <!-- </div>
                 <div class="col-md-7 col-12"> -->
-                  <img class="solution_img_1" src="assets/img/data-center/1.jpeg" alt="Data Center" />
+                  <img
+                    class="solution_img_1"
+                    src="assets/img/data-center/1.jpeg"
+                    alt="Data Center"
+                  />
                 </div>
               </div>
             </div>
@@ -2247,6 +2247,316 @@
       });
     </script>
 
+      <!-- What we do -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cardContainer = document.querySelector(".whatWeDoCard-container");
+          const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
+          const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
+          const prevBtn = document.getElementById("whatWeDoCard-prev");
+          const nextBtn = document.getElementById("whatWeDoCard-next");
+          const count = document.querySelector(".whatWeDoCard-Count");
+  
+          let currentIndex = 0;
+          const totalCards = cards.length;
+          let isDragging = false;
+          let startX = 0;
+          let currentTranslate = 0;
+          let prevTranslate = 0;
+          let animationID = null;
+  
+          function isMobile() {
+            return window.innerWidth <= 768;
+          }
+  
+          // Calculate the maximum translation to prevent showing empty space
+          function getMaxTranslation() {
+            const containerWidth = cardContainer.parentElement.offsetWidth;
+            const totalCardsWidth = cards[0].offsetWidth * totalCards;
+            const maxTranslate = Math.max(0, totalCardsWidth - containerWidth);
+            return maxTranslate;
+          }
+  
+          function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth;
+            const maxTranslate = getMaxTranslation();
+  
+            // Calculate the translation amount
+            let translateX = currentIndex * cardWidth;
+  
+            // Ensure we don't translate beyond the maximum allowed
+            translateX = Math.min(translateX, maxTranslate);
+  
+            // Apply the translation
+            cardContainer.style.transform = `translateX(-${translateX}px)`;
+  
+            // Update indicator position
+            indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
+  
+            // Update active card status
+            cards.forEach((card) => card.classList.remove("active"));
+            if (currentIndex < totalCards) {
+              cards[currentIndex].classList.add("active");
+            }
+  
+            // Update counter
+            count.textContent = `${currentIndex + 1}/${totalCards}`;
+  
+            // Update button states
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === totalCards - 1;
+  
+            if (currentIndex === 0) {
+              prevBtn.classList.add("disabled");
+            } else {
+              prevBtn.classList.remove("disabled");
+            }
+  
+            if (currentIndex === totalCards - 1) {
+              nextBtn.classList.add("disabled");
+            } else {
+              nextBtn.classList.remove("disabled");
+            }
+          }
+  
+          function nextSlide() {
+            if (currentIndex < totalCards - 1) {
+              currentIndex++;
+              updateCarousel();
+            }
+          }
+  
+          function prevSlide() {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+            }
+          }
+  
+          function touchStart(event) {
+            if (!isMobile()) return;
+            isDragging = true;
+            startX = event.type.includes("touch")
+              ? event.touches[0].clientX
+              : event.clientX;
+  
+            // Get current translation from transform style
+            const style = window.getComputedStyle(cardContainer);
+            const matrix = new WebKitCSSMatrix(style.transform);
+            prevTranslate = matrix.m41;
+  
+            animationID = requestAnimationFrame(animation);
+  
+            // Prevent default behavior to avoid page scrolling
+            event.preventDefault();
+          }
+  
+          function touchMove(event) {
+            if (!isDragging || !isMobile()) return;
+            const currentPosition = event.type.includes("touch")
+              ? event.touches[0].clientX
+              : event.clientX;
+            const movedBy = currentPosition - startX;
+  
+            // Get the maximum translation allowed
+            const maxTranslate = getMaxTranslation();
+  
+            // Calculate new translation with boundaries
+            let newTranslate = prevTranslate + movedBy;
+  
+            // Apply constraints to prevent overscrolling
+            newTranslate = Math.min(0, Math.max(-maxTranslate, newTranslate));
+  
+            // Apply resistance when trying to scroll beyond boundaries
+            if (newTranslate > 0) {
+              newTranslate = newTranslate / 3; // Apply resistance when pulling beyond start
+            } else if (newTranslate < -maxTranslate) {
+              const overscroll = newTranslate + maxTranslate;
+              newTranslate = -maxTranslate + overscroll / 3; // Apply resistance when pulling beyond end
+            }
+  
+            currentTranslate = newTranslate;
+            cardContainer.style.transform = `translateX(${currentTranslate}px)`;
+  
+            // Prevent default to avoid page scrolling
+            event.preventDefault();
+          }
+  
+          function touchEnd() {
+            if (!isMobile()) return;
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+  
+            const cardWidth = cards[0].offsetWidth;
+            const threshold = cardWidth * 0.2; // 20% threshold for swipe detection
+  
+            // Determine the nearest card based on current position
+            const moveDirection = currentTranslate - prevTranslate;
+            const absMove = Math.abs(moveDirection);
+  
+            if (absMove > threshold) {
+              if (moveDirection > 0 && currentIndex > 0) {
+                // Swiped right, go to previous card
+                currentIndex--;
+              } else if (moveDirection < 0 && currentIndex < totalCards - 1) {
+                // Swiped left, go to next card
+                currentIndex++;
+              }
+            }
+  
+            // Ensure index is within bounds
+            currentIndex = Math.max(0, Math.min(currentIndex, totalCards - 1));
+  
+            updateCarousel();
+          }
+  
+          function animation() {
+            if (isDragging) requestAnimationFrame(animation);
+          }
+  
+          // Initialize event listeners
+          nextBtn.addEventListener("click", nextSlide);
+          prevBtn.addEventListener("click", prevSlide);
+  
+          cardContainer.addEventListener("touchstart", touchStart, {
+            passive: false,
+          });
+          cardContainer.addEventListener("touchmove", touchMove, {
+            passive: false,
+          });
+          cardContainer.addEventListener("touchend", touchEnd);
+  
+          cardContainer.addEventListener("mousedown", touchStart);
+          cardContainer.addEventListener("mousemove", touchMove);
+          cardContainer.addEventListener("mouseup", touchEnd);
+          cardContainer.addEventListener("mouseleave", touchEnd);
+  
+          // Initialize carousel
+          updateCarousel();
+  
+          // Recalculate on resize
+          window.addEventListener("resize", updateCarousel);
+        });
+      </script>
+  
+      <!-- <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+          const cardContainer = document.querySelector(".whatWeDoCard-container");
+          const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
+          const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
+          const prevBtn = document.getElementById("whatWeDoCard-prev");
+          const nextBtn = document.getElementById("whatWeDoCard-next");
+          const count = document.querySelector(".whatWeDoCard-Count");
+  
+          let currentIndex = 0;
+          const totalCards = cards.length;
+          let isDragging = false;
+          let startX = 0;
+          let currentTranslate = 0;
+          let prevTranslate = 0;
+          let animationID = null;
+  
+          function isMobile() {
+            return window.innerWidth <= 768;
+          }
+  
+          function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth;
+            cardContainer.style.transform = `translateX(-${
+              currentIndex * cardWidth
+            }px)`;
+  
+            indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
+  
+            cards.forEach((card) => card.classList.remove("active"));
+            if (currentIndex < totalCards) {
+              cards[currentIndex].classList.add("active");
+            }
+            count.textContent = `${currentIndex + 1}/${totalCards}`;
+          }
+  
+          function nextSlide() {
+            if (currentIndex < totalCards - 1) {
+              currentIndex++;
+              updateCarousel();
+            }
+          }
+  
+          function prevSlide() {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+            }
+          }
+  
+          function touchStart(event) {
+            if (!isMobile()) return;
+            isDragging = true;
+            startX = event.type.includes("touch")
+              ? event.touches[0].clientX
+              : event.clientX;
+            prevTranslate = currentIndex * -cards[0].offsetWidth;
+            animationID = requestAnimationFrame(animation);
+          }
+  
+          function touchMove(event) {
+            if (!isDragging || !isMobile()) return;
+            const currentPosition = event.type.includes("touch")
+              ? event.touches[0].clientX
+              : event.clientX;
+            const movedBy = currentPosition - startX;
+            currentTranslate = prevTranslate + movedBy;
+            cardContainer.style.transform = `translateX(${currentTranslate}px)`;
+  
+            // Move indicator dynamically
+            let percentageMoved =
+              Math.abs(movedBy / cards[0].offsetWidth) * (100 / totalCards);
+            indicator.style.left = `${
+              (100 / totalCards) * currentIndex + percentageMoved
+            }%`;
+          }
+  
+          function touchEnd() {
+            if (!isMobile()) return;
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+  
+            const movedDistance = currentTranslate - prevTranslate;
+            const cardWidth = cards[0].offsetWidth;
+  
+            if (movedDistance < -50 && currentIndex < totalCards - 1) {
+              currentIndex++;
+            } else if (movedDistance > 50 && currentIndex > 0) {
+              currentIndex--;
+            }
+  
+            updateCarousel();
+          }
+  
+          function animation() {
+            if (isDragging) requestAnimationFrame(animation);
+          }
+  
+          // Button Events (For Desktop)
+          nextBtn.addEventListener("click", nextSlide);
+          prevBtn.addEventListener("click", prevSlide);
+  
+          // Mouse & Touch Dragging (For Mobile Only)
+          cardContainer.addEventListener("touchstart", touchStart);
+          cardContainer.addEventListener("touchmove", touchMove);
+          cardContainer.addEventListener("touchend", touchEnd);
+  
+          cardContainer.addEventListener("mousedown", touchStart);
+          cardContainer.addEventListener("mousemove", touchMove);
+          cardContainer.addEventListener("mouseup", touchEnd);
+          cardContainer.addEventListener("mouseleave", touchEnd);
+  
+          updateCarousel();
+          window.addEventListener("resize", updateCarousel);
+        });
+      </script> -->
+      <!-- What we do End -->
+
     <!-- Solution slider Script -->
     <script>
       const myCarousel = document.getElementById("carouselExampleIndicators2");
@@ -2307,7 +2617,7 @@
     <!-- script for section 1 End -->
 
     <!-- Industry we serve -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", () => {
         const cardContainer = document.querySelector(".card-container");
         const cards = cardContainer.querySelectorAll(".card");
@@ -2411,100 +2721,71 @@
         updateCarousel();
         window.addEventListener("resize", updateCarousel);
       });
-    </script>
-    <!-- Industry we serve End -->
-
-    <!-- What we do -->
-
-    <script type="text/javascript">
-      // document.addEventListener("DOMContentLoaded", () => {
-      //   const cardContainer = document.querySelector(".whatWeDoCard-container");
-      //   const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
-      //   const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
-      //   const prevBtn = document.getElementById("whatWeDoCard-prev");
-      //   const nextBtn = document.getElementById("whatWeDoCard-next");
-      //   const count = document.querySelector(".whatWeDoCard-Count");
-
-      //   let currentIndex = 0;
-      //   const totalCards = cards.length;
-
-      //   function isMobile() {
-      //     return window.innerWidth <= 768;
-      //   }
-
-      //   function updateCarousel() {
-      //     const cardWidth = cards[0].offsetWidth;
-      //     cardContainer.style.transform = `translateX(-${
-      //       currentIndex * cardWidth
-      //     }px)`;
-      //     // if (isMobile()) {
-      //     //   cardContainer.style.transform = `translateX(-${
-      //     //     currentIndex * cardWidth
-      //     //   }px)`;
-      //     // } else {
-      //     //   cardContainer.style.transform = `translateX(0)`;
-      //     // }
-
-      //     indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
-
-      //     cards.forEach((card) => card.classList.remove("active"));
-      //     if (currentIndex < totalCards) {
-      //       cards[currentIndex].classList.add("active");
-      //     }
-      //     count.textContent = `${currentIndex + 1}/${totalCards}`;
-      //   }
-
-      //   nextBtn.addEventListener("click", () => {
-      //     if (currentIndex < totalCards - 1) {
-      //       currentIndex++;
-      //       updateCarousel();
-      //     }
-      //   });
-
-      //   prevBtn.addEventListener("click", () => {
-      //     if (currentIndex > 0) {
-      //       currentIndex--;
-      //       updateCarousel();
-      //     }
-      //   });
-
-      //   updateCarousel();
-      //   window.addEventListener("resize", updateCarousel);
-      // });
-
+    </script> -->
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const cardContainer = document.querySelector(".whatWeDoCard-container");
-        const cards = cardContainer.querySelectorAll(".whatWeDoCard-card");
-        const indicator = document.querySelector(".whatWeDoCard-Indicator-bar");
-        const prevBtn = document.getElementById("whatWeDoCard-prev");
-        const nextBtn = document.getElementById("whatWeDoCard-next");
-        const count = document.querySelector(".whatWeDoCard-Count");
+        const cardContainer = document.querySelector(".card-container");
+        const cards = cardContainer.querySelectorAll(".card");
+        const indicator = document.querySelector(".indicator");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+        const count = document.querySelector(".count");
 
         let currentIndex = 0;
         const totalCards = cards.length;
         let isDragging = false;
-        let startX = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-        let animationID = null;
+        let startX, currentTranslate, prevTranslate, animationID;
 
         function isMobile() {
           return window.innerWidth <= 768;
         }
 
+        // Calculate the maximum translation to prevent showing empty space
+        function getMaxTranslation() {
+          const containerWidth = cardContainer.parentElement.offsetWidth;
+          const totalCardsWidth = cards[0].offsetWidth * totalCards;
+          const maxTranslate = Math.max(0, totalCardsWidth - containerWidth);
+          return maxTranslate;
+        }
+
         function updateCarousel() {
           const cardWidth = cards[0].offsetWidth;
-          cardContainer.style.transform = `translateX(-${
-            currentIndex * cardWidth
-          }px)`;
+          const maxTranslate = getMaxTranslation();
 
+          // Calculate the translation amount
+          let translateX = currentIndex * cardWidth;
+
+          // Ensure we don't translate beyond the maximum allowed
+          translateX = Math.min(translateX, maxTranslate);
+
+          // Apply the translation
+          cardContainer.style.transform = `translateX(-${translateX}px)`;
+
+          // Move indicator
           indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
 
+          // Update active class
           cards.forEach((card) => card.classList.remove("active"));
-          if (currentIndex < totalCards) {
-            cards[currentIndex].classList.add("active");
-          }
+          cards[currentIndex].classList.add("active");
+
+          // Update count
           count.textContent = `${currentIndex + 1}/${totalCards}`;
+
+          // Update button states
+          prevBtn.disabled = currentIndex === 0;
+          nextBtn.disabled = currentIndex === totalCards - 1;
+
+          if (currentIndex === 0) {
+            prevBtn.classList.add("disabled");
+          } else {
+            prevBtn.classList.remove("disabled");
+          }
+
+          if (currentIndex === totalCards - 1) {
+            nextBtn.classList.add("disabled");
+          } else {
+            nextBtn.classList.remove("disabled");
+          }
         }
 
         function nextSlide() {
@@ -2522,13 +2803,24 @@
         }
 
         function touchStart(event) {
-          if (!isMobile()) return;
+          if (!isMobile()) return; // Enable dragging only on mobile
+
           isDragging = true;
           startX = event.type.includes("touch")
             ? event.touches[0].clientX
             : event.clientX;
-          prevTranslate = currentIndex * -cards[0].offsetWidth;
+
+          // Get current translation from transform style
+          const style = window.getComputedStyle(cardContainer);
+          const matrix = new WebKitCSSMatrix(style.transform);
+          prevTranslate = matrix.m41;
+
           animationID = requestAnimationFrame(animation);
+
+          // Prevent default behavior to avoid page scrolling
+          if (event.cancelable) {
+            event.preventDefault();
+          }
         }
 
         function touchMove(event) {
@@ -2537,30 +2829,58 @@
             ? event.touches[0].clientX
             : event.clientX;
           const movedBy = currentPosition - startX;
-          currentTranslate = prevTranslate + movedBy;
+
+          // Get the maximum translation allowed
+          const maxTranslate = getMaxTranslation();
+
+          // Calculate new translation with boundaries
+          let newTranslate = prevTranslate + movedBy;
+
+          // Apply constraints to prevent overscrolling
+          newTranslate = Math.min(0, Math.max(-maxTranslate, newTranslate));
+
+          // Apply resistance when trying to scroll beyond boundaries
+          if (newTranslate > 0) {
+            newTranslate = newTranslate / 3; // Apply resistance when pulling beyond start
+          } else if (newTranslate < -maxTranslate) {
+            const overscroll = newTranslate + maxTranslate;
+            newTranslate = -maxTranslate + overscroll / 3; // Apply resistance when pulling beyond end
+          }
+
+          currentTranslate = newTranslate;
           cardContainer.style.transform = `translateX(${currentTranslate}px)`;
 
-          // Move indicator dynamically
-          let percentageMoved =
-            Math.abs(movedBy / cards[0].offsetWidth) * (100 / totalCards);
-          indicator.style.left = `${
-            (100 / totalCards) * currentIndex + percentageMoved
-          }%`;
+          // Prevent default to avoid page scrolling
+          if (event.cancelable) {
+            event.preventDefault();
+          }
         }
 
         function touchEnd() {
-          if (!isMobile()) return;
+          if (!isMobile()) return; // Restrict for mobile only
+
           isDragging = false;
           cancelAnimationFrame(animationID);
 
-          const movedDistance = currentTranslate - prevTranslate;
           const cardWidth = cards[0].offsetWidth;
+          const threshold = cardWidth * 0.2; // 20% threshold for swipe detection
 
-          if (movedDistance < -50 && currentIndex < totalCards - 1) {
-            currentIndex++;
-          } else if (movedDistance > 50 && currentIndex > 0) {
-            currentIndex--;
+          // Determine the nearest card based on current position
+          const moveDirection = currentTranslate - prevTranslate;
+          const absMove = Math.abs(moveDirection);
+
+          if (absMove > threshold) {
+            if (moveDirection > 0 && currentIndex > 0) {
+              // Swiped right, go to previous card
+              currentIndex--;
+            } else if (moveDirection < 0 && currentIndex < totalCards - 1) {
+              // Swiped left, go to next card
+              currentIndex++;
+            }
           }
+
+          // Ensure index is within bounds
+          currentIndex = Math.max(0, Math.min(currentIndex, totalCards - 1));
 
           updateCarousel();
         }
@@ -2573,21 +2893,31 @@
         nextBtn.addEventListener("click", nextSlide);
         prevBtn.addEventListener("click", prevSlide);
 
-        // Mouse & Touch Dragging (For Mobile Only)
-        cardContainer.addEventListener("touchstart", touchStart);
-        cardContainer.addEventListener("touchmove", touchMove);
+        // Dragging Events (For Mobile Only)
+        cardContainer.addEventListener("touchstart", touchStart, {
+          passive: false,
+        });
+        cardContainer.addEventListener("touchmove", touchMove, {
+          passive: false,
+        });
         cardContainer.addEventListener("touchend", touchEnd);
 
+        // Mouse events (optional but included for completeness)
         cardContainer.addEventListener("mousedown", touchStart);
         cardContainer.addEventListener("mousemove", touchMove);
         cardContainer.addEventListener("mouseup", touchEnd);
         cardContainer.addEventListener("mouseleave", touchEnd);
 
+        // Initialize carousel
         updateCarousel();
+
+        // Handle window resize
         window.addEventListener("resize", updateCarousel);
       });
     </script>
-    <!-- What we do End -->
+    <!-- Industry we serve End -->
+
+  
 
     <!-- CSR script -->
     <script>
