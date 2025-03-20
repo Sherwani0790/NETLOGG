@@ -928,7 +928,7 @@ ul {
     padding: 0;
     margin-right: 40%;
     margin-bottom: 1rem;
-    margin-left: 0%;
+    margin-left: 9.5%;
     list-style: none;
   }
   #carouselExampleIndicators2 .carousal_left {
@@ -975,7 +975,7 @@ ul {
     /* border: 1px solid #fff; */
   }
   .width-515px {
-    width: 335px;
+    width: 330px;
   }
   .carousel-caption a {
     margin: 0;
@@ -985,8 +985,8 @@ ul {
     color: #fff;
     font-size: 22px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 36px;
+    font-weight: 500;
+    line-height: 27px;
   }
   .solution_section .solutions_p {
     color: #fefefe;
