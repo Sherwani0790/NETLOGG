@@ -686,11 +686,11 @@ ul {
     height: auto;
   }
   .carousel-caption h1 {
-    width: 350px;
+    width: 330px;
     color: #fff;
     font-size: 22px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 36px;
     text-transform: capitalize;
   }
@@ -701,15 +701,15 @@ ul {
     text-align: left;
   }
   .carousel-caption p {
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
     color: white;
   }
   .width_568px,
   .width_720px {
-    width: 350px;
+    width: 320px;
   }
 }
 
@@ -1531,7 +1531,7 @@ ul {
 }
 @media (max-width: 768px) {
   .why_netlogg_section {
-    padding: 30px;
+    padding: 20px;
   }
   .netLogg-title {
     font-size: 22px;
@@ -1541,7 +1541,7 @@ ul {
     font-size: 22px;
   }
   .netLogg_card .desc {
-    font-size: 13px;
+    font-size: 12px;
     margin: 0;
   }
   .netLogg_card {
@@ -1665,7 +1665,7 @@ ul {
   }
   .customer_success_img .main_img {
     height: 250px;
-    width: 350px;
+    width: 315px;
     object-fit: cover;
     position: relative;
     margin-bottom: 20px;
