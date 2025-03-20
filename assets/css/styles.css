@@ -1567,7 +1567,7 @@ ul {
 }
 @media (max-width: 768px) {
   .why_netlogg_section {
-    padding: 12px;
+    padding: 12px 12px 100px 12px;
   }
   .netLogg-title {
     font-size: 22px;
