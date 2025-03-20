@@ -1500,13 +1500,10 @@ ul {
   color: #000;
 }
 .netLogg_card {
-  display: flex;
-  width: 100%;
+  float: left;
+  width: 25%;
   height: 373px;
   padding: 36px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
   border: 1px solid #ededed;
   margin-top: 60px;
 }
@@ -1538,27 +1535,22 @@ ul {
   }
   .netLogg-title {
     font-size: 22px;
-  }
-  .why_netlogg_section .d-flex {
-    flex-direction: row;
-    overflow: auto;
+    margin-bottom: 30px;
   }
   .netLogg_card .count {
     font-size: 22px;
   }
   .netLogg_card .desc {
-    font-size: 16px;
+    font-size: 13px;
+    margin: 0;
   }
   .netLogg_card {
-    display: flex;
-    min-width: 290px;
-    height: 250px;
-    padding: 20px 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    float: left;
+    width: 50%;
+    height: 230px;
+    padding: 20px;
     border: 1px solid #ededed;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .netLogg_card img {
     width: 30px;
