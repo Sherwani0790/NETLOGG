@@ -19,7 +19,10 @@
     />
     <link href="assets/css/owl-carousal.css" rel="stylesheet" />
     <!-- <link href="assets/css/aos/aos.css" rel="stylesheet"> -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Custom styles -->
     <link href="assets/css/styles.css" rel="stylesheet" />
     <!-- JS files -->
@@ -34,6 +37,7 @@
       src="https://kit.fontawesome.com/3ece5adbc2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -1251,7 +1255,7 @@
           </div>
         </div>
         <!-- Industries Cards -->
-        <div class="carousel-wrapper">
+        <!-- <div class="carousel-wrapper">
           <div class="card-container">
             <div class="card active">
               <img src="assets/img/industries/1.jpeg" alt="Fintech & Banking" />
@@ -1289,10 +1293,21 @@
                 </div>
               </div>
             </div>
+            <div class="card">
+              <img src="assets/img/industries/1.jpeg" alt="Fintech & Banking" />
+              <div class="card-overlay">
+                <div class="card-title">Fintech & Banking</div>
+                <div class="card-text">
+                  Driving innovation in financial services with secure, scalable
+                  solutions that enhance banking operations and customer
+                  experiences.
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </div> -->
         <!-- Indicator -->
-        <div class="dp-flex justify-content-between align-items-center">
+        <!-- <div class="dp-flex justify-content-between align-items-center">
           <div class="industry_indicator-container">
             <div class="indicator"></div>
           </div>
@@ -1311,7 +1326,134 @@
               />
             </button>
           </div>
+        </div> -->
+        <div class="swiper carouselWrapper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="assets/img/industries/1.jpeg"
+                  alt="Fintech & Banking"
+                />
+                <div class="card-overlay">
+                  <div class="card-title">Fintech & Banking</div>
+                  <div class="card-text">
+                    Driving innovation in financial services with secure,
+                    scalable solutions that enhance banking operations and
+                    customer experiences.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card telcom_card">
+                <img
+                  src="assets/img/industries/2.jpeg"
+                  alt="Telecommunications"
+                />
+                <div class="card-overlay">
+                  <div class="card-title">Telecommunications</div>
+                  <div class="card-text">
+                    Empowering telecom providers with reliable infrastructure
+                    and advanced technologies to optimize connectivity and
+                    service delivery.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="assets/img/industries/3.jpeg"
+                  alt="Fintech & Banking"
+                />
+                <div class="card-overlay">
+                  <div class="card-title">Fintech & Banking</div>
+                  <div class="card-text">
+                    Driving innovation in financial services with secure,
+                    scalable solutions that enhance banking operations and
+                    customer experiences.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="assets/img/industries/1.jpeg"
+                  alt="Fintech & Banking"
+                />
+                <div class="card-overlay">
+                  <div class="card-title">Fintech & Banking</div>
+                  <div class="card-text">
+                    Driving innovation in financial services with secure,
+                    scalable solutions that enhance banking operations and
+                    customer experiences.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card telcom_card">
+                <img
+                  src="assets/img/industries/2.jpeg"
+                  alt="Telecommunications"
+                />
+                <div class="card-overlay">
+                  <div class="card-title">Telecommunications</div>
+                  <div class="card-text">
+                    Empowering telecom providers with reliable infrastructure
+                    and advanced technologies to optimize connectivity and
+                    service delivery.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <ul class="swiper-pagination"></ul>
+          </div>
+          <div class="IndustriesArrow">
+            <div class="prevArrowBtn">
+              <img src="assets/img/Logo/prevIcon.svg">
+              <!-- <i class="fa fa-arrow-left"></i> -->
+            </div>
+            <div class="nextArrowBtn">
+              <img src="assets/img/Logo/nextIcon.svg">
+              <!-- <i class="fa fa-arrow-right"></i> -->
+            </div>
+          </div>
         </div>
+        <script>
+          var swiper = new Swiper(".carouselWrapper", {
+            slidesPerView: 3,
+            spaceBetween: 100,
+            loop: true,
+            freeMode: true,
+            navigation: {
+              nextEl: ".nextArrowBtn",
+              prevEl: ".prevArrowBtn",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              renderBullet: function (index, className) {
+                return '<li class="' + className + '"> </li>';
+              },
+              clickable: false,
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            },
+          });
+        </script>
       </div>
     </section>
     <!-- Industries we serve Section End-->
@@ -2120,79 +2262,86 @@
       //     $(this).closest("ul").removeClass("open");
       //   });
       // });
+    </script>
+    <!-- Mobile menu Script for navigation bar -->
+    <script>
+      $(document).ready(function () {
+        // First, let's modify the HTML structure to include both buttons
+        // We'll add this code on initialization to ensure the structure is correct
+        if ($(".mobile_menu_back_btn").length === 0) {
+          $(".mobile_menu_top").prepend(
+            '<div class="mobile_menu_back_btn" style="display: none;"><i class="fa fa-arrow-left mbl_arrow_left"></i> &nbsp;Back</div>'
+          );
+        }
 
-     </script>
-     <!-- Mobile menu Script for navigation bar -->
-      <script>
-         $(document).ready(function () {
-  // First, let's modify the HTML structure to include both buttons
-  // We'll add this code on initialization to ensure the structure is correct
-  if ($(".mobile_menu_back_btn").length === 0) {
-    $(".mobile_menu_top").prepend('<div class="mobile_menu_back_btn" style="display: none;"><i class="fa fa-arrow-left mbl_arrow_left"></i> &nbsp;Back</div>');
-  }
-  
-  // Toggle mobile menu when trigger is clicked
-  $("#mobile_menu_trigger").click(function () {
-    $("#mobile_menu_container").addClass("open");
-    $(".mobile_menu_back_btn").hide(); // Hide back button initially
-    $(".mobile_menu_close").show(); // Ensure close button is visible
-  });
+        // Toggle mobile menu when trigger is clicked
+        $("#mobile_menu_trigger").click(function () {
+          $("#mobile_menu_container").addClass("open");
+          $(".mobile_menu_back_btn").hide(); // Hide back button initially
+          $(".mobile_menu_close").show(); // Ensure close button is visible
+        });
 
-  // Handle close button click (always closes the entire menu)
-  $(".mobile_menu_close").on("click", function () {
-    $("#mobile_menu_container").removeClass("open");
-    // Reset any open submenus when closing the entire menu
-    $("#mobile_menu .submenu.open").removeClass("open");
-  });
+        // Handle close button click (always closes the entire menu)
+        $(".mobile_menu_close").on("click", function () {
+          $("#mobile_menu_container").removeClass("open");
+          // Reset any open submenus when closing the entire menu
+          $("#mobile_menu .submenu.open").removeClass("open");
+        });
 
-  // Handle back button click (navigates back one level)
-  $(".mobile_menu_back_btn").on("click", function () {
-    // Find the last open submenu and close it
-    $("#mobile_menu .submenu.open").last().removeClass("open");
-    
-    // If no more open submenus, hide the back button
-    if ($("#mobile_menu .submenu.open").length === 0) {
-      $(this).hide();
-    }
-  });
+        // Handle back button click (navigates back one level)
+        $(".mobile_menu_back_btn").on("click", function () {
+          // Find the last open submenu and close it
+          $("#mobile_menu .submenu.open").last().removeClass("open");
 
-  // Handle clicks outside the menu content area to close the menu
-  $("#mobile_menu_container").on("click", function (e) {
-    if (e.target === this) {
-      $("#mobile_menu_container").removeClass("open");
-      $("#mobile_menu .submenu.open").removeClass("open");
-      $(".mobile_menu_back_btn").hide();
-    }
-  });
+          // If no more open submenus, hide the back button
+          if ($("#mobile_menu .submenu.open").length === 0) {
+            $(this).hide();
+          }
+        });
 
-  // Open submenu when parent item is clicked
-  $(document).on("click", "#mobile_menu .has_submenu > span", function () {
-    $("+ .submenu", $(this)).addClass("open");
-    // Show back button when submenu is opened
-    $(".mobile_menu_back_btn").show();
-  });
+        // Handle clicks outside the menu content area to close the menu
+        $("#mobile_menu_container").on("click", function (e) {
+          if (e.target === this) {
+            $("#mobile_menu_container").removeClass("open");
+            $("#mobile_menu .submenu.open").removeClass("open");
+            $(".mobile_menu_back_btn").hide();
+          }
+        });
 
-  // Open nested submenu (sub_sub_menu)
-  $(document).on("click", "#mobile_menu .sub_sub_menu > span", function () {
-    $("+ ul", $(this)).addClass("open");
-    // Ensure back button is showing
-    $(".mobile_menu_back_btn").show();
-  });
+        // Open submenu when parent item is clicked
+        $(document).on(
+          "click",
+          "#mobile_menu .has_submenu > span",
+          function () {
+            $("+ .submenu", $(this)).addClass("open");
+            // Show back button when submenu is opened
+            $(".mobile_menu_back_btn").show();
+          }
+        );
 
-  // Handle back links inside the menu (as an alternative to the back button)
-  $(document).on("click", "#mobile_menu .mobile_menu_back", function () {
-    $(this).closest("ul").removeClass("open");
-    
-    // If no more open submenus, hide the back button
-    if ($("#mobile_menu .submenu.open").length === 0) {
-      $(".mobile_menu_back_btn").hide();
-    }
-  });
+        // Open nested submenu (sub_sub_menu)
+        $(document).on(
+          "click",
+          "#mobile_menu .sub_sub_menu > span",
+          function () {
+            $("+ ul", $(this)).addClass("open");
+            // Ensure back button is showing
+            $(".mobile_menu_back_btn").show();
+          }
+        );
 
+        // Handle back links inside the menu (as an alternative to the back button)
+        $(document).on("click", "#mobile_menu .mobile_menu_back", function () {
+          $(this).closest("ul").removeClass("open");
+
+          // If no more open submenus, hide the back button
+          if ($("#mobile_menu .submenu.open").length === 0) {
+            $(".mobile_menu_back_btn").hide();
+          }
+        });
       });
-    
-      </script>
-     <!-- Mobile menu Script for navigation bar End -->
+    </script>
+    <!-- Mobile menu Script for navigation bar End -->
     <!-- script for step progressbar slider -->
 
     <!-- script for section 1 -->
@@ -2255,7 +2404,7 @@
     </script>
 
     <!-- What we do -->
-   
+
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", () => {
         const cardContainer = document.querySelector(".whatWeDoCard-container");
@@ -2539,6 +2688,130 @@
         window.addEventListener("resize", updateCarousel);
       });
     </script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const cardContainer = document.querySelector(".card-container");
+  const cards = cardContainer.querySelectorAll(".card");
+  const indicator = document.querySelector(".indicator");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+  const count = document.querySelector(".count");
+
+  let currentIndex = 0;
+  const totalCards = cards.length;
+  let isDragging = false;
+  let startX, currentTranslate, prevTranslate, animationID;
+
+  function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth;
+    cardContainer.style.transform = `translateX(-${
+      currentIndex * cardWidth
+    }px)`;
+
+    // Move indicator
+    indicator.style.left = `${(100 / totalCards) * currentIndex}%`;
+
+    // Update active class
+    cards.forEach((card) => card.classList.remove("active"));
+    cards[currentIndex].classList.add("active");
+
+    // Update count
+    count.textContent = `${currentIndex + 1}/${totalCards}`;
+  }
+
+  function nextSlide() {
+    // Change this part to create a loop
+    if (currentIndex < totalCards - 1) {
+      currentIndex++;
+    } else {
+      // Loop back to first card when reaching the end
+      currentIndex = 0;
+    }
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    // Change this part to create a loop in the other direction
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      // Loop to last card when at the beginning
+      currentIndex = totalCards - 1;
+    }
+    updateCarousel();
+  }
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  function touchStart(event) {
+    if (!isMobile()) return; // Enable dragging only on mobile
+
+    isDragging = true;
+    startX = event.type.includes("touch")
+      ? event.touches[0].clientX
+      : event.clientX;
+    prevTranslate = currentIndex * -cards[0].offsetWidth;
+    animationID = requestAnimationFrame(animation);
+  }
+
+  function touchMove(event) {
+    if (!isDragging || !isMobile()) return;
+    const currentPosition = event.type.includes("touch")
+      ? event.touches[0].clientX
+      : event.clientX;
+    const movedBy = currentPosition - startX;
+    currentTranslate = prevTranslate + movedBy;
+    cardContainer.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function touchEnd() {
+    if (!isMobile()) return; // Restrict for mobile only
+
+    isDragging = false;
+    cancelAnimationFrame(animationID);
+
+    const movedDistance = currentTranslate - prevTranslate;
+    const cardWidth = cards[0].offsetWidth;
+
+    // Modified to support looping in touch gestures
+    if (movedDistance < -50) {
+      // Next slide with loop
+      if (currentIndex < totalCards - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+    } else if (movedDistance > 50) {
+      // Previous slide with loop
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalCards - 1;
+      }
+    }
+
+    updateCarousel();
+  }
+
+  function animation() {
+    if (isDragging) requestAnimationFrame(animation);
+  }
+
+  // Button Events (For Desktop)
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Dragging Events (For Mobile Only)
+  cardContainer.addEventListener("touchstart", touchStart);
+  cardContainer.addEventListener("touchmove", touchMove);
+  cardContainer.addEventListener("touchend", touchEnd);
+
+  updateCarousel();
+  window.addEventListener("resize", updateCarousel);
+});
+    </script> -->
     <!-- Industry we serve End -->
 
     <!-- CSR script -->

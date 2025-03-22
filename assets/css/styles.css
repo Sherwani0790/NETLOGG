@@ -1066,7 +1066,7 @@ ul {
   line-height: 25.6px;
   color: #000;
 }
-.carousel-wrapper {
+.carouselWrapper {
   position: relative;
   margin: auto;
   overflow: visible;
@@ -1079,10 +1079,10 @@ ul {
   transition: transform 0.4s ease-in-out;
 }
 
-.carousel-wrapper .card {
+.carouselWrapper .card {
   position: relative;
-  width: 650px;
-  height: 550px;
+  width: 596px;
+  height: 436px;
   border: none;
   overflow: hidden;
   border-radius: 0px;
@@ -1097,17 +1097,17 @@ ul {
   /* border: 2px solid #000; */
 }
 
-.carousel-wrapper .card img {
-  width: 640px;
-  height: 800px;
+.carouselWrapper .card img {
+  width: 450px;
+  height: 500px;
   object-fit: cover;
 }
 
-.carousel-wrapper .card-overlay {
+.carouselWrapper .card-overlay {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  width: 470px;
+  width: 428px;
   height: 180px;
   padding: 24px 24px 32px 24px;
   background: radial-gradient(
@@ -1118,28 +1118,15 @@ ul {
   );
   backdrop-filter: blur(16px);
 }
-/* .carousel-wrapper .card.telcom_card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ); 
-} */
 
-.carousel-wrapper .card-title {
+.carouselWrapper .card-title {
   color: #fff;
   font-size: 24px;
   font-weight: 500;
   line-height: 37px;
 }
 
-.carousel-wrapper .card-text {
+.carouselWrapper .card-text {
   margin-top: 12px;
   color: #fefefe;
   font-size: 16px;
@@ -1159,7 +1146,7 @@ ul {
 .industry_indicator-container .indicator {
   border-radius: 24px;
   height: 2px;
-  width: calc(100% / 3);
+  width: calc(100% / 4);
   background: black;
   position: absolute;
   transition: left 0.3s ease-in-out;
@@ -1197,6 +1184,27 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 12px;
+}
+.IndustriesArrow{
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+.carouselWrapper .swiper-pagination-bullet-active,
+.carouselWrapper .swiper-pagination-bullet{
+  border-radius: 0;
+    height: 2px;
+    width: 200px;
+    margin: 0 !important;
+}
+.swiper-pagination {
+  bottom: -60px !important;
+  left: 0;
+  right: auto;
+  text-align: left;
 }
 @media (max-width: 768px) {
   .industry_section {
