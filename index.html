@@ -1409,25 +1409,40 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img
+                  src="assets/img/industries/3.jpeg"
+                  alt="Fintech & Banking"
+                />
+                <div class="card-overlay">
+                  <div class="card-title">Fintech & Banking</div>
+                  <div class="card-text">
+                    Driving innovation in financial services with secure,
+                    scalable solutions that enhance banking operations and
+                    customer experiences.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="">
             <ul class="swiper-pagination"></ul>
           </div>
           <div class="IndustriesArrow">
             <div class="prevArrowBtn">
-              <img src="assets/img/Logo/prevIcon.svg">
-              <!-- <i class="fa fa-arrow-left"></i> -->
+              <img src="assets/img/Logo/prevIcon.svg" />
             </div>
+            <div class="count">1/5</div>
             <div class="nextArrowBtn">
-              <img src="assets/img/Logo/nextIcon.svg">
-              <!-- <i class="fa fa-arrow-right"></i> -->
+              <img src="assets/img/Logo/nextIcon.svg" />
             </div>
           </div>
         </div>
         <script>
           var swiper = new Swiper(".carouselWrapper", {
             slidesPerView: 3,
-            spaceBetween: 100,
+            spaceBetween: 10,
             loop: true,
             freeMode: true,
             navigation: {
@@ -1447,12 +1462,30 @@
               },
               768: {
                 slidesPerView: 2,
+                spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 3,
               },
             },
+            on: {
+              init: function () {
+                updateCount(this);
+              },
+              slideChange: function () {
+                updateCount(this);
+              },
+            },
           });
+
+          function updateCount(swiper) {
+            let currentIndex = swiper.realIndex + 1;
+            let totalSlides = document.querySelectorAll(
+              ".swiper-slide:not(.swiper-slide-duplicate)"
+            ).length;
+            document.querySelector(".IndustriesArrow .count").textContent =
+              currentIndex + "/" + totalSlides;
+          }
         </script>
       </div>
     </section>
