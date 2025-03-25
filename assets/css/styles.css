@@ -998,7 +998,7 @@ ul {
   .whatWeDoCardWrapper .swiper-pagination-bullet {
     border-radius: 24px;
     height: 2px;
-    width: 55px;
+    width: 50px;
     margin: 0 !important;
   }
   .whatWeDoCardWrapper .whatWeDoArrow {
@@ -1424,7 +1424,7 @@ ul {
   .carouselWrapper .swiper-pagination-bullet {
     border-radius: 24px;
     height: 2px;
-    width: 35px;
+    width: 30px;
     margin: 0 !important;
   }
   .carouselWrapper .IndustriesArrow {
