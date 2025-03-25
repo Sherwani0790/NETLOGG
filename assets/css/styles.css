@@ -289,7 +289,7 @@ ul {
   font-size: 16px;
   cursor: pointer;
 }
-.mobile_menu_back_btn .mbl_arrow_left{
+.mobile_menu_back_btn .mbl_arrow_left {
   font-size: 13px;
 }
 
@@ -568,13 +568,13 @@ ul {
   left: 0;
   bottom: 70px; */
   background: rgba(0, 0, 0, 0.185);
-    backdrop-filter: blur(5px);
-    width: 87%;
-    margin: 0 auto;
-    position: absolute;
-    right: 35px;
-    left: 0;
-    bottom: 70px;
+  backdrop-filter: blur(5px);
+  width: 87%;
+  margin: 0 auto;
+  position: absolute;
+  right: 35px;
+  left: 0;
+  bottom: 70px;
 }
 .custom-indicators {
   display: flex;
@@ -740,7 +740,7 @@ ul {
 .what_we_do_section {
   background: #fff;
   height: 100%;
-  padding: 100px 96px 44px 96px;
+  padding: 100px 96px;
   overflow: hidden;
 }
 .what_we_do_section h1 {
@@ -772,24 +772,213 @@ ul {
   width: 14px;
   height: 17px;
 }
-/* .all_cap_button .fa-arrow-right {
-  margin-left: 5px;
-  font-size: 12px;
-  color: #000;
-} */
 .all_cap_button:hover img {
   margin-left: 5px;
   transition: 0.3s all ease-in-out;
 }
 .all_cap_button:hover {
   color: #000;
-  /* text-decoration: underline; */
+}
+
+.whatWeDoCardWrapper {
+  position: relative;
+  margin: auto;
+  overflow: visible;
+  margin-top: 40px;
+}
+.whatWeDoCardWrapper .swiper-slide {
+  width: 470px !important;
+}
+.whatWeDoCard-card {
+  position: relative;
+  width: 470px;
+  height: 600px;
+  border: none;
+  overflow: hidden;
+  border-radius: 0px;
+  flex-shrink: 0;
+  transition: border 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.whatWeDoCard-card img {
+  width: 470px;
+  height: 800px;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.whatWeDoCard-card:hover img {
+  transform: translateY(250px) scale(2.1);
+  filter: blur(7px);
+}
+
+.whatWeDoCard-card-overlay {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 370px;
+  height: 180px;
+  padding: 24px;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+}
+
+.whatWeDoCard-card:hover .whatWeDoCard-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatWeDoCard-card-title-small {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 37px;
+  transition: none;
+}
+.whatWeDoCard-card-title {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  width: 302px;
+  transition: none;
+}
+
+.whatWeDoCard-card-text {
+  margin-top: 12px;
+  color: #fefefe;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+  width: 302px;
+}
+
+.whatWeDoCard-card:hover .whatWeDoCard-card-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatWeDoCard-card-button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.whatWeDoCard-card-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+}
+
+.whatWeDoCard-card:hover .whatWeDoCard-card-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatWeDoCardWrapper .whatWeDoArrow {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.whatWeDoCardWrapper .whatWeDoArrow .countIndex {
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.whatWeDoCardWrapper .swiper-pagination-bullet-active,
+.whatWeDoCardWrapper .swiper-pagination-bullet {
+  border-radius: 24px;
+  height: 2px;
+  width: 330px;
+  margin: 0 !important;
+}
+.whatWeDoCardWrapper .swiper-pagination-bullet-active {
+  background-color: #000 !important;
+  transition: all 0.3s ease-in-out;
+}
+.whatWeDoCardWrapper .swiper-pagination-bullet {
+  transition: all 0.3s ease-in-out;
+  background-color: #6e6e6e !important;
+}
+
+.whatWeDoCardWrapper .swiper-pagination {
+  bottom: -60px !important;
+  left: 0;
+  right: auto;
+  text-align: left;
+  padding-left: 0;
+  width: 85% !important;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
+  .whatWeDoCard-card {
+    width: 300px;
+    height: 350px;
+  }
+  /* .whatWeDoCard-Wrapper {
+    overflow-x: auto;
+  } */
+  .whatWeDoCard-card img {
+    width: 350px;
+    height: 400px;
+  }
+  .whatWeDoCard-card:hover img {
+    transform: translateY(150px) scale(2.1);
+    filter: blur(6px);
+  }
+  .whatWeDoCard-card-overlay {
+    width: 295px;
+    height: 145px;
+    padding: 5px 15px;
+  }
+  .whatWeDoCard-card-title-small {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .whatWeDoCard-card-title {
+    font-size: 16px;
+    width: 100%;
+    line-height: 24px;
+  }
+
+  .whatWeDoCard-card-text {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .whatWeDoCard-card-button {
+    right: 20px;
+    font-size: 14px;
+  }
+
   .what_we_do_section {
     height: auto;
-    padding: 50px 16px;
+    padding: 100px 16px;
   }
   .what_we_do_section h1 {
     font-weight: 400;
@@ -805,6 +994,52 @@ ul {
   .width-700 {
     width: 100%;
   }
+  .whatWeDoCardWrapper .swiper-pagination-bullet-active,
+  .whatWeDoCardWrapper .swiper-pagination-bullet {
+    border-radius: 24px;
+    height: 2px;
+    width: 55px;
+    margin: 0 !important;
+  }
+  .whatWeDoCardWrapper .whatWeDoArrow {
+    right: 0;
+    gap: 20px;
+  }
+  .whatWeDoCardWrapper .swiper-pagination {
+    width: 70% !important;
+  }
+  .whatWeDoCardWrapper .whatWeDoCard-card {
+    position: relative;
+    width: 330px;
+    height: 350px;
+    border: none;
+    overflow: hidden;
+    border-radius: 0px;
+    flex-shrink: 0;
+    transition: border 0.3s ease-in-out;
+    border: 0;
+  }
+  .whatWeDoCardWrapper .whatWeDoCard-card img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .whatWeDoCardWrapper .whatWeDoArrow .countIndex {
+    background: black;
+    color: white;
+    padding: 11px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 0px;
+  }
+  .whatWeDoCardWrapper .whatWeDoArrow img {
+    width: 16px;
+  }
 }
 
 /* what_we_do_section End */
@@ -813,7 +1048,7 @@ ul {
   background: #000a1c;
   position: relative;
 }
-.solution_img_1{
+.solution_img_1 {
   object-position: 500px;
   background: #0d0f0e;
 }
@@ -943,7 +1178,7 @@ ul {
   /* border: 1px solid #fff; */
 }
 @media (max-width: 768px) {
-  .solution_img_1{
+  .solution_img_1 {
     object-position: center;
     background: #0d0f0e;
   }
@@ -1029,10 +1264,10 @@ ul {
     justify-content: space-around;
     gap: 10px;
     text-decoration: none;
-    margin-top:20px;
+    margin-top: 20px;
     transition: 0.3s all ease-in-out;
   }
- .solution_section .carousel-caption a:hover {
+  .solution_section .carousel-caption a:hover {
     border: 1px solid white;
     display: flex;
     color: white;
@@ -1052,7 +1287,7 @@ ul {
 .industry_section {
   background: #fff;
   height: 100%;
-  padding: 100px 96px 44px 96px;
+  padding: 100px 96px;
   overflow: hidden;
 }
 .industry_section h1 {
@@ -1066,48 +1301,38 @@ ul {
   line-height: 25.6px;
   color: #000;
 }
-.carousel-wrapper {
+.carouselWrapper {
   position: relative;
   margin: auto;
   overflow: visible;
   margin-top: 40px;
 }
-
-.carousel-wrapper .card-container {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.4s ease-in-out;
-}
-
-.carousel-wrapper .card {
+.carouselWrapper .card {
   position: relative;
-  width: 650px;
-  height: 550px;
+  width: 550px;
+  height: 436px;
   border: none;
   overflow: hidden;
   border-radius: 0px;
   flex-shrink: 0;
   transition: border 0.3s ease-in-out;
-  border: 2px solid transparent;
+  border: 0;
 }
 .industry_section .carousel-wrapper .card-container {
   flex-wrap: nowrap;
 }
-.card.active {
-  /* border: 2px solid #000; */
-}
 
-.carousel-wrapper .card img {
-  width: 640px;
+.carouselWrapper .card img {
+  width: 596px;
   height: 800px;
   object-fit: cover;
 }
 
-.carousel-wrapper .card-overlay {
+.carouselWrapper .card-overlay {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  width: 470px;
+  width: 428px;
   height: 180px;
   padding: 24px 24px 32px 24px;
   background: radial-gradient(
@@ -1118,75 +1343,30 @@ ul {
   );
   backdrop-filter: blur(16px);
 }
-/* .carousel-wrapper .card.telcom_card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ); 
-} */
 
-.carousel-wrapper .card-title {
+.carouselWrapper .card-title {
   color: #fff;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 37px;
 }
 
-.carousel-wrapper .card-text {
+.carouselWrapper .card-text {
   margin-top: 12px;
   color: #fefefe;
   font-size: 16px;
   font-weight: 300;
 }
 
-/* Indicator Bar */
-.industry_indicator-container {
-  width: 90%;
-  position: relative;
-  height: 2px;
-  border-radius: 24px;
-  background: lightgray;
-  margin: 14px auto 0 auto;
-}
-
-.industry_indicator-container .indicator {
-  border-radius: 24px;
-  height: 2px;
-  width: calc(100% / 3);
-  background: black;
+.carouselWrapper .IndustriesArrow {
   position: absolute;
-  transition: left 0.3s ease-in-out;
-}
-
-/* Controls */
-.industry_controls {
+  right: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: 10px;
-  border-radius: 88px;
-  margin-right: 10px;
+  gap: 40px;
+  margin-top: 20px;
 }
-
-.industries_leftarrow_button,
-.industries_rightarrow_button {
-  border: 0;
-  background: transparent;
-  z-index: 1;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.industry_controls .count {
+.carouselWrapper .IndustriesArrow .count {
   background: black;
   color: white;
   padding: 10px;
@@ -1197,6 +1377,31 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 12px;
+}
+.carouselWrapper .swiper-pagination-bullet-active,
+.carouselWrapper .swiper-pagination-bullet {
+  border-radius: 24px;
+  height: 2px;
+  width: 240px;
+  margin: 0 !important;
+}
+.carouselWrapper .swiper-pagination-bullet-active {
+  background-color: #000 !important;
+  transition: all 0.3s ease-in-out;
+}
+.carouselWrapper .carouselWrapper .swiper-pagination-bullet {
+  transition: all 0.3s ease-in-out;
+  background-color: #6e6e6e !important;
+}
+
+.carouselWrapper .swiper-pagination {
+  bottom: -60px !important;
+  left: 0;
+  right: auto;
+  text-align: left;
+  padding-left: 0;
+  width: 85% !important;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
   .industry_section {
@@ -1214,38 +1419,44 @@ ul {
     line-height: 25.6px;
     color: #000;
   }
-  /* .carousel-wrapper {
-    overflow-x: auto;
-  } */
-  .carousel-wrapper .card-container {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.4s ease-in-out;
-    flex-wrap: nowrap;
+
+  .carouselWrapper .swiper-pagination-bullet-active,
+  .carouselWrapper .swiper-pagination-bullet {
+    border-radius: 24px;
+    height: 2px;
+    width: 35px;
+    margin: 0 !important;
   }
-  .carousel-wrapper .card img {
-    width: 350px;
-    height: 400px;
-    object-fit: cover;
+  .carouselWrapper .IndustriesArrow {
+    right: 0;
+    gap: 20px;
   }
-  .carousel-wrapper .card {
+  .carouselWrapper .swiper-pagination {
+    width: 70% !important;
+  }
+  .carouselWrapper .card {
     position: relative;
-    width: 320px;
+    width: 330px;
     height: 350px;
     border: none;
     overflow: hidden;
     border-radius: 0px;
     flex-shrink: 0;
     transition: border 0.3s ease-in-out;
-    border: 2px solid transparent;
+    border: 0;
   }
-  .carousel-wrapper .card-overlay {
+  .carouselWrapper .card img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .carouselWrapper .card-overlay {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 295px;
-    height: 145px;
-    padding: 5px 15px 5px 15px;
+    bottom: 20px;
+    left: 15px;
+    width: 300px;
+    height: 180px;
+    padding: 24px;
     background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(0, 0, 0, 0.32) 0%,
@@ -1254,289 +1465,36 @@ ul {
     );
     backdrop-filter: blur(16px);
   }
-  .carousel-wrapper .card-title {
+  .carouselWrapper .card-title {
     color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 37px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
   }
-  .carousel-wrapper .card-text {
-    margin-top: 7px;
+  .carouselWrapper .card-text {
+    margin-top: 12px;
     color: #fefefe;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 300;
   }
-  .industries_leftarrow_button,
-  .industries_rightarrow_button {
-    border: 0;
-    background: transparent;
-    z-index: 1;
+  .carouselWrapper .IndustriesArrow .count {
+    background: black;
+    color: white;
+    padding: 11px;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-  }
-  .industry_controls .count {
-    background: black;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 11px;
+    letter-spacing: 0px;
   }
-  .industry_controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-top: 5px;
-    margin-right: 0px;
-    border-radius: 88px;
+  .carouselWrapper .IndustriesArrow img {
+    width: 16px;
   }
 }
 /* Industry we serve  Section End */
-
-/* What we do Section */
-
-.whatWeDoCard-Wrapper {
-  position: relative;
-  margin: auto;
-  overflow: visible;
-  margin-top: 40px;
-}
-
-.whatWeDoCard-container {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.4s ease-in-out;
-}
-
-.whatWeDoCard-card {
-  position: relative;
-  width: 470px;
-  height: 600px;
-  border: none;
-  overflow: hidden;
-  border-radius: 0px;
-  flex-shrink: 0;
-  transition: border 0.3s ease-in-out;
-  border: 2px solid transparent;
-}
-
-.whatWeDoCard-card img {
-  width: 470px;
-  height: 800px;
-  object-fit: cover;
-  transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.whatWeDoCard-card:hover img {
-  transform: translateY(250px) scale(2.1);
-  filter: blur(7px);
-}
-
-.whatWeDoCard-card-overlay {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 370px;
-  height: 180px;
-  padding: 24px;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  transform: translateY(20px);
-}
-
-.whatWeDoCard-card:hover .whatWeDoCard-card-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatWeDoCard-card-title-small {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 37px;
-  transition: none;
-}
-.whatWeDoCard-card-title {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 37px;
-  width: 302px;
-  transition: none;
-}
-
-.whatWeDoCard-card-text {
-  margin-top: 12px;
-  color: #fefefe;
-  font-size: 16px;
-  font-weight: 400;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  transform: translateY(20px);
-  width: 302px;
-}
-
-.whatWeDoCard-card:hover .whatWeDoCard-card-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatWeDoCard-card-button:hover {
-  color: #fff;
-  text-decoration: none;
-}
-.whatWeDoCard-card-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  border: 0;
-  background: transparent;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  transform: translateY(20px);
-}
-
-.whatWeDoCard-card:hover .whatWeDoCard-card-button {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatWeDoCard-Indicator {
-  width: 90%;
-  position: relative;
-  height: 2px;
-  background: lightgray;
-  margin: 14px auto 0px auto;
-  border-radius: 24px;
-}
-
-.whatWeDoCard-Indicator .whatWeDoCard-Indicator-bar {
-  height: 2px;
-  width: calc(100% / 4);
-  background: black;
-  position: absolute;
-  transition: left 0.3s ease-in-out;
-  border-radius: 24px;
-}
-
-.whatWeDoCard-Controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 10px;
-  border-radius: 88px;
-  margin-right: 16px;
-}
-
-.whatWeDo_leftarrow_button,
-.whatWeDo_rightarrow_button {
-  border: 0;
-  background: transparent;
-  z-index: 1;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.whatWeDoCard-Count {
-  background: black;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-@media (max-width: 768px) {
-  .whatWeDoCard-card {
-    width: 300px;
-    height: 350px;
-  }
-  /* .whatWeDoCard-Wrapper {
-    overflow-x: auto;
-  } */
-  .whatWeDoCard-card img {
-    width: 350px;
-    height: 400px;
-  }
-  .whatWeDoCard-card:hover img {
-    transform: translateY(150px) scale(2.1);
-    filter: blur(6px);
-  }
-  .whatWeDoCard-card-overlay {
-    width: 295px;
-    height: 145px;
-    padding: 5px 15px;
-  }
-  .whatWeDoCard-card-title-small {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  .whatWeDoCard-card-title {
-    font-size: 16px;
-    width: 100%;
-    line-height: 24px;
-  }
-
-  .whatWeDoCard-card-text {
-    font-size: 12px;
-    width: 100%;
-  }
-
-  .whatWeDoCard-card-button {
-    right: 20px;
-    font-size: 14px;
-  }
-  .whatWeDo_leftarrow_button,
-  .whatWeDo_rightarrow_button {
-    border: 0;
-    background: transparent;
-    z-index: 1;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-  }
-  .whatWeDoCard-Count {
-    background: black;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-  }
-  .whatWeDoCard-Controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-top: 5px;
-    margin-right: 0px;
-    border-radius: 88px;
-  }
-}
-/* What we do Section End */
-
 /* Why Netlogg Section */
 .why_netlogg_section {
   background: #fff;
