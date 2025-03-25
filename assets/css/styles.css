@@ -740,7 +740,7 @@ ul {
 .what_we_do_section {
   background: #fff;
   height: 100%;
-  padding: 100px 96px 44px 96px;
+  padding: 100px 96px;
   overflow: hidden;
 }
 .what_we_do_section h1 {
@@ -772,24 +772,213 @@ ul {
   width: 14px;
   height: 17px;
 }
-/* .all_cap_button .fa-arrow-right {
-  margin-left: 5px;
-  font-size: 12px;
-  color: #000;
-} */
 .all_cap_button:hover img {
   margin-left: 5px;
   transition: 0.3s all ease-in-out;
 }
 .all_cap_button:hover {
   color: #000;
-  /* text-decoration: underline; */
+}
+
+.whatWeDoCardWrapper {
+  position: relative;
+  margin: auto;
+  overflow: visible;
+  margin-top: 40px;
+}
+.whatWeDoCardWrapper .swiper-slide {
+  width: 470px !important;
+}
+.whatWeDoCard-card {
+  position: relative;
+  width: 470px;
+  height: 600px;
+  border: none;
+  overflow: hidden;
+  border-radius: 0px;
+  flex-shrink: 0;
+  transition: border 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.whatWeDoCard-card img {
+  width: 470px;
+  height: 800px;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.whatWeDoCard-card:hover img {
+  transform: translateY(250px) scale(2.1);
+  filter: blur(7px);
+}
+
+.whatWeDoCard-card-overlay {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 370px;
+  height: 180px;
+  padding: 24px;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+}
+
+.whatWeDoCard-card:hover .whatWeDoCard-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatWeDoCard-card-title-small {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 37px;
+  transition: none;
+}
+.whatWeDoCard-card-title {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  width: 302px;
+  transition: none;
+}
+
+.whatWeDoCard-card-text {
+  margin-top: 12px;
+  color: #fefefe;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+  width: 302px;
+}
+
+.whatWeDoCard-card:hover .whatWeDoCard-card-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatWeDoCard-card-button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.whatWeDoCard-card-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+}
+
+.whatWeDoCard-card:hover .whatWeDoCard-card-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatWeDoCardWrapper .whatWeDoArrow {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.whatWeDoCardWrapper .whatWeDoArrow .countIndex {
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.whatWeDoCardWrapper .swiper-pagination-bullet-active,
+.whatWeDoCardWrapper .swiper-pagination-bullet {
+  border-radius: 24px;
+  height: 2px;
+  width: 330px;
+  margin: 0 !important;
+}
+.whatWeDoCardWrapper .swiper-pagination-bullet-active {
+  background-color: #000 !important;
+  transition: all 0.3s ease-in-out;
+}
+.whatWeDoCardWrapper .swiper-pagination-bullet {
+  transition: all 0.3s ease-in-out;
+  background-color: #6e6e6e !important;
+}
+
+.whatWeDoCardWrapper .swiper-pagination {
+  bottom: -60px !important;
+  left: 0;
+  right: auto;
+  text-align: left;
+  padding-left: 0;
+  width: 85% !important;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
+  .whatWeDoCard-card {
+    width: 300px;
+    height: 350px;
+  }
+  /* .whatWeDoCard-Wrapper {
+    overflow-x: auto;
+  } */
+  .whatWeDoCard-card img {
+    width: 350px;
+    height: 400px;
+  }
+  .whatWeDoCard-card:hover img {
+    transform: translateY(150px) scale(2.1);
+    filter: blur(6px);
+  }
+  .whatWeDoCard-card-overlay {
+    width: 295px;
+    height: 145px;
+    padding: 5px 15px;
+  }
+  .whatWeDoCard-card-title-small {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .whatWeDoCard-card-title {
+    font-size: 16px;
+    width: 100%;
+    line-height: 24px;
+  }
+
+  .whatWeDoCard-card-text {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .whatWeDoCard-card-button {
+    right: 20px;
+    font-size: 14px;
+  }
+
   .what_we_do_section {
     height: auto;
-    padding: 50px 16px;
+    padding: 100px 16px;
   }
   .what_we_do_section h1 {
     font-weight: 400;
@@ -804,6 +993,52 @@ ul {
   }
   .width-700 {
     width: 100%;
+  }
+  .whatWeDoCardWrapper .swiper-pagination-bullet-active,
+  .whatWeDoCardWrapper .swiper-pagination-bullet {
+    border-radius: 24px;
+    height: 2px;
+    width: 55px;
+    margin: 0 !important;
+  }
+  .whatWeDoCardWrapper .whatWeDoArrow {
+    right: 0;
+    gap: 20px;
+  }
+  .whatWeDoCardWrapper .swiper-pagination {
+    width: 70% !important;
+  }
+  .whatWeDoCardWrapper .whatWeDoCard-card {
+    position: relative;
+    width: 330px;
+    height: 350px;
+    border: none;
+    overflow: hidden;
+    border-radius: 0px;
+    flex-shrink: 0;
+    transition: border 0.3s ease-in-out;
+    border: 0;
+  }
+  .whatWeDoCardWrapper .whatWeDoCard-card img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .whatWeDoCardWrapper .whatWeDoArrow .countIndex {
+    background: black;
+    color: white;
+    padding: 11px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 0px;
+  }
+  .whatWeDoCardWrapper .whatWeDoArrow img {
+    width: 16px;
   }
 }
 
@@ -1072,13 +1307,6 @@ ul {
   overflow: visible;
   margin-top: 40px;
 }
-
-/* .carousel-wrapper .card-container {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.4s ease-in-out;
-} */
-
 .carouselWrapper .card {
   position: relative;
   width: 550px;
@@ -1132,10 +1360,10 @@ ul {
 
 .carouselWrapper .IndustriesArrow {
   position: absolute;
-  right: 40px;
+  right: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
   margin-top: 20px;
 }
 .carouselWrapper .IndustriesArrow .count {
@@ -1172,7 +1400,7 @@ ul {
   right: auto;
   text-align: left;
   padding-left: 0;
-  width: 90% !important;
+  width: 85% !important;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
@@ -1201,11 +1429,8 @@ ul {
   }
   .carouselWrapper .IndustriesArrow {
     right: 0;
+    gap: 20px;
   }
-  /* .carouselWrapper .swiper-slide-active,
-  .carouselWrapper .swiper-slide{
-    margin-right: 0 !important;
-  } */
   .carouselWrapper .swiper-pagination {
     width: 70% !important;
   }
@@ -1270,245 +1495,6 @@ ul {
   }
 }
 /* Industry we serve  Section End */
-
-/* What we do Section */
-
-.whatWeDoCard-Wrapper {
-  position: relative;
-  margin: auto;
-  overflow: visible;
-  margin-top: 40px;
-}
-
-.whatWeDoCard-container {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.4s ease-in-out;
-}
-
-.whatWeDoCard-card {
-  position: relative;
-  width: 470px;
-  height: 600px;
-  border: none;
-  overflow: hidden;
-  border-radius: 0px;
-  flex-shrink: 0;
-  transition: border 0.3s ease-in-out;
-  border: 2px solid transparent;
-}
-
-.whatWeDoCard-card img {
-  width: 470px;
-  height: 800px;
-  object-fit: cover;
-  transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.whatWeDoCard-card:hover img {
-  transform: translateY(250px) scale(2.1);
-  filter: blur(7px);
-}
-
-.whatWeDoCard-card-overlay {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 370px;
-  height: 180px;
-  padding: 24px;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  transform: translateY(20px);
-}
-
-.whatWeDoCard-card:hover .whatWeDoCard-card-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatWeDoCard-card-title-small {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 37px;
-  transition: none;
-}
-.whatWeDoCard-card-title {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 37px;
-  width: 302px;
-  transition: none;
-}
-
-.whatWeDoCard-card-text {
-  margin-top: 12px;
-  color: #fefefe;
-  font-size: 16px;
-  font-weight: 400;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  transform: translateY(20px);
-  width: 302px;
-}
-
-.whatWeDoCard-card:hover .whatWeDoCard-card-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatWeDoCard-card-button:hover {
-  color: #fff;
-  text-decoration: none;
-}
-.whatWeDoCard-card-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  border: 0;
-  background: transparent;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-  transform: translateY(20px);
-}
-
-.whatWeDoCard-card:hover .whatWeDoCard-card-button {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.whatWeDoCard-Indicator {
-  width: 90%;
-  position: relative;
-  height: 2px;
-  background: lightgray;
-  margin: 14px auto 0px auto;
-  border-radius: 24px;
-}
-
-.whatWeDoCard-Indicator .whatWeDoCard-Indicator-bar {
-  height: 2px;
-  width: calc(100% / 4);
-  background: black;
-  position: absolute;
-  transition: left 0.3s ease-in-out;
-  border-radius: 24px;
-}
-
-.whatWeDoCard-Controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 10px;
-  border-radius: 88px;
-  margin-right: 16px;
-}
-
-.whatWeDo_leftarrow_button,
-.whatWeDo_rightarrow_button {
-  border: 0;
-  background: transparent;
-  z-index: 1;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.whatWeDoCard-Count {
-  background: black;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-@media (max-width: 768px) {
-  .whatWeDoCard-card {
-    width: 300px;
-    height: 350px;
-  }
-  /* .whatWeDoCard-Wrapper {
-    overflow-x: auto;
-  } */
-  .whatWeDoCard-card img {
-    width: 350px;
-    height: 400px;
-  }
-  .whatWeDoCard-card:hover img {
-    transform: translateY(150px) scale(2.1);
-    filter: blur(6px);
-  }
-  .whatWeDoCard-card-overlay {
-    width: 295px;
-    height: 145px;
-    padding: 5px 15px;
-  }
-  .whatWeDoCard-card-title-small {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  .whatWeDoCard-card-title {
-    font-size: 16px;
-    width: 100%;
-    line-height: 24px;
-  }
-
-  .whatWeDoCard-card-text {
-    font-size: 12px;
-    width: 100%;
-  }
-
-  .whatWeDoCard-card-button {
-    right: 20px;
-    font-size: 14px;
-  }
-  .whatWeDo_leftarrow_button,
-  .whatWeDo_rightarrow_button {
-    border: 0;
-    background: transparent;
-    z-index: 1;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-  }
-  .whatWeDoCard-Count {
-    background: black;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-  }
-  .whatWeDoCard-Controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin-top: 5px;
-    margin-right: 0px;
-    border-radius: 88px;
-  }
-}
-/* What we do Section End */
-
 /* Why Netlogg Section */
 .why_netlogg_section {
   background: #fff;
