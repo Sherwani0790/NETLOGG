@@ -556,11 +556,6 @@
           <li class="has_submenu">
             <span>Who we are <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <!-- <li>
-                <span class="mobile_menu_back"
-                  ><i class="fa fa-arrow-left"></i> Back</span
-                >
-              </li> -->
               <li>
                 <h4>Who We Are</h4>
               </li>
@@ -604,11 +599,6 @@
           <li class="has_submenu">
             <span>What we do <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <!-- <li>
-                <span class="mobile_menu_back"
-                  ><i class="fa fa-arrow-left"></i> Back</span
-                >
-              </li> -->
               <li>
                 <h4>What We Do</h4>
               </li>
@@ -657,11 +647,6 @@
           <li class="has_submenu">
             <span>Industries <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <!-- <li>
-                <span class="mobile_menu_back"
-                  ><i class="fa fa-arrow-left"></i> Back</span
-                >
-              </li> -->
               <li>
                 <h4>Industries</h4>
               </li>
@@ -705,11 +690,6 @@
           <li class="has_submenu">
             <span>Solutions <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <!-- <li>
-                <span class="mobile_menu_back"
-                  ><i class="fa fa-arrow-left"></i> Back</span
-                >
-              </li> -->
               <li>
                 <div class="row">
                   <!-- <div class="col-12 pb-5">
@@ -796,11 +776,6 @@
           <li class="has_submenu">
             <span>Insights <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
-              <!-- <li>
-                <span class="mobile_menu_back"
-                  ><i class="fa fa-arrow-left"></i> Back</span
-                >
-              </li> -->
               <li>
                 <h4>Insights</h4>
               </li>
@@ -835,670 +810,1110 @@
         </ul>
       </div>
     </div>
+    <!-- Main Section -->
+    <div class="blockchain-main-section" id="blockchain-main-section">
+      <div class="main-section-overlay"></div>
+      <div class="main-section-width">
+        <p class="small-text">Blockchain</p>
+        <p class="big-text">
+          Harnessing Blockchain for Business Transformation
+        </p>
+      </div>
+    </div>
+    <!-- Main Section End -->
+    <!-- Progress Section Selection -->
+    <div
+      class="progress_section_selection sticky-column"
+      style="z-index: 999; top: 65px"
+    >
+      <!-- progress bar -->
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
 
-    <!-- CaseStudy Section -->
-    <section class="caseStudy_section">
-      <div class="">
-        <div
-          id="carouselExampleIndicators2"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-pause="true"
-        >
-          <!--  -->
-          <div class="dp-flex align-items-center">
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators2"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              >
-                <span></span>
-              </button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators2"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              >
-                <span></span>
-              </button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators2"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              >
-                <span></span>
-              </button>
+      <div class="text-indication">
+        <div class="progress-label-left">
+          <p>You’re reading</p>
+          <p>1. Overiew</p>
+        </div>
+        <div class="progress-label-right">
+          <p>Up Next</p>
+          <div class="custom-dropdown">
+            <div class="custom-dropdown-button">
+              Select Section <i class="fas fa-chevron-down"></i>
             </div>
-            <div class="right_left_count">
-              <div class="dp-flex align-items-center">
-                <button
-                  class="carousal_left"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide="prev"
-                >
-                  <span>
-                    <img
-                      class="button_arrow_left"
-                      src="assets/img/Logo/prevIcon.svg"
-                    />
-                  </span>
-                </button>
-                <div class="count_carousal">1 / 3</div>
-                <button
-                  class="carousal_right"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide="next"
-                >
-                  <span>
-                    <img
-                      class="button_arrow_right"
-                      src="assets/img/Logo/nextIcon.svg"
-                    />
-                  </span>
-                </button>
+            <ul class="custom-dropdown-content">
+              <li data-target="overview_section">1. OVERVIEW</li>
+              <li data-target="caseStudy_section">2. CASE STUDIES</li>
+              <li data-target="blockChainValue_section">
+                3. BLOCKCHAIN VALUE & SOLUTIONS
+              </li>
+              <li data-target="innovation_section">4. INNOVATION & INSIGHTS</li>
+              <li data-target="newsUpdate_section">5. NEWS AND UPDATE</li>
+              <li data-target="contactus_section">6. CONTACT US</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // function updateProgressBar() {
+      //   const progressBar = document.querySelector(".progress-bar");
+      //   const totalHeight = document.body.scrollHeight - window.innerHeight;
+      //   const progress = (window.pageYOffset / totalHeight) * 100;
+      //   progressBar.style.width = progress + "%";
+      // }
+
+      // updateProgressBar();
+      // window.addEventListener("scroll", updateProgressBar);
+      $(document).ready(function () {
+        function updateProgressBar() {
+          const progressBar = $(".progress-bar");
+          const sections = $("section");
+          let scrollPosition = $(window).scrollTop();
+
+          sections.each(function () {
+            let top = $(this).offset().top - 150; // Adjust for header offset
+            let bottom = top + $(this).outerHeight();
+
+            if (scrollPosition >= top && scrollPosition < bottom) {
+              let sectionId = $(this).attr("id");
+              let sectionText = $(this).data("title"); // Get section title from data-title attribute
+
+              // Update the "You're reading" text
+              $(".progress-label-left p:nth-child(2)").text(sectionText);
+
+              // Update dropdown selected item text
+              $(".custom-dropdown-button").html(
+                sectionText + ' <i class="fas fa-chevron-down"></i>'
+              );
+            }
+          });
+
+          // Update progress bar width
+          const totalHeight = $(document).height() - $(window).height();
+          const progress = (scrollPosition / totalHeight) * 100;
+          progressBar.css("width", progress + "%");
+        }
+
+        // Click event to scroll to the selected section
+        $(".custom-dropdown-content li").on("click", function () {
+          let sectionText = $(this).text().trim();
+          let sectionId = $(this).data("target"); // Get target section ID
+
+          let targetSection = $("#" + sectionId);
+          if (targetSection.length) {
+            $("html, body").animate(
+              {
+                scrollTop: targetSection.offset().top - 50, // Adjust for fixed header
+              },
+              800
+            );
+
+            // Update "You're reading" text
+            $(".progress-label-left p:nth-child(2)").text(sectionText);
+
+            // Update dropdown button text
+            $(".custom-dropdown-button").html(
+              sectionText + ' <i class="fas fa-chevron-down"></i>'
+            );
+          }
+        });
+
+        // Update progress bar & section text on scroll
+        $(window).on("scroll", updateProgressBar);
+        updateProgressBar();
+      });
+    </script>
+    <!-- Progress Section Selection End -->
+
+    <!-- OverView Section -->
+    <div class="scrollable-column">
+      <section
+        class="overview_section"
+        id="overview_section"
+        data-title="1. OVERVIEW"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div>
+                <h2>Overiew</h2>
+              </div>
+              <div class="gap-24">
+                <p class="overview_text width-531px">
+                  The future of business is built on the Internet of Value,
+                  where data is the new asset class reshaping industries. As the
+                  lines between producers and consumers blur, enterprises must
+                  adapt to a new era of "prosumers" and decentralized value
+                  exchange.
+                </p>
+              </div>
+              <div class="gap-24">
+                <p class="overview_text width-531px">
+                  Blockchain and distributed ledger technologies (DLTs) are
+                  catalysts for this transformation, empowering businesses to
+                  redefine market dynamics across supply chains, regulators, and
+                  industry players. Following are the Blockchain services we
+                  offer:
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="overview-main-img">
+                <img src="assets/img/blockChain-Values-Icons/banner-3.svg" />
               </div>
             </div>
           </div>
-          <div class="carousel-inner pb-5">
-            <div class="carousel-item item_total_count active">
-              <div class="row">
-                <div class="col-12">
-                  <div class="carousel-caption z_index">
-                    <p class="solutions_small_text">Case Studies</p>
-                    <h1 class="solutions_heading">
-                      Transforming Supply Chain
-                      <br />
-                      Transparency with Blockchain
-                    </h1>
-                    <p class="width-644px solutions_p">
-                      Netlogg’s blockchain solution enabled real-time tracking,
-                      fraud prevention, and automated smart contracts, reducing
-                      disputes by 50% and costs by 30%.
-                    </p>
-                    <a href="#">
-                      <span> Read More </span>
-                      <img src="assets/img/Logo/smallArrowRight.svg" />
-                    </a>
+          <div class="row gap-24">
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
                   </div>
-                  <div class="caseStudy_overlay">
-                    <img
-                      src="assets/img/blockChain-caseStudy-Slider/1.svg"
-                      alt="Case Study"
-                    />
+                  <div class="margin-top-14">
+                    <p class="overview_card_text">
+                      Blockchain architecture design
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_text">
+                      App development & migration
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_text">
+                      Blockchain security consulting
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_text">
+                      Business logic customization
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-14">
+                    <p class="overview_card_text">
+                      Functionality breakdown & estimation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_text">
+                      Business case & workflow analysis
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-14">
+                    <p class="overview_card_text">
+                      Private & permissioned blockchain
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img src="assets/img/blockChain-OverView-Icons/1.svg" />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_text">
+                      External services integration
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- CaseStudy Section End-->
+      </section>
+      <!-- OverView Section End -->
 
-    <!-- Block Chain Section -->
-    <section class="blockChainValue_section">
-      <div class="container-fluid">
-        <h2 class="blockChain-title">The Value of Blockchain</h2>
-        <div>
+      <!-- CaseStudy Section -->
+      <section
+        class="caseStudy_section"
+        id="caseStudy_section"
+        data-title="2. CASE STUDIES"
+      >
+        <div class="">
+          <div
+            id="carouselExampleIndicators2"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-pause="true"
+          >
+            <!--  -->
+            <div class="dp-flex align-items-center">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators2"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                >
+                  <span></span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators2"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                >
+                  <span></span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators2"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                >
+                  <span></span>
+                </button>
+              </div>
+              <div class="right_left_count">
+                <div class="dp-flex align-items-center">
+                  <button
+                    class="carousal_left"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="prev"
+                  >
+                    <span>
+                      <img
+                        class="button_arrow_left"
+                        src="assets/img/Logo/prevIcon.svg"
+                      />
+                    </span>
+                  </button>
+                  <div class="count_carousal">1 / 3</div>
+                  <button
+                    class="carousal_right"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="next"
+                  >
+                    <span>
+                      <img
+                        class="button_arrow_right"
+                        src="assets/img/Logo/nextIcon.svg"
+                      />
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-inner pb-5">
+              <div class="carousel-item item_total_count active">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="carousel-caption z_index">
+                      <p class="solutions_small_text">Case Studies</p>
+                      <h1 class="solutions_heading">
+                        Transforming Supply Chain
+                        <br />
+                        Transparency with Blockchain
+                      </h1>
+                      <p class="width-644px solutions_p">
+                        Netlogg’s blockchain solution enabled real-time
+                        tracking, fraud prevention, and automated smart
+                        contracts, reducing disputes by 50% and costs by 30%.
+                      </p>
+                      <a href="#">
+                        <span> Read More </span>
+                        <img src="assets/img/Logo/smallArrowRight.svg" />
+                      </a>
+                    </div>
+                    <div class="caseStudy_overlay">
+                      <img
+                        src="assets/img/blockChain-caseStudy-Slider/1.svg"
+                        alt="Case Study"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CaseStudy Section End-->
+
+      <!-- Block Chain Section -->
+      <section
+        class="blockChainValue_section"
+        id="blockChainValue_section"
+        data-title="3. BLOCKCHAIN VALUE & SOLUTIONS"
+      >
+        <div class="container-fluid">
+          <h2 class="blockChain-title">The Value of Blockchain</h2>
+          <div>
+            <div class="w-100 mb-5">
+              <div class="blockChain_card">
+                <div>
+                  <img
+                    src="assets/img/blockChain-Values-Icons/1.svg"
+                    alt="NetLogg"
+                  />
+                </div>
+
+                <div>
+                  <p class="desc width-258px">
+                    Enhance operational efficiency in complex, multi-party
+                    ecosystems.
+                  </p>
+                </div>
+              </div>
+              <div class="blockChain_card">
+                <div>
+                  <img
+                    src="assets/img/blockChain-Values-Icons/2.svg"
+                    alt="NetLogg"
+                  />
+                </div>
+
+                <div>
+                  <p class="desc width-258px">
+                    Improve traceability & compliance, mitigating risks and
+                    penalties.
+                  </p>
+                </div>
+              </div>
+              <div class="blockChain_card">
+                <div>
+                  <img
+                    src="assets/img/blockChain-Values-Icons/3.svg"
+                    alt="NetLogg"
+                  />
+                </div>
+
+                <div>
+                  <p class="desc width-258px">
+                    Unlock new revenue streams through data-driven services and
+                    analytics.
+                  </p>
+                </div>
+              </div>
+              <div class="blockChain_card">
+                <div>
+                  <img
+                    src="assets/img/blockChain-Values-Icons/4.svg"
+                    alt="NetLogg"
+                  />
+                </div>
+
+                <div>
+                  <p class="desc width-258px">
+                    Strengthen security & trust by ensuring data integrity and
+                    reducing fraud risks.
+                  </p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="container-fluid gap-40">
+          <h2 class="blockChain-title">
+            Blockchain Development Solutions in Focus
+          </h2>
+          <div class="row gap-40">
+            <div class="col-md-3 col-12">
+              <div
+                class="nav nav-pills"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="enterprise-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#enterprise"
+                  type="button"
+                  role="tab"
+                >
+                  Enterprise Development
+                </button>
+                <button
+                  class="nav-link"
+                  id="crypto-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#crypto"
+                  type="button"
+                  role="tab"
+                >
+                  Cryptocurrency Development
+                </button>
+                <button
+                  class="nav-link"
+                  id="leaders-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#leaders"
+                  type="button"
+                  role="tab"
+                >
+                  Empowering Leaders
+                </button>
+                <button
+                  class="nav-link"
+                  id="smart-contract-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#smart-contract"
+                  type="button"
+                  role="tab"
+                >
+                  Smart Contract Development
+                </button>
+                <button
+                  class="nav-link"
+                  id="wallet-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#wallet"
+                  type="button"
+                  role="tab"
+                >
+                  Cryptocurrency Wallet
+                </button>
+                <button
+                  class="nav-link"
+                  id="nft-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#nft"
+                  type="button"
+                  role="tab"
+                >
+                  Revenue Streams with NFTs
+                </button>
+              </div>
+            </div>
+            <div class="col-md-9 col-12 mb-5">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="enterprise"
+                  role="tabpanel"
+                >
+                  <div class="blockchain-tab-img">
+                    <img
+                      src="assets/img/blockChain-Values-Icons/banner-1.svg"
+                      alt="Enterprise"
+                    />
+                  </div>
+                  <h2 class="gap-32 mb-3">
+                    Enterprise Blockchain Development: & Graphic Novels
+                  </h2>
+                  <p class="gap-8 mb-0">
+                    Netlogg delivers enterprise-grade blockchain solutions that
+                    go beyond efficiency—enabling secure collaboration,
+                    accelerating key processes, and fostering continuous
+                    innovation. Build a resilient, future-ready ecosystem to
+                    lead your industry.
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="crypto" role="tabpanel">
+                  <div class="blockchain-tab-img">
+                    <img
+                      src="assets/img/blockChain-Values-Icons/banner-2.svg"
+                      alt="Cryptocurrency"
+                    />
+                  </div>
+                  <h2 class="gap-32 mb-3">
+                    Cryptocurrency Exchange Development
+                  </h2>
+                  <p class="gap-8 mb-0">
+                    Netlogg builds robust, user-friendly cryptocurrency exchange
+                    platforms for web and mobile. Designed for both novice and
+                    professional traders, our solutions feature customizable
+                    trading modules, multi-pair support, two-factor
+                    authentication, live chat, and integrated customer support
+                    for a seamless trading experience.
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="leaders" role="tabpanel">
+                  <div class="blockchain-tab-img">
+                    <img
+                      src="assets/img/blockChain-Values-Icons/banner-3.svg"
+                      alt="Cryptocurrency"
+                    />
+                  </div>
+                  <h2 class="gap-32 mb-3">Empowering Innovators & Leaders</h2>
+                  <p class="gap-8 mb-0">
+                    Netlogg offers expert-led blockchain training sessions
+                    tailored for professionals, business owners, and investors.
+                    Focused on emerging trends, our programs deliver practical
+                    insights, real-world applications, and strategic know-how,
+                    helping you navigate and leverage blockchain technology
+                    effectively.
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="smart-contract" role="tabpanel">
+                  <div class="blockchain-tab-img">
+                    <img
+                      src="assets/img/blockChain-Values-Icons/banner-4.svg"
+                      alt="Cryptocurrency"
+                    />
+                  </div>
+                  <h2 class="gap-32 mb-3">
+                    Smart Contract Development & Audit
+                  </h2>
+                  <p class="gap-8 mb-0">
+                    Netlogg delivers robust, business-specific smart contracts
+                    that streamline operations, reduce costs, and eliminate
+                    fraud risks. Built on Cardano, Polkadot, Echo, Solana, and
+                    Ethereum, our solutions ensure security, efficiency, and
+                    seamless cryptocurrency transactions—backed by comprehensive
+                    audits and performance optimization.
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="wallet" role="tabpanel">
+                  <div class="blockchain-tab-img">
+                    <img
+                      src="assets/img/blockChain-Values-Icons/banner-6.svg"
+                      alt="Cryptocurrency"
+                    />
+                  </div>
+                  <h2 class="gap-32 mb-3">Cryptocurrency Wallet Development</h2>
+                  <p class="gap-8 mb-0">
+                    Netlogg designs high-performance crypto wallets for desktop
+                    and mobile, built with rigorous security standards and
+                    seamless functionality. Our wallets go beyond aesthetics,
+                    offering an intuitive UX with both standard and custom
+                    features, ensuring a secure and effortless digital asset
+                    experience.
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="nft" role="tabpanel">
+                  <div class="blockchain-tab-img">
+                    <img
+                      src="assets/img/blockChain-Values-Icons/banner-5.svg"
+                      alt="Cryptocurrency"
+                    />
+                  </div>
+                  <h2 class="gap-32 mb-3">
+                    Unlock New Revenue Streams with NFTs
+                  </h2>
+                  <p class="gap-8 mb-0">
+                    Netlogg leverages its deep blockchain expertise to deliver
+                    cutting-edge NFT solutions that drive engagement,
+                    monetization, and digital ownership. Explore how NFTs can
+                    revolutionize your industry and accelerate your business
+                    growth!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="container-fluid gap-40">
           <div class="w-100">
-            <div class="blockChain_card">
-              <div>
-                <img
-                  src="assets/img/blockChain-Values-Icons/1.svg"
-                  alt="NetLogg"
-                />
+            <div class="card-25 custom-margin-1">
+              <div class="">
+                <img src="assets/img/blockChain-Values-Icons/5.svg" />
               </div>
-
-              <div>
-                <p class="desc width-258px">
-                  Enhance operational efficiency in complex, multi-party
-                  ecosystems.
+              <div class="gap-8">
+                <p class="count_big">50+</p>
+              </div>
+              <div class="gap-8">
+                <p class="des width-276px">
+                  Successful Blockchain Implementations
                 </p>
               </div>
             </div>
-            <div class="blockChain_card">
-              <div>
-                <img
-                  src="assets/img/blockChain-Values-Icons/2.svg"
-                  alt="NetLogg"
-                />
+            <div class="card-25 custom-margin-2">
+              <div class="">
+                <img src="assets/img/blockChain-Values-Icons/6.svg" />
               </div>
-
-              <div>
-                <p class="desc width-258px">
-                  Improve traceability & compliance, mitigating risks and
-                  penalties.
-                </p>
+              <div class="gap-8">
+                <p class="count_big">30%</p>
+              </div>
+              <div class="gap-8">
+                <p class="des">Increase in Operational Efficiency</p>
               </div>
             </div>
-            <div class="blockChain_card">
-              <div>
-                <img
-                  src="assets/img/blockChain-Values-Icons/3.svg"
-                  alt="NetLogg"
-                />
+            <div class="card-25 custom-margin-2">
+              <div class="">
+                <img src="assets/img/blockChain-Values-Icons/7.svg" />
               </div>
-
-              <div>
-                <p class="desc width-258px">
-                  Unlock new revenue streams through data-driven services and
-                  analytics.
-                </p>
+              <div class="gap-8">
+                <p class="count_big">500M+</p>
+              </div>
+              <div class="gap-8">
+                <p class="des">Secure Transactions Processed</p>
               </div>
             </div>
-            <div class="blockChain_card">
-              <div>
-                <img
-                  src="assets/img/blockChain-Values-Icons/4.svg"
-                  alt="NetLogg"
-                />
+            <div class="card-25 custom-margin-4">
+              <div class="">
+                <img src="assets/img/blockChain-Values-Icons/8.svg" />
               </div>
-
-              <div>
-                <p class="desc width-258px">
-                  Strengthen security & trust by ensuring data integrity and
-                  reducing fraud risks.
-                </p>
+              <div class="gap-8">
+                <p class="count_big">50+</p>
+              </div>
+              <div class="gap-8">
+                <p class="des">Key Industry-Specific Blockchain Solutions</p>
               </div>
             </div>
             <div class="clearfix"></div>
           </div>
         </div>
-      </div>
-      <!--  -->
-      <div class="container-fluid gap-40">
-        <h2 class="blockChain-title">
-          Blockchain Development Solutions in Focus
-        </h2>
-        <div class="row">
-          <div class="col-3">
-              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <button class="nav-link active" id="enterprise-tab" data-bs-toggle="pill" data-bs-target="#enterprise" type="button" role="tab">Enterprise Development</button>
-                  <button class="nav-link" id="crypto-tab" data-bs-toggle="pill" data-bs-target="#crypto" type="button" role="tab">Cryptocurrency Development</button>
-                  <button class="nav-link" id="leaders-tab" data-bs-toggle="pill" data-bs-target="#leaders" type="button" role="tab">Empowering Leaders</button>
-                  <button class="nav-link" id="smart-contract-tab" data-bs-toggle="pill" data-bs-target="#smart-contract" type="button" role="tab">Smart Contract Development</button>
-                  <button class="nav-link" id="wallet-tab" data-bs-toggle="pill" data-bs-target="#wallet" type="button" role="tab">Cryptocurrency Wallet</button>
-                  <button class="nav-link" id="nft-tab" data-bs-toggle="pill" data-bs-target="#nft" type="button" role="tab">Revenue Streams with NFTs</button>
-              </div>
-          </div>
-          <div class="col-9">
-              <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active" id="enterprise" role="tabpanel">
-                    <div class="blockchain-tab-img">
-                      <img src="assets/img/blockChain-Values-Icons/banner-1.svg" alt="Enterprise">
-                    </div>
-                      <h2 class=" mb-3">Enterprise Blockchain Development: & Graphic Novels</h2>
-                      <p class="gap-8 m-0">Netlogg delivers enterprise-grade blockchain solutions that go beyond efficiency—enabling secure collaboration, accelerating key processes, and fostering continuous innovation. Build a resilient, future-ready ecosystem to lead your industry.</p>
-                  </div>
-                  <div class="tab-pane fade" id="crypto" role="tabpanel">
-                      <h2 class="text-primary mb-3">Cryptocurrency Development</h2>
-                      <p>Comprehensive cryptocurrency development services tailored to your business needs. From blockchain integration to custom token creation, we provide end-to-end solutions.</p>
-                  </div>
-                  <div class="tab-pane fade" id="leaders" role="tabpanel">
-                      <h2 class="text-primary mb-3">Empowering Leaders</h2>
-                      <p>Strategic consulting and leadership development for blockchain and cryptocurrency enterprises. We help transform innovative ideas into market-leading solutions.</p>
-                  </div>
-                  <div class="tab-pane fade" id="smart-contract" role="tabpanel">
-                      <h2 class="text-primary mb-3">Smart Contract Development</h2>
-                      <p>Secure and efficient smart contract development using cutting-edge blockchain technologies. Our experts create robust, audited smart contracts for various blockchain platforms.</p>
-                  </div>
-                  <div class="tab-pane fade" id="wallet" role="tabpanel">
-                      <h2 class="text-primary mb-3">Cryptocurrency Wallet</h2>
-                      <p>Develop secure, user-friendly cryptocurrency wallets with advanced features including multi-currency support, cold storage integration, and seamless user experience.</p>
-                  </div>
-                  <div class="tab-pane fade" id="nft" role="tabpanel">
-                      <h2 class="text-primary mb-3">Revenue Streams with NFTs</h2>
-                      <p>Innovative NFT development and monetization strategies. Create, launch, and manage unique digital assets that open new revenue streams for your business.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!--  -->
-      <div class="container-fluid gap-40">
-        <div class="w-100">
-          <div class="card-25 custom-margin-1">
-            <div class="">
-              <img src="assets/img/blockChain-Values-Icons/5.svg" />
-            </div>
-            <div class="gap-8">
-              <p class="count_big">50+</p>
-            </div>
-            <div class="gap-8">
-              <p class="des width-276px">
-                Successful Blockchain Implementations
-              </p>
-            </div>
-          </div>
-          <div class="card-25 custom-margin-2">
-            <div class="">
-              <img src="assets/img/blockChain-Values-Icons/6.svg" />
-            </div>
-            <div class="gap-8">
-              <p class="count_big">30%</p>
-            </div>
-            <div class="gap-8">
-              <p class="des">Increase in Operational Efficiency</p>
-            </div>
-          </div>
-          <div class="card-25 custom-margin-2">
-            <div class="">
-              <img src="assets/img/blockChain-Values-Icons/7.svg" />
-            </div>
-            <div class="gap-8">
-              <p class="count_big">500M+</p>
-            </div>
-            <div class="gap-8">
-              <p class="des">Secure Transactions Processed</p>
-            </div>
-          </div>
-          <div class="card-25 custom-margin-4">
-            <div class="">
-              <img src="assets/img/blockChain-Values-Icons/8.svg" />
-            </div>
-            <div class="gap-8">
-              <p class="count_big">50+</p>
-            </div>
-            <div class="gap-8">
-              <p class="des">Key Industry-Specific Blockchain Solutions</p>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <script>
-        $(document).ready(function () {
-          function animateCount($element, target, suffix = "") {
-            let start = 0;
-            let duration = 5000; // Animation duration in milliseconds
-            let startTime = null;
 
-            function easing(t) {
-              return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // Cubic ease-in-out
-            }
+        <script>
+          $(document).ready(function () {
+            function animateCount($element, target, suffix = "") {
+              let start = 0;
+              let duration = 5000; // Animation duration in milliseconds
+              let startTime = null;
 
-            function updateCount(timestamp) {
-              if (!startTime) startTime = timestamp;
-              let progress = (timestamp - startTime) / duration;
-              let easedProgress = easing(Math.min(progress, 1)); // Apply easing function
-              let displayValue = Math.floor(easedProgress * target);
-
-              // Format numbers with commas and restore suffix
-              $element.text(displayValue.toLocaleString() + suffix);
-
-              if (progress < 1) {
-                requestAnimationFrame(updateCount);
-              } else {
-                $element.text(target.toLocaleString() + suffix); // Ensure final value is correct
+              function easing(t) {
+                return t < 0.5
+                  ? 4 * t * t * t
+                  : 1 - Math.pow(-2 * t + 2, 3) / 2; // Cubic ease-in-out
               }
+
+              function updateCount(timestamp) {
+                if (!startTime) startTime = timestamp;
+                let progress = (timestamp - startTime) / duration;
+                let easedProgress = easing(Math.min(progress, 1)); // Apply easing function
+                let displayValue = Math.floor(easedProgress * target);
+
+                // Format numbers with commas and restore suffix
+                $element.text(displayValue.toLocaleString() + suffix);
+
+                if (progress < 1) {
+                  requestAnimationFrame(updateCount);
+                } else {
+                  $element.text(target.toLocaleString() + suffix); // Ensure final value is correct
+                }
+              }
+
+              requestAnimationFrame(updateCount);
             }
 
-            requestAnimationFrame(updateCount);
-          }
+            function parseNumber(text) {
+              let number = parseFloat(text.replace(/[^0-9.]/g, ""));
+              let suffix = "";
 
-          function parseNumber(text) {
-            let number = parseFloat(text.replace(/[^0-9.]/g, ""));
-            let suffix = "";
+              if (text.includes("M")) {
+                // number *= 1_000_000; // Convert 'M' to million
+                suffix = "M+";
+              } else if (text.includes("+")) {
+                suffix = "+";
+              } else if (text.includes("%")) {
+                suffix = "%";
+              }
 
-            if (text.includes("M")) {
-              // number *= 1_000_000; // Convert 'M' to million
-              suffix = "M+";
-            } else if (text.includes("+")) {
-              suffix = "+";
-            } else if (text.includes("%")) {
-              suffix = "%";
+              return { number, suffix };
             }
 
-            return { number, suffix };
-          }
-
-          function startCounting() {
-            $(".count_big").each(function () {
-              let $this = $(this);
-              let { number, suffix } = parseNumber($this.text());
-              animateCount($this, number, suffix);
-            });
-          }
-
-          // Trigger animation when the element enters the viewport
-          $(window).on("scroll", function () {
-            $(".count_big").each(function () {
-              let $this = $(this);
-              let offsetTop = $this.offset().top;
-              let windowHeight = $(window).height();
-              let scrollTop = $(window).scrollTop();
-
-              if (
-                scrollTop + windowHeight > offsetTop &&
-                !$this.hasClass("counted")
-              ) {
-                $this.addClass("counted"); // Ensure it runs only once
+            function startCounting() {
+              $(".count_big").each(function () {
+                let $this = $(this);
                 let { number, suffix } = parseNumber($this.text());
                 animateCount($this, number, suffix);
-              }
+              });
+            }
+
+            // Trigger animation when the element enters the viewport
+            $(window).on("scroll", function () {
+              $(".count_big").each(function () {
+                let $this = $(this);
+                let offsetTop = $this.offset().top;
+                let windowHeight = $(window).height();
+                let scrollTop = $(window).scrollTop();
+
+                if (
+                  scrollTop + windowHeight > offsetTop &&
+                  !$this.hasClass("counted")
+                ) {
+                  $this.addClass("counted"); // Ensure it runs only once
+                  let { number, suffix } = parseNumber($this.text());
+                  animateCount($this, number, suffix);
+                }
+              });
             });
+
+            // Run once in case elements are already in view
+            startCounting();
           });
+        </script>
+      </section>
+      <!-- Block Chain Section End -->
 
-          // Run once in case elements are already in view
-          startCounting();
-        });
-      </script>
-    </section>
-    <!-- Block Chain Section End -->
-
-    <!-- Innovation & Insights Section -->
-    <section class="newsroom_section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 col-12 sticky-column">
-            <div style="">
-              <p class="newsroom_title width_587px">Innovation & Insights</p>
-            </div>
-            <div>
-              <img
-                class="new_main_img"
-                src="assets/img/blockChain-Innovation/1.svg"
-                alt="NewsRoom"
-              />
-            </div>
-            <div class="mt-32">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 col-12 mbl_margin scrollable-column">
-            <div class="d-flex flex-column custom-border-newsroom">
-              <div
-                class="newsroom_card padding-64 custom-border-bottom-newsroom"
-              >
-                <h1>The Value of Blockchain</h1>
-                <p>
-                  Blockchain is more than just a technology—it’s a paradigm
-                  shift in how value is created and exchanged. From enhancing
-                  multi-party collaboration to enabling secure, decentralized
-                  ecosystems, blockchain is reshaping industries
-                </p>
-              </div>
-              <div
-                class="newsroom_card padding-64 custom-border-bottom-newsroom"
-              >
-                <h1>Business Transformation</h1>
-                <p>
-                  From financial services to supply chains, blockchain is
-                  reshaping industries with secure transactions, real-time
-                  tracking, and automated compliance. Netlogg delivers
-                  blockchain solutions tailored for sustainable growth.
-                </p>
-              </div>
-              <div
-                class="newsroom_card padding-64 custom-border-bottom-newsroom"
-              >
-                <h1>Our Approach to Blockchain Innovation</h1>
-                <p>
-                  We focus on real-world challenges, ensuring ecosystem-wide
-                  value distribution and developing scalable blockchain
-                  solutions that deliver tangible business results beyond
-                  proof-of-concept.
-                </p>
-              </div>
-              <div
-                class="newsroom_card padding-64 custom-border-bottom-newsroom"
-              >
-                <h1>Netlogg's Latest Milestones</h1>
-                <p>
-                  Stay updated on our AI breakthroughs, global expansions, and
-                  industry-leading partnerships shaping the future of digital
-                  innovation.
-                </p>
-              </div>
-              <div
-                class="newsroom_card padding-64 custom-border-bottom-newsroom"
-              >
-                <h1>Shaping the Future with Netlogg</h1>
-                <p>
-                  We’re redefining industries with cutting-edge AI, blockchain,
-                  and scalable infrastructure to solve today’s toughest
-                  challenges.
-                </p>
-              </div>
-              <div class="newsroom_card padding-64">
-                <h1>Expert Insights for Digital Leaders</h1>
-                <p>
-                  Access exclusive strategies and trends from Netlogg to stay
-                  ahead in AI, blockchain, and digital transformation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Innovation & Insights Section End -->
-    <!-- News update -->
-    <section class="newsUpdate_section">
-      <div class="container-fluid">
-        <h3 class="newsUpdate_title">News and Updates</h3>
-        <div class="row gap-60">
-          <div class="col-md-4 col-12 gap-16">
-            <div class="image-wrapper">
-              <img
-                class="w-100"
-                src="assets/img/blockChain-NewsUpdates/1.svg"
-                alt="Net Zero"
-              />
-            </div>
-            <div class="gap-24">
-              <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-            </div>
-            <div class="gap-16">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 col-12 gap-16">
-            <div class="image-wrapper">
-              <img
-                class="w-100"
-                src="assets/img/blockChain-NewsUpdates/2.svg"
-                alt="Net Zero"
-              />
-            </div>
-            <div class="gap-24">
-              <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-            </div>
-            <div class="gap-16">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 col-12 gap-16">
-            <div class="image-wrapper">
-              <img
-                class="w-100"
-                src="assets/img/blockChain-NewsUpdates/3.svg"
-                alt="Net Zero"
-              />
-            </div>
-            <div class="gap-24">
-              <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-            </div>
-            <div class="gap-16">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row gap-60">
-          <div class="col-md-4 col-12 gap-16">
-            <div class="image-wrapper">
-              <img
-                class="w-100"
-                src="assets/img/blockChain-NewsUpdates/4.svg"
-                alt="Net Zero"
-              />
-            </div>
-            <div class="gap-24">
-              <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-            </div>
-            <div class="gap-16">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 col-12 gap-16">
-            <div class="image-wrapper">
-              <img
-                class="w-100"
-                src="assets/img/blockChain-NewsUpdates/5.svg"
-                alt="Net Zero"
-              />
-            </div>
-            <div class="gap-24">
-              <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-            </div>
-            <div class="gap-16">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 col-12 gap-16">
-            <div class="image-wrapper">
-              <img
-                class="w-100"
-                src="assets/img/blockChain-NewsUpdates/6.svg"
-                alt="Net Zero"
-              />
-            </div>
-            <div class="gap-24">
-              <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-            </div>
-            <div class="gap-16">
-              <a href="#" class="all_cap_button dp-flex align-items-center">
-                <span> Explore All </span>
-                <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- News update End -->
-
-    <!-- Reach out section -->
-    <section class="reachout_section">
-      <div class="container">
-        <div class="width-50-auto">
-          <h3>Ready to Transform? Reach Out to Us.</h3>
-
+      <!-- Innovation & Insights Section -->
+      <section
+        class="newsroom_section"
+        id="innovation_section"
+        data-title="4. INNOVATION & INSIGHTS"
+      >
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-md-6 col-12">
-              <div class="form-floating mb-3 mt-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="firstName"
-                  placeholder="Enter First Name"
-                  name="firstName"
+            <div class="col-md-6 col-12 sticky-column">
+              <div style="">
+                <p class="newsroom_title width_587px">Innovation & Insights</p>
+              </div>
+              <div>
+                <img
+                  class="new_main_img"
+                  src="assets/img/blockChain-Innovation/1.svg"
+                  alt="NewsRoom"
                 />
-                <label for="firstName">First Name</label>
+              </div>
+              <div class="mt-32">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
               </div>
             </div>
-            <div class="col-md-6 col-12">
-              <div class="form-floating mb-3 mt-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastName"
-                  placeholder="Enter Last Name"
-                  name="lastName"
-                />
-                <label for="lastName">Last Name</label>
+            <div class="col-md-6 col-12 mbl_margin scrollable-column">
+              <div class="d-flex flex-column custom-border-newsroom">
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>The Value of Blockchain</h1>
+                  <p>
+                    Blockchain is more than just a technology—it’s a paradigm
+                    shift in how value is created and exchanged. From enhancing
+                    multi-party collaboration to enabling secure, decentralized
+                    ecosystems, blockchain is reshaping industries
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Business Transformation</h1>
+                  <p>
+                    From financial services to supply chains, blockchain is
+                    reshaping industries with secure transactions, real-time
+                    tracking, and automated compliance. Netlogg delivers
+                    blockchain solutions tailored for sustainable growth.
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Our Approach to Blockchain Innovation</h1>
+                  <p>
+                    We focus on real-world challenges, ensuring ecosystem-wide
+                    value distribution and developing scalable blockchain
+                    solutions that deliver tangible business results beyond
+                    proof-of-concept.
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Netlogg's Latest Milestones</h1>
+                  <p>
+                    Stay updated on our AI breakthroughs, global expansions, and
+                    industry-leading partnerships shaping the future of digital
+                    innovation.
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Shaping the Future with Netlogg</h1>
+                  <p>
+                    We’re redefining industries with cutting-edge AI,
+                    blockchain, and scalable infrastructure to solve today’s
+                    toughest challenges.
+                  </p>
+                </div>
+                <div class="newsroom_card padding-64">
+                  <h1>Expert Insights for Digital Leaders</h1>
+                  <p>
+                    Access exclusive strategies and trends from Netlogg to stay
+                    ahead in AI, blockchain, and digital transformation.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="form-floating mb-3 mt-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="companyName"
-                  placeholder="Enter Company Name"
-                  name="companyName"
-                />
-                <label for="companyName">Company Name</label>
-              </div>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="form-floating mb-3 mt-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter Email"
-                  name="email"
-                />
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="form-floating mb-3 mt-3">
-                <input
-                  type="jobTitlte"
-                  class="form-control"
-                  id="jobTitlte"
-                  placeholder="Enter Job Titlte"
-                  name="jobTitlte"
-                />
-                <label for="jobTitlte">Job Titlte</label>
-              </div>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="form-floating mb-3 mt-3">
-                <select class="form-select" id="country" name="country">
-                  <option>Dubai</option>
-                </select>
-                <label for="country" class="form-label">Country</label>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-floating mb-3 mt-3">
-                <textarea
-                  rows="5"
-                  class="form-control"
-                  id="message"
-                  name="text"
-                  placeholder="Message"
-                ></textarea>
-                <label for="message">Message</label>
-              </div>
-            </div>
-            <div class="col-12 text-end">
-              <button type="submit" class="submit_button">Submit</button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Reach out section End-->
+      </section>
+      <!-- Innovation & Insights Section End -->
+      <!-- News update -->
+      <section
+        class="newsUpdate_section"
+        id="newsUpdate_section"
+        data-title="5. NEWS AND UPDATE"
+      >
+        <div class="container-fluid">
+          <h3 class="newsUpdate_title">News and Updates</h3>
+          <div class="row gap-60">
+            <div class="col-md-4 col-12 gap-16">
+              <div class="image-wrapper">
+                <img
+                  class="w-100"
+                  src="assets/img/blockChain-NewsUpdates/1.svg"
+                  alt="Net Zero"
+                />
+              </div>
+              <div class="gap-24">
+                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
+              </div>
+              <div class="gap-16">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-16">
+              <div class="image-wrapper">
+                <img
+                  class="w-100"
+                  src="assets/img/blockChain-NewsUpdates/2.svg"
+                  alt="Net Zero"
+                />
+              </div>
+              <div class="gap-24">
+                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
+              </div>
+              <div class="gap-16">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-16">
+              <div class="image-wrapper">
+                <img
+                  class="w-100"
+                  src="assets/img/blockChain-NewsUpdates/3.svg"
+                  alt="Net Zero"
+                />
+              </div>
+              <div class="gap-24">
+                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
+              </div>
+              <div class="gap-16">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row gap-60">
+            <div class="col-md-4 col-12 gap-16">
+              <div class="image-wrapper">
+                <img
+                  class="w-100"
+                  src="assets/img/blockChain-NewsUpdates/4.svg"
+                  alt="Net Zero"
+                />
+              </div>
+              <div class="gap-24">
+                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
+              </div>
+              <div class="gap-16">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-16">
+              <div class="image-wrapper">
+                <img
+                  class="w-100"
+                  src="assets/img/blockChain-NewsUpdates/5.svg"
+                  alt="Net Zero"
+                />
+              </div>
+              <div class="gap-24">
+                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
+              </div>
+              <div class="gap-16">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-16">
+              <div class="image-wrapper">
+                <img
+                  class="w-100"
+                  src="assets/img/blockChain-NewsUpdates/6.svg"
+                  alt="Net Zero"
+                />
+              </div>
+              <div class="gap-24">
+                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
+              </div>
+              <div class="gap-16">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- News update End -->
 
+      <!-- Reach out section -->
+      <section
+        class="reachout_section"
+        id="contactus_section"
+        data-title="6. CONTACT US"
+      >
+        <div class="container">
+          <div class="width-50-auto">
+            <h3>Ready to Transform? Reach Out to Us.</h3>
+
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Enter First Name"
+                    name="firstName"
+                  />
+                  <label for="firstName">First Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Enter Last Name"
+                    name="lastName"
+                  />
+                  <label for="lastName">Last Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companyName"
+                    placeholder="Enter Company Name"
+                    name="companyName"
+                  />
+                  <label for="companyName">Company Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter Email"
+                    name="email"
+                  />
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="jobTitlte"
+                    class="form-control"
+                    id="jobTitlte"
+                    placeholder="Enter Job Titlte"
+                    name="jobTitlte"
+                  />
+                  <label for="jobTitlte">Job Titlte</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <select class="form-select" id="country" name="country">
+                    <option>Dubai</option>
+                  </select>
+                  <label for="country" class="form-label">Country</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <textarea
+                    rows="5"
+                    class="form-control"
+                    id="message"
+                    name="text"
+                    placeholder="Message"
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="submit_button">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Reach out section End-->
+    </div>
     <!-- Footer -->
     <!-- For Desktop -->
     <div class="footer_desktop">
