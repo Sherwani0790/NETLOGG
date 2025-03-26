@@ -2265,12 +2265,27 @@ textarea {
   background: #f7f7f7;
   padding: 24px;
   height: 128px;
+  transition: all 0.5s ease-in-out;
+}
+.overview_section .card-25:hover .margin-top-14 {
+  margin-top: 12px;
+}
+.overview_section .card-25:hover .margin-top-20 {
+  margin-top: 15px;
+}
+.overview_section .card-25:hover img {
+  transition: all 0.5s ease-in-out;
+  width: 60px;
+  height: 60px;
+  transform: scale(1.8);
+  opacity: 0.3;
 }
 .overview_section .card-25 .overview_card_text {
   width: 154px;
   font-weight: 500;
   font-size: 16px;
   margin: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .overview_section .overview-main-img img {
