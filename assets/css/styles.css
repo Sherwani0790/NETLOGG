@@ -2352,6 +2352,13 @@ textarea {
   width: 60px;
   height: 60px;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.blockChainValue_section .blockChain_card:hover img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
 .blockChainValue_section .blockChain_card .count {
   color: #161616;
@@ -2414,6 +2421,37 @@ textarea {
 .custom-margin-4 {
   margin: 0 0 0 8px;
 }
+.nav-pills .nav-link {
+  color: #666;
+  font-weight: 500;
+  position: relative;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.nav-pills .nav-link.active {
+  background-color: transparent;
+  color: #1b1aff;
+  text-align: left;
+}
+.nav-pills .nav-link.active::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #1b1aff;
+}
+.tab-content {
+  border: 0;
+  border-radius: 0;
+  padding: 0 0 0 32px;
+}
+.blockChainValue_section .tab-content .blockchain-tab-img img {
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 768px) {
   .blockChainValue_section {
     padding: 12px 12px 100px 12px;
@@ -2447,11 +2485,16 @@ textarea {
 /* BlockChain Value End */
 /* News Update */
 .newsUpdate_section {
-  padding: 100px 96px;
+  padding: 100px 130px 100px 96px;
 }
-.newsUpdate_section:first-child img {
-  width: 427px;
+.newsUpdate_section .newsUpdate_title {
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
 }
+
 .newsUpdate_section p {
   color: #2a304a;
   font-size: 18px;
@@ -2471,6 +2514,42 @@ textarea {
 }
 .newsUpdate_section .newUpdate_banner {
   width: 427px;
+}
+.newsUpdate_section .gap-60 {
+  margin-top: 60px;
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Black overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: scale(1.5); /* Slight zoom-in effect */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.5); /* Slight zoom-in effect */
+}
+
+.image-wrapper:hover::before {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 /* News Update End */
@@ -2785,6 +2864,19 @@ textarea {
     left: 0;
     bottom: 70px;
   }
+  .blockChainValue_section .card-25 {
+    width: 24.3%;
+    float: left;
+    padding: 24px;
+    background: #f7f7f7;
+    height: 220px;
+  }
+  .custom-margin-2 {
+    margin: 0 5px;
+  }
+  .custom-margin-4 {
+    margin: 0 0 0 5px;
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
@@ -2834,5 +2926,18 @@ textarea {
     right: 35px;
     left: 0;
     bottom: 70px;
+  }
+  .blockChainValue_section .card-25 {
+    width: 24.4%;
+    float: left;
+    padding: 24px;
+    background: #f7f7f7;
+    height: 220px;
+  }
+  .custom-margin-2 {
+    margin: 0 5px;
+  }
+  .custom-margin-4 {
+    margin: 0 0 0 5px;
   }
 }

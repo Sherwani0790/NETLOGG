@@ -1013,6 +1013,55 @@
           </div>
         </div>
       </div>
+      <!--  -->
+      <div class="container-fluid gap-40">
+        <h2 class="blockChain-title">
+          Blockchain Development Solutions in Focus
+        </h2>
+        <div class="row">
+          <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link active" id="enterprise-tab" data-bs-toggle="pill" data-bs-target="#enterprise" type="button" role="tab">Enterprise Development</button>
+                  <button class="nav-link" id="crypto-tab" data-bs-toggle="pill" data-bs-target="#crypto" type="button" role="tab">Cryptocurrency Development</button>
+                  <button class="nav-link" id="leaders-tab" data-bs-toggle="pill" data-bs-target="#leaders" type="button" role="tab">Empowering Leaders</button>
+                  <button class="nav-link" id="smart-contract-tab" data-bs-toggle="pill" data-bs-target="#smart-contract" type="button" role="tab">Smart Contract Development</button>
+                  <button class="nav-link" id="wallet-tab" data-bs-toggle="pill" data-bs-target="#wallet" type="button" role="tab">Cryptocurrency Wallet</button>
+                  <button class="nav-link" id="nft-tab" data-bs-toggle="pill" data-bs-target="#nft" type="button" role="tab">Revenue Streams with NFTs</button>
+              </div>
+          </div>
+          <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="enterprise" role="tabpanel">
+                    <div class="blockchain-tab-img">
+                      <img src="assets/img/blockChain-Values-Icons/banner-1.svg" alt="Enterprise">
+                    </div>
+                      <h2 class=" mb-3">Enterprise Blockchain Development: & Graphic Novels</h2>
+                      <p class="gap-8 m-0">Netlogg delivers enterprise-grade blockchain solutions that go beyond efficiency—enabling secure collaboration, accelerating key processes, and fostering continuous innovation. Build a resilient, future-ready ecosystem to lead your industry.</p>
+                  </div>
+                  <div class="tab-pane fade" id="crypto" role="tabpanel">
+                      <h2 class="text-primary mb-3">Cryptocurrency Development</h2>
+                      <p>Comprehensive cryptocurrency development services tailored to your business needs. From blockchain integration to custom token creation, we provide end-to-end solutions.</p>
+                  </div>
+                  <div class="tab-pane fade" id="leaders" role="tabpanel">
+                      <h2 class="text-primary mb-3">Empowering Leaders</h2>
+                      <p>Strategic consulting and leadership development for blockchain and cryptocurrency enterprises. We help transform innovative ideas into market-leading solutions.</p>
+                  </div>
+                  <div class="tab-pane fade" id="smart-contract" role="tabpanel">
+                      <h2 class="text-primary mb-3">Smart Contract Development</h2>
+                      <p>Secure and efficient smart contract development using cutting-edge blockchain technologies. Our experts create robust, audited smart contracts for various blockchain platforms.</p>
+                  </div>
+                  <div class="tab-pane fade" id="wallet" role="tabpanel">
+                      <h2 class="text-primary mb-3">Cryptocurrency Wallet</h2>
+                      <p>Develop secure, user-friendly cryptocurrency wallets with advanced features including multi-currency support, cold storage integration, and seamless user experience.</p>
+                  </div>
+                  <div class="tab-pane fade" id="nft" role="tabpanel">
+                      <h2 class="text-primary mb-3">Revenue Streams with NFTs</h2>
+                      <p>Innovative NFT development and monetization strategies. Create, launch, and manage unique digital assets that open new revenue streams for your business.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--  -->
       <div class="container-fluid gap-40">
         <div class="w-100">
           <div class="card-25 custom-margin-1">
@@ -1064,6 +1113,83 @@
           <div class="clearfix"></div>
         </div>
       </div>
+      <script>
+        $(document).ready(function () {
+          function animateCount($element, target, suffix = "") {
+            let start = 0;
+            let duration = 5000; // Animation duration in milliseconds
+            let startTime = null;
+
+            function easing(t) {
+              return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // Cubic ease-in-out
+            }
+
+            function updateCount(timestamp) {
+              if (!startTime) startTime = timestamp;
+              let progress = (timestamp - startTime) / duration;
+              let easedProgress = easing(Math.min(progress, 1)); // Apply easing function
+              let displayValue = Math.floor(easedProgress * target);
+
+              // Format numbers with commas and restore suffix
+              $element.text(displayValue.toLocaleString() + suffix);
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                $element.text(target.toLocaleString() + suffix); // Ensure final value is correct
+              }
+            }
+
+            requestAnimationFrame(updateCount);
+          }
+
+          function parseNumber(text) {
+            let number = parseFloat(text.replace(/[^0-9.]/g, ""));
+            let suffix = "";
+
+            if (text.includes("M")) {
+              // number *= 1_000_000; // Convert 'M' to million
+              suffix = "M+";
+            } else if (text.includes("+")) {
+              suffix = "+";
+            } else if (text.includes("%")) {
+              suffix = "%";
+            }
+
+            return { number, suffix };
+          }
+
+          function startCounting() {
+            $(".count_big").each(function () {
+              let $this = $(this);
+              let { number, suffix } = parseNumber($this.text());
+              animateCount($this, number, suffix);
+            });
+          }
+
+          // Trigger animation when the element enters the viewport
+          $(window).on("scroll", function () {
+            $(".count_big").each(function () {
+              let $this = $(this);
+              let offsetTop = $this.offset().top;
+              let windowHeight = $(window).height();
+              let scrollTop = $(window).scrollTop();
+
+              if (
+                scrollTop + windowHeight > offsetTop &&
+                !$this.hasClass("counted")
+              ) {
+                $this.addClass("counted"); // Ensure it runs only once
+                let { number, suffix } = parseNumber($this.text());
+                animateCount($this, number, suffix);
+              }
+            });
+          });
+
+          // Run once in case elements are already in view
+          startCounting();
+        });
+      </script>
     </section>
     <!-- Block Chain Section End -->
 
@@ -1160,9 +1286,10 @@
     <!-- News update -->
     <section class="newsUpdate_section">
       <div class="container-fluid">
-        <div class="row">
+        <h3 class="newsUpdate_title">News and Updates</h3>
+        <div class="row gap-60">
           <div class="col-md-4 col-12 gap-16">
-            <div class="">
+            <div class="image-wrapper">
               <img
                 class="w-100"
                 src="assets/img/blockChain-NewsUpdates/1.svg"
@@ -1180,7 +1307,7 @@
             </div>
           </div>
           <div class="col-md-4 col-12 gap-16">
-            <div class="">
+            <div class="image-wrapper">
               <img
                 class="w-100"
                 src="assets/img/blockChain-NewsUpdates/2.svg"
@@ -1198,7 +1325,7 @@
             </div>
           </div>
           <div class="col-md-4 col-12 gap-16">
-            <div class="">
+            <div class="image-wrapper">
               <img
                 class="w-100"
                 src="assets/img/blockChain-NewsUpdates/3.svg"
@@ -1215,8 +1342,10 @@
               </a>
             </div>
           </div>
+        </div>
+        <div class="row gap-60">
           <div class="col-md-4 col-12 gap-16">
-            <div class="">
+            <div class="image-wrapper">
               <img
                 class="w-100"
                 src="assets/img/blockChain-NewsUpdates/4.svg"
@@ -1234,7 +1363,7 @@
             </div>
           </div>
           <div class="col-md-4 col-12 gap-16">
-            <div class="">
+            <div class="image-wrapper">
               <img
                 class="w-100"
                 src="assets/img/blockChain-NewsUpdates/5.svg"
@@ -1252,7 +1381,7 @@
             </div>
           </div>
           <div class="col-md-4 col-12 gap-16">
-            <div class="">
+            <div class="image-wrapper">
               <img
                 class="w-100"
                 src="assets/img/blockChain-NewsUpdates/6.svg"
