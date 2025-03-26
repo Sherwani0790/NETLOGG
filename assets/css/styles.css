@@ -2275,8 +2275,8 @@ textarea {
 }
 .overview_section .card-25:hover img {
   transition: all 0.5s ease-in-out;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   transform: scale(1.8);
   opacity: 0.3;
 }
@@ -2640,7 +2640,7 @@ textarea {
   margin-top: 16px;
 }
 .blockChainValue_section .width-258px {
-  width: 258px;
+  width: 230px;
 }
 .blockChainValue_section .gap-40 {
   margin-top: 40px;
@@ -2710,6 +2710,7 @@ textarea {
   top: 0;
   bottom: 0;
   width: 4px;
+  border-radius: 8px;
   background-color: #1b1aff;
 }
 .blockChainValue_section .tab-content {
@@ -3133,10 +3134,19 @@ textarea {
     object-fit: cover;
     transition: transform 0.6s ease, filter 0.6s ease;
   }
+  .whatWeDoCardWrapper .swiper-slide {
+    width: 445px !important;
+  }
   .carousel-caption {
     position: absolute;
     top: 15%;
     left: 6%;
+    text-align: left;
+  }
+  .caseStudy_section .carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 7%;
     text-align: left;
   }
   #carouselExampleIndicators2 .carousel-indicators {
@@ -3174,7 +3184,7 @@ textarea {
     margin-top: 50px;
   }
   .newsroom_section .newsroom_card p {
-    width: 520px;
+    width: 500px;
   }
   .footer_extension .footer-social {
     display: flex;
@@ -3240,6 +3250,26 @@ textarea {
   .custom-margin-4 {
     margin: 0 0 0 5px;
   }
+  .blockChainValue_section .card-25 {
+    width: 24.3% !important;
+  }
+  .blockchain-main-section .main-section-overlay {
+    height: 600px;
+    background-position-y: -150px;
+  }
+  .blockchain-main-section .main-section-width {
+    width: 531px;
+    position: absolute;
+    top: 155px;
+    left: 110px;
+  }
+  .overview_section .overview-main-img img {
+    width: 100%;
+    margin-top: 14px;
+  }
+  .overview_section .gap-24 {
+    margin-top: 0px;
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
@@ -3302,5 +3332,14 @@ textarea {
   }
   .custom-margin-4 {
     margin: 0 0 0 5px;
+  }
+  .blockchain-main-section .main-section-width {
+    width: 531px;
+    position: absolute;
+    top: 185px;
+    left: 110px;
+  }
+  .caseStudy_section .carousel-caption {
+    top: 40%;
   }
 }
