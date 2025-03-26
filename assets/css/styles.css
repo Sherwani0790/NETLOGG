@@ -3321,7 +3321,7 @@ textarea {
     bottom: 70px;
   }
   .blockChainValue_section .card-25 {
-    width: 24.4%;
+    width: 24.3%;
     float: left;
     padding: 24px;
     background: #f7f7f7;
@@ -3336,10 +3336,17 @@ textarea {
   .blockchain-main-section .main-section-width {
     width: 531px;
     position: absolute;
-    top: 185px;
+    top: 140px;
     left: 110px;
   }
   .caseStudy_section .carousel-caption {
     top: 40%;
+  }
+  .progress_section_selection .text-indication {
+    padding: 10px 138px 10px 110px;
+  }
+  .blockchain-main-section .main-section-overlay {
+    height: 600px;
+    background-position-y: -200px;
   }
 }
