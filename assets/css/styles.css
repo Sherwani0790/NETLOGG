@@ -1836,6 +1836,9 @@ ul {
   .newsroom_section img {
     width: 100%;
   }
+  .newsroom_section .new_main_img {
+    width: 100%;
+  }
 }
 /* NewsRoom Section End */
 
@@ -2066,7 +2069,838 @@ textarea {
   }
 }
 /* Reach out section End */
+/* BlockChain-main Section */
+.blockchain-main-section {
+  /* padding: 100px 130px 100px 96px; */
+  position: relative;
+}
+.blockchain-main-section .main-section-overlay {
+  background-image: url("../img/blockChain-Main/bg_img.svg");
+  background-size: cover;
+  width: 100%;
+  height: 712px;
+  background-position-y: -200px;
+}
+.blockchain-main-section .main-section-width {
+  width: 531px;
+  position: absolute;
+  top: 225px;
+  left: 110px;
+}
+.blockchain-main-section .main-section-width .small-text {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 17px; /* 141.667% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.blockchain-main-section .main-section-width .big-text {
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 0 0;
+}
+@media (max-width: 768px) {
+  .blockchain-main-section .main-section-overlay {
+    height: 430px;
+    background-position-y: -18px;
+  }
+  .blockchain-main-section .main-section-width {
+    width: auto;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+  }
+  .blockchain-main-section .main-section-width .big-text {
+    font-size: 22px;
+  }
+  .progress_section_selection {
+    display: none;
+  }
+}
+/* BlockChain-main Section End */
 
+/* Block chain Progress bar */
+/* body{
+  height: 100vh;
+} */
+
+.progress_section_selection .progress-bar-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #777a8a;
+  z-index: 9999;
+}
+
+.progress_section_selection .progress-bar {
+  height: 100%;
+  background-color: #1b1aff;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+.progress_section_selection .text-indication {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 130px 10px 96px;
+}
+.progress_section_selection .text-indication .progress-label-left {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+.progress_section_selection .text-indication .progress-label-left p {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.6px;
+  padding-top: 12px;
+}
+.progress_section_selection .text-indication .progress-label-right {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  /* padding-top: 12px; */
+}
+.progress_section_selection .text-indication .progress-label-right p {
+  color: #1a1a1a;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.6px;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-dropdown-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.custom-dropdown-button i {
+  margin-left: 10px;
+}
+
+.custom-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: max-content;
+  background: white;
+  /* border: 1px solid #ddd; */
+  box-shadow: 0px 4px 6px rgb(0 0 0 / 25%);
+  padding: 10px 5px;
+}
+
+.custom-dropdown-content li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-dropdown-content li:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-dropdown:hover .custom-dropdown-content {
+  display: block;
+}
+
+/* Block chain Progress bar End */
+
+/* OverView section */
+.overview_section {
+  padding: 100px 130px 100px 96px;
+  overflow: hidden;
+}
+.overview_section .gap-24 {
+  margin-top: 24px;
+}
+.overview_section .gap-32 {
+  margin-top: 32px;
+}
+.overview_section h2 {
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.overview_section .overview_text {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.overview_section .width-531px {
+  width: 531px;
+}
+.overview_section .card-25 {
+  background: #f7f7f7;
+  padding: 24px;
+  height: 128px;
+}
+.overview_section .card-25 .overview_card_text {
+  width: 154px;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+
+.overview_section .overview-main-img img {
+  width: 100%;
+}
+.overview_section .card-25 .margin-top-20 {
+  margin-top: 20px;
+}
+.overview_section .card-25 .margin-top-14 {
+  margin-top: 14px;
+}
+@media (max-width: 768px) {
+  .overview_section {
+    padding: 10px;
+    overflow: hidden;
+  }
+  .overview_section .width-531px {
+    width: 100%;
+  }
+  .overview_section h2 {
+    font-size: 22px;
+  }
+  .overview_section .overview_text {
+    font-size: 14px;
+  }
+}
+/* OverView section End */
+
+/* CaseStudy Section */
+.caseStudy_overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+}
+.z_index {
+  z-index: 9;
+}
+.caseStudy_section {
+  background: #000a1c;
+  position: relative;
+}
+.solution_img_1 {
+  object-position: 500px;
+  background: #0d0f0e;
+}
+#carouselExampleIndicators2 .carousel-item {
+  height: 85vh;
+}
+/* .width-515px {
+  width: 515px;
+} */
+.caseStudy_section .solutions_small_text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fefefe;
+}
+.caseStudy_section .solutions_heading {
+  color: #fefefe;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 63px;
+}
+.caseStudy_section .solutions_p {
+  color: #fefefe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+#carouselExampleIndicators2 .carousel-item p::before {
+  content: url(../images/vec.png);
+  position: absolute;
+  top: 0%;
+  left: 21.5%;
+  opacity: 14%;
+}
+
+#carouselExampleIndicators2 .carousel-indicators [data-bs-target] {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border: 0.2px solid #fefefe;
+  border-radius: 24px;
+  background: #a9a8a82e;
+  cursor: default;
+  border: 0;
+}
+
+#carouselExampleIndicators2 .carousel-indicators [data-bs-target] span {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  border-radius: inherit;
+  cursor: default;
+  transition: width 0.05s linear;
+}
+#carouselExampleIndicators2 .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+#carouselExampleIndicators2 .carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 20%;
+  margin-bottom: 1rem;
+  margin-left: 5.6%;
+  list-style: none;
+}
+.right_left_count {
+  position: absolute;
+  right: 140px;
+  bottom: 20px;
+  z-index: 1;
+  border-radius: 88px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0.26) 0%,
+    rgba(0, 0, 0, 0.27) 15%,
+    rgba(0, 0, 0, 0.33) 100%
+  );
+
+  backdrop-filter: blur(16px);
+}
+#carouselExampleIndicators2 .carousal_left {
+  background: #fff;
+  z-index: 1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0;
+}
+#carouselExampleIndicators2 .carousal_left .carousel-control-prev,
+#carouselExampleIndicators2 .carousal_left .carousel-control-prev {
+  color: #000;
+}
+#carouselExampleIndicators2 .carousal_right {
+  border: 0;
+  background: #fff;
+  z-index: 1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.count_carousal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  background: #000;
+  /* border: 1px solid #fff; */
+}
+.caseStudy_section .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  text-align: left;
+}
+.caseStudy_section .width-644px {
+  width: 644px;
+}
+@media (max-width: 768px) {
+  .caseStudy_section {
+    margin-top: 50px;
+  }
+  .solution_img_1 {
+    object-position: center;
+    background: #0d0f0e;
+  }
+  #carouselExampleIndicators2 .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 40%;
+    margin-bottom: 1rem;
+    margin-left: 7.5%;
+    list-style: none;
+  }
+  #carouselExampleIndicators2 .carousal_left {
+    background: #fff;
+    z-index: 1;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 0;
+  }
+  #carouselExampleIndicators2 .carousal_right {
+    border: 0;
+    background: #fff;
+    z-index: 1;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  .right_left_count {
+    left: auto;
+    bottom: 20px;
+    z-index: 1;
+    right: 25px;
+  }
+
+  .count_carousal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    background: #000;
+    /* border: 1px solid #fff; */
+  }
+  .caseStudy_section .width-644px {
+    width: 330px;
+  }
+  .caseStudy_section .solutions_heading {
+    width: 330px;
+    color: #fff;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+  }
+  .caseStudy_section .solutions_small_text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fefefe;
+  }
+  .caseStudy_section .solutions_p {
+    color: #fefefe;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .caseStudy_section .carousel-caption a {
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    width: 151px;
+    padding: 10px 18px 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s all ease-in-out;
+  }
+  .caseStudy_section .carousel-caption a:hover {
+    border: 1px solid white;
+    display: flex;
+    color: white;
+    width: 161px;
+    padding: 10px 18px 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .caseStudy_section #carouselExampleIndicators2 .pb-5 {
+    padding-bottom: 5rem !important;
+  }
+  .caseStudy_overlay img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* CaseStudy Section End */
+
+/* BlockChain Value  */
+.blockChainValue_section {
+  background: #fff;
+  padding: 100px 130px 100px 100px;
+}
+.blockChainValue_section .blockChain-title {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.blockChainValue_section .blockChain_card {
+  float: left;
+  width: 25%;
+  height: 283px;
+  padding: 36px;
+  border: 1px solid #ededed;
+  margin-top: 60px;
+}
+.blockChainValue_section .blockChain_card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.blockChainValue_section .blockChain_card:hover img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.blockChainValue_section .blockChain_card .count {
+  color: #161616;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 43.5px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.blockChainValue_section .blockChain_card .desc {
+  color: #262b3f;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 16px;
+}
+.blockChainValue_section .width-258px {
+  width: 258px;
+}
+.blockChainValue_section .gap-40 {
+  margin-top: 40px;
+}
+.blockChainValue_section .gap-32 {
+  margin-top: 32px;
+}
+.blockChainValue_section .gap-8 {
+  margin-top: 8px;
+}
+.blockChainValue_section .card-25 {
+  width: 24.25%;
+  float: left;
+  padding: 24px;
+  background: #f7f7f7;
+  height: 220px;
+}
+.blockChainValue_section .card-25 .count_big {
+  color: #1d1d1f;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.blockChainValue_section .card-25 .des {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.blockChainValue_section .card-25 .width-276px {
+  width: 276px;
+}
+.custom-margin-1 {
+  margin: 0 8px 0 0;
+}
+.custom-margin-2 {
+  margin: 0 8px;
+}
+.custom-margin-4 {
+  margin: 0 0 0 8px;
+}
+.blockChainValue_section .nav-pills {
+  flex-direction: column;
+}
+.blockChainValue_section .nav-pills .nav-link {
+  color: #666;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  padding: 16px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.blockChainValue_section .nav-pills .nav-link.active {
+  background-color: transparent;
+  color: #1b1aff;
+  text-align: left;
+}
+.blockChainValue_section .nav-pills .nav-link.active::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #1b1aff;
+}
+.blockChainValue_section .tab-content {
+  border: 0;
+  border-radius: 0;
+  padding: 0 0 0 32px;
+}
+.blockChainValue_section .tab-content h2 {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.blockChainValue_section .tab-content p {
+  color: #424242;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 27.2px;
+}
+
+.blockchain-tab-img img {
+  width: 100%;
+  height: 385px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .blockChainValue_section {
+    padding: 12px;
+  }
+  .blockChainValue_section .blockChain-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .blockChainValue_section .blockChain_card .count {
+    font-size: 22px;
+  }
+  .blockChainValue_section .blockChain_card .desc {
+    font-size: 12px;
+    margin: 24px 0;
+  }
+  .blockChainValue_section .blockChain_card {
+    float: left;
+    width: 50%;
+    height: 230px;
+    padding: 20px;
+    border: 1px solid #ededed;
+    margin-top: 0px;
+  }
+  .blockChainValue_section .blockChain_card img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+  .blockChainValue_section .width-258px {
+    width: 100%;
+  }
+  .blockChainValue_section .nav-pills {
+    overflow: auto;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+  }
+  .blockChainValue_section .nav-pills .nav-link {
+    font-size: 14px;
+    padding: 7px 14px 7px 5px;
+    margin-bottom: 13px;
+    white-space: nowrap;
+  }
+  .blockChainValue_section .tab-content {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+  .blockchain-tab-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .blockChainValue_section .tab-content h2 {
+    font-size: 22px;
+  }
+  .blockChainValue_section .tab-content p {
+    font-size: 14px;
+  }
+  .blockChainValue_section .card-25 {
+    width: 48%;
+    float: left;
+    padding: 20px;
+    background: #f7f7f7;
+    height: 200px;
+  }
+  .custom-margin-2 {
+    margin: 0px 5px 10px 0px;
+  }
+  .custom-margin-1 {
+    margin: 0 5px 10px 0;
+  }
+  .custom-margin-4 {
+    margin: 0 0 0 0px;
+  }
+  .blockChainValue_section .card-25 .count_big {
+    font-size: 22px;
+  }
+  .blockChainValue_section .card-25 .des {
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+  .blockChainValue_section .card-25 .width-276px {
+    width: 100%;
+  }
+}
+
+/* BlockChain Value End */
+/* News Update */
+.newsUpdate_section {
+  padding: 100px 130px 100px 96px;
+}
+.newsUpdate_section .newsUpdate_title {
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+}
+
+.newsUpdate_section p {
+  color: #2a304a;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0;
+}
+.newsUpdate_section .gap-24 {
+  margin-top: 24px;
+}
+.newsUpdate_section .gap-16 {
+  margin-top: 16px;
+}
+.newsUpdate_section .col-gap-20 {
+  column-gap: 20px !important;
+}
+.newsUpdate_section .newUpdate_banner {
+  width: 427px;
+}
+.newsUpdate_section .gap-60 {
+  margin-top: 60px;
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Black overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: scale(1.5); /* Slight zoom-in effect */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.5); /* Slight zoom-in effect */
+}
+
+.image-wrapper:hover::before {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .newsUpdate_section {
+    padding: 50px 10px;
+  }
+  .newsUpdate_section .newsUpdate_title {
+    font-size: 22px;
+  }
+  .newsUpdate_section .gap-60 {
+    margin-top: 30px;
+  }
+  .newsUpdate_section p {
+    font-size: 14px;
+  }
+  .newsUpdate_section .gap-16 {
+    margin-top: 30px;
+  }
+}
+
+/* News Update End */
 /* Footer */
 .footer {
   background: #f7f7f7;
@@ -2378,6 +3212,19 @@ textarea {
     left: 0;
     bottom: 70px;
   }
+  .blockChainValue_section .card-25 {
+    width: 24.3%;
+    float: left;
+    padding: 24px;
+    background: #f7f7f7;
+    height: 220px;
+  }
+  .custom-margin-2 {
+    margin: 0 5px;
+  }
+  .custom-margin-4 {
+    margin: 0 0 0 5px;
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
@@ -2427,5 +3274,18 @@ textarea {
     right: 35px;
     left: 0;
     bottom: 70px;
+  }
+  .blockChainValue_section .card-25 {
+    width: 24.4%;
+    float: left;
+    padding: 24px;
+    background: #f7f7f7;
+    height: 220px;
+  }
+  .custom-margin-2 {
+    margin: 0 5px;
+  }
+  .custom-margin-4 {
+    margin: 0 0 0 5px;
   }
 }
