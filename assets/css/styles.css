@@ -2195,7 +2195,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: auto;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.5px;
