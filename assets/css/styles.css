@@ -94,7 +94,7 @@ ul {
   top: 59px;
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1000;
   padding: 48px 140px 48px 110px;
   opacity: 0;
   /* transform: translateY(-20px); */
@@ -139,6 +139,7 @@ ul {
 }
 .card-body {
   padding: 20px;
+  height: 140px;
 }
 .card-title {
   font-weight: 600;
@@ -3266,7 +3267,7 @@ textarea {
   .blockchain-main-section .main-section-width {
     width: 531px;
     position: absolute;
-    top: 155px;
+    top: 175px;
     left: 110px;
   }
   .overview_section .overview-main-img img {
