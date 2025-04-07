@@ -695,9 +695,6 @@ ul {
     width: 100%;
   }
 }
-.explore_more {
-}
-
 @media (max-width: 768px) {
   .carousel-item img,
   .carousel-item .ai_img_class {
@@ -1806,8 +1803,7 @@ ul {
   .newsroom_section .newsroom_title {
     font-size: 22px;
   }
-  .newsroom_section {
-  }
+
   .newsroom_section .newsroom_card {
     width: 100%;
     padding: 20px;
