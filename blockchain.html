@@ -24,7 +24,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
-      href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
     <!-- Custom styles -->
@@ -42,7 +42,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -1642,7 +1642,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6 col-12 sticky-column">
-              <div >
+              <div>
                 <p class="newsroom_title width_587px">Innovation & Insights</p>
               </div>
               <div>
@@ -2271,9 +2271,9 @@
 
     <!-- /* Jquery library */ -->
     <script type="text/javascript">
-      AOS.init({
-        duration: 1000,
-      });
+      // AOS.init({
+      //   duration: 1000,
+      // });
       // for desktop script
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -2319,6 +2319,9 @@
 
       // accordian script
       $(document).ready(function () {
+        AOS.init({
+          duration: 1000,
+        });
         $(".accordion-header").click(function () {
           var content = $(this).next(".accordion-content");
           var icon = $(this).find(".chevron");
