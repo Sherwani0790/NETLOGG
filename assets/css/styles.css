@@ -94,7 +94,7 @@ ul {
   top: 59px;
   left: 0;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1000;
   padding: 48px 140px 48px 110px;
   opacity: 0;
   /* transform: translateY(-20px); */
@@ -139,6 +139,7 @@ ul {
 }
 .card-body {
   padding: 20px;
+  height: 140px;
 }
 .card-title {
   font-weight: 600;
@@ -2044,6 +2045,7 @@ textarea {
   cursor: pointer;
   width: 133px;
   transition: 0.3s all ease-in-out;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .submit_button:hover {
   background: transparent;
@@ -2058,6 +2060,7 @@ textarea {
   /* border-radius: 5px; */
   cursor: pointer;
   width: 133px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 768px) {
   .width-50-auto {
@@ -2114,7 +2117,7 @@ textarea {
   .blockchain-main-section .main-section-width {
     width: auto;
     position: absolute;
-    top: 100px;
+    top: 94px;
     left: 30px;
   }
   .blockchain-main-section .main-section-width .big-text {
@@ -2741,7 +2744,7 @@ textarea {
 }
 @media (max-width: 768px) {
   .blockChainValue_section {
-    padding: 12px;
+    padding: 50px 12px;
   }
   .blockChainValue_section .blockChain-title {
     font-size: 22px;
@@ -3264,7 +3267,7 @@ textarea {
   .blockchain-main-section .main-section-width {
     width: 531px;
     position: absolute;
-    top: 155px;
+    top: 175px;
     left: 110px;
   }
   .overview_section .overview-main-img img {
