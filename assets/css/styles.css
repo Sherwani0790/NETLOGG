@@ -13,6 +13,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   color: #414453;
+  /* overflow-x: hidden; */
 }
 body::-webkit-scrollbar {
   width: 6px;
@@ -2777,7 +2778,7 @@ textarea {
   }
   .blockChainValue_section .nav-pills .nav-link {
     font-size: 14px;
-    padding: 7px 14px 7px 5px;
+    padding: 7px 10px 7px 5px;
     margin-bottom: 13px;
     white-space: nowrap;
   }
