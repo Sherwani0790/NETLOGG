@@ -575,7 +575,7 @@ ul {
   position: absolute;
   right: 35px;
   left: 0;
-  bottom: 70px;
+  bottom: 24px;
 }
 .custom-indicators {
   display: flex;
@@ -3118,6 +3118,9 @@ textarea {
 /* Footer End */
 /* main media query  */
 @media (min-width: 1440px) and (max-width: 1599px) {
+  .carousel-item .ai_img_class {
+    right: -400px;
+  }
   .whatWeDoCard-card {
     position: relative;
     width: 450px !important;
@@ -3236,7 +3239,7 @@ textarea {
     position: absolute;
     right: 35px;
     left: 0;
-    bottom: 70px;
+    bottom: 24px;
   }
   .blockChainValue_section .card-25 {
     width: 24.3%;
