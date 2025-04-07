@@ -2148,7 +2148,7 @@ textarea {
   height: 100%;
   background-color: #1b1aff;
   transition: all 0.3s ease;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 .progress_section_selection .text-indication {
   background: #f7f7f7;
