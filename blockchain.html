@@ -23,6 +23,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <!-- Custom styles -->
     <link href="assets/css/styles.css" rel="stylesheet" />
     <!-- JS files -->
@@ -38,6 +42,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -857,15 +862,6 @@
       </div>
     </div>
     <script>
-      // function updateProgressBar() {
-      //   const progressBar = document.querySelector(".progress-bar");
-      //   const totalHeight = document.body.scrollHeight - window.innerHeight;
-      //   const progress = (window.pageYOffset / totalHeight) * 100;
-      //   progressBar.style.width = progress + "%";
-      // }
-
-      // updateProgressBar();
-      // window.addEventListener("scroll", updateProgressBar);
       $(document).ready(function () {
         function updateProgressBar() {
           const progressBar = $(".progress-bar");
@@ -873,54 +869,42 @@
           let scrollPosition = $(window).scrollTop();
 
           sections.each(function () {
-            let top = $(this).offset().top - 150; // Adjust for header offset
+            let top = $(this).offset().top - 150;
             let bottom = top + $(this).outerHeight();
 
             if (scrollPosition >= top && scrollPosition < bottom) {
               let sectionId = $(this).attr("id");
-              let sectionText = $(this).data("title"); // Get section title from data-title attribute
-
-              // Update the "You're reading" text
+              let sectionText = $(this).data("title");
               $(".progress-label-left p:nth-child(2)").text(sectionText);
-
-              // Update dropdown selected item text
               $(".custom-dropdown-button").html(
                 sectionText + ' <i class="fas fa-chevron-down"></i>'
               );
             }
           });
-
-          // Update progress bar width
           const totalHeight = $(document).height() - $(window).height();
           const progress = (scrollPosition / totalHeight) * 100;
           progressBar.css("width", progress + "%");
         }
 
-        // Click event to scroll to the selected section
         $(".custom-dropdown-content li").on("click", function () {
           let sectionText = $(this).text().trim();
-          let sectionId = $(this).data("target"); // Get target section ID
+          let sectionId = $(this).data("target");
 
           let targetSection = $("#" + sectionId);
           if (targetSection.length) {
             $("html, body").animate(
               {
-                scrollTop: targetSection.offset().top - 50, // Adjust for fixed header
+                scrollTop: targetSection.offset().top - 50,
               },
               800
             );
-
-            // Update "You're reading" text
             $(".progress-label-left p:nth-child(2)").text(sectionText);
-
-            // Update dropdown button text
             $(".custom-dropdown-button").html(
               sectionText + ' <i class="fas fa-chevron-down"></i>'
             );
           }
         });
 
-        // Update progress bar & section text on scroll
         $(window).on("scroll", updateProgressBar);
         updateProgressBar();
       });
@@ -933,6 +917,9 @@
         class="overview_section"
         id="overview_section"
         data-title="1. OVERVIEW"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
       >
         <div class="container-fluid">
           <div class="row">
@@ -1088,6 +1075,9 @@
         class="caseStudy_section"
         id="caseStudy_section"
         data-title="2. CASE STUDIES"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
       >
         <div class="">
           <div
@@ -1229,7 +1219,12 @@
         id="blockChainValue_section"
         data-title="3. BLOCKCHAIN SOLUTIONS"
       >
-        <div class="container-fluid">
+        <div
+          class="container-fluid"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <h2 class="blockChain-title">The Value of Blockchain</h2>
           <div>
             <div class="w-100 mb-5">
@@ -1298,7 +1293,12 @@
           </div>
         </div>
         <!--  -->
-        <div class="container-fluid gap-40">
+        <div
+          class="container-fluid gap-40"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <h2 class="blockChain-title">
             Blockchain Development Solutions in Focus
           </h2>
@@ -1491,7 +1491,12 @@
           </div>
         </div>
         <!--  -->
-        <div class="container-fluid gap-40">
+        <div
+          class="container-fluid gap-40"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           <div class="w-100">
             <div class="card-25 custom-margin-1">
               <div class="">
@@ -1627,6 +1632,9 @@
 
       <!-- Innovation & Insights Section -->
       <section
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
         class="newsroom_section"
         id="innovation_section"
         data-title="4. INNOVATION & INSIGHTS"
@@ -1721,6 +1729,9 @@
       <!-- Innovation & Insights Section End -->
       <!-- News update -->
       <section
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
         class="newsUpdate_section"
         id="newsUpdate_section"
         data-title="5. NEWS AND UPDATE"
@@ -1755,7 +1766,9 @@
                 />
               </div>
               <div class="gap-24">
-                <p>Expansion of AI-Ready Data Centres in the Asia Pacific Region</p>
+                <p>
+                  Expansion of AI-Ready Data Centres in the Asia Pacific Region
+                </p>
               </div>
               <div class="gap-16">
                 <a href="#" class="all_cap_button dp-flex align-items-center">
@@ -1811,7 +1824,9 @@
                 />
               </div>
               <div class="gap-24">
-                <p>Expansion of AI-Ready Data Centres in the Asia Pacific Region</p>
+                <p>
+                  Expansion of AI-Ready Data Centres in the Asia Pacific Region
+                </p>
               </div>
               <div class="gap-16">
                 <a href="#" class="all_cap_button dp-flex align-items-center">
@@ -1845,6 +1860,9 @@
 
       <!-- Reach out section -->
       <section
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
         class="reachout_section"
         id="contactus_section"
         data-title="6. CONTACT US"
@@ -2253,6 +2271,9 @@
 
     <!-- /* Jquery library */ -->
     <script type="text/javascript">
+      AOS.init({
+        duration: 1000,
+      });
       // for desktop script
 
       document.addEventListener("DOMContentLoaded", function () {
