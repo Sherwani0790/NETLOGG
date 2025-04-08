@@ -1811,145 +1811,145 @@
         </a>
       </div>
       <!-- CSR script -->
-    <script>
-      $(document).ready(function () {
-        // Define carousel content - update these with your actual content
-        const carouselItems = [
-          {
-            image: "assets/img/customer-service/1.webp",
-            playButton: "assets/img/customer-service/PlayButton.png", // Default play button
-            title: "Customer Success Stories",
-            description:
-              "See how Netlogg's consulting-led, AI-powered strategies help clients achieve their ambitions and drive measurable success.",
-          },
-          {
-            image: "assets/img/bg-imgs/newsroom-img.webp",
-            playButton: "assets/img/customer-service/PlayButton.png", // Second play button (create or use your own)
-            title: "Client Transformations",
-            description:
-              "Discover how our enterprise-level solutions transform business operations and drive sustainable growth for our clients.",
-          },
-          {
-            image: "assets/img/career/1.webp",
-            playButton: "assets/img/customer-service/PlayButton.png", // Third play button (create or use your own)
-            title: "Partnership Results",
-            description:
-              "Our collaborative approach delivers measurable outcomes that help organizations reach their strategic objectives.",
-          },
-        ];
+      <script>
+        $(document).ready(function () {
+          // Define carousel content - update these with your actual content
+          const carouselItems = [
+            {
+              image: "assets/img/customer-service/1.webp",
+              playButton: "assets/img/customer-service/PlayButton.png", // Default play button
+              title: "Customer Success Stories",
+              description:
+                "See how Netlogg's consulting-led, AI-powered strategies help clients achieve their ambitions and drive measurable success.",
+            },
+            {
+              image: "assets/img/bg-imgs/newsroom-img.webp",
+              playButton: "assets/img/customer-service/PlayButton.png", // Second play button (create or use your own)
+              title: "Client Transformations",
+              description:
+                "Discover how our enterprise-level solutions transform business operations and drive sustainable growth for our clients.",
+            },
+            {
+              image: "assets/img/career/1.webp",
+              playButton: "assets/img/customer-service/PlayButton.png", // Third play button (create or use your own)
+              title: "Partnership Results",
+              description:
+                "Our collaborative approach delivers measurable outcomes that help organizations reach their strategic objectives.",
+            },
+          ];
 
-        let currentIndex = 0;
-        const totalItems = carouselItems.length;
-        let isAnimating = false; // Flag to prevent rapid clicking
-        let autoSlideInterval;
-        const autoSlideDelay = 5000;
-        function updateCounter() {
-          $(".csr_count").text(`${currentIndex + 1}/${totalItems}`);
-        }
+          let currentIndex = 0;
+          const totalItems = carouselItems.length;
+          let isAnimating = false; // Flag to prevent rapid clicking
+          let autoSlideInterval;
+          const autoSlideDelay = 5000;
+          function updateCounter() {
+            $(".csr_count").text(`${currentIndex + 1}/${totalItems}`);
+          }
 
-        // Update the content with smooth transitions
-        function updateContent() {
-          if (isAnimating) return;
-          isAnimating = true;
+          // Update the content with smooth transitions
+          function updateContent() {
+            if (isAnimating) return;
+            isAnimating = true;
 
-          // Fade out content
-          $(
-            ".customer_success_img .main_img, .customer_success_img .play_button, .width-431px h5, .width-431px p"
-          ).addClass("fade-out");
-
-          // Wait for fade-out to complete
-          setTimeout(function () {
-            // Change the main image
-            $(".customer_success_img .main_img").attr(
-              "src",
-              carouselItems[currentIndex].image
-            );
-
-            // Change the play button image
-            $(".customer_success_img .play_button").attr(
-              "src",
-              carouselItems[currentIndex].playButton
-            );
-
-            // Change the text content
-            $(".width-431px h5").text(carouselItems[currentIndex].title);
-            $(".width-431px p").text(carouselItems[currentIndex].description);
-
-            // Update the counter
-            updateCounter();
-
-            // Fade in new content
+            // Fade out content
             $(
               ".customer_success_img .main_img, .customer_success_img .play_button, .width-431px h5, .width-431px p"
-            ).removeClass("fade-out");
+            ).addClass("fade-out");
 
-            // Reset animation flag after transition completes
+            // Wait for fade-out to complete
             setTimeout(function () {
-              isAnimating = false;
+              // Change the main image
+              $(".customer_success_img .main_img").attr(
+                "src",
+                carouselItems[currentIndex].image
+              );
+
+              // Change the play button image
+              $(".customer_success_img .play_button").attr(
+                "src",
+                carouselItems[currentIndex].playButton
+              );
+
+              // Change the text content
+              $(".width-431px h5").text(carouselItems[currentIndex].title);
+              $(".width-431px p").text(carouselItems[currentIndex].description);
+
+              // Update the counter
+              updateCounter();
+
+              // Fade in new content
+              $(
+                ".customer_success_img .main_img, .customer_success_img .play_button, .width-431px h5, .width-431px p"
+              ).removeClass("fade-out");
+
+              // Reset animation flag after transition completes
+              setTimeout(function () {
+                isAnimating = false;
+              }, 500);
             }, 500);
-          }, 500);
-        }
-
-        // Move to next slide
-        function nextSlide() {
-          currentIndex = (currentIndex + 1) % totalItems;
-          updateContent();
-        }
-
-        // Move to previous slide
-        function prevSlide() {
-          currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-          updateContent();
-        }
-
-        // Start auto-slide function
-        function startAutoSlide() {
-          stopAutoSlide();
-          autoSlideInterval = setInterval(function () {
-            nextSlide();
-          }, autoSlideDelay);
-        }
-
-        // Stop auto-slide function
-        function stopAutoSlide() {
-          if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
           }
-        }
 
-        // Initialize carousel
-        updateContent(); // Set initial content
-        // startAutoSlide(); // Start auto-slide
+          // Move to next slide
+          function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateContent();
+          }
 
-        // Previous button click handler
-        $(".csr_leftarrow_button").click(function () {
-          stopAutoSlide();
-          prevSlide();
-          // startAutoSlide();
-        });
+          // Move to previous slide
+          function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateContent();
+          }
 
-        // Next button click handler
-        $(".csr_rightarrow_button").click(function () {
-          stopAutoSlide(); // Stop auto-sliding when user interacts
-          nextSlide();
-          // startAutoSlide();
-        });
-
-        // Pause auto-slide when user hovers over the carousel
-        $(".customer_success_section").hover(
-          function () {
+          // Start auto-slide function
+          function startAutoSlide() {
             stopAutoSlide();
-          },
-          function () {
-            // startAutoSlide();
+            autoSlideInterval = setInterval(function () {
+              nextSlide();
+            }, autoSlideDelay);
           }
-        );
 
-        // Optional: Add play button click functionality
-        $(".play_button").click(function () {});
-      });
-    </script>
-    <!-- CSR script End-->
+          // Stop auto-slide function
+          function stopAutoSlide() {
+            if (autoSlideInterval) {
+              clearInterval(autoSlideInterval);
+            }
+          }
+
+          // Initialize carousel
+          updateContent(); // Set initial content
+          // startAutoSlide(); // Start auto-slide
+
+          // Previous button click handler
+          $(".csr_leftarrow_button").click(function () {
+            stopAutoSlide();
+            prevSlide();
+            // startAutoSlide();
+          });
+
+          // Next button click handler
+          $(".csr_rightarrow_button").click(function () {
+            stopAutoSlide(); // Stop auto-sliding when user interacts
+            nextSlide();
+            // startAutoSlide();
+          });
+
+          // Pause auto-slide when user hovers over the carousel
+          $(".customer_success_section").hover(
+            function () {
+              stopAutoSlide();
+            },
+            function () {
+              // startAutoSlide();
+            }
+          );
+
+          // Optional: Add play button click functionality
+          $(".play_button").click(function () {});
+        });
+      </script>
+      <!-- CSR script End-->
     </section>
     <!-- Career Section End -->
 
@@ -2361,10 +2361,31 @@
     <!-- For Mobile End -->
 
     <!-- Footer End -->
-
+    <button id="scrollToTopBtn">
+      <img src="assets/img/Logo/smallArrowRight.svg" />
+    </button>
     <!-- /* Jquery library */ -->
     <script type="text/javascript">
-     
+      // Show or hide the button when scrolling
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      scrollToTopBtn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
       // for desktop script
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -2411,8 +2432,8 @@
       // accordian script
       $(document).ready(function () {
         AOS.init({
-        duration: 1000,
-      });
+          duration: 1000,
+        });
         $(".accordion-header").click(function () {
           var content = $(this).next(".accordion-content");
           var icon = $(this).find(".chevron");
@@ -2627,8 +2648,6 @@
       });
     </script>
     <!-- script for section 1 End -->
-
-    
 
     <!-- Footer For mobile Accordian script -->
     <script>
