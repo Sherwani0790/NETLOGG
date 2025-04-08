@@ -3145,6 +3145,39 @@ textarea {
   width: 18px;
   height: 18px;
 }
+@media (max-width: 768px) {
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color: #1b1aff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: none; /* Hide the button initially */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  #scrollToTopBtn:hover {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color: #1b1aff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: none; /* Hide the button initially */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  #scrollToTopBtn img {
+    rotate: 270deg;
+    width: 14px;
+    height: 18px;
+  }
+}
 /* Footer End */
 /* main media query  */
 @media (min-width: 1440px) and (max-width: 1599px) {
