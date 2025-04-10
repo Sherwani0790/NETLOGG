@@ -210,9 +210,9 @@ ul {
   .for_desktop {
     display: none !important;
   }
-  .custom-indicators-bg {
+  /* .custom-indicators-bg {
     display: none;
-  }
+  } */
   .card_height {
     height: 100%;
   }
@@ -499,11 +499,23 @@ ul {
   position: absolute;
   overflow: hidden;
 }
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to top right, #000000, #ffffff00);
+  z-index: 2;
+}
 .carousel-caption {
   position: absolute;
   top: 30%;
   left: 6%;
   text-align: left;
+  z-index: 999;
 }
 .section_1 h1 {
   width: 700px;
@@ -577,6 +589,7 @@ ul {
   right: 35px;
   left: 0;
   bottom: 24px;
+  z-index: 99;
 }
 .custom-indicators {
   display: flex;
@@ -699,7 +712,7 @@ ul {
   .carousel-item img,
   .carousel-item .ai_img_class {
     width: 450px;
-    height: 250px;
+    /* height: 250px; */
     object-fit: cover;
     position: initial !important;
   }
@@ -718,7 +731,7 @@ ul {
   }
   .carousel-caption {
     position: absolute;
-    top: 45%;
+    top: 25%;
     left: 7%;
     text-align: left;
   }
@@ -732,6 +745,20 @@ ul {
   .width_568px,
   .width_720px {
     width: 320px;
+  }
+  .progress-label {
+    display: none;
+  }
+  .custom-indicators-bg {
+    width: 100%;
+    bottom: 20px;
+  }
+  .progress-indicators {
+    width: 90%;
+    gap: 10px;
+  }
+  .progress-item {
+    padding: 20px;
   }
 }
 
@@ -1780,19 +1807,32 @@ ul {
 .scrollable-column {
   min-height: 100vh;
 }
+.sticky-column-inovations {
+  position: sticky;
+  top: 150px;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.scrollable-column-inovations {
+  min-height: 100vh;
+}
 
 .newsroom_card {
   background: #fff;
-  /* margin-bottom: 20px; */
-  /* padding: 20px; */
-  /* border-radius: 8px; */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .sticky-column {
-    position: relative; /* Don't make sticky on mobile */
-    top: 0;
+    position: sticky;
+    top: 62px !important;
+    background-color: #fff;
+  }
+  .sticky-column-inovations {
+    position: sticky;
+    top: 130px !important;
+    background-color: #fff;
   }
 }
 @media (max-width: 768px) {
@@ -2105,21 +2145,48 @@ textarea {
   line-height: normal;
   margin: 12px 0 0 0;
 }
+.progress_section_selection_sticky {
+  position: sticky;
+  top: 64px;
+  z-index: 99;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.blockChain-scrollable-column {
+  min-height: 100vh;
+}
 @media (max-width: 768px) {
+  .blockchain-main-section {
+    background: #100b08;
+  }
   .blockchain-main-section .main-section-overlay {
-    height: 430px;
-    background-position-y: -18px;
+    height: 550px;
+    background-position-y: 0px;
   }
   .blockchain-main-section .main-section-width {
     width: auto;
     position: absolute;
     top: 94px;
-    left: 30px;
+    left: 25px;
   }
   .blockchain-main-section .main-section-width .big-text {
     font-size: 22px;
   }
   .progress_section_selection {
+    top: 62px !important;
+  }
+  .progress_section_selection .text-indication {
+    padding: 10px 12px !important;
+  }
+  .progress_section_selection
+    .text-indication
+    .progress-label-left
+    p:last-child,
+  .progress_section_selection
+    .text-indication
+    .progress-label-right
+    p:first-child {
     display: none;
   }
 }
@@ -2188,14 +2255,14 @@ textarea {
 }
 
 .custom-dropdown-button {
-  background-color: blue;
+  background-color: #1b1aff;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: auto;
+  width: 230px;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -2210,8 +2277,8 @@ textarea {
   position: absolute;
   top: 40px;
   left: 0;
-  width: max-content;
-  background: white;
+  width: 100%;
+  background: #1b1aff;
   /* border: 1px solid #ddd; */
   box-shadow: 0px 4px 6px rgb(0 0 0 / 25%);
   padding: 10px 5px;
@@ -2221,14 +2288,44 @@ textarea {
   list-style: none;
   padding: 10px;
   cursor: pointer;
+  color: #fff;
 }
 
 .custom-dropdown-content li:hover {
-  background-color: #f0f0f0;
+  background-color: #0000c7b8;
 }
 
 .custom-dropdown:hover .custom-dropdown-content {
   display: block;
+}
+@media (max-width: 768px) {
+  .custom-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -58px;
+    width: max-content;
+    background: white;
+    /* border: 1px solid #ddd; */
+    box-shadow: 0px 4px 6px rgb(0 0 0 / 25%);
+    padding: 10px 5px;
+  }
+  .custom-dropdown-button {
+    background-color: #1b1aff;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  .progress_section_selection .text-indication .progress-label-left p {
+    font-size: 12px;
+  }
 }
 
 /* Block chain Progress bar End */
@@ -2299,7 +2396,7 @@ textarea {
 }
 @media (max-width: 768px) {
   .overview_section {
-    padding: 10px;
+    padding: 30px 12px;
     overflow: hidden;
   }
   .overview_section .width-531px {
@@ -2315,19 +2412,19 @@ textarea {
 /* OverView section End */
 
 /* CaseStudy Section */
-.caseStudy_overlay::before {
+/* .caseStudy_overlay::before {
   content: "";
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
-}
-.z_index {
+} */
+/* .z_index {
   z-index: 9;
-}
+} */
 .caseStudy_section {
   background: #000a1c;
   position: relative;
@@ -2400,7 +2497,7 @@ textarea {
   right: 0;
   bottom: 30px;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   justify-content: center;
   padding: 0;
@@ -2413,7 +2510,7 @@ textarea {
   position: absolute;
   right: 140px;
   bottom: 20px;
-  z-index: 1;
+  z-index: 5;
   border-radius: 88px;
   background: radial-gradient(
     50% 50% at 50% 50%,
@@ -2426,7 +2523,7 @@ textarea {
 }
 #carouselExampleIndicators2 .carousal_left {
   background: #fff;
-  z-index: 1;
+  z-index: 5;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -2439,7 +2536,7 @@ textarea {
 #carouselExampleIndicators2 .carousal_right {
   border: 0;
   background: #fff;
-  z-index: 1;
+  z-index: 5;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -2482,7 +2579,7 @@ textarea {
     right: 0;
     bottom: 20px;
     left: 0;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -2493,7 +2590,7 @@ textarea {
   }
   #carouselExampleIndicators2 .carousal_left {
     background: #fff;
-    z-index: 1;
+    z-index: 5;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -2502,7 +2599,7 @@ textarea {
   #carouselExampleIndicators2 .carousal_right {
     border: 0;
     background: #fff;
-    z-index: 1;
+    z-index: 5;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -2510,7 +2607,7 @@ textarea {
   .right_left_count {
     left: auto;
     bottom: 20px;
-    z-index: 1;
+    z-index: 5;
     right: 25px;
   }
 
@@ -2581,16 +2678,22 @@ textarea {
     margin-top: 20px;
   }
   .caseStudy_section #carouselExampleIndicators2 .pb-5 {
-    padding-bottom: 5rem !important;
+    padding-bottom: 2rem !important;
   }
   .caseStudy_overlay img {
     width: 100%;
-    height: 100%;
+    height: 90vh;
+  }
+  .caseStudy_section .carousel-caption {
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    text-align: left;
   }
 }
 /* CaseStudy Section End */
 
-/* BlockChain Value  */
+/* BlockChain V10lue  */
 .blockChainValue_section {
   background: #fff;
   padding: 100px 130px 100px 100px;
@@ -2862,6 +2965,7 @@ textarea {
   font-weight: 300;
   line-height: 32px;
   margin: 0;
+  height: 75px;
 }
 .newsUpdate_section .gap-24 {
   margin-top: 24px;
