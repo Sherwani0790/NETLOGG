@@ -2174,6 +2174,7 @@ textarea {
   }
   .blockchain-main-section .main-section-width .big-text {
     font-size: 22px;
+    width: 300px;
   }
   .progress_section_selection {
     top: 62px !important;
