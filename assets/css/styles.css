@@ -64,7 +64,7 @@ nav.scrolled {
   background-color: #ffffffe0;
   transition: all 0.5s;
   z-index: 997;
-  box-shadow: 0px 0px 12px -1px #bbbbbb;
+  box-shadow: 0px 0px 12px -1px #bbbbbb54;
 }
 nav.scrolled .dropdown .dropbtn {
   color: #000;
