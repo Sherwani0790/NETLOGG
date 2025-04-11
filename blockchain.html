@@ -2275,11 +2275,51 @@
     </button>
     <!-- /* Jquery library */ -->
     <script type="text/javascript">
+      document.addEventListener("scroll", () => {
+        if (window.innerWidth > 768) {
+        const navbar = document.querySelector(".navbar");
+        const navbarLogo = document.querySelector(".navbar-brand img");
+        const searchIcon = document.querySelector(".search_icon img");
+        const globeIcon = document.querySelector(".globe_icon img");
+        const blockChainMainSection = document.querySelector(".blockchain-main-section");
 
+        if (blockChainMainSection) {
+          // Get the position and dimensions of the section
+          const sectionRect = blockChainMainSection.getBoundingClientRect();
+          const sectionBottom = sectionRect.bottom;
 
-
-
-      // Show or hide the button when scrolling
+          // Check if we've scrolled past the bottom of the what_we_do_section
+          if (sectionBottom <= 0) {
+            navbar.classList.add("scrolled");
+            // Change the logo image when scrolled
+            if (navbarLogo) {
+              navbarLogo.src = "assets/img/footerLogos/FooterLogo.png";
+            }
+            if (searchIcon) {
+              searchIcon.src = "assets/img/Logo/searchIconBlack.png";
+            }
+            if (globeIcon) {
+              globeIcon.src = "assets/img/Logo/GlobeSimpleBlack.png";
+            }
+          } else {
+            navbar.classList.remove("scrolled");
+            // Restore the original logo image
+            if (navbarLogo) {
+              navbarLogo.src = "assets/img/Logo/NetLog.svg";
+            }
+            if (searchIcon) {
+              searchIcon.src = "assets/img/Logo/searchIcon.svg";
+            }
+            if (globeIcon) {
+              globeIcon.src = "assets/img/Logo/globe.svg";
+            }
+          }
+        }
+        }
+      });
+    </script>
+    <script type="text/javascript">
+     // Show or hide the button when scrolling
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
       window.onscroll = function () {
