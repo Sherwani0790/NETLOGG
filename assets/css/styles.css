@@ -2305,9 +2305,9 @@ textarea {
     display: none;
     position: absolute;
     top: 40px;
-    left: -58px;
-    width: max-content;
-    background: white;
+    left: 0;
+    width: 100%;
+    /* background: white; */
     /* border: 1px solid #ddd; */
     box-shadow: 0px 4px 6px rgb(0 0 0 / 25%);
     padding: 10px 5px;
