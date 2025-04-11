@@ -2372,6 +2372,10 @@ textarea {
 .overview_section .card-25:hover .margin-top-20 {
   margin-top: 12px;
 }
+.overview_section .card-25 img {
+  width: 40px;
+  height: 40px;
+}
 .overview_section .card-25:hover img {
   transition: all 0.5s ease-in-out;
   width: 40px;
@@ -2944,6 +2948,9 @@ textarea {
   }
   .blockChainValue_section .card-25 .width-276px {
     width: 100%;
+  }
+  .blockChainValue_section .nav-pills .nav-link.active::after,.blockChainValue_section .nav-pills .nav-link:hover::after{
+    background-color: transparent;
   }
 }
 
