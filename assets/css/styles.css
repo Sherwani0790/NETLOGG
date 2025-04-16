@@ -66,6 +66,9 @@ nav.scrolled {
   z-index: 997;
   box-shadow: 0px 0px 12px -1px #bbbbbb54;
 }
+.navbar-brand img {
+  width: 100px;
+}
 nav.scrolled .dropdown .dropbtn {
   color: #000;
 }
@@ -636,7 +639,7 @@ nav.scrolled .dropdown .dropbtn {
   background-color: #000;
 }
 .video_tag_class {
-  height: 80vh;
+  height: 100vh;
 }
 .col-gap-40 {
   column-gap: 40px;
@@ -725,15 +728,14 @@ nav.scrolled .dropdown .dropbtn {
 @media (max-width: 768px) {
   .carousel-item img,
   .carousel-item .ai_img_class {
-    width: 450px;
-    /* height: 250px; */
+    width: -webkit-fill-available;
     object-fit: cover;
     position: initial !important;
   }
-  .video_tag_class {
+  /* .video_tag_class {
     width: 420px;
     height: auto;
-  }
+  } */
   .carousel-caption h1 {
     width: 330px;
     color: #fff;
