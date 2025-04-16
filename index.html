@@ -860,18 +860,19 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <!-- class="ai_img_class" -->
             <img
-              class="ai_img_class"
-              src="assets/img/main-slider/slider-1.webp"
+              src="assets/img/main-slider/Managed-Services.webp"
               alt="Slide 1"
             />
             <div class="carousel-caption">
               <h1 class="ai_h1_class">
-                Netlogg Named A Leader In Global GenAI Services
+                Focus on Growth, We’ll Manage the Rest.
               </h1>
               <p class="width_568px">
-                Netlogg has been named a Leader in the 2024 ISG Provider Lens™
-                global Generative AI Services report.
+                End-to-end IT operations, infrastructure, and support—secure,
+                scalable, and always on. Let Netlogg manage your tech so you can
+                drive business forward.
               </p>
 
               <a href="#">
@@ -881,13 +882,35 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/img/main-slider/slider-2.webp" alt="Slide 2" />
+            <img
+              src="assets/img/main-slider/Digital-Transformation.webp"
+              alt="Slide 2"
+            />
             <div class="carousel-caption">
-              <h1 class="ai_h1_class">Netlogg Digital Transformation</h1>
-              <p class="width_720px">
+              <h1 class="ai_h1_class">Digital Transformation</h1>
+              <p class="width_568px">
                 Netlogg empowers you to shape the future and unlock new value by
-                reimagining and executing transformative solutins accross your
+                reimagining and executing transformative solutions across your
                 entire enterprise.
+              </p>
+              <a href="#">
+                Explore More
+                <img src="assets/img/Logo/smallArrowRight.svg" />
+              </a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="assets/img/main-slider/Cloud-Services.webp"
+              alt="Slide 3"
+            />
+            <div class="carousel-caption">
+              <h1>Cloud-Powered Agility for Modern Enterprises</h1>
+              <p class="width_568px">
+                Accelerate innovation and performance with our tailored cloud
+                strategies—from migration to optimization across public,
+                private, and hybrid clouds.
               </p>
               <a href="#">
                 Explore More
@@ -898,29 +921,16 @@
           <div class="carousel-item vedio_tag_class_active">
             <video autoplay muted loop class="video_tag_class">
               <source
-                src="assets/img/main-slider/slider-3.mp4"
+                src="assets/img/main-slider/Ai-DataCenter.mp4"
                 type="video/mp4"
               />
             </video>
             <div class="carousel-caption">
-              <h1>NetLogg Global Recognised For Digital Experience Services</h1>
-              <p>Leader in 2024 Gartner* Magic Quadrant™</p>
-              <a href="#">
-                Explore More
-                <img src="assets/img/Logo/smallArrowRight.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/main-slider/slider-4.webp" alt="Slide 4" />
-            <div class="carousel-caption">
-              <h1>
-                Trusted, Reliable, And Resilient Global Data Center Provider
-              </h1>
-              <p class="width_720px">
-                Global leader in secure, scalable and sustainable data center
-                solutions, trusted for reliability,resilience, and responsible
-                innovation.
+              <h1>Smarter Datacenters. Intelligent Operations.</h1>
+              <p class="width_568px">
+                Transform your infrastructure with AI-driven automation,
+                efficiency, and predictive insights—built for the demands of
+                tomorrow.
               </p>
               <a href="#">
                 Explore More
@@ -951,7 +961,7 @@
             <div class="progress-container">
               <div class="progress-bar" id="progress-1"></div>
             </div>
-            <span class="progress-label">Netlogg Digital Transformation</span>
+            <span class="progress-label">Digital Transformation</span>
           </div>
           <div
             class="progress-item"
@@ -961,7 +971,7 @@
             <div class="progress-container">
               <div class="progress-bar" id="progress-2"></div>
             </div>
-            <span class="progress-label">Cloud</span>
+            <span class="progress-label">Cloud Solutions</span>
           </div>
           <div
             class="progress-item"
@@ -971,7 +981,7 @@
             <div class="progress-container">
               <div class="progress-bar" id="progress-3"></div>
             </div>
-            <span class="progress-label">Ai Data Center</span>
+            <span class="progress-label">AI-Powered Datacenters</span>
           </div>
         </div>
       </div>
@@ -2376,44 +2386,44 @@
     <script type="text/javascript">
       document.addEventListener("scroll", () => {
         if (window.innerWidth > 768) {
-        const navbar = document.querySelector(".navbar");
-        const navbarLogo = document.querySelector(".navbar-brand img");
-        const searchIcon = document.querySelector(".search_icon img");
-        const globeIcon = document.querySelector(".globe_icon img");
-        const section1 = document.querySelector(".section_1");
+          const navbar = document.querySelector(".navbar");
+          const navbarLogo = document.querySelector(".navbar-brand img");
+          const searchIcon = document.querySelector(".search_icon img");
+          const globeIcon = document.querySelector(".globe_icon img");
+          const section1 = document.querySelector(".section_1");
 
-        if (section1) {
-          // Get the position and dimensions of the section
-          const sectionRect = section1.getBoundingClientRect();
-          const sectionBottom = sectionRect.bottom;
+          if (section1) {
+            // Get the position and dimensions of the section
+            const sectionRect = section1.getBoundingClientRect();
+            const sectionBottom = sectionRect.bottom;
 
-          // Check if we've scrolled past the bottom of the what_we_do_section
-          if (sectionBottom <= 0) {
-            navbar.classList.add("scrolled");
-            // Change the logo image when scrolled
-            if (navbarLogo) {
-              navbarLogo.src = "assets/img/footerLogos/FooterLogo.png";
-            }
-            if (searchIcon) {
-              searchIcon.src = "assets/img/Logo/searchIconBlack.png";
-            }
-            if (globeIcon) {
-              globeIcon.src = "assets/img/Logo/GlobeSimpleBlack.png";
-            }
-          } else {
-            navbar.classList.remove("scrolled");
-            // Restore the original logo image
-            if (navbarLogo) {
-              navbarLogo.src = "assets/img/Logo/NetLog.svg";
-            }
-            if (searchIcon) {
-              searchIcon.src = "assets/img/Logo/searchIcon.svg";
-            }
-            if (globeIcon) {
-              globeIcon.src = "assets/img/Logo/globe.svg";
+            // Check if we've scrolled past the bottom of the what_we_do_section
+            if (sectionBottom <= 0) {
+              navbar.classList.add("scrolled");
+              // Change the logo image when scrolled
+              if (navbarLogo) {
+                navbarLogo.src = "assets/img/Logo/log-color.png";
+              }
+              if (searchIcon) {
+                searchIcon.src = "assets/img/Logo/searchIconBlack.png";
+              }
+              if (globeIcon) {
+                globeIcon.src = "assets/img/Logo/GlobeSimpleBlack.png";
+              }
+            } else {
+              navbar.classList.remove("scrolled");
+              // Restore the original logo image
+              if (navbarLogo) {
+                navbarLogo.src = "assets/img/Logo/NetLog.svg";
+              }
+              if (searchIcon) {
+                searchIcon.src = "assets/img/Logo/searchIcon.svg";
+              }
+              if (globeIcon) {
+                globeIcon.src = "assets/img/Logo/globe.svg";
+              }
             }
           }
-        }
         }
       });
     </script>
