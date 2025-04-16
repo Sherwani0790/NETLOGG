@@ -489,8 +489,9 @@ nav.scrolled .dropdown .dropbtn {
 
 /* Section 1 */
 .section_1 {
-  background: linear-gradient(180deg, #352865 0%, #0b0f1b 100%),
-    url(<path-to-image>) lightgray 50% / cover no-repeat;
+  background: #000;
+  /* background: linear-gradient(180deg, #352865 0%, #0b0f1b 100%),
+    url(<path-to-image>) lightgray 50% / cover no-repeat; */
   /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.21) 0%, rgba(0, 0, 0, 0.70) 100%); */
 }
 .carousel-item {
