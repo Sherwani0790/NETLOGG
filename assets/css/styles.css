@@ -729,7 +729,6 @@ nav.scrolled .dropdown .dropbtn {
   .carousel-item img,
   .carousel-item .ai_img_class {
     width: -webkit-fill-available;
-    /* height: 250px; */
     object-fit: cover;
     position: initial !important;
   }
