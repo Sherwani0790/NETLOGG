@@ -211,6 +211,9 @@ nav.scrolled .dropdown .dropbtn {
 #mobile_menu_globe {
   display: none;
 }
+/* .bars_icon img{
+  width: 20px;
+} */
 @media (max-width: 768px) {
   .navbar {
     padding: 12px;

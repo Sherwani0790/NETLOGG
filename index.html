@@ -542,12 +542,12 @@
             </a>
           </div>
           <div>
-            <a href="#" id="mobile_menu_globe" class="globe_icon">
+            <a href="#" id="mobile_menu_contact" class="contact_icon">
               <img src="assets/img/Logo/contactMobile.svg" alt="" />
             </a>
           </div>
-          <button type="button" id="mobile_menu_trigger" class="">
-            <img src="assets/img/Logo/hamburgerIcon.svg" alt="" />
+          <button type="button" id="mobile_menu_trigger" class="bars_icon">
+            <img src="assets/img/Logo/menu_white.png" alt="" />
           </button>
         </div>
       </div>
@@ -2385,48 +2385,91 @@
     <!-- /* Jquery library */ -->
     <script type="text/javascript">
       document.addEventListener("scroll", () => {
-        if (window.innerWidth > 768) {
-          const navbar = document.querySelector(".navbar");
-          const navbarLogo = document.querySelector(".navbar-brand img");
-          const searchIcon = document.querySelector(".search_icon img");
-          const globeIcon = document.querySelector(".globe_icon img");
-          const section1 = document.querySelector(".section_1");
+    const navbar = document.querySelector(".navbar");
+    const navbarLogo = document.querySelector(".navbar-brand img");
+    const searchIcon = document.querySelector(".search_icon img");
+    const globeIcon = document.querySelectorAll(".globe_icon img");
+    const barsIcon = document.querySelector(".bars_icon img");
+    const section1 = document.querySelector(".section_1");
 
-          if (section1) {
-            // Get the position and dimensions of the section
-            const sectionRect = section1.getBoundingClientRect();
-            const sectionBottom = sectionRect.bottom;
+    const mobileSearchIcon = document.querySelector("#mobile_menu_search img");
+    const mobileGlobeIcons = document.querySelectorAll("#mobile_menu_globe img");
+    const mobile_menu_contact = document.querySelectorAll("#mobile_menu_contact img");
+    const mobileBarsIcon = document.querySelector("#mobile_menu_trigger img");
 
-            // Check if we've scrolled past the bottom of the what_we_do_section
-            if (sectionBottom <= 0) {
-              navbar.classList.add("scrolled");
-              // Change the logo image when scrolled
-              if (navbarLogo) {
-                navbarLogo.src = "assets/img/Logo/log-color.png";
-              }
-              if (searchIcon) {
-                searchIcon.src = "assets/img/Logo/searchIconBlack.png";
-              }
-              if (globeIcon) {
-                globeIcon.src = "assets/img/Logo/GlobeSimpleBlack.png";
-              }
-            } else {
-              navbar.classList.remove("scrolled");
-              // Restore the original logo image
-              if (navbarLogo) {
-                navbarLogo.src = "assets/img/Logo/NetLog.svg";
-              }
-              if (searchIcon) {
-                searchIcon.src = "assets/img/Logo/searchIcon.svg";
-              }
-              if (globeIcon) {
-                globeIcon.src = "assets/img/Logo/globe.svg";
-              }
-            }
-          }
+    if (section1) {
+      const sectionRect = section1.getBoundingClientRect();
+      const sectionBottom = sectionRect.bottom;
+
+      if (sectionBottom <= 0) {
+        navbar.classList.add("scrolled");
+
+        if (navbarLogo) {
+          navbarLogo.src = "assets/img/Logo/log-color.png";
         }
-      });
-    </script>
+        if (searchIcon) {
+          searchIcon.src = "assets/img/Logo/searchIconBlack.png";
+        }
+        if (globeIcon) {
+          globeIcon.forEach(icon => {
+            icon.src = "assets/img/Logo/GlobeSimpleBlack.png";
+          });
+        }
+        if (mobileSearchIcon) {
+          mobileSearchIcon.src = "assets/img/Logo/searchIconBlack.png";
+        }
+        if (mobileGlobeIcons) {
+          mobileGlobeIcons.forEach(icon => {
+            icon.src = "assets/img/Logo/GlobeSimpleBlack.png";
+          });}
+        if (mobile_menu_contact) {
+          mobile_menu_contact.forEach(icon => {
+            icon.src = "assets/img/Logo/mail.png";
+          });
+        }
+        if (barsIcon) {
+          barsIcon.src = "assets/img/Logo/menu.png";
+        }
+        if (mobileBarsIcon) {
+          mobileBarsIcon.src = "assets/img/Logo/menu.png";
+        }
+      } else {
+        navbar.classList.remove("scrolled");
+
+        if (navbarLogo) {
+          navbarLogo.src = "assets/img/Logo/NetLog.svg";
+        }
+        if (searchIcon) {
+          searchIcon.src = "assets/img/Logo/searchIcon.svg";
+        }
+        if (globeIcon) {
+          globeIcon.forEach(icon => {
+            icon.src = "assets/img/Logo/globe.svg";
+          });
+        }
+        if (mobileSearchIcon) {
+          mobileSearchIcon.src = "assets/img/Logo/searchIcon.svg";
+        }
+        if (mobileGlobeIcons) {
+          mobileGlobeIcons.forEach(icon => {
+            icon.src = "assets/img/Logo/globe.svg";
+          });
+        }
+        if (mobile_menu_contact) {
+          mobile_menu_contact.forEach(icon => {
+            icon.src = "assets/img/Logo/contactMobile.svg";
+          });}
+        if (barsIcon) {
+          barsIcon.src = "assets/img/Logo/menu_white.png";
+        }
+        if (mobileBarsIcon) {
+          mobileBarsIcon.src = "assets/img/Logo/menu_white.png";
+        }
+      }
+    }
+  });
+</script>
+   </script>
     <script type="text/javascript">
       // Show or hide the button when scrolling
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
