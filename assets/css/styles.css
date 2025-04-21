@@ -209,20 +209,19 @@ nav.scrolled .dropdown .dropbtn {
 #mobile_menu_trigger,
 #mobile_menu_search,
 #mobile_menu_globe,
-#mobile_menu_contact
-{
+#mobile_menu_contact {
   display: none;
 }
 /* .bars_icon img{
   width: 20px;
   } */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 12px;
-    }
-    #mobile_menu_trigger,
-    #mobile_menu_search,
-    #mobile_menu_contact,
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px;
+  }
+  #mobile_menu_trigger,
+  #mobile_menu_search,
+  #mobile_menu_contact,
   #mobile_menu_globe {
     display: block;
   }
@@ -2821,6 +2820,14 @@ textarea {
 }
 .blockChainValue_section .nav-pills {
   flex-direction: column;
+  position: relative;
+}
+.block-chain-leftArrow {
+ display: none;
+}
+.block-chain-rightArrow {
+  display: none;
+ 
 }
 .blockChainValue_section .nav-pills .nav-link {
   color: #666;
@@ -2925,6 +2932,7 @@ textarea {
     font-size: 14px;
     padding: 7px 10px 7px 5px;
     margin-bottom: 13px;
+    margin-left: 10px;
     white-space: nowrap;
   }
   .blockChainValue_section .tab-content {
@@ -2976,6 +2984,28 @@ textarea {
   .blockChainValue_section .nav-pills .nav-link.active::after,
   .blockChainValue_section .nav-pills .nav-link:hover::after {
     background-color: transparent;
+  }
+  .block-chain-leftArrow {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    left: -5px;
+    text-align: center;
+    top: 112px;
+  }
+  .block-chain-rightArrow {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    right: 0px;
+    top: 112px;
+    text-align: center;
   }
 }
 

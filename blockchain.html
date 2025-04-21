@@ -1320,12 +1320,18 @@
           </h2>
           <div class="row gap-40">
             <div class="col-md-3 col-12">
+              <div class="block-chain-leftArrow">
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <div class="block-chain-rightArrow">
+                <i class="fa fa-chevron-right"></i>
+              </div>
               <div
                 class="nav nav-pills"
                 id="v-pills-tab"
                 role="tablist"
                 aria-orientation="vertical"
-              >
+              >                
                 <button
                   class="nav-link active"
                   id="enterprise-tab"
@@ -1642,6 +1648,24 @@
             // Run once in case elements are already in view
             startCounting();
           });
+
+          // add tabs jquery script
+          $(document).ready(function() {
+    const $tabContainer = $('#v-pills-tab');
+    const scrollAmount = 150; // Amount to scroll on each arrow click
+
+    $('.block-chain-rightArrow').on('click', function () {
+      $tabContainer.animate({
+        scrollLeft: $tabContainer.scrollLeft() + scrollAmount
+      }, 300);
+    });
+
+    $('.block-chain-leftArrow').on('click', function () {
+      $tabContainer.animate({
+        scrollLeft: $tabContainer.scrollLeft() - scrollAmount
+      }, 300);
+    });
+  });
         </script>
       </section>
       <!-- Block Chain Section End -->
