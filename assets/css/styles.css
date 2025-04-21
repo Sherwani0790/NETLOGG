@@ -208,18 +208,21 @@ nav.scrolled .dropdown .dropbtn {
 }
 #mobile_menu_trigger,
 #mobile_menu_search,
-#mobile_menu_globe {
+#mobile_menu_globe,
+#mobile_menu_contact
+{
   display: none;
 }
 /* .bars_icon img{
   width: 20px;
-} */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 12px;
-  }
-  #mobile_menu_trigger,
-  #mobile_menu_search,
+  } */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 12px;
+    }
+    #mobile_menu_trigger,
+    #mobile_menu_search,
+    #mobile_menu_contact,
   #mobile_menu_globe {
     display: block;
   }
@@ -1847,13 +1850,13 @@ nav.scrolled .dropdown .dropbtn {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .sticky-column {
-    position: sticky;
+    position: relative;
     top: 62px !important;
     background-color: #fff;
   }
   .sticky-column-inovations {
-    position: sticky;
-    top: 130px !important;
+    position: relative;
+    top: 0px !important;
     background-color: #fff;
   }
 }
