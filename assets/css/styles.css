@@ -2923,7 +2923,7 @@ textarea {
     width: 100%;
   }
   .blockChainValue_section .nav-pills {
-    overflow: auto;
+    overflow: hidden;
     flex-direction: row !important;
     flex-wrap: nowrap;
     margin-bottom: 20px;
@@ -3006,6 +3006,12 @@ textarea {
     right: 0px;
     top: 112px;
     text-align: center;
+  }
+  #v-pills-tab .nav-link.active {
+    border-bottom: 2px solid #1b1aff !important; /* your brand color */
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    
   }
 }
 

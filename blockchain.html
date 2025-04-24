@@ -1331,7 +1331,7 @@
                 id="v-pills-tab"
                 role="tablist"
                 aria-orientation="vertical"
-              >                
+              >
                 <button
                   class="nav-link active"
                   id="enterprise-tab"
@@ -1650,22 +1650,115 @@
           });
 
           // add tabs jquery script
-          $(document).ready(function() {
-    const $tabContainer = $('#v-pills-tab');
-    const scrollAmount = 150; // Amount to scroll on each arrow click
+          //         $(document).ready(function() {
+          //   const $tabContainer = $('#v-pills-tab');
+          //   const scrollAmount = 150; // Amount to scroll on each arrow click
 
-    $('.block-chain-rightArrow').on('click', function () {
-      $tabContainer.animate({
-        scrollLeft: $tabContainer.scrollLeft() + scrollAmount
-      }, 300);
-    });
+          //   $('.block-chain-rightArrow').on('click', function () {
+          //     $tabContainer.animate({
+          //       scrollLeft: $tabContainer.scrollLeft() + scrollAmount
+          //     }, 300);
+          //   });
 
-    $('.block-chain-leftArrow').on('click', function () {
-      $tabContainer.animate({
-        scrollLeft: $tabContainer.scrollLeft() - scrollAmount
-      }, 300);
-    });
-  });
+          //   $('.block-chain-leftArrow').on('click', function () {
+          //     $tabContainer.animate({
+          //       scrollLeft: $tabContainer.scrollLeft() - scrollAmount
+          //     }, 300);
+          //   });
+          // });
+          $(document).ready(function () {
+            const $tabContainer = $("#v-pills-tab");
+            const $tabs = $("#v-pills-tab .nav-link");
+            const tabCount = $tabs.length;
+            let currentTab = 0;
+
+            function isMobileView() {
+              return $(window).width() <= 768;
+            }
+
+            function updateArrows() {
+              $(".block-chain-leftArrow").toggleClass(
+                "disabled",
+                currentTab === 0
+              );
+              $(".block-chain-rightArrow").toggleClass(
+                "disabled",
+                currentTab === tabCount - 1
+              );
+            }
+
+            function scrollToTab(index) {
+              const $tab = $tabs.eq(index);
+              const containerWidth = $tabContainer.outerWidth();
+              const tabOffsetLeft = $tab.position().left;
+              const tabWidth = $tab.outerWidth();
+
+              const scrollTo =
+                $tabContainer.scrollLeft() +
+                tabOffsetLeft -
+                containerWidth / 2 +
+                tabWidth / 2;
+
+              $tabContainer.animate(
+                {
+                  scrollLeft: scrollTo,
+                },
+                300
+              );
+            }
+
+            function activateTab(index) {
+              if (!isMobileView()) return;
+
+              currentTab = index;
+              $tabs.eq(currentTab).trigger("click"); // Triggers tab content change
+              scrollToTab(currentTab); // Centers tab
+              updateArrows(); // Updates arrows
+            }
+
+            // Arrow click events
+            $(".block-chain-rightArrow").on("click", function () {
+              if (isMobileView() && currentTab < tabCount - 1) {
+                activateTab(currentTab + 1);
+              }
+            });
+
+            $(".block-chain-leftArrow").on("click", function () {
+              if (isMobileView() && currentTab > 0) {
+                activateTab(currentTab - 1);
+              }
+            });
+
+            // Tab click event (manually clicked tab)
+            $tabs.on("click", function () {
+              if (isMobileView()) {
+                currentTab = $tabs.index(this);
+                scrollToTab(currentTab);
+                updateArrows();
+              }
+            });
+
+            // On window resize
+            $(window).on("resize", function () {
+              if (isMobileView()) {
+                scrollToTab(currentTab);
+                updateArrows();
+              } else {
+                $tabContainer.scrollLeft(0);
+                $(
+                  ".block-chain-leftArrow, .block-chain-rightArrow"
+                ).removeClass("disabled");
+              }
+            });
+
+            // Initial setup
+            if (isMobileView()) {
+              const $active = $tabs.filter(".active");
+              currentTab = $tabs.index($active.length ? $active : $tabs.eq(0));
+              scrollToTab(currentTab);
+              updateArrows();
+            }
+          });
         </script>
       </section>
       <!-- Block Chain Section End -->
