@@ -2923,7 +2923,7 @@ textarea {
     width: 100%;
   }
   .blockChainValue_section .nav-pills {
-    overflow: auto;
+    overflow: hidden;
     flex-direction: row !important;
     flex-wrap: nowrap;
     margin-bottom: 20px;
