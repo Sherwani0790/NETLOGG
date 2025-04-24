@@ -3007,6 +3007,12 @@ textarea {
     top: 112px;
     text-align: center;
   }
+  #v-pills-tab .nav-link.active {
+    border-bottom: 2px solid #1b1aff !important; /* your brand color */
+    background-color: transparent !important;
+    border-radius: 0px !important;
+    
+  }
 }
 
 /* BlockChain Value End */
