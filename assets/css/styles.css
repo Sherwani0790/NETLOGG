@@ -1010,15 +1010,15 @@ nav.scrolled .dropdown .dropbtn {
     padding: 5px 15px;
   }
   .whatWeDoCard-card-title-small {
-    color: #fff;
+    /* color: #fff;
     font-size: 12px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 24px; */
   }
   .whatWeDoCard-card-title {
-    font-size: 16px;
+    font-size: 24px;
     width: 100%;
-    line-height: 24px;
+    /* line-height: 24px; */
   }
 
   .whatWeDoCard-card-text {
