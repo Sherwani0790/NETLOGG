@@ -839,12 +839,12 @@ nav.scrolled .dropdown .dropbtn {
   margin-top: 40px;
 }
 .whatWeDoCardWrapper .swiper-slide {
-  width: 470px !important;
+  width: 430px !important;
 }
 .whatWeDoCard-card {
   position: relative;
-  width: 470px;
-  height: 600px;
+  width: 430px;
+  height: 500px;
   border: none;
   overflow: hidden;
   border-radius: 0px;
@@ -854,8 +854,8 @@ nav.scrolled .dropdown .dropbtn {
 }
 
 .whatWeDoCard-card img {
-  width: 470px;
-  height: 800px;
+  width: 430px;
+  height: 600px;
   object-fit: cover;
   transition: transform 0.6s ease, filter 0.6s ease;
 }
@@ -991,7 +991,7 @@ nav.scrolled .dropdown .dropbtn {
     height: 350px;
   }
   .whatWeDoCardWrapper .swiper-slide {
-    width: auto !important;
+    /* width: auto !important; */
   }
   /* .whatWeDoCard-Wrapper {
     overflow-x: auto;
@@ -1010,15 +1010,15 @@ nav.scrolled .dropdown .dropbtn {
     padding: 5px 15px;
   }
   .whatWeDoCard-card-title-small {
-    color: #fff;
+    /* color: #fff;
     font-size: 12px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 24px; */
   }
   .whatWeDoCard-card-title {
-    font-size: 16px;
+    font-size: 24px;
     width: 100%;
-    line-height: 24px;
+    /* line-height: 24px; */
   }
 
   .whatWeDoCard-card-text {
@@ -3406,8 +3406,8 @@ textarea {
   }
   .whatWeDoCard-card {
     position: relative;
-    width: 450px !important;
-    height: 550px;
+    width: 400px !important;
+    height: 500px;
     border: none;
     overflow: hidden;
     border-radius: 0px;
@@ -3416,13 +3416,13 @@ textarea {
     border: 2px solid transparent;
   }
   .whatWeDoCard-card img {
-    width: 450px;
-    height: 700px;
+    width: 400px;
+    height: 600px;
     object-fit: cover;
     transition: transform 0.6s ease, filter 0.6s ease;
   }
   .whatWeDoCardWrapper .swiper-slide {
-    width: 445px !important;
+    width: 395px !important;
   }
   .carousel-caption {
     position: absolute;
@@ -3557,6 +3557,12 @@ textarea {
   .overview_section .gap-24 {
     margin-top: 0px;
   }
+  .nav_img{
+    width: 305px;
+  }
+  .width-700 {
+    width: 610px;
+}
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
@@ -3635,5 +3641,95 @@ textarea {
   .blockchain-main-section .main-section-overlay {
     height: 600px;
     background-position-y: -200px;
+  }
+}
+
+#container {
+  display: grid;
+  place-items: center;
+  /* height: 100vh; */
+}
+#slider-container {
+  height: 100%;
+  width: 85vw;
+  max-width: 100%;
+  position: relative;
+  /* padding: 20px; */
+  overflow: hidden;
+}
+#slider-container .btn {
+  position: absolute;
+  top: calc(50% - 30px);
+  height: 28px;
+  width: 28px;
+  border-left: 8px solid #000;
+  border-top: 8px solid #000;
+  border-bottom: 0;
+  border-right: 0;
+  cursor: pointer;
+}
+#slider-container .btn:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+#slider-container .btn.inactive {
+  border-color: #ddd;
+}
+#slider-container .btn:first-of-type {
+  transform: rotate(-45deg);
+  left: 10px;
+}
+#slider-container .btn:last-of-type {
+  transform: rotate(135deg);
+  right: 10px;
+}
+#slider-container #slider {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  /* cursor: grab; */
+  user-select: none;
+  transition: margin-left 0.3s ease;
+  scroll-behavior: smooth;
+}
+/* #slider {
+} */
+
+#slider-container #slider.grabbing {
+  /* cursor: grabbing; */
+}
+#slider-container #slider .slide {
+  width: 345px;
+  height: 500px;
+  margin: auto 8px;
+  background: #b5b5b5;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+  display: grid;
+  place-items: center;
+}
+#slider-container #slider .slide span {
+  color: white;
+  font-size: 30px;
+}
+/* @media only screen and (min-width: 1100px) {
+  #slider-container #slider .slide {
+    width: calc(2.5% - 20px);
+  }
+} */
+@media only screen and (max-width: 1100px) {
+  #slider-container #slider .slide {
+    width: calc(3.333333% - 20px);
+  }
+}
+@media only screen and (max-width: 900px) {
+  #slider-container #slider .slide {
+    width: calc(5% - 20px);
+  }
+}
+@media only screen and (max-width: 550px) {
+  #slider-container #slider .slide {
+    width: calc(10% - 17px);
   }
 }
