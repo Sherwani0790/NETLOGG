@@ -527,13 +527,7 @@ nav.scrolled .dropdown .dropbtn {
   left: 0;
   width: 100%;
   height: 100vh;
-  /* background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 1)
-  ); */
   z-index: 2;
-  /* background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0)); */
   background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0));
 }
 .carousel-caption {
@@ -1780,6 +1774,13 @@ nav.scrolled .dropdown .dropbtn {
   font-weight: 300;
   line-height: normal;
 }
+.newsroom_section .newsroom_subtitle {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
 .width_587px {
   width: 587px;
 }
@@ -2162,11 +2163,20 @@ textarea {
   text-transform: uppercase;
   margin: 0;
 }
+
 .blockchain-main-section .main-section-width .big-text {
   color: #fff;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 0 0;
+}
+.blockchain-main-section .main-section-width .medium-text {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
   margin: 12px 0 0 0;
 }
@@ -2215,6 +2225,14 @@ textarea {
     p:first-child {
     display: none;
   }
+  .blockchain-main-section .main-section-width .medium-text {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 12px 0 0 0;
+}
 }
 /* BlockChain-main Section End */
 
@@ -2823,13 +2841,15 @@ textarea {
   flex-direction: column;
   position: relative;
 }
-.block-chain-leftArrow {
- display: none;
-}
-.block-chain-rightArrow {
+.block-chain-leftArrow,
+.block-chain-rightArrow,
+.block-chain-leftArrowNew,
+.block-chain-rightArrowNew {
   display: none;
- 
 }
+/* {
+  display: none;
+} */
 .blockChainValue_section .nav-pills .nav-link {
   color: #666;
   font-weight: 400;
@@ -2867,6 +2887,14 @@ textarea {
   border-radius: 8px;
   background-color: #1b1aff;
 }
+.blockChainValue_section .blockChain-subtitle {
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
 .blockChainValue_section .tab-content {
   border: 0;
   border-radius: 0;
@@ -2880,6 +2908,16 @@ textarea {
   line-height: normal;
 }
 .blockChainValue_section .tab-content p {
+  color: #424242;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 27.2px;
+}
+.blockChainValue_section .tab-content ul {
+  list-style: outside;
+}
+.blockChainValue_section .tab-content ul li {
   color: #424242;
   font-size: 16px;
   font-style: normal;
@@ -3008,11 +3046,32 @@ textarea {
     top: 112px;
     text-align: center;
   }
+  .block-chain-leftArrowNew {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    left: -5px;
+    text-align: center;
+    top: 155px;
+  }
+  .block-chain-rightArrowNew {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    right: 0px;
+    top: 155px;
+    text-align: center;
+  }
   #v-pills-tab .nav-link.active {
     border-bottom: 2px solid #1b1aff !important; /* your brand color */
     background-color: transparent !important;
     border-radius: 0px !important;
-    
   }
 }
 
@@ -3105,6 +3164,292 @@ textarea {
 }
 
 /* News Update End */
+
+/* Core Capabilities Section */
+.coreCapabilities_section {
+  background: #fff;
+  padding: 30px 130px 100px 100px;
+}
+.coreCapabilities_section .blockChain-title {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.coreCapabilities_section .blockChain-subtitle {
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.coreCapabilities_section .blockChain_card {
+  float: left;
+  width: 25%;
+  height: 300px;
+  padding: 36px 20px;
+  border: 1px solid #ededed;
+  margin-top: 60px;
+}
+.coreCapabilities_section .blockChain_card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.coreCapabilities_section .blockChain_card:hover img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.coreCapabilities_section .blockChain_card .count {
+  color: #161616;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 43.5px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.coreCapabilities_section .blockChain_card .desc {
+  color: #262b3f;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 16px;
+}
+.coreCapabilities_section .width-258px {
+  width: 230px;
+}
+@media (max-width: 768px) {
+  .coreCapabilities_section {
+    padding: 50px 12px;
+  }
+  .coreCapabilities_section .blockChain-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .coreCapabilities_section .blockChain-subtitle {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color: #000;
+  }
+  .coreCapabilities_section .blockChain_card .count {
+    font-size: 22px;
+  }
+  .coreCapabilities_section .blockChain_card .desc {
+    font-size: 12px;
+    margin: 24px 0;
+  }
+  .coreCapabilities_section .blockChain_card {
+    float: left;
+    width: 50%;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ededed;
+    margin-top: 0px;
+  }
+  .coreCapabilities_section .blockChain_card img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+  .coreCapabilities_section .width-258px {
+    width: 100%;
+  }
+}
+/* Core Capabilities Section End */
+
+/* Inteligent Section */
+
+.intelligentEcosystem_section {
+  padding: 30px 130px 100px 96px;
+}
+.intelligentEcosystem_section h2 {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.intelligentEcosystem_section p {
+  color: #424242;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 27.2px;
+}
+.intelligentEcosystem_section .gap-32 {
+  margin-top: 32px;
+}
+.intelligentEcosystem_section .gap-8 {
+  margin-top: 8px;
+}
+.pl-80 {
+  padding-left: 80px;
+}
+.intelligentEcosystem-ul {
+  list-style: outside;
+}
+.intelligentEcosystem-ul li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #424242;
+}
+@media (max-width: 768px) {
+  .intelligentEcosystem_section {
+    padding: 50px 12px;
+  }
+  .intelligentEcosystem_section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 20px !important;
+  }
+  .intelligentEcosystem_section p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .pl-80 {
+    padding-left: 10.5px !important;
+  }
+}
+/* Inteligent Section End*/
+/* Case study details */
+.caseStudyDetails-section {
+  /* padding: 100px 130px 100px 96px; */
+  position: relative;
+}
+.caseStudyDetails-section .main-section-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0));
+}
+.caseStudyDetails-section .main-section-overlay {
+  background-image: url("../img/blockChain-caseStudy-Slider/1.webp");
+  background-size: cover;
+  width: 100%;
+  height: 512px;
+  background-position-y: -400px;
+}
+.caseStudyDetailsMain_section {
+  height: 100vh;
+  background: #fff;
+}
+.caseStudyDetailsMain_section .main-card {
+  background: #fff;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 36px;
+}
+.caseStudyDetailsMain_section .main-card .caseStudyDetails-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.caseStudyDetails-content {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.caseStudyDetails-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+
+.caseStudyDetailsMain_section .main-card .caseStudy_solutionText {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27.2px;
+  color: #000;
+  /* margin: 0; */
+}
+.caseStudyDetailsMain_section .main-card ul {
+  list-style: outside;
+}
+.caseStudyDetailsMain_section .main-card ul li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+.caseStudy_social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.caseStudy_social p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+  margin: 0;
+}
+.caseStudy_social a {
+  cursor: pointer;
+}
+.caseStudy_cards_section {
+  padding: 100px 130px 100px 96px;
+}
+.caseStudy_cards_section .caseStudy_cards_title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 20px;
+}
+.caseStudy_cards_section .cards {
+  background: #f7f7f7;
+  padding: 24px;
+  height: 400px;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .caseStudyDetailsMain_section {
+    height: 100%;
+    background: #fff;
+  }
+  .caseStudyDetails-section .main-section-overlay {
+    height: 310px;
+    background-position-y: -350px;
+  }
+  .caseStudyDetailsMain_section .main-card {
+    padding: 24px;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .caseStudyDetailsMain_section .main-card .caseStudyDetails-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .caseStudy_cards_section {
+    padding: 50px 12px;
+  }
+  .caseStudy_cards_section .gap-8 {
+    margin-top: 8px;
+  }
+}
+/* Case study details End */
 /* Footer */
 .footer {
   background: #f7f7f7;
@@ -3531,15 +3876,20 @@ textarea {
     background: #f7f7f7;
     height: 220px;
   }
+  .coreCapabilities_section .card-25 {
+    width: 24.3%;
+    float: left;
+    padding: 24px;
+    background: #f7f7f7;
+    height: 220px;
+  }
   .custom-margin-2 {
     margin: 0 5px;
   }
   .custom-margin-4 {
     margin: 0 0 0 5px;
   }
-  .blockChainValue_section .card-25 {
-    width: 24.3% !important;
-  }
+
   .blockchain-main-section .main-section-overlay {
     height: 600px;
     background-position-y: -150px;
@@ -3557,12 +3907,18 @@ textarea {
   .overview_section .gap-24 {
     margin-top: 0px;
   }
-  .nav_img{
+  .nav_img {
     width: 305px;
   }
   .width-700 {
     width: 610px;
-}
+  }
+  .caseStudyDetailsMain_section .main-card {
+    top: 140%;
+  }
+  .caseStudyDetailsMain_section {
+    height: calc(100vh - -450px);
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
