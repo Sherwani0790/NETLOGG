@@ -991,10 +991,10 @@
 
           <div class="row gap-40">
             <div class="col-md-3 col-12">
-              <div class="block-chain-leftArrowNew">
+              <div class="block-chain-leftArrowDiligence">
                 <i class="fa fa-chevron-left"></i>
               </div>
-              <div class="block-chain-rightArrowNew">
+              <div class="block-chain-rightArrowDiligence">
                 <i class="fa fa-chevron-right"></i>
               </div>
               <div
@@ -1153,11 +1153,11 @@
             }
 
             function updateArrows() {
-              $(".block-chain-leftArrowNew").toggleClass(
+              $(".block-chain-leftArrowDiligence").toggleClass(
                 "disabled",
                 currentTab === 0
               );
-              $(".block-chain-rightArrowNew").toggleClass(
+              $(".block-chain-rightArrowDiligence").toggleClass(
                 "disabled",
                 currentTab === tabCount - 1
               );
@@ -1193,13 +1193,13 @@
             }
 
             // Arrow click events
-            $(".block-chain-rightArrowNew").on("click", function () {
+            $(".block-chain-rightArrowDiligence").on("click", function () {
               if (isMobileView() && currentTab < tabCount - 1) {
                 activateTab(currentTab + 1);
               }
             });
 
-            $(".block-chain-leftArrowNew").on("click", function () {
+            $(".block-chain-leftArrowDiligence").on("click", function () {
               if (isMobileView() && currentTab > 0) {
                 activateTab(currentTab - 1);
               }
@@ -1222,7 +1222,7 @@
               } else {
                 $tabContainer.scrollLeft(0);
                 $(
-                  ".block-chain-leftArrowNew, .block-chain-rightArrowNew"
+                  ".block-chain-leftArrowDiligence, .block-chain-rightArrowDiligence"
                 ).removeClass("disabled");
               }
             });

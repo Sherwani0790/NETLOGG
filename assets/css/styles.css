@@ -2232,6 +2232,7 @@ textarea {
     font-weight: 300;
     line-height: normal;
     margin: 12px 0 0 0;
+    width: 320px;
   }
 }
 /* BlockChain-main Section End */
@@ -2844,7 +2845,11 @@ textarea {
 .block-chain-leftArrow,
 .block-chain-rightArrow,
 .block-chain-leftArrowNew,
-.block-chain-rightArrowNew {
+.block-chain-rightArrowNew,
+.block-chain-rightArrowGen,
+.block-chain-leftArrowGen,
+.block-chain-rightArrowDiligence,
+.block-chain-leftArrowDiligence {
   display: none;
 }
 /* {
@@ -3066,6 +3071,50 @@ textarea {
     z-index: 99;
     right: 0px;
     top: 155px;
+    text-align: center;
+  }
+  .block-chain-leftArrowGen {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    left: -5px;
+    text-align: center;
+    top: 185px;
+  }
+  .block-chain-rightArrowGen {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    right: 0px;
+    top: 185px;
+    text-align: center;
+  }
+  .block-chain-leftArrowDiligence {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    left: -5px;
+    text-align: center;
+    top: 185px;
+  }
+  .block-chain-rightArrowDiligence {
+    display: block;
+    position: absolute;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+    right: 0px;
+    top: 185px;
     text-align: center;
   }
   #v-pills-tab .nav-link.active {
