@@ -2232,7 +2232,7 @@ textarea {
     font-weight: 300;
     line-height: normal;
     margin: 12px 0 0 0;
-}
+  }
 }
 /* BlockChain-main Section End */
 
@@ -3324,7 +3324,6 @@ textarea {
 /* Inteligent Section End*/
 /* Case study details */
 .caseStudyDetails-section {
-  /* padding: 100px 130px 100px 96px; */
   position: relative;
 }
 .caseStudyDetails-section .main-section-overlay::before {
@@ -3439,6 +3438,413 @@ textarea {
     transform: none;
   }
   .caseStudyDetailsMain_section .main-card .caseStudyDetails-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .caseStudy_cards_section {
+    padding: 50px 12px;
+  }
+  .caseStudy_cards_section .gap-8 {
+    margin-top: 8px;
+  }
+}
+/* Case study details End */
+/* Case study details 2*/
+.caseStudyDetails-section2 {
+  position: relative;
+}
+.caseStudyDetails-section2 .main-section-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0));
+}
+.caseStudyDetails-section2 .main-section-overlay {
+  background-image: url("../img/blockChain-Values-Icons/banner-4.webp");
+  background-size: cover;
+  width: 100%;
+  height: 512px;
+  background-position-y: -200px;
+}
+.caseStudyDetailsMain_section2 {
+  height: calc(100vh - 350px);
+  background: #fff;
+}
+.caseStudyDetailsMain_section2 .main-card {
+  background: #fff;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 36px;
+}
+.caseStudyDetailsMain_section2 .main-card .caseStudyDetails-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.caseStudyDetails-content {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.caseStudyDetails-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+
+.caseStudyDetailsMain_section2 .main-card .caseStudy_solutionText {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27.2px;
+  color: #000;
+  /* margin: 0; */
+}
+.caseStudyDetailsMain_section2 .main-card ul {
+  list-style: outside;
+}
+.caseStudyDetailsMain_section2 .main-card ul li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+.caseStudy_social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.caseStudy_social p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+  margin: 0;
+}
+.caseStudy_social a {
+  cursor: pointer;
+}
+.caseStudy_cards_section {
+  padding: 100px 130px 100px 96px;
+}
+.caseStudy_cards_section .caseStudy_cards_title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 20px;
+}
+.caseStudy_cards_section .cards {
+  background: #f7f7f7;
+  padding: 24px;
+  height: 400px;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .caseStudyDetailsMain_section2 {
+    height: 100%;
+    background: #fff;
+  }
+  .caseStudyDetails-section2 .main-section-overlay {
+    height: 310px;
+    background-position-y: -350px;
+  }
+  .caseStudyDetailsMain_section2 .main-card {
+    padding: 24px;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .caseStudyDetailsMain_section2 .main-card .caseStudyDetails-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .caseStudy_cards_section {
+    padding: 50px 12px;
+  }
+  .caseStudy_cards_section .gap-8 {
+    margin-top: 8px;
+  }
+}
+/* Case study details End */
+/* Case study details 3*/
+.caseStudyDetails-section3 {
+  position: relative;
+}
+.caseStudyDetails-section3 .main-section-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0));
+}
+.caseStudyDetails-section3 .main-section-overlay {
+  background-image: url("../img/blockChain-Values-Icons/banner-4.webp");
+  background-size: cover;
+  width: 100%;
+  height: 512px;
+  background-position-y: -200px;
+}
+.caseStudyDetailsMain_section3 {
+  height: calc(100vh - -2150px);
+  background: #fff;
+}
+.caseStudyDetailsMain_section3 .main-card {
+  background: #fff;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  top: 202%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 36px;
+}
+.caseStudyDetailsMain_section3 .main-card .caseStudyDetails-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.caseStudyDetails-content {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.caseStudyDetails-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+
+.caseStudyDetailsMain_section3 .main-card .caseStudy_solutionText {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27.2px;
+  color: #000;
+  /* margin: 0; */
+}
+.caseStudyDetailsMain_section3 .main-card .caseStudy_solutionText_subHeading {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 27.2px;
+  color: #000;
+  /* margin: 0; */
+}
+.caseStudyDetailsMain_section3 .main-card ul {
+  list-style: outside;
+}
+.caseStudyDetailsMain_section3 .main-card ul li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+.caseStudyDetailsMain_section3 .main-card .caseStudy_centered_img img {
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+.caseStudy_social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.caseStudy_social p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+  margin: 0;
+}
+.caseStudy_social a {
+  cursor: pointer;
+}
+.caseStudy_cards_section {
+  padding: 100px 130px 100px 96px;
+}
+.caseStudy_cards_section .caseStudy_cards_title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 20px;
+}
+.caseStudy_cards_section .cards {
+  background: #f7f7f7;
+  padding: 24px;
+  height: 400px;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .caseStudyDetailsMain_section3 {
+    height: 100%;
+    background: #fff;
+  }
+  .caseStudyDetails-section3 .main-section-overlay {
+    height: 310px;
+    background-position-y: -350px;
+  }
+  .caseStudyDetailsMain_section3 .main-card {
+    padding: 24px;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .caseStudyDetailsMain_section3 .main-card .caseStudyDetails-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .caseStudy_cards_section {
+    padding: 50px 12px;
+  }
+  .caseStudy_cards_section .gap-8 {
+    margin-top: 8px;
+  }
+}
+/* Case study details End */
+/* Case study details 4*/
+.caseStudyDetails-section4 {
+  position: relative;
+}
+.caseStudyDetails-section4 .main-section-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0));
+}
+.caseStudyDetails-section4 .main-section-overlay {
+  background-image: url("../img/blockChain-Values-Icons/banner-4.webp");
+  background-size: cover;
+  width: 100%;
+  height: 512px;
+  background-position-y: -200px;
+}
+.caseStudyDetailsMain_section4 {
+  height: calc(100vh - 600px);
+  background: #fff;
+}
+.caseStudyDetailsMain_section4 .main-card {
+  background: #fff;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 36px;
+}
+.caseStudyDetailsMain_section4 .main-card .caseStudyDetails-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.caseStudyDetails-content {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.caseStudyDetails-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+
+.caseStudyDetailsMain_section4 .main-card .caseStudy_solutionText {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27.2px;
+  color: #000;
+  /* margin: 0; */
+}
+.caseStudyDetailsMain_section4 .main-card .caseStudy_solutionText_subHeading {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 27.2px;
+  color: #000;
+  /* margin: 0; */
+}
+.caseStudyDetailsMain_section4 .main-card ul {
+  list-style: outside;
+}
+.caseStudyDetailsMain_section4 .main-card ul li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+.caseStudyDetailsMain_section4 .main-card .caseStudy_centered_img img {
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+.caseStudy_social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.caseStudy_social p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+  margin: 0;
+}
+.caseStudy_social a {
+  cursor: pointer;
+}
+.caseStudy_cards_section {
+  padding: 100px 130px 100px 96px;
+}
+.caseStudy_cards_section .caseStudy_cards_title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 20px;
+}
+.caseStudy_cards_section .cards {
+  background: #f7f7f7;
+  padding: 24px;
+  height: 400px;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .caseStudyDetailsMain_section4 {
+    height: 100%;
+    background: #fff;
+  }
+  .caseStudyDetails-section4 .main-section-overlay {
+    height: 310px;
+    background-position-y: -350px;
+  }
+  .caseStudyDetailsMain_section4 .main-card {
+    padding: 24px;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .caseStudyDetailsMain_section4 .main-card .caseStudyDetails-title {
     font-size: 22px;
     font-weight: 400;
   }
@@ -3918,6 +4324,24 @@ textarea {
   }
   .caseStudyDetailsMain_section {
     height: calc(100vh - -450px);
+  }
+  .caseStudyDetailsMain_section2 .main-card {
+    top: 107%;
+  }
+  .caseStudyDetailsMain_section2 {
+    height: calc(100vh - 0px);
+  }
+  .caseStudyDetailsMain_section3 .main-card {
+    top: 257%;
+  }
+  .caseStudyDetailsMain_section3 {
+    height: calc(100vh - -2500px);
+  }
+  .caseStudyDetailsMain_section4 .main-card {
+    top: 87.5%;
+  }
+  .caseStudyDetailsMain_section4 {
+    height: calc(100vh - 500px);
   }
 }
 

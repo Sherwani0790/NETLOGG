@@ -829,625 +829,246 @@
       </div>
     </div>
     <!-- Main Section -->
-    <div class="blockchain-main-section" id="blockchain-main-section">
+    <div class="caseStudyDetails-section3" id="caseStudyDetails-section">
       <div class="main-section-overlay"></div>
-      <div class="main-section-width">
-        <p class="small-text">Digital Infrastructure</p>
-        <p class="big-text">Digital Infrastructure and Integration services</p>
-      </div>
     </div>
     <!-- Main Section End -->
-    <!-- Progress Section Selection -->
-    <div class="progress_section_selection progress_section_selection_sticky">
-      <!-- progress bar -->
-      <div class="progress-bar-container">
-        <div class="progress-bar"></div>
-      </div>
-
-      <div class="text-indication">
-        <div class="progress-label-left">
-          <p>Digital Infrastructure Services</p>
-          <p>1. Vision & Value</p>
-        </div>
-        <div class="progress-label-right">
-          <p>Up Next</p>
-          <div class="custom-dropdown">
-            <div class="custom-dropdown-button">
-              Select Section <i class="fas fa-chevron-down"></i>
-            </div>
-            <ul class="custom-dropdown-content">
-              <li data-target="vision_value">1. Vision & Value</li>
-              <li data-target="core_capabilities">2. Core Capabilities</li>
-              <li data-target="intelligent_ecosystem">3. Intelligent Ecosystem</li>
-              <li data-target="caseStudy_section">4. Case Studies</li>
-              <li data-target="Insights_Emerging">5. Insights & Emerging</li>
-              <li data-target="contactus_section">6. Contact Us</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      $(document).ready(function () {
-        function updateProgressBar() {
-          const progressBar = $(".progress-bar");
-          const sections = $("section");
-          let scrollPosition = $(window).scrollTop();
-
-          sections.each(function () {
-            let top = $(this).offset().top - 150;
-            let bottom = top + $(this).outerHeight();
-
-            if (scrollPosition >= top && scrollPosition < bottom) {
-              let sectionId = $(this).attr("id");
-              let sectionText = $(this).data("title");
-              $(".progress-label-left p:nth-child(2)").text(sectionText);
-              $(".custom-dropdown-button").html(
-                sectionText + ' <i class="fas fa-chevron-down"></i>'
-              );
-            }
-          });
-          const totalHeight = $(document).height() - $(window).height();
-          const progress = (scrollPosition / totalHeight) * 100;
-          progressBar.css("width", progress + "%");
-        }
-
-        $(".custom-dropdown-content li").on("click", function () {
-          let sectionText = $(this).text().trim();
-          let sectionId = $(this).data("target");
-
-          let targetSection = $("#" + sectionId);
-          if (targetSection.length) {
-            $("html, body").animate(
-              {
-                scrollTop: targetSection.offset().top - 50,
-              },
-              800
-            );
-            $(".progress-label-left p:nth-child(2)").text(sectionText);
-            $(".custom-dropdown-button").html(
-              sectionText + ' <i class="fas fa-chevron-down"></i>'
-            );
-          }
-        });
-
-        $(window).on("scroll", updateProgressBar);
-        updateProgressBar();
-      });
-    </script>
-    <!-- Progress Section Selection End -->
-
-    <!-- OverView Section -->
-    <div class="blockChain-scrollable-column">
-      <section
-        class="overview_section"
-        id="vision_value"
-        data-title="1. Vision & Value "
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-      >
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 col-12">
-              <div>
-                <h2>Vision & Value</h2>
-              </div>
-              <div class="gap-24">
-                <p class="overview_text width-531px">
-                  At NETLOGG, we enable enterprises to redefine operational
-                  agility through intelligent, scalable digital infrastructure.
-                  Our vision is to build future-proof environments that adapt to
-                  today’s challenges and tomorrow’s growth.
-                </p>
-              </div>
-              <div class="gap-24">
-                <p class="overview_text width-531px">
-                  From hybrid cloud integration to full-scale network
-                  transformation and data center modernization, we provide the
-                  foundation for digital business success. By prioritizing
-                  resilience, scalability, and automation, we ensure IT
-                  ecosystems are ready to support mission-critical services with
-                  maximum efficiency and minimal risk.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-12">
-              <div class="overview-main-img">
-                <img src="assets/img/blockChain-Values-Icons/banner-3.svg" />
-              </div>
-            </div>
-          </div>
-          </div>
-      </section>
-      <!-- OverView Section End -->
-      <!-- coreCapabilities Section -->
-      <section 
-      id="core_capabilities"
-        data-title="2. Core Capabilities"
-      class="coreCapabilities_section">
-        <div
-          class="container-fluid"
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          <h2 class="blockChain-title">Core Capabilities</h2>
-          <p class="blockChain-subtitle">
-            Our digital infrastructure services cover every critical layer of
-            enterprise IT transformation
-          </p>
+    <!-- Case Study Details -->
+    <div class="caseStudyDetailsMain_section3">
+      <div class="main-card">
+        <h1 class="caseStudyDetails-title">
+          SaaS Transformation for a National Higher Education Authority
+        </h1>
+        <div class="caseStudy_social">
           <div>
-            <div class="w-100 mb-5">
-              <!-- <div class="blockChain_card">
-                <div>
-                  <img
-                    src="assets/img/blockChain-Values-Icons/1.svg"
-                    alt="NetLogg"
-                  />
-                </div>
-
-                <div>
-                  <p class="desc width-258px">
-                    Cloud Management Platform – Centralized tools to provision,
-                    monitor, and optimize multi-cloud environments—ensuring
-                    visibility, control, and cost-efficiency across your cloud
-                    infrastructure.
-                  </p>
-                </div>
-              </div> -->
-              <div class="blockChain_card">
-                <div>
-                  <img
-                    src="assets/img/blockChain-Values-Icons/2.svg"
-                    alt="NetLogg"
-                  />
-                </div>
-
-                <div>
-                  <p class="desc width-258px">
-                    Network Transformation – Reinventing legacy networks through
-                    software-defined architectures, high-speed connectivity, and
-                    intelligent automation.
-                  </p>
-                </div>
-              </div>
-              <div class="blockChain_card">
-                <div>
-                  <img
-                    src="assets/img/blockChain-Values-Icons/3.svg"
-                    alt="NetLogg"
-                  />
-                </div>
-
-                <div>
-                  <p class="desc width-258px">
-                    Business Continuity & Disaster Recovery – Infrastructure
-                    solutions designed to support uninterrupted operations and
-                    rapid recovery.
-                  </p>
-                </div>
-              </div>
-              <div class="blockChain_card">
-                <div>
-                  <img
-                    src="assets/img/blockChain-Values-Icons/4.svg"
-                    alt="NetLogg"
-                  />
-                </div>
-
-                <div>
-                  <p class="desc width-258px">
-                    Managed Services – 24/7 performance monitoring, incident
-                    management, and SLA-driven response services.
-                  </p>
-                </div>
-              </div>
-              <div class="blockChain_card">
-                <div>
-                  <img
-                    src="assets/img/blockChain-Values-Icons/1.svg"
-                    alt="NetLogg"
-                  />
-                </div>
-
-                <div>
-                  <p class="desc width-258px">
-                    Data Center Technology Revamp – Redesigning and modernizing
-                    data centers for cloud compatibility, energy efficiency, and
-                    operational excellence.
-                  </p>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-            </div>
+            <p>5 min read</p>
+          </div>
+          <div>
+            <a href="#"
+              ><img src="assets/img/footerLogos/FacebookLogo.svg" class=""
+            /></a>
+            <a href="#"
+              ><img src="assets/img/footerLogos/InstagramLogo.svg" class=""
+            /></a>
+            <a href="#"
+              ><img src="assets/img/footerLogos/LinkedinLogo.svg" class=""
+            /></a>
+            <a href="#"
+              ><img src="assets/img/footerLogos/XLogo.svg" class=""
+            /></a>
+            <a href="#"
+              ><img src="assets/img/footerLogos/YoutubeLogo.svg" class=""
+            /></a>
           </div>
         </div>
-      </section>
 
-      <!-- coreCapabilities Section End -->
+        <div class="caseStudyDetails-content">
+          <p>
+            A national regulatory body overseeing both public and private
+            universities across the country faced mounting challenges in
+            managing IT services for the higher education sector. With hundreds
+            of institutions under its umbrella and thousands of users—students,
+            faculty, and administrative staff—depending on digital platforms,
+            the need for a centralized, scalable, and secure solution became
+            essential.
+          </p>
 
-      <!-- Intelligent Ecosystem Section -->
-      <section
-      id="intelligent_ecosystem"
-      data-title="3. Intelligent Ecosystem"
-      
-      class="intelligentEcosystem_section">
-        <div class="container-fluid">
-          <div class="row gap-24">
-            <div class="col-12 col-md-7">
-              <div class="blockchain-tab-img">
-                <img
-                  src="assets/img/blockChain-Values-Icons/banner-1.webp"
-                  alt="Enterprise"
-                />
-              </div>
-            </div>
-            <div class="col-12 col-md-5 pl-80">
-              <h2 class="mb-3">Intelligent Ecosystems</h2>
-              <p class="gap-8 mb-0">
-                We collaborate with leading global technology partners to
-                deliver cutting-edge infrastructure solutions, enabling seamless
-                integration and performance at scale. Our strategic alliances
-                include: Through this ecosystem, NETLOGG delivers unified
-                infrastructure experiences that span cloud, core, and
-                edge—empowering enterprises with automation, intelligence, and
-                interoperability.
-              </p>
-            </div>
+          <p>
+            The existing IT landscape was fragmented, with institutions using
+            disparate systems and platforms. This led to inconsistent user
+            experiences, increased helpdesk requests, and high operational
+            overhead. Software provisioning was manual and time-consuming,
+            resulting in delays, human errors, and difficulty in maintaining
+            version control across universities. There was no unified platform
+            for application management, usage monitoring, or cost control.
+            Additionally, the absence of centralized identity management
+            complicated access for users, who often had to manage multiple
+            credentials across systems.
+          </p>
+          <div class="caseStudy_centered_img">
+            <img src="assets/img/blockChain-Values-Icons/banner-2.webp" />
+          </div>
+          <p>
+            To address these challenges, Netlogg designed and deployed a
+            <b>SaaS-based Education Cloud</b>—a unified platform purpose-built
+            for the higher education ecosystem. This model allowed institutions
+            under the authority’s management to access essential academic and
+            administrative software on-demand, without the burden of managing
+            infrastructure or performing manual deployments.
+          </p>
+          <p>
+            Preconfigured application blueprints for learning management
+            systems, examination tools, and academic portals enabled rapid
+            rollout of services across multiple universities. Real-time
+            monitoring and logging provided clear visibility into system
+            performance, application usage, and user behavior, empowering
+            administrators with actionable insights. A transparent billing
+            system ensured accurate cost allocation across departments and
+            institutions, optimizing budget utilization.
+          </p>
+          <div class="caseStudy_centered_img">
+            <img src="assets/img/blockChain-NewsUpdates/6.webp" />
+          </div>
+          <p>
+            A key element of the solution was the implementation of centralized
+            <b>Identity and Access Management (IAM)</b>, enabling single sign-on
+            (SSO) for students, faculty, and administrators. This simplified
+            user access across all integrated services and improved security
+            compliance. Continuous updates, security patches, and enhancements
+            were delivered seamlessly through the SaaS model, ensuring all
+            institutions remained on the latest and most secure versions of
+            their applications without any service disruption. The outcomes were
+            transformative. Universities were able to launch digital services
+            significantly faster, with minimal reliance on internal IT teams.
+          </p>
+          <p>
+            The SaaS model reduced operational complexity and lowered software
+            management costs, while centralized IAM cut down login-related
+            issues by 80%. Institutions saw enhanced productivity, better
+            compliance with data policies, and a smoother, more consistent
+            digital experience for all users.
+          </p>
+          <p>
+            By adopting Netlogg’s SaaS-based Education Cloud, the higher
+            education authority successfully modernized service delivery across
+            its network of universities, enabling a future-ready academic
+            environment built on efficiency, scalability, and innovation.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <p class="caseStudy_solutionText">Solutions Delivered by Netlogg</p>
+            <p class="caseStudy_solutionText_subHeading">
+              SaaS-Based Education Cloud
+            </p>
+            <p>
+              Unified, on-demand access to academic and administrative
+              applications for all universities under the authority.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Preconfigured Application Blueprints
+            </p>
+            <p>
+              Rapid deployment of learning management systems, exam tools, and
+              academic portals.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Centralized Identity and Access Management (IAM)
+            </p>
+            <p>
+              Single sign-on (SSO) across platforms, simplifying access for
+              students, faculty, and staff.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Real-Time Monitoring and Logging
+            </p>
+            <p>
+              Integrated system performance tracking and user activity analytics
+              for proactive issue resolution.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Transparent Billing System
+            </p>
+            <p>
+              Accurate cost allocation and optimized budget management for all
+              institutions.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Continuous Updates and Security Patches
+            </p>
+            <p>
+              Automatic delivery of system updates, ensuring all applications
+              are current and secure without disruption.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Cloud-Based Scalability
+            </p>
+            <p>
+              Elastic cloud resources to meet the demand of fluctuating usage
+              during peak periods such as exams or admissions.
+            </p>
+          </div>
+          <div class="col-12">
+            <p class="caseStudy_solutionText">Outcomes</p>
+            <p class="caseStudy_solutionText_subHeading">
+              Reduced Operational Complexity
+            </p>
+            <p>
+              The SaaS model eliminated the need for universities to manage
+              infrastructure and software deployments, simplifying IT
+              operations.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Faster Service Deployment
+            </p>
+            <p>
+              New academic tools and platforms were rolled out 60% faster due to
+              preconfigured solutions and cloud-based infrastructure.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Improved User Experience
+            </p>
+            <p>
+              Single sign-on (SSO) and centralized identity management reduced
+              login issues by 80%, streamlining access for users across all
+              platforms.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">Cost Efficiency</p>
+            <p>
+              The transparent billing system and cloud-based scalability reduced
+              overall IT costs by 30%, with optimized resource usage across
+              institutions.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">Enhanced Security</p>
+            <p>
+              Continuous updates, real-time threat monitoring, and seamless
+              security patches reduced security incidents by 90%, safeguarding
+              sensitive academic data.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">
+              Better Compliance and Data Management
+            </p>
+            <p>
+              Automated updates and integrated monitoring ensured compliance
+              with data protection policies and regulatory standards.
+            </p>
+            <p class="caseStudy_solutionText_subHeading">Higher Productivity</p>
+            <p>
+              Faculty, students, and administrators experienced improved
+              workflow efficiency, with access to the latest tools and
+              applications without the delays associated with manual management.
+            </p>
           </div>
         </div>
-      </section>
-      <!-- Intelligent Ecosystem Section End-->
-      <!-- CaseStudy Section -->
-      <section
-        class="caseStudy_section"
-        id="caseStudy_section"
-        data-title="4. Case Studies"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-      >
-        <div class="">
-          <div
-            id="carouselExampleIndicators2"
-            class="carousel slide"
-            data-bs-ride="carousel"
-            data-bs-pause="true"
-          >
-            <!--  -->
-            <div class="dp-flex align-items-center">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                >
-                  <span></span>
-                </button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                >
-                  <span></span>
-                </button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                >
-                  <span></span>
-                </button>
-              </div>
-              <div class="right_left_count">
-                <div class="dp-flex align-items-center">
-                  <button
-                    class="carousal_left"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators2"
-                    data-bs-slide="prev"
-                  >
-                    <span>
-                      <img
-                        class="button_arrow_left"
-                        src="assets/img/Logo/prevIcon.svg"
-                      />
-                    </span>
-                  </button>
-                  <div class="count_carousal">1 / 3</div>
-                  <button
-                    class="carousal_right"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators2"
-                    data-bs-slide="next"
-                  >
-                    <span>
-                      <img
-                        class="button_arrow_right"
-                        src="assets/img/Logo/nextIcon.svg"
-                      />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-inner pb-5">
-              <div class="carousel-item item_total_count active">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="carousel-caption z_index">
-                      <p class="solutions_small_text">Success in Action </p>
-                      <h1 class="solutions_heading">
-                        Netlogg’s Customized ERP 
-                        <br />
-                        Solution
-                        For A Mining Company
-                      </h1>
-                      <p class="width-644px solutions_p">
-                        Transforming Mining Operations with Smart ERP Solutions
-                      </p>
-                      <a href="digital-infrastructure-Details1.html">
-                        <span> Read More </span>
-                        <img src="assets/img/Logo/smallArrowRight.svg" />
-                      </a>
-                    </div>
-                    <div class="caseStudy_overlay">
-                      <img
-                        src="assets/img/blockChain-caseStudy-Slider/1.webp"
-                        alt="Case Study"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item item_total_count">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="carousel-caption z_index">
-                      <p class="solutions_small_text">Success in Action </p>
-                      <h1 class="solutions_heading">
-                        Banking Sector Transformation <br/>Through Network Modernization
-                      </h1>
-                      <p class="width-644px solutions_p">
-                        A prominent commercial bank with an extensive national 
-                        branch footprint and an aging network infrastructure.
-                                               
-                      </p>
-                      <a href="digital-infrastructure-Details2.html">
-                        <span> Read More </span>
-                        <img src="assets/img/Logo/smallArrowRight.svg" />
-                      </a>
-                    </div>
-                    <div class="caseStudy_overlay">
-                      <img
-                        src="assets/img/blockChain-Values-Icons/banner-4.webp"
-                        alt="Case Study"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item item_total_count">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="carousel-caption z_index">
-                      <p class="solutions_small_text">Success in Action </p>
-                      <h1 class="solutions_heading">
-                        SaaS Transformation For A <br/>National Higher Education Authority
-                      </h1>
-                      <p class="width-644px solutions_p">
-                        A national regulatory body overseeing both public and private universities across the country faced mounting challenges in managing IT services for the higher education sector.
-                      </p>
-                      <a href="digital-infrastructure-Details3.html">
-                        <span> Read More </span>
-                        <img src="assets/img/Logo/smallArrowRight.svg" />
-                      </a>
-                    </div>
-                    <div class="caseStudy_overlay">
-                      <img
-                        src="assets/img/blockChain-Values-Icons/banner-6.webp"
-                        alt="Case Study"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CaseStudy Section End-->
-
-
-      <!-- Innovation & Insights Section -->
-      <section
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        class="newsroom_section"
-        id="Insights_Emerging"
-        data-title="5. Insights & Emerging"
-      >
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 col-12 sticky-column-inovations">
-              <div>
-                <p class="newsroom_title width_587px">Market Insights & Emerging Innovations</p>
-              </div>
-              <div>
-                <img
-                  class="new_main_img"
-                  src="assets/img/blockChain-Innovation/1.svg"
-                  alt="NewsRoom"
-                />
-              </div>
-              <div class="mt-32">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-            <div
-              class="col-md-6 col-12 mbl_margin scrollable-column-inovations"
-            >
-              <div class="d-flex flex-column custom-border-newsroom">
-                <div
-                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
-                >
-                  <h1>Intelligent Infrastructure Management</h1>
-                  <p>
-                    Organizations are increasingly leveraging AI-driven tools for proactive network monitoring and predictive maintenance, leading to more autonomous and resilient IT environments.
-                  </p>
-                </div>
-                <div
-                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
-                >
-                  <h1>Security-First Design Principles</h1>
-                  <p>
-                    Security is now a foundational element in infrastructure strategy, with growing adoption of zero-trust frameworks and network micro-segmentation to enhance protection.
-                  </p>
-                </div>
-                <div
-                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
-                >
-                  <h1>Adoption of Fabric-Based Architectures</h1>
-                  <p>
-                    Fabric network designs are becoming the norm in modern data centers, offering high scalability and reduced latency for dynamic workloads.
-                  </p>
-                </div>
-                <div
-                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
-                >
-                  <h1>Shift Toward Cloud-Native Models</h1>
-                  <p>
-                    With the rise in containerization, many enterprises are transitioning to cloud-native infrastructure, embracing microservices and agile networking approaches.
-                  </p>
-                </div>
-                <div
-                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
-                >
-                  <h1>Sustainability in Infrastructure</h1>
-                  <p>
-                    Eco-conscious practices are influencing data center strategies, including energy-efficient cooling systems, modular designs, and workload optimization to reduce environmental impact.
-                  </p>
-                </div>
-                             </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Innovation & Insights Section End -->
-
-      <!-- Reach out section -->
-      <section
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        class="reachout_section"
-        id="contactus_section"
-        data-title="6. Contact Us"
-      >
-        <div class="container">
-          <div class="width-50-auto">
-            <h3>Ready to Transform? Reach Out to Us.</h3>
-
-            <div class="row">
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="firstName"
-                    placeholder="Enter First Name"
-                    name="firstName"
-                  />
-                  <label for="firstName">First Name</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lastName"
-                    placeholder="Enter Last Name"
-                    name="lastName"
-                  />
-                  <label for="lastName">Last Name</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="companyName"
-                    placeholder="Enter Company Name"
-                    name="companyName"
-                  />
-                  <label for="companyName">Company Name</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Enter Email"
-                    name="email"
-                  />
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="jobTitlte"
-                    class="form-control"
-                    id="jobTitlte"
-                    placeholder="Enter Job Titlte"
-                    name="jobTitlte"
-                  />
-                  <label for="jobTitlte">Job Titlte</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <select class="form-select" id="country" name="country">
-                    <option>Dubai</option>
-                  </select>
-                  <label for="country" class="form-label">Country</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <textarea
-                    rows="5"
-                    class="form-control"
-                    id="message"
-                    name="text"
-                    placeholder="Message"
-                  ></textarea>
-                  <label for="message">Message</label>
-                </div>
-              </div>
-              <div class="col-12 text-end">
-                <button type="submit" class="submit_button">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Reach out section End-->
+      </div>
     </div>
+    <section class="caseStudy_cards_section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="caseStudy_cards_title">More Case Studies</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-3 gap-8">
+            <div class="cards"></div>
+          </div>
+          <div class="col-12 col-md-3 gap-8">
+            <div class="cards"></div>
+          </div>
+          <div class="col-12 col-md-3 gap-8">
+            <div class="cards"></div>
+          </div>
+          <div class="col-12 col-md-3 gap-8">
+            <div class="cards"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Details End -->
+
     <!-- Footer -->
     <!-- For Desktop -->
     <div class="footer_desktop">
