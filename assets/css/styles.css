@@ -2433,6 +2433,13 @@ textarea {
   margin: 0;
   transition: all 0.5s ease-in-out;
 }
+.overview_section .card-25 .overview_card_textNew {
+  width: 235px;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+}
 
 .overview_section .overview-main-img img {
   width: 100%;
@@ -2829,6 +2836,10 @@ textarea {
 .blockChainValue_section .card-25 .width-276px {
   width: 276px;
 }
+
+.blockChainValue_section .card-25 .width-276px {
+  width: 276px;
+}
 .custom-margin-1 {
   margin: 0 8px 0 0;
 }
@@ -2841,6 +2852,25 @@ textarea {
 .blockChainValue_section .nav-pills {
   flex-direction: column;
   position: relative;
+}
+.blockChainValue_section .insights_cards {
+  padding: 36px 24px;
+  background: #f7f7f7;
+  height: 220px;
+  margin-top: 12px;
+  text-align: center;
+}
+.blockChainValue_section .insights_cards img {
+  width: 50px;
+}
+.blockChainValue_section .insights_cards .des {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 20px;
+  text-align: center;
 }
 .block-chain-leftArrow,
 .block-chain-rightArrow,
@@ -3323,7 +3353,7 @@ textarea {
 }
 .intelligentEcosystem_section h2 {
   color: #1a1a1a;
-  font-size: 24px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
