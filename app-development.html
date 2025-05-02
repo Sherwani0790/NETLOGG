@@ -839,237 +839,846 @@
       </div>
     </div>
     <!-- Main Section -->
-    <div class="caseStudyDetails-section" id="caseStudyDetails-section">
+    <div class="blockchain-main-section" id="blockchain-main-section">
       <div class="main-section-overlay"></div>
+      <div class="main-section-width">
+        <p class="small-text">Applications Development</p>
+        <p class="big-text">Applications Development</p>
+        <p class="medium-text">
+          At NETLOGG, our Applications Development division is the engine behind
+          transformative digital platforms — from financial inclusion tools to
+          smart city infrastructure. With deep mobile, cloud, and system
+          integration expertise, we deliver resilient, user-centric applications
+          that scale with ambition.
+        </p>
+      </div>
     </div>
     <!-- Main Section End -->
-    <!-- Case Study Details -->
-    <div class="caseStudyDetailsMain_section">
-      <div class="main-card">
-        <h1 class="caseStudyDetails-title">
-          Netlogg’s Customized ERP Solution For A Mining Company
-        </h1>
-        <div class="caseStudy_social">
-          <div>
-            <p>5 min read</p>
-          </div>
-          <div>
-            <a href="#"
-              ><img src="assets/img/footerLogos/FacebookLogo.svg" class=""
-            /></a>
-            <a href="#"
-              ><img src="assets/img/footerLogos/InstagramLogo.svg" class=""
-            /></a>
-            <a href="#"
-              ><img src="assets/img/footerLogos/LinkedinLogo.svg" class=""
-            /></a>
-            <a href="#"
-              ><img src="assets/img/footerLogos/XLogo.svg" class=""
-            /></a>
-            <a href="#"
-              ><img src="assets/img/footerLogos/YoutubeLogo.svg" class=""
-            /></a>
-          </div>
+    <!-- Progress Section Selection -->
+    <div class="progress_section_selection progress_section_selection_sticky">
+      <!-- progress bar -->
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+      </div>
+
+      <div class="text-indication">
+        <div class="progress-label-left">
+          <p>Apps Development Services</p>
+          <p>1. Vision & Value</p>
         </div>
-
-        <div class="caseStudyDetails-content">
-          <p>
-            Netlogg partnered with a leading mining operation to address a range
-            of operational inefficiencies that were affecting productivity and
-            decision-making. The client faced persistent challenges such as
-            manual data entry, which led to frequent errors and delays, along
-            with a lack of real-time inventory tracking that caused stock
-            discrepancies and operational disruptions.
-          </p>
-          <p>
-            largely manual, making them inefficient and slow, while stock issue
-            and return approvals followed outdated workflows that delayed
-            operations further. Additionally, the limited availability of
-            actionable insights hindered optimal resource allocation and
-            strategic planning.
-          </p>
-          <p>
-            Purchase and work order processes were To solve these issues,
-            Netlogg delivered a custom-built ERP solution tailored specifically
-            to the needs of the mining industry. The system integrated
-            barcode-based inventory tracking, automated PO and WO workflows, and
-            digital approval mechanisms that significantly accelerated key
-            processes. Real-time analytics were also introduced, providing deep
-            insights into resource utilization and operational performance.
-          </p>
-          <p>
-            As part of the comprehensive solution, Netlogg provided custom
-            module development, seamless data migration from legacy systems, and
-            a scalable architecture to support future growth. Our team ensured
-            ongoing system optimization through proactive monitoring, regular
-            updates, and dedicated system administration. To maximize user
-            adoption, we conducted on-site training and offered 24/7 technical
-            support.
-          </p>
-          <p>
-            The result was a significant reduction in manual errors, faster
-            turnaround for approvals, improved inventory accuracy, and enhanced
-            overall productivity. Through this transformation, the mining site
-            evolved into a more agile, efficient, and data-driven operation.
-            This success story exemplifies how Netlogg’s strategic approach and
-            customized ERP solutions can drive real impact in complex industrial
-            environments.
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
-            <p class="caseStudy_solutionText">Solutions Delivered by Netlogg</p>
-            <ul>
-              <li>Custom-built ERP solution tailored for mining operations</li>
-
-              <li>
-                Barcode-based inventory tracking for real-time stock visibility
+        <div class="progress-label-right">
+          <p>Up Next</p>
+          <div class="custom-dropdown">
+            <div class="custom-dropdown-button">
+              Select Section <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="custom-dropdown-content">
+              <li data-target="vision_value">1. Vision & Value</li>
+              <li data-target="core_capabilities">2. Core Capabilities</li>
+              <li data-target="intelligent_ecosystem">
+                3. Intelligent Ecosystem
               </li>
-              <li>Automated purchase and work order workflows</li>
-              <li>
-                Digital approval systems for faster stock issue and return
-                processing
-              </li>
-              <li>
-                Real-time analytics dashboard for resource utilization and
-                operational insights
-              </li>
-              <li>Seamless migration of legacy data into the new system</li>
-              <li>Scalable architecture for future expansion</li>
-              <li>Ongoing system monitoring, updates, and 24/7 support</li>
-            </ul>
-          </div>
-          <div class="col-12">
-            <p class="caseStudy_solutionText">Outcomes & Impact</p>
-            <ul>
-              <li>
-                Reduced manual data entry errors and administrative overhead
-              </li>
-
-              <li>Significant acceleration in PO and WO approval times</li>
-              <li>Improved inventory accuracy and stock availability</li>
-              <li>Enhanced visibility into resource allocation and usage</li>
-              <li>
-                Increased operational speed, agility, and overall productivity
-              </li>
-              <li>
-                Empowered staff through training and intuitive system interface
-              </li>
-              <li>Positioned the mining site for long-term digital growth</li>
+              <li data-target="caseStudy_section">4. Case Studies</li>
+              <li data-target="Insights_Emerging">5. Insights & Emerging</li>
+              <li data-target="contactus_section">6. Contact Us</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <section class="caseStudy_cards_section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="caseStudy_cards_title">More Case Studies</h2>
+    <script>
+      $(document).ready(function () {
+        function updateProgressBar() {
+          const progressBar = $(".progress-bar");
+          const sections = $("section");
+          let scrollPosition = $(window).scrollTop();
+
+          sections.each(function () {
+            let top = $(this).offset().top - 150;
+            let bottom = top + $(this).outerHeight();
+
+            if (scrollPosition >= top && scrollPosition < bottom) {
+              let sectionId = $(this).attr("id");
+              let sectionText = $(this).data("title");
+              $(".progress-label-left p:nth-child(2)").text(sectionText);
+              $(".custom-dropdown-button").html(
+                sectionText + ' <i class="fas fa-chevron-down"></i>'
+              );
+            }
+          });
+          const totalHeight = $(document).height() - $(window).height();
+          const progress = (scrollPosition / totalHeight) * 100;
+          progressBar.css("width", progress + "%");
+        }
+
+        $(".custom-dropdown-content li").on("click", function () {
+          let sectionText = $(this).text().trim();
+          let sectionId = $(this).data("target");
+
+          let targetSection = $("#" + sectionId);
+          if (targetSection.length) {
+            $("html, body").animate(
+              {
+                scrollTop: targetSection.offset().top - 50,
+              },
+              800
+            );
+            $(".progress-label-left p:nth-child(2)").text(sectionText);
+            $(".custom-dropdown-button").html(
+              sectionText + ' <i class="fas fa-chevron-down"></i>'
+            );
+          }
+        });
+
+        $(window).on("scroll", updateProgressBar);
+        updateProgressBar();
+      });
+    </script>
+    <!-- Progress Section Selection End -->
+
+    <!-- OverView Section -->
+    <div class="blockChain-scrollable-column">
+      <section
+        class="overview_section"
+        id="vision_value"
+        data-title="1. Vision & Value "
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div>
+                <h2>Vision & Value</h2>
+              </div>
+              <div class="gap-24">
+                <p class="overview_text width-531px">
+                  Applications are more than code — they’re digital experiences
+                  that define engagement, trust, and operational excellence. At
+                  NETLOGG, we architect mobile and enterprise applications that
+                  power public and private sector transformation.
+                </p>
+              </div>
+              <div class="gap-24">
+                <p class="overview_text width-531px">
+                  Whether enabling mobile banking, digitizing government
+                  workflows, or driving smart mobility, our vision is rooted in
+                  performance, scalability, and secure digital access for all.
+                </p>
+              </div>
+              <div class="gap-24">
+                <p class="overview_text width-531px">
+                  We bring together strategy, compliance, and innovation to
+                  deliver applications that perform in complex, evolving
+                  environments.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="overview-main-img">
+                <img src="assets/img/blockChain-Values-Icons/banner-3.svg" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md-3 gap-8">
-            <div class="cards">
-              <div>
+      </section>
+      <!-- OverView Section End -->
+      <!-- coreCapabilities Section -->
+      <section
+        id="core_capabilities"
+        data-title="2. Core Capabilities"
+        class="overview_section"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <div
+          class="container-fluid"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="overview-main-img">
+                <img src="assets/img/blockChain-Values-Icons/banner-3.svg" />
+              </div>
+            </div>
+            <div class="col-md-6 col-12 mbl_margin pl-80">
+              <h2>Core Capabilities</h2>
+              <p class="overview_text width-531px">
+                NETLOGG develops intelligent, scalable applications across iOS,
+                Android, and hybrid frameworks. Our agile teams support clients
+                throughout the full lifecycle — from ideation and design to
+                release, monitoring, and evolution.
+              </p>
+            </div>
+          </div>
+
+          <div class="row gap-24">
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/blockchain-archetech.png"
+                    />
+                  </div>
+                  <div class="margin-top-14">
+                    <p class="overview_card_textNew">
+                      Mobile Application Development (iOS, Android, Flutter,
+                      React Native)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/app-development.png"
+                    />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_textNew">
+                      Custom Web Portals and Dashboards
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/blockchain-security.png"
+                    />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_textNew">
+                      API and Middleware Integration
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/business-logistics.png"
+                    />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_textNew">
+                      Cloud-Native Architecture and Microservices
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/funtionality-breakdown.png"
+                    />
+                  </div>
+                  <div class="margin-top-14">
+                    <p class="overview_card_textNew">
+                      UI/UX Research, Prototyping, and Design Systems
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/business-cases.png"
+                    />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_textNew">
+                      DevSecOps and Secure SDLC Practices
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/private-permissions.png"
+                    />
+                  </div>
+                  <div class="margin-top-14">
+                    <p class="overview_card_textNew">
+                      AI/ML Integration for Predictive Insights
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/services-provider.png"
+                    />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_textNew">
+                      Regulatory Compliance (GDPR, PCI-DSS, NCA, RBI guidelines)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-12 gap-32">
+              <div class="card-25">
+                <div class="dp-flex justify-content-around">
+                  <div class="margin-top-20">
+                    <img
+                      src="assets/img/blockChain-OverView-Icons/blockchain-archetech.png"
+                    />
+                  </div>
+                  <div class="margin-top-20">
+                    <p class="overview_card_textNew">
+                      Citizen-Centric Platforms with GIS and E-KYC Integration
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- coreCapabilities Section End -->
+
+      <!-- Intelligent Ecosystem Section -->
+      <section
+        id="intelligent_ecosystem"
+        data-title="3. Intelligent Ecosystem"
+        class="intelligentEcosystem_section"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <div class="container-fluid">
+          <div class="row gap-24">
+            <div class="col-12 col-md-7">
+              <div class="blockchain-tab-img">
                 <img
-                  class="main-banner"
                   src="assets/img/blockChain-Values-Icons/banner-1.webp"
-                  alt="CaseStudy1"
+                  alt="Enterprise"
                 />
               </div>
-              <div class="cards_content">
-                <p>
-                  Enabling a Strategic Tech Refresh for a Regional Banking
-                  Leader
-                </p>
-                <div class="content_linking">
-                  <a
-                    class="all_cap_button dp-flex align-items-center"
-                    href="due-diligence-details1.html"
-                    >Read More
-                    <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                  </a>
+            </div>
+            <div class="col-12 col-md-5 pl-80">
+              <h2>Intelligent Ecosystems</h2>
+              <p class="gap-8 mb-0">
+                NETLOGG’s development capability is powered by a
+                multidisciplinary ecosystem: mobile engineers, solution
+                architects, security analysts, DevOps specialists, and data
+                scientists.
+              </p>
+              <p class="gap-8 mb-0">
+                Our methodology blends rapid prototyping with enterprise-grade
+                delivery, using:
+              </p>
+              <ul class="intelligentEcosystem-ul gap-8">
+                <li>User-centered design frameworks and iterative sprints</li>
+                <li>
+                  Automated testing, continuous integration, and release
+                  pipelines
+                </li>
+                <li>
+                  Security-first coding practices with static/dynamic analysis
+                </li>
+                <li>
+                  Cloud platforms (Azure, AWS, GCP) with scalable, serverless
+                  functions
+                </li>
+                <li>Analytics and telemetry for post-deployment insights</li>
+              </ul>
+              <p class="gap-8 mb-0">
+                We operate through a hybrid model — combining remote agile pods
+                with onsite coordination to ensure speed, flexibility, and deep
+                client alignment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Intelligent Ecosystem Section End-->
+      <!-- CaseStudy Section -->
+      <section
+        class="caseStudy_section"
+        id="caseStudy_section"
+        data-title="4. Case Studies"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
+        <div class="">
+          <div
+            id="carouselExampleIndicators2"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-pause="true"
+          >
+            <!--  -->
+            <div class="dp-flex align-items-center">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators2"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                >
+                  <span></span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators2"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                >
+                  <span></span>
+                </button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators2"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                >
+                  <span></span>
+                </button>
+              </div>
+              <div class="right_left_count">
+                <div class="dp-flex align-items-center">
+                  <button
+                    class="carousal_left"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="prev"
+                  >
+                    <span>
+                      <img
+                        class="button_arrow_left"
+                        src="assets/img/Logo/prevIcon.svg"
+                      />
+                    </span>
+                  </button>
+                  <div class="count_carousal">1 / 3</div>
+                  <button
+                    class="carousal_right"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide="next"
+                  >
+                    <span>
+                      <img
+                        class="button_arrow_right"
+                        src="assets/img/Logo/nextIcon.svg"
+                      />
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-3 gap-8">
-            <div class="cards">
-              <div>
-                <img
-                  class="main-banner"
-                  src="assets/img/blockChain-Values-Icons/banner-2.webp"
-                  alt="CaseStudy1"
-                />
-              </div>
-              <div class="cards_content">
-                <p>
-                  Driving Operational Efficiency Through an End-to-End
-                  Technology Refresh
-                </p>
-                <div class="content_linking">
-                  <a
-                    class="all_cap_button dp-flex align-items-center"
-                    href="due-diligence-details2.html"
-                    >Read More
-                    <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                  </a>
+            <div class="carousel-inner pb-5">
+              <div class="carousel-item item_total_count active">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="carousel-caption z_index">
+                      <p class="solutions_small_text">Case Study</p>
+                      <h1 class="solutions_heading">
+                        Commercial Bank <br />
+                        Digital Wallet
+                      </h1>
+                      <p class="width-644px solutions_p">
+                        Empowering Financial Access for Underserved Populations
+                      </p>
+                      <a href="app-development-details1.html">
+                        <span> Read More </span>
+                        <img src="assets/img/Logo/smallArrowRight.svg" />
+                      </a>
+                    </div>
+                    <div class="caseStudy_overlay">
+                      <img
+                        src="assets/img/blockChain-caseStudy-Slider/1.webp"
+                        alt="Case Study"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-3 gap-8">
-            <div class="cards">
-              <div>
-                <img
-                  class="main-banner"
-                  src="assets/img/blockChain-Values-Icons/banner-3.webp"
-                  alt="CaseStudy1"
-                />
-              </div>
-              <div class="cards_content">
-                <p>Commercial Bank Digital Wallet</p>
-                <div class="content_linking">
-                  <a
-                    class="all_cap_button dp-flex align-items-center"
-                    href="app-development-details1.html"
-                    >Read More
-                    <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                  </a>
+              <div class="carousel-item item_total_count">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="carousel-caption z_index">
+                      <p class="solutions_small_text">Case Study</p>
+                      <h1 class="solutions_heading">
+                        E-Traffic Management<br />
+                        System
+                      </h1>
+                      <p class="width-644px solutions_p">
+                        Digitizing Urban Traffic Enforcement and Analytics
+                      </p>
+                      <a href="app-development-details2.html">
+                        <span> Read More </span>
+                        <img src="assets/img/Logo/smallArrowRight.svg" />
+                      </a>
+                    </div>
+                    <div class="caseStudy_overlay">
+                      <img
+                        src="assets/img/blockChain-Values-Icons/banner-4.webp"
+                        alt="Case Study"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-3 gap-8">
-            <div class="cards">
-              <div>
-                <img
-                  class="main-banner"
-                  src="assets/img/blockChain-Values-Icons/banner-4.webp"
-                  alt="CaseStudy1"
-                />
-              </div>
-              <div class="cards_content">
-                <p>E-Traffic Management System</p>
-                <div class="content_linking">
-                  <a
-                    class="all_cap_button dp-flex align-items-center"
-                    href="app-development-details1.html"
-                    >Read More
-                    <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                  </a>
+              <div class="carousel-item item_total_count">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="carousel-caption z_index">
+                      <p class="solutions_small_text">Case Study</p>
+                      <h1 class="solutions_heading">
+                        E-Land Management<br />
+                        Platform
+                      </h1>
+                      <p class="width-644px solutions_p">
+                        Transforming Land Services with Blockchain & GIS
+                      </p>
+                      <a href="app-development-details3.html">
+                        <span> Read More </span>
+                        <img src="assets/img/Logo/smallArrowRight.svg" />
+                      </a>
+                    </div>
+                    <div class="caseStudy_overlay">
+                      <img
+                        src="assets/img/blockChain-caseStudy-Slider/1.webp"
+                        alt="Case Study"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- CaseStudy Section End-->
 
-    <!-- Case Study Details End -->
+      <!-- Innovation & Insights Section -->
+      <section
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        class="blockChainValue_section"
+        id="Insights_Emerging"
+        data-title="5. Insights & Emerging"
+      >
+        <div class="container-fluid">
+          <h2 class="blockChain-title">
+            Market Insights & <br />
+            Emerging Innovations
+          </h2>
+          <p class="blockChain-subtitle">
+            Applications are entering a new era — defined by real-time
+            intelligence, composable architecture, and ethical design. At
+            NETLOGG, we invest in the future through:
+          </p>
+          <div class="row mt-5">
+            <div class="col-md-4 col-12">
+              <div class="insights_cards">
+                <div class="">
+                  <img src="assets/img/blockChain-Values-Icons/5.svg" />
+                </div>
 
+                <div class="gap-8">
+                  <p class="des">AI-powered user engagement analysis</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="insights_cards">
+                <div class="">
+                  <img src="assets/img/blockChain-Values-Icons/6.svg" />
+                </div>
+                <div class="gap-8">
+                  <p class="des">
+                    Blockchain-based recordkeeping and verification
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="insights_cards">
+                <div class="">
+                  <img src="assets/img/blockChain-Values-Icons/7.svg" />
+                </div>
+
+                <div class="gap-8">
+                  <p class="des">Zero Trust security architecture for apps</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="insights_cards">
+                <div class="">
+                  <img src="assets/img/blockChain-Values-Icons/8.svg" />
+                </div>
+
+                <div class="gap-8">
+                  <p class="des">
+                    Low-code/no-code toolchains for rapid prototyping
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="insights_cards">
+                <div class="">
+                  <img src="assets/img/blockChain-Values-Icons/8.svg" />
+                </div>
+
+                <div class="gap-8">
+                  <p class="des">
+                    Sustainable and energy-efficient mobile frameworks
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-12">
+              <div class="insights_cards">
+                <div class="">
+                  <img src="assets/img/blockChain-Values-Icons/8.svg" />
+                </div>
+
+                <div class="gap-8">
+                  <p class="des">
+                    Privacy-first design thinking with embedded compliance
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="clearfix"></div> -->
+          </div>
+
+          <p class="blockChain-subtitle mt-5">
+            NETLOGG’s Applications Development practice stands at the
+            intersection of innovation and impact — building for the world as it
+            is, and as it’s becoming.
+          </p>
+        </div>
+      </section>
+      <!-- <section
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        class="newsroom_section"
+        id="Insights_Emerging"
+        data-title="5. Insights & Emerging"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-12 sticky-column-inovations">
+              <div>
+                <p class="newsroom_title width_587px">
+                  Market Insights & Emerging Innovations
+                </p>
+                <p class="newsroom_subtitle width_587px">
+                  We stay ahead by continuously innovating at the edge of Gen AI
+                </p>
+              </div>
+              <div>
+                <img
+                  class="new_main_img"
+                  src="assets/img/blockChain-Innovation/1.svg"
+                  alt="NewsRoom"
+                />
+              </div>
+              <div class="mt-32">
+                <a href="#" class="all_cap_button dp-flex align-items-center">
+                  <span> Explore All </span>
+                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-12 mbl_margin scrollable-column-inovations"
+            >
+              <div class="d-flex flex-column custom-border-newsroom">
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Multimodal AI</h1>
+                  <p>
+                    Integrating text, images, video, and voice into unified
+                    experiences
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Synthetic Data Generation</h1>
+                  <p>For enhanced training without privacy tradeoffs</p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>AI for Software Engineering</h1>
+                  <p>
+                    Boosting developer velocity with AI-powered coding copilots
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <h1>Real-time AI Ops</h1>
+                  <p>
+                    Monitoring, automation, and real-time insight generation
+                    from operations data
+                  </p>
+                </div>
+                <div
+                  class="newsroom_card padding-64 custom-border-bottom-newsroom"
+                >
+                  <p>
+                    NETLOGG is not just deploying AI — we’re shaping how
+                    enterprises harness it responsibly, creatively, and
+                    profitably.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- Innovation & Insights Section End -->
+
+      <!-- Reach out section -->
+      <section
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        class="reachout_section"
+        id="contactus_section"
+        data-title="6. Contact Us"
+      >
+        <div class="container">
+          <div class="width-50-auto">
+            <h3>Ready to Transform? Reach Out to Us.</h3>
+
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Enter First Name"
+                    name="firstName"
+                  />
+                  <label for="firstName">First Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Enter Last Name"
+                    name="lastName"
+                  />
+                  <label for="lastName">Last Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companyName"
+                    placeholder="Enter Company Name"
+                    name="companyName"
+                  />
+                  <label for="companyName">Company Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter Email"
+                    name="email"
+                  />
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <input
+                    type="jobTitlte"
+                    class="form-control"
+                    id="jobTitlte"
+                    placeholder="Enter Job Titlte"
+                    name="jobTitlte"
+                  />
+                  <label for="jobTitlte">Job Titlte</label>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <select class="form-select" id="country" name="country">
+                    <option>Dubai</option>
+                  </select>
+                  <label for="country" class="form-label">Country</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3 mt-3">
+                  <textarea
+                    rows="5"
+                    class="form-control"
+                    id="message"
+                    name="text"
+                    placeholder="Message"
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="submit_button">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Reach out section End-->
+    </div>
     <!-- Footer -->
     <!-- For Desktop -->
     <div class="footer_desktop">
