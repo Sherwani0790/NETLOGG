@@ -39,6 +39,309 @@ body::-webkit-scrollbar-thumb:hover {
   row-gap: 8px;
   column-gap: 8px;
 }
+.custom-gap-2 {
+  margin-top: 2px;
+}
+.custom-gap-4 {
+  margin-top: 4px;
+}
+.custom-gap-6 {
+  margin-top: 6px;
+}
+.custom-gap-8 {
+  margin-top: 8px;
+}
+.custom-gap-10 {
+  margin-top: 10px;
+}
+.custom-gap-12 {
+  margin-top: 12px;
+}
+.custom-gap-14 {
+  margin-top: 14px;
+}
+.custom-gap-16 {
+  margin-top: 16px;
+}
+.custom-gap-18 {
+  margin-top: 18px;
+}
+.custom-gap-20 {
+  margin-top: 20px;
+}
+.custom-gap-22 {
+  margin-top: 22px;
+}
+.custom-gap-24 {
+  margin-top: 24px;
+}
+.custom-gap-26 {
+  margin-top: 26px;
+}
+.custom-gap-28 {
+  margin-top: 28px;
+}
+.custom-gap-30 {
+  margin-top: 30px;
+}
+.custom-gap-32 {
+  margin-top: 32px;
+}
+.custom-gap-34 {
+  margin-top: 34px;
+}
+.custom-gap-36 {
+  margin-top: 36px;
+}
+.custom-gap-38 {
+  margin-top: 38px;
+}
+.custom-gap-40 {
+  margin-top: 40px;
+}
+.custom-gap-42 {
+  margin-top: 42px;
+}
+.custom-gap-44 {
+  margin-top: 44px;
+}
+.custom-gap-46 {
+  margin-top: 46px;
+}
+.custom-gap-48 {
+  margin-top: 48px;
+}
+.custom-gap-50 {
+  margin-top: 50px;
+}
+.custom-gap-52 {
+  margin-top: 52px;
+}
+.custom-gap-54 {
+  margin-top: 54px;
+}
+.custom-gap-56 {
+  margin-top: 56px;
+}
+.custom-gap-58 {
+  margin-top: 58px;
+}
+.custom-gap-60 {
+  margin-top: 60px;
+}
+.custom-gap-62 {
+  margin-top: 62px;
+}
+.custom-gap-64 {
+  margin-top: 64px;
+}
+.custom-gap-66 {
+  margin-top: 66px;
+}
+.custom-gap-68 {
+  margin-top: 68px;
+}
+.custom-gap-70 {
+  margin-top: 70px;
+}
+.custom-gap-72 {
+  margin-top: 72px;
+}
+.custom-gap-74 {
+  margin-top: 74px;
+}
+.custom-gap-76 {
+  margin-top: 76px;
+}
+.custom-gap-78 {
+  margin-top: 78px;
+}
+.custom-gap-80 {
+  margin-top: 80px;
+}
+.custom-gap-82 {
+  margin-top: 82px;
+}
+.custom-gap-84 {
+  margin-top: 84px;
+}
+.custom-gap-86 {
+  margin-top: 86px;
+}
+.custom-gap-88 {
+  margin-top: 88px;
+}
+.custom-gap-90 {
+  margin-top: 90px;
+}
+.custom-gap-92 {
+  margin-top: 92px;
+}
+.custom-gap-94 {
+  margin-top: 94px;
+}
+.custom-gap-96 {
+  margin-top: 96px;
+}
+.custom-gap-98 {
+  margin-top: 98px;
+}
+.custom-gap-100 {
+  margin-top: 100px;
+}
+.custom-col-gap-2 {
+  column-gap: 2px;
+}
+.custom-col-gap-2 {
+  column-gap: 2px;
+}
+.custom-col-gap-4 {
+  column-gap: 4px;
+}
+.custom-col-gap-6 {
+  column-gap: 6px;
+}
+.custom-col-gap-8 {
+  column-gap: 8px;
+}
+.custom-col-gap-10 {
+  column-gap: 10px;
+}
+.custom-col-gap-12 {
+  column-gap: 12px;
+}
+.custom-col-gap-14 {
+  column-gap: 14px;
+}
+.custom-col-gap-16 {
+  column-gap: 16px;
+}
+.custom-col-gap-18 {
+  column-gap: 18px;
+}
+.custom-col-gap-20 {
+  column-gap: 20px;
+}
+.custom-col-gap-22 {
+  column-gap: 22px;
+}
+.custom-col-gap-24 {
+  column-gap: 24px;
+}
+.custom-col-gap-26 {
+  column-gap: 26px;
+}
+.custom-col-gap-28 {
+  column-gap: 28px;
+}
+.custom-col-gap-30 {
+  column-gap: 30px;
+}
+.custom-col-gap-32 {
+  column-gap: 32px;
+}
+.custom-col-gap-34 {
+  column-gap: 34px;
+}
+.custom-col-gap-36 {
+  column-gap: 36px;
+}
+.custom-col-gap-38 {
+  column-gap: 38px;
+}
+.custom-col-gap-40 {
+  column-gap: 40px;
+}
+.custom-col-gap-42 {
+  column-gap: 42px;
+}
+.custom-col-gap-44 {
+  column-gap: 44px;
+}
+.custom-col-gap-46 {
+  column-gap: 46px;
+}
+.custom-col-gap-48 {
+  column-gap: 48px;
+}
+.custom-col-gap-50 {
+  column-gap: 50px;
+}
+.custom-col-gap-52 {
+  column-gap: 52px;
+}
+.custom-col-gap-54 {
+  column-gap: 54px;
+}
+.custom-col-gap-56 {
+  column-gap: 56px;
+}
+.custom-col-gap-58 {
+  column-gap: 58px;
+}
+.custom-col-gap-60 {
+  column-gap: 60px;
+}
+.custom-col-gap-62 {
+  column-gap: 62px;
+}
+.custom-col-gap-64 {
+  column-gap: 64px;
+}
+.custom-col-gap-66 {
+  column-gap: 66px;
+}
+.custom-col-gap-68 {
+  column-gap: 68px;
+}
+.custom-col-gap-70 {
+  column-gap: 70px;
+}
+.custom-col-gap-72 {
+  column-gap: 72px;
+}
+.custom-col-gap-74 {
+  column-gap: 74px;
+}
+.custom-col-gap-76 {
+  column-gap: 76px;
+}
+.custom-col-gap-78 {
+  column-gap: 78px;
+}
+.custom-col-gap-80 {
+  column-gap: 80px;
+}
+.custom-col-gap-82 {
+  column-gap: 82px;
+}
+.custom-col-gap-84 {
+  column-gap: 84px;
+}
+.custom-col-gap-86 {
+  column-gap: 86px;
+}
+.custom-col-gap-88 {
+  column-gap: 88px;
+}
+.custom-col-gap-90 {
+  column-gap: 90px;
+}
+.custom-col-gap-92 {
+  column-gap: 92px;
+}
+.custom-col-gap-94 {
+  column-gap: 94px;
+}
+.custom-col-gap-96 {
+  column-gap: 96px;
+}
+.custom-col-gap-98 {
+  column-gap: 98px;
+}
+.custom-col-gap-100 {
+  column-gap: 100px;
+}
 .bold {
   font-weight: 600 !important;
 }
@@ -2147,6 +2450,13 @@ textarea {
   height: 712px;
   background-position-y: -200px;
 }
+.blockchain-main-section .services-overlay {
+  background-image: url("../img/services-page-images/main-banner.svg");
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  background-position-y: 0px;
+}
 .blockchain-main-section .main-section-width {
   width: 561px;
   position: absolute;
@@ -2233,6 +2543,9 @@ textarea {
     line-height: normal;
     margin: 12px 0 0 0;
     width: 320px;
+  }
+  .blockchain-main-section .services-overlay {
+    height: 250px;
   }
 }
 /* BlockChain-main Section End */
@@ -2380,8 +2693,23 @@ textarea {
   padding: 100px 130px 100px 96px;
   overflow: hidden;
 }
+.overview_section .overview-mian-text-padding {
+  width: 948px;
+  margin: 0 auto;
+  text-align: center;
+}
+.overview_section .overview-mian-text-padding .overview-main-text {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
 .overview_section .gap-24 {
   margin-top: 24px;
+}
+.overview_section .gap-40 {
+  margin-top: 40px;
 }
 .overview_section .gap-32 {
   margin-top: 32px;
@@ -2392,6 +2720,16 @@ textarea {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+.overview_section .overview_text_ul {
+  list-style: outside;
+}
+.overview_section .overview_text_ul li {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
 }
 .overview_section .overview_text {
   color: #000;
@@ -2470,6 +2808,18 @@ textarea {
     font-size: 16px;
     margin: 0;
     transition: all 0.5s ease-in-out;
+  }
+  .overview_section .overview-mian-text-padding {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .overview_section .overview-mian-text-padding .overview-main-text {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
   }
 }
 /* OverView section End */
@@ -2755,6 +3105,114 @@ textarea {
   }
 }
 /* CaseStudy Section End */
+/* Success Story Section */
+.success_story_section {
+  padding: 100px 130px 100px 100px;
+}
+.success_story_section h2 {
+  color: #1a1a1a;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.success_story_one,
+.success_story_two,
+.success_story_three {
+  position: relative;
+}
+.success_story_section_img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(
+    0 0 0 / 45%
+  ); /* Change the color and opacity as needed */
+}
+.success_story_section_img img {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
+.success_story_one .success_story_section_content {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+.success_story_one .success_story_section_content p {
+  color: #fefefe;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 14px;
+}
+.success_story_one .success_story_section_content h4 {
+  color: #fefefe;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+}
+.success_story_two .success_story_section_content {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+.success_story_two .success_story_section_content p {
+  color: #fefefe;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 14px;
+}
+.success_story_two .success_story_section_content h4 {
+  color: #fefefe;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+}
+.success_story_three .success_story_section_content {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+.success_story_three .success_story_section_content p {
+  color: #fefefe;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 14px;
+}
+.success_story_three .success_story_section_content h4 {
+  color: #fefefe;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .success_story_section {
+    padding: 50px 12px;
+  }
+  .success_story_section h2 {
+    color: #1a1a1a;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .success_story_section_img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  .success_story_one,
+  .success_story_two,
+  .success_story_three {
+    position: relative;
+    margin: 16px 0px 0px 0px;
+  }
+}
+/* Success Story Section End */
 
 /* BlockChain V10lue  */
 .blockChainValue_section {
@@ -3250,10 +3708,14 @@ textarea {
 }
 
 /* News Update End */
-
+.overview_corecapabilities-overlay {
+  background-image: url("../img/services-page-images/core-capabilities-gradient.svg");
+  background-repeat: no-repeat;
+  background-position-y: -70px;
+}
 /* Core Capabilities Section */
 .coreCapabilities_section {
-  background: #fff;
+  /* background: #fff; */
   padding: 30px 130px 100px 100px;
 }
 .coreCapabilities_section .blockChain-title {
@@ -3263,21 +3725,17 @@ textarea {
   line-height: normal;
   color: #000;
 }
-.coreCapabilities_section .blockChain-subtitle {
-  margin: 0;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  color: #000;
-}
-.coreCapabilities_section .blockChain_card {
-  float: left;
-  width: 25%;
-  height: 300px;
-  padding: 36px 20px;
+.coreCapabilities_section .coreCapabilities_card {
+  background-image: linear-gradient(
+    0deg,
+    rgba(3, 255, 207, 0.3) 0%,
+    #1800ff 48.08%,
+    #0a0137 100%
+  );
+  padding: 36px;
   border: 1px solid #ededed;
   margin-top: 60px;
+  height: 362px;
 }
 .coreCapabilities_section .blockChain_card img {
   width: 60px;
@@ -3285,31 +3743,26 @@ textarea {
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
-.coreCapabilities_section .blockChain_card:hover img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  transition: all 0.3s ease-in-out;
-}
-.coreCapabilities_section .blockChain_card .count {
-  color: #161616;
-  font-size: 40px;
+.coreCapabilities_section .coreCapabilities_card h4 {
+  color: #fff;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 43.5px;
-  margin-top: 12px;
-  margin-bottom: 0;
+  font-weight: 400;
+  line-height: normal;
 }
-.coreCapabilities_section .blockChain_card .desc {
-  color: #262b3f;
+.coreCapabilities_section .coreCapabilities_card ul {
+  list-style: outside;
+  margin-top: 24px;
+}
+.coreCapabilities_section .coreCapabilities_card ul li {
+  color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  margin-top: 16px;
 }
 .coreCapabilities_section .width-258px {
-  width: 230px;
+  width: 258px;
 }
 @media (max-width: 768px) {
   .coreCapabilities_section {
@@ -3318,37 +3771,6 @@ textarea {
   .coreCapabilities_section .blockChain-title {
     font-size: 22px;
     margin-bottom: 20px;
-  }
-  .coreCapabilities_section .blockChain-subtitle {
-    margin: 0 0 20px 0;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    color: #000;
-  }
-  .coreCapabilities_section .blockChain_card .count {
-    font-size: 22px;
-  }
-  .coreCapabilities_section .blockChain_card .desc {
-    font-size: 12px;
-    margin: 24px 0;
-  }
-  .coreCapabilities_section .blockChain_card {
-    float: left;
-    width: 50%;
-    height: 300px;
-    padding: 20px;
-    border: 1px solid #ededed;
-    margin-top: 0px;
-  }
-  .coreCapabilities_section .blockChain_card img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-  }
-  .coreCapabilities_section .width-258px {
-    width: 100%;
   }
 }
 /* Core Capabilities Section End */
@@ -3378,6 +3800,11 @@ textarea {
 .intelligentEcosystem_section .gap-8 {
   margin-top: 8px;
 }
+.intelligentEcosystem_section img {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
 .pl-80 {
   padding-left: 80px;
 }
@@ -3405,6 +3832,12 @@ textarea {
   }
   .pl-80 {
     padding-left: 10.5px !important;
+  }
+  .intelligentEcosystem_section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 24px;
   }
 }
 /* Inteligent Section End*/
@@ -3437,7 +3870,7 @@ textarea {
 .caseStudyDetailsMain_section .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 105%;
   left: 50%;
@@ -3486,7 +3919,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -3558,7 +3991,7 @@ textarea {
 .caseStudyDetailsMain_section2 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -3607,7 +4040,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -3680,7 +4113,7 @@ textarea {
 .caseStudyDetailsMain_section3 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 202%;
   left: 50%;
@@ -3742,7 +4175,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -3802,11 +4235,11 @@ textarea {
   background-image: linear-gradient(180deg, rgb(125 125 125 / 0%), rgb(0 0 0));
 }
 .caseStudyDetails-section4 .main-section-overlay {
-  background-image: url("../img/blockChain-Values-Icons/banner-4.webp");
+  background-image: url("../img/services-page-images/3.jpg");
   background-size: cover;
   width: 100%;
   height: 512px;
-  background-position-y: -200px;
+  background-position-y: -60px;
 }
 .caseStudyDetailsMain_section4 {
   height: calc(100vh - 600px);
@@ -3815,9 +4248,9 @@ textarea {
 .caseStudyDetailsMain_section4 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -3877,7 +4310,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -3950,7 +4383,7 @@ textarea {
 .caseStudyDetailsMain_section5 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 103%;
   left: 50%;
@@ -4012,7 +4445,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -4085,7 +4518,7 @@ textarea {
 .caseStudyDetailsMain_section6 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 99%;
   left: 50%;
@@ -4147,7 +4580,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -4220,7 +4653,7 @@ textarea {
 .caseStudyDetailsMain_section7 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 78%;
   left: 50%;
@@ -4282,7 +4715,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -4355,7 +4788,7 @@ textarea {
 .caseStudyDetailsMain_section8 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -4417,7 +4850,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -4490,7 +4923,7 @@ textarea {
 .caseStudyDetailsMain_section9 .main-card {
   background: #fff;
   margin: 0 auto;
-  width: 50%;
+  width: 1094px;
   position: absolute;
   top: 83%;
   left: 50%;
@@ -4552,7 +4985,7 @@ textarea {
   font-size: 14px;
   font-weight: 300;
   line-height: 27.2px;
-  color: #000;
+  color: #1800ff;
   margin: 0;
 }
 .caseStudy_social a {
@@ -4568,8 +5001,46 @@ textarea {
   color: #000;
   margin-bottom: 20px;
 }
-
+.for-caseStudy-details {
+  width: 1094px !important;
+  margin: 0 auto !important;
+  padding: 200px 0px 100px 0px !important;
+}
+.caseStudyDetails-card {
+  background-image: linear-gradient(
+    0deg,
+    rgba(160, 244, 238, 0.22) 0%,
+    rgba(24, 0, 255, 0.22) 100%
+  );
+  padding: 36px;
+  height: 220px;
+}
+.caseStudyDetails-card .caseStudyDetails-card_content {
+}
+.caseStudyDetails-card .caseStudyDetails-card_content p {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.caseStudyDetails-card .caseStudyDetails-card_content h4 {
+  color: #1d1d1f;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 @media (max-width: 768px) {
+  .for-caseStudy-details {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0px 12px !important;
+  }
+  .caseStudyDetails-card{
+margin-top: 10px;
+margin-bottom: 20px;
+  }
   .caseStudyDetailsMain_section9 {
     height: 100%;
     background: #fff;
@@ -5110,10 +5581,10 @@ textarea {
     height: calc(100vh - -2500px);
   }
   .caseStudyDetailsMain_section4 .main-card {
-    top: 87.5%;
+    top: 100%;
   }
   .caseStudyDetailsMain_section4 {
-    height: calc(100vh - 500px);
+    height: calc(100vh - 350px);
   }
   .caseStudyDetailsMain_section5 .main-card {
     top: 130%;
