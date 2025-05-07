@@ -3143,6 +3143,8 @@ textarea {
   position: absolute;
   left: 40px;
   bottom: 40px;
+  height: 110px;
+  width: 270px;
 }
 .success_story_one .success_story_section_content p {
   color: #fefefe;
@@ -3160,6 +3162,8 @@ textarea {
   position: absolute;
   left: 40px;
   bottom: 40px;
+  height: 110px;
+  width: 270px;
 }
 .success_story_two .success_story_section_content p {
   color: #fefefe;
@@ -3177,6 +3181,8 @@ textarea {
   position: absolute;
   left: 40px;
   bottom: 40px;
+  height: 110px;
+  width: 270px;
 }
 .success_story_three .success_story_section_content p {
   color: #fefefe;
@@ -3711,7 +3717,7 @@ textarea {
 /* News Update End */
 .overview_corecapabilities-overlay {
   background-image: url("../img/services-page-images/core-capabilities-gradient.svg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position-y: -70px;
 }
 /* Core Capabilities Section */
@@ -4812,7 +4818,7 @@ textarea {
   background-position-y: -200px;
 }
 .caseStudyDetailsMain_section8 {
-  height: calc(100vh - 430px);
+  height: calc(100vh - 230px);
   background: #fff;
 }
 .caseStudyDetailsMain_section8 .main-card {
@@ -4820,14 +4826,18 @@ textarea {
   margin: 0 auto;
   width: 1094px;
   position: absolute;
-  top: 80%;
+  top: 87%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  padding: 36px;
+  padding: 36px 112px;
 }
 .caseStudyDetailsMain_section8 .main-card .caseStudyDetails-title {
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: 400;
+}
+.caseStudyDetailsMain_section8 .main-card .caseStudyDetails-subTitle {
+  font-size: 16px;
   font-weight: 400;
 }
 .caseStudyDetails-content {
@@ -5067,9 +5077,9 @@ textarea {
     margin: 0 auto !important;
     padding: 0px 12px !important;
   }
-  .caseStudyDetails-card{
-margin-top: 10px;
-margin-bottom: 20px;
+  .caseStudyDetails-card {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .caseStudyDetailsMain_section9 {
     height: 100%;
@@ -5272,9 +5282,9 @@ margin-bottom: 20px;
     margin: 0 auto !important;
     padding: 0px 12px !important;
   }
-  .caseStudyDetails-card{
-margin-top: 10px;
-margin-bottom: 20px;
+  .caseStudyDetails-card {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .caseStudyDetailsMain_section10 {
     height: 100%;
@@ -5840,10 +5850,10 @@ margin-bottom: 20px;
     height: calc(100vh - 120px);
   }
   .caseStudyDetailsMain_section8 .main-card {
-    top: 105%;
+    top: 112%;
   }
   .caseStudyDetailsMain_section8 {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 50px);
   }
   .caseStudyDetailsMain_section9 .main-card {
     top: 111%;
