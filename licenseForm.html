@@ -7,7 +7,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
-
     <title>NETLOGG</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
@@ -23,7 +22,6 @@
       rel="stylesheet"
     />
     <link href="assets/css/owl-carousal.css" rel="stylesheet" />
-    <!-- <link href="assets/css/aos/aos.css" rel="stylesheet"> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -48,9 +46,10 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" id="changeHeader">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"
           ><img src="assets/img/Logo/NetLog.svg" alt=""
@@ -538,9 +537,6 @@
             <div>
               <a class="contact-button" href="#">Contact Us</a>
             </div>
-            <div>
-              <a class="contact-button" href="licenseForm.html">Existing Customer</a>
-            </div>
           </div>
         </div>
         <div class="for_mobile_only">
@@ -559,8 +555,8 @@
               <img src="assets/img/Logo/contactMobile.svg" alt="" />
             </a>
           </div>
-          <button type="button" id="mobile_menu_trigger" class="">
-            <img src="assets/img/Logo/hamburgerIcon.svg" alt="" />
+          <button type="button" id="mobile_menu_trigger" class="bars_icon">
+            <img src="assets/img/Logo/menu_white.png" alt="" />
           </button>
         </div>
       </div>
@@ -577,6 +573,11 @@
           <li class="has_submenu">
             <span>Who we are <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
+              <!-- <li>
+                <span class="mobile_menu_back"
+                  ><i class="fa fa-arrow-left"></i> Back</span
+                >
+              </li> -->
               <li>
                 <h4>Who We Are</h4>
               </li>
@@ -620,6 +621,11 @@
           <li class="has_submenu">
             <span>What we do <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
+              <!-- <li>
+                <span class="mobile_menu_back"
+                  ><i class="fa fa-arrow-left"></i> Back</span
+                >
+              </li> -->
               <li>
                 <h4>What We Do</h4>
               </li>
@@ -678,6 +684,11 @@
           <li class="has_submenu">
             <span>Industries <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
+              <!-- <li>
+                <span class="mobile_menu_back"
+                  ><i class="fa fa-arrow-left"></i> Back</span
+                >
+              </li> -->
               <li>
                 <h4>Industries</h4>
               </li>
@@ -721,6 +732,11 @@
           <li class="has_submenu">
             <span>Solutions <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
+              <!-- <li>
+                <span class="mobile_menu_back"
+                  ><i class="fa fa-arrow-left"></i> Back</span
+                >
+              </li> -->
               <li>
                 <div class="row">
                   <!-- <div class="col-12 pb-5">
@@ -807,6 +823,11 @@
           <li class="has_submenu">
             <span>Insights <i class="fa fa-chevron-right"></i></span>
             <ul class="submenu">
+              <!-- <li>
+                <span class="mobile_menu_back"
+                  ><i class="fa fa-arrow-left"></i> Back</span
+                >
+              </li> -->
               <li>
                 <h4>Insights</h4>
               </li>
@@ -841,724 +862,136 @@
         </ul>
       </div>
     </div>
-    <!-- Main Section -->
-    <div class="blockchain-main-section" id="blockchain-main-section">
-      <div class="services-overlay"></div>
-      <div class="main-section-width">
-        <p class="small-text">Generative AI</p>
-        <p class="big-text">Generative AI Services by NETLOGG</p>
-      </div>
-    </div>
-    <!-- Main Section End -->
-    <!-- Progress Section Selection -->
-    <div class="progress_section_selection progress_section_selection_sticky">
-      <!-- progress bar -->
-      <div class="progress-bar-container">
-        <div class="progress-bar"></div>
-      </div>
+    <!-- Carousal Slider Section -->
 
-      <div class="text-indication">
-        <div class="progress-label-left">
-          <p>Generative AI Services</p>
-          <p>1. Vision & Value</p>
-        </div>
-        <div class="progress-label-right">
-          <p>Up Next</p>
-          <div class="custom-dropdown">
-            <div class="custom-dropdown-button">
-              Select Section <i class="fas fa-chevron-down"></i>
+    <!-- License Section -->
+    <section class="license_section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <div class="license_text">
+              <h4>Proof Of Entitlement</h4>
             </div>
-            <ul class="custom-dropdown-content">
-              <li data-target="vision_value">1. Vision & Value</li>
-              <li data-target="core_capabilities">2. Core Capabilities</li>
-              <li data-target="intelligent_ecosystem">
-                3. Intelligent Ecosystem
-              </li>
-              <li data-target="caseStudy_section">4. Case Studies</li>
-              <li data-target="newsUpdate_section">5. News And Updates</li>
-              <li data-target="contactus_section">6. Contact Us</li>
-            </ul>
           </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      $(document).ready(function () {
-        function updateProgressBar() {
-          const progressBar = $(".progress-bar");
-          const sections = $("section");
-          let scrollPosition = $(window).scrollTop();
 
-          sections.each(function () {
-            let top = $(this).offset().top - 150;
-            let bottom = top + $(this).outerHeight();
-
-            if (scrollPosition >= top && scrollPosition < bottom) {
-              let sectionId = $(this).attr("id");
-              let sectionText = $(this).data("title");
-              $(".progress-label-left p:nth-child(2)").text(sectionText);
-              $(".custom-dropdown-button").html(
-                sectionText + ' <i class="fas fa-chevron-down"></i>'
-              );
-            }
-          });
-          const totalHeight = $(document).height() - $(window).height();
-          const progress = (scrollPosition / totalHeight) * 100;
-          progressBar.css("width", progress + "%");
-        }
-
-        $(".custom-dropdown-content li").on("click", function () {
-          let sectionText = $(this).text().trim();
-          let sectionId = $(this).data("target");
-
-          let targetSection = $("#" + sectionId);
-          if (targetSection.length) {
-            $("html, body").animate(
-              {
-                scrollTop: targetSection.offset().top - 50,
-              },
-              800
-            );
-            $(".progress-label-left p:nth-child(2)").text(sectionText);
-            $(".custom-dropdown-button").html(
-              sectionText + ' <i class="fas fa-chevron-down"></i>'
-            );
-          }
-        });
-
-        $(window).on("scroll", updateProgressBar);
-        updateProgressBar();
-      });
-    </script>
-    <!-- Progress Section Selection End -->
-
-    <!-- OverView Section -->
-    <div class="blockChain-scrollable-column">
-      <div class="overview_corecapabilities-overlay">
-        <section
-          class="overview_section"
-          id="vision_value"
-          data-title="1. Vision & Value "
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          <div class="container-fluid">
-            <div class="overview-mian-text-padding">
-              <p class="overview-main-text">
-                At NETLOGG, we redefine what’s possible with Generative AI. We
-                help enterprises leverage the full potential of Gen AI to Boost
-                ROI, Elevate Decision-making, and Accelerate Innovation across
-                every business function.
-              </p>
-
-              <p class="overview-main-text gap-24">
-                With a laser focus on security, compliance, and performance, our
-                Gen AI solutions drive real transformation, not just automation.
-              </p>
+          <div class="col-12 col-md-8"></div>
+          <div class="col-12 col-md-4">
+            <div class="search_license dp-flex custom-col-gap-8">
+              <input
+                id="searchInput"
+                class="form-control"
+                type="text"
+                placeholder="Search Contract or PO Number"
+              />
+              <button id="searchBtn" class="searchBtn">Search</button>
             </div>
-            <div class="custom-gap-40">
-              <h2>Vision & Value</h2>
-            </div>
-            <div class="row">
-              <div class="col-md-4 col-12">
-                <div class="custom-gap-16">
-                  <ul class="overview_text_ul">
-                    <li>
-                      Generative AI is more than just a buzzword — it’s a
-                      catalyst for strategic reinvention.
-                    </li>
-                    <li>
-                      At NETLOGG, we harness Gen AI to unlock business value
-                      through smarter workflows, dynamic content creation,
-                      intelligent automation, and data-informed decision-making.
-                    </li>
-                  </ul>
-                </div>
-                <div class="gap-24">
-                  <p class="overview_text">
-                    From enhancing customer engagement to reimagining internal
-                    processes, our approach transforms vision into measurable
-                    outcomes. We work with you to align AI innovation with your
-                    business goals, ensuring responsible use, regulatory
-                    alignment, and long-term scalability.
+          </div>
+          <div class="col-12">
+            <div id="certificateDiv" class="certificate">
+              <section class="content">
+                <div class="info">
+                  <div>
+                    <p><strong>Netlogg Contract Number:</strong></p>
+                    <p>NETLOGG-CON-0001</p>
+                  </div>
+                  <div>
+                    <p><strong>Customer PO Number:</strong></p>
+                    <p>NETLOGG-CON-1453</p>
+                  </div>
+                  <p>
+                    <strong>Product and Version Number:</strong> UnifyDesk - CRM
+                    & Help Desk v4.2
                   </p>
+                  <p><strong>Project Information:</strong></p>
+                  <p><strong>End Customer Name:</strong></p>
                 </div>
-              </div>
-              <div class="col-md-8 col-12">
-                <div class="overview-main-img">
-                  <img src="assets/img/services-page-images/1.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- OverView Section End -->
-        <!-- coreCapabilities Section -->
-        <section
-          id="core_capabilities"
-          data-title="2. Core Capabilities"
-          class="coreCapabilities_section"
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          <div
-            class="container-fluid"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <h2 class="blockChain-title">Core Capabilities</h2>
 
-            <div class="row gap-40">
-              <div class="col-md-3 col-12">
-                <div class="coreCapabilities_card">
-                  <div>
-                    <img
-                      src="assets/img/services-page-images/FediverseLogo.svg"
-                      alt="Core Capabilities"
-                    />
-                  </div>
-                  <div class="custom-gap-12 width-258px">
-                    <h4>Gen AI Consulting & Readiness</h4>
-                  </div>
-                  <div class="width-258px">
-                    <ul>
-                      <li>Use-case discovery & prioritization</li>
-                      <li>AI governance frameworks</li>
-                      <li>Responsible AI implementation</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-12">
-                <div class="coreCapabilities_card">
-                  <div>
-                    <img
-                      src="assets/img/services-page-images/ChartDonut.svg"
-                      alt="Core Capabilities"
-                    />
-                  </div>
-                  <div class="custom-gap-12 width-258px">
-                    <h4>
-                      Process Reinvention<br />
-                      with AI
-                    </h4>
-                  </div>
-                  <div class="width-258px">
-                    <ul>
-                      <li>Automated content generation</li>
-                      <li>
-                        Intelligent workflows and robotic process automation
-                      </li>
-                      <li>AI copilots for knowledge workers</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-12">
-                <div class="coreCapabilities_card">
-                  <div>
-                    <img
-                      src="assets/img/services-page-images/Bandaids.svg"
-                      alt="Core Capabilities"
-                    />
-                  </div>
-                  <div class="custom-gap-12 width-258px">
-                    <h4>
-                      Secure & Compliant Gen<br />
-                      AI Development
-                    </h4>
-                  </div>
-                  <div class="width-258px">
-                    <ul>
-                      <li>Enterprise-grade data protection</li>
-                      <li>Model fine-tuning and deployment</li>
-                      <li>Audit-ready logging and explainability tools</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-12">
-                <div class="coreCapabilities_card">
-                  <div>
-                    <img
-                      src="assets/img/services-page-images/FediverseLogo.svg"
-                      alt="Core Capabilities"
-                    />
-                  </div>
-                  <div class="custom-gap-12 width-258px">
-                    <h4>
-                      Gen AI Ops<br />
-                      & MLOps
-                    </h4>
-                  </div>
-                  <div class="width-258px">
-                    <ul>
-                      <li>Model lifecycle management</li>
-                      <li>Monitoring, retraining, and drift detection</li>
-                      <li>Cloud-native deployment</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Part Number</th>
+                      <th>Entitlement Quantity</th>
+                      <th>Description</th>
+                      <th>License Validity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>CRM-ENT-001</td>
+                      <td>1</td>
+                      <td>CRM Module - Enterprise Edition</td>
+                      <td>3 years</td>
+                    </tr>
+                    <tr>
+                      <td>HLP-ENT-002</td>
+                      <td>1</td>
+                      <td>Help Desk Module - Enterprise Edition</td>
+                      <td>3 years</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="footer-text">
+                  By accessing or using the Netlogg products identified, you
+                  agree that your use of such products is governed by the terms
+                  and conditions of the Netlogg Software License and any
+                  applicable supplemental license agreement.
+                </p>
+              </section>
+
+              <footer>
+                <p>
+                  Electronic-Only License transmitted by:
+                  <strong>NETLOGG</strong>
+                </p>
+                <p>All Rights Reserved</p>
+                <!-- <p class="page-number">1 | P a g e</p> -->
+              </footer>
             </div>
           </div>
-        </section>
-        <!-- coreCapabilities Section End -->
-        <!-- Intelligent Ecosystem Section -->
+          <div class="col-12">
+            <div
+              id="invalidMessage"
+              style="display: none; color: red; margin-top: 1rem"
+            >
+              Invalid Netlogg Contract Number or Customer PO Number
+            </div>
+          </div>
+        </div>
       </div>
-      <section
-        id="intelligent_ecosystem"
-        data-title="3. Intelligent Ecosystem"
-        class="intelligentEcosystem_section"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-      >
-        <div class="container-fluid">
-          <h2 class="mb-5">Intelligent Ecosystems</h2>
-          <div class="row gap-24">
-            <div class="col-12 col-md-8">
-              <div class="intelligentEcosystem-img">
-                <img
-                  src="assets/img/services-page-images/2.svg"
-                  alt="Enterprise"
-                />
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <p class="gap-8 mb-0">
-                NETLOGG operates at the intersection of innovation and impact.
-                Our ecosystem includes:
-              </p>
-              <ul class="intelligentEcosystem-ul gap-8">
-                <li>AI engineers, data scientists, and domain consultants</li>
-                <li>
-                  Partnerships with cloud leaders and open-source communities
-                </li>
-                <li>
-                  Model-agnostic architecture: Integrate OpenAI, Anthropic,
-                  Mistral, Meta, or custom LLMs
-                </li>
-                <li>
-                  Built-in compliance with data privacy laws (GDPR, HIPAA, SOC
-                  2)
-                </li>
-              </ul>
-              <p class="gap-8 mb-0">
-                Our ecosystem is designed to scale with you — from early-stage
-                pilots to enterprise-wide rollouts.
-              </p>
-            </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="captchaModal"
+      tabindex="-1"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content pb-4">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>
-      </section>
-      <!-- Intelligent Ecosystem Section End-->
-      <!-- CaseStudy Section -->
-      <section
-        class="success_story_section"
-        id="caseStudy_section"
-        data-title="4. Case Studies"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-      >
-        <div class="container-fluid">
-          <h2 class="mb-5">Success Stories and Case Studies</h2>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <a href="generate-ai-details1.html">
-                <div class="success_story_one">
-                  <div class="success_story_section_img">
-                    <img src="assets/img/services-page-images/3.jpg" />
-                  </div>
-                  <div class="success_story_section_content">
-                    <p>Success in Action</p>
-                    <h4>Retail Personalization at Scale</h4>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-12 col-md-6">
-              <a href="generate-ai-details2.html">
-                <div class="success_story_two">
-                  <div class="success_story_section_img">
-                    <img src="assets/img/services-page-images/5.jpg" />
-                  </div>
-                  <div class="success_story_section_content">
-                    <p>Success in Action</p>
-                    <h4>Knowledge Automation for a Pharma Leader</h4>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="">
+          <h5 class="mb-3">Verify you are Human</h5>
           <div
-          id="carouselExampleIndicators2"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-pause="true"
-          >
-          
-          <div class="dp-flex align-items-center">
-            <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                >
-                  <span></span>
-                </button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                >
-                  <span></span>
-                </button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                >
-                  <span></span>
-                </button>
-              </div>
-              <div class="right_left_count">
-                <div class="dp-flex align-items-center">
-                  <button
-                    class="carousal_left"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators2"
-                    data-bs-slide="prev"
-                  >
-                    <span>
-                      <img
-                        class="button_arrow_left"
-                        src="assets/img/Logo/prevIcon.svg"
-                      />
-                    </span>
-                  </button>
-                  <div class="count_carousal">1 / 3</div>
-                  <button
-                    class="carousal_right"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators2"
-                    data-bs-slide="next"
-                  >
-                    <span>
-                      <img
-                        class="button_arrow_right"
-                        src="assets/img/Logo/nextIcon.svg"
-                      />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-inner pb-5">
-              <div class="carousel-item item_total_count active">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="carousel-caption z_index">
-                      <p class="solutions_small_text">Success in Action</p>
-                      <h1 class="solutions_heading">
-                        Retail Personalization <br />at Scale
-                      </h1>
-                      <p class="width-644px solutions_p">
-                        A global fashion retailer wanted to enhance product
-                        recommendations, reduce churn, and increase customer
-                        engagement.
-                      </p>
-                      <a href="generate-ai-details1.html">
-                        <span> Read More </span>
-                        <img src="assets/img/Logo/smallArrowRight.svg" />
-                      </a>
-                    </div>
-                    <div class="caseStudy_overlay">
-                      <img
-                        src="assets/img/blockChain-caseStudy-Slider/1.webp"
-                        alt="Case Study"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item item_total_count">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="carousel-caption z_index">
-                      <p class="solutions_small_text">Success in Action</p>
-                      <h1 class="solutions_heading">
-                        Knowledge Automation for <br />a Pharma Leader
-                      </h1>
-                      <p class="width-644px solutions_p">
-                        A pharmaceutical enterprise needed to streamline R&D
-                        documentation, automate regulatory filings, and reduce
-                        time-to-insight.
-                      </p>
-                      <a href="generate-ai-details2.html">
-                        <span> Read More </span>
-                        <img src="assets/img/Logo/smallArrowRight.svg" />
-                      </a>
-                    </div>
-                    <div class="caseStudy_overlay">
-                      <img
-                        src="assets/img/blockChain-Values-Icons/banner-4.webp"
-                        alt="Case Study"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </section>
-      <!-- CaseStudy Section End-->
-      <!-- News update -->
-      <section
-        data-aos="zoom-in"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        class="newsUpdate_section"
-        id="newsUpdate_section"
-        data-title="5. News & Updates"
-      >
-        <div class="container-fluid">
-          <h3 class="newsUpdate_title">News and Updates</h3>
-          <div class="row gap-60">
-            <div class="col-md-4 col-12 gap-16">
-              <div class="image-wrapper">
-                <img
-                  class="w-100"
-                  src="assets/img/blockChain-NewsUpdates/1.webp"
-                  alt="Net Zero"
-                />
-              </div>
-              <div class="gap-24">
-                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-              </div>
-              <div class="">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 gap-16">
-              <div class="image-wrapper">
-                <img
-                  class="w-100"
-                  src="assets/img/blockChain-NewsUpdates/2.webp"
-                  alt="Net Zero"
-                />
-              </div>
-              <div class="gap-24">
-                <p>
-                  Expansion of AI-Ready Data Centres in the Asia Pacific Region
-                </p>
-              </div>
-              <div class="">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 gap-16">
-              <div class="image-wrapper">
-                <img
-                  class="w-100"
-                  src="assets/img/blockChain-NewsUpdates/3.webp"
-                  alt="Net Zero"
-                />
-              </div>
-              <div class="gap-24">
-                <p>Government Initiatives to Support AI Data Centres</p>
-              </div>
-              <div class="">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="row gap-60">
-            <div class="col-md-4 col-12 gap-16">
-              <div class="image-wrapper">
-                <img
-                  class="w-100"
-                  src="assets/img/blockChain-NewsUpdates/4.webp"
-                  alt="Net Zero"
-                />
-              </div>
-              <div class="gap-24">
-                <p>Net-Zero AI Data Center Project in Saudi Arabia</p>
-              </div>
-              <div class="">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 gap-16">
-              <div class="image-wrapper">
-                <img
-                  class="w-100"
-                  src="assets/img/blockChain-NewsUpdates/5.webp"
-                  alt="Net Zero"
-                />
-              </div>
-              <div class="gap-24">
-                <p>
-                  Expansion of AI-Ready Data Centres in the Asia Pacific Region
-                </p>
-              </div>
-              <div class="">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-            <div class="col-md-4 col-12 gap-16">
-              <div class="image-wrapper">
-                <img
-                  class="w-100"
-                  src="assets/img/blockChain-NewsUpdates/6.webp"
-                  alt="Net Zero"
-                />
-              </div>
-              <div class="gap-24">
-                <p>Government Initiatives to Support AI Data Centres</p>
-              </div>
-              <div class="">
-                <a href="#" class="all_cap_button dp-flex align-items-center">
-                  <span> Explore All </span>
-                  <img src="assets/img/Logo/smallArrowRightBlack.svg" />
-                </a>
-              </div>
-            </div>
-          </div>
+            class="g-recaptcha"
+            data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            data-callback="captchaVerified"
+          ></div>
         </div>
-      </section>
-      <!-- News update End -->
-
-      <!-- Reach out section -->
-      <section
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        class="reachout_section"
-        id="contactus_section"
-        data-title="6. Contact Us"
-      >
-        <div class="container">
-          <div class="width-50-auto">
-            <h3>Ready to Transform? Reach Out to Us.</h3>
-
-            <div class="row">
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="firstName"
-                    placeholder="Enter First Name"
-                    name="firstName"
-                  />
-                  <label for="firstName">First Name</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lastName"
-                    placeholder="Enter Last Name"
-                    name="lastName"
-                  />
-                  <label for="lastName">Last Name</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="companyName"
-                    placeholder="Enter Company Name"
-                    name="companyName"
-                  />
-                  <label for="companyName">Company Name</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Enter Email"
-                    name="email"
-                  />
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <input
-                    type="jobTitlte"
-                    class="form-control"
-                    id="jobTitlte"
-                    placeholder="Enter Job Titlte"
-                    name="jobTitlte"
-                  />
-                  <label for="jobTitlte">Job Titlte</label>
-                </div>
-              </div>
-              <div class="col-md-6 col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <select class="form-select" id="country" name="country">
-                    <option>Dubai</option>
-                  </select>
-                  <label for="country" class="form-label">Country</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating mb-3 mt-3">
-                  <textarea
-                    rows="5"
-                    class="form-control"
-                    id="message"
-                    name="text"
-                    placeholder="Message"
-                  ></textarea>
-                  <label for="message">Message</label>
-                </div>
-              </div>
-              <div class="col-12 text-end">
-                <button type="submit" class="submit_button">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Reach out section End-->
+      </div>
     </div>
+
+    <!-- License Section End -->
+
     <!-- Footer -->
     <!-- For Desktop -->
     <div class="footer_desktop">
@@ -1874,6 +1307,9 @@
     <!-- For Mobile End -->
 
     <!-- Footer End -->
+    <!-- <div class="loader-wrapper">
+      <div class="loader"></div>
+  </div> -->
     <button id="scrollToTopBtn">
       <img src="assets/img/Logo/smallArrowRight.svg" />
     </button>
@@ -1885,7 +1321,7 @@
         const searchIcon = document.querySelector(".search_icon img");
         const globeIcon = document.querySelectorAll(".globe_icon img");
         const barsIcon = document.querySelector(".bars_icon img");
-        const section1 = document.querySelector(".blockchain-main-section");
+        const section1 = document.querySelector(".section_1");
 
         const mobileSearchIcon = document.querySelector(
           "#mobile_menu_search img"
@@ -1974,7 +1410,6 @@
         }
       });
     </script>
-    <!-- </script> -->
     <script type="text/javascript">
       // Show or hide the button when scrolling
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -1996,7 +1431,6 @@
           behavior: "smooth",
         });
       };
-
       // for desktop script
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -2042,6 +1476,11 @@
 
       // accordian script
       $(document).ready(function () {
+        // Show loader
+        //     $('.loader-wrapper').fadeIn();
+        // setTimeout(function() {
+        //     $('.loader-wrapper').fadeOut();
+        // }, 3000);
         AOS.init({
           duration: 1000,
         });
@@ -2140,66 +1579,236 @@
         });
       });
     </script>
-    <!-- Mobile menu Script for navigation bar End -->
 
-    <!-- Solution slider Script -->
+    <!-- Showing license certificate -->
     <script>
-      const myCarousel = document.getElementById("carouselExampleIndicators2");
-      const countDisplay = document.querySelector(".count_carousal");
-      const totalSlides = document.querySelectorAll(".item_total_count").length;
-      const carouselIndicators = myCarousel.querySelectorAll(
-        ".carousel-indicators button span"
-      );
-      let intervalID;
+      //   $(document).ready(function () {
+      //     const netloggContract = "NETLOGG-CON-0001";
+      //     const customerPO = "NETLOGG-CON-1453";
 
-      const carousel = new bootstrap.Carousel(myCarousel);
+      //     $('#searchInput').on('input', function () {
+      //       const searchVal = $(this).val().trim().toUpperCase();
 
-      window.addEventListener("load", function () {
-        fillCarouselIndicator(1);
+      //       if (searchVal === netloggContract || searchVal === customerPO) {
+      //         $('#certificateDiv').show();
+      //         $('#invalidMessage').hide();
+      //       } else if (searchVal === '') {
+      //         $('#certificateDiv').hide();
+      //         $('#invalidMessage').hide();
+      //       } else {
+      //         $('#certificateDiv').hide();
+      //         $('#invalidMessage').show();
+      //       }
+      //     });
+      //   });
+
+      //  $(document).ready(function () {
+      //     const netloggContract = "NETLOGG-CON-0001";
+      //     const customerPO = "NETLOGG-CON-1453";
+
+      //     $('#searchInput').on('input', function () {
+      //       const searchVal = $(this).val().trim().toUpperCase();
+
+      //       const matchesContract = netloggContract.toUpperCase().includes(searchVal);
+      //       const matchesPO = customerPO.toUpperCase().includes(searchVal);
+
+      //       if (searchVal === '') {
+      //         $('#certificateDiv').hide();
+      //         $('#invalidMessage').hide();
+      //       } else if (matchesContract || matchesPO) {
+      //         $('#certificateDiv').show();
+      //         $('#invalidMessage').hide();
+      //       } else {
+      //         $('#certificateDiv').hide();
+      //         $('#invalidMessage').show();
+      //       }
+      //     });
+      //   });
+      //   let searchValue = "";
+
+      //   $(document).ready(function () {
+      //     $("#searchBtn").click(function () {
+      //       searchValue = $("#searchInput").val().trim().toUpperCase();
+
+      //       if (searchValue === "") {
+      //         $("#certificateDiv").hide();
+      //         $("#invalidMessage").hide();
+      //         return;
+      //       }
+
+      //       // Show modal with captcha
+      //       $("#captchaModal").modal("show");
+      //     });
+      //   });
+
+      //   // Called when CAPTCHA is completed
+      //   function captchaVerified() {
+      //     $("#captchaModal").modal("hide");
+
+      //     const netloggContract = "NETLOGG-CON-0001";
+      //     const customerPO = "NETLOGG-CON-1453";
+
+      //     const matchesContract = netloggContract
+      //       .toUpperCase()
+      //       .includes(searchValue);
+      //     const matchesPO = customerPO.toUpperCase().includes(searchValue);
+
+      //     if (matchesContract || matchesPO) {
+      //       $("#certificateDiv").show();
+      //       $("#invalidMessage").hide();
+      //     } else {
+      //       $("#certificateDiv").hide();
+      //       $("#invalidMessage").show();
+      //     }
+
+      //     grecaptcha.reset();
+      //   }
+
+      // let searchValue = "";
+
+      //$(document).ready(function () {
+      //  $("#searchBtn").click(function () {
+      //    searchValue = $("#searchInput").val().trim().toUpperCase();
+      //
+      //    if (searchValue === "") {
+      //      $("#certificateDiv").hide();
+      //      $("#invalidMessage").hide();
+      //      return;
+      //    }
+      //
+      //    $("#captchaModal").modal("show");
+      //  });
+      //});
+      //
+      //function captchaVerified() {
+      //  $("#captchaModal").modal("hide");
+      //
+      //  const netloggContract = "NETLOGG-CON-0001";
+      //  const customerPO = "NETLOGG-CON-1453";
+      //
+      //  const matchesContract = netloggContract.toUpperCase().includes(searchValue);
+      //  const matchesPO = customerPO.toUpperCase().includes(searchValue);
+      //
+      //  if (matchesContract || matchesPO) {
+      //    $("#certificateDiv").show();
+      //    $("#invalidMessage").hide();
+      //  } else {
+      //    $("#certificateDiv").hide();
+      //    $("#invalidMessage").show();
+      //  }
+      //
+      //  grecaptcha.reset();
+      //}
+      //
+
+      // let searchValue = "";
+
+      // $(document).ready(function () {
+      //   // Hide certificate when user clears or edits input
+      //   $("#searchInput").on("input", function () {
+      //     const inputVal = $(this).val().trim();
+      //     if (inputVal === "") {
+      //       $("#certificateDiv").hide();
+      //       $("#invalidMessage").hide();
+      //     }
+      //   });
+
+      //   $("#searchBtn").click(function () {
+      //     searchValue = $("#searchInput").val().trim().toUpperCase();
+
+      //     if (searchValue === "") {
+      //       $("#certificateDiv").hide();
+      //       $("#invalidMessage").hide();
+      //       return;
+      //     }
+
+      //     // Show CAPTCHA modal
+      //     $("#captchaModal").modal("show");
+      //   });
+      // });
+
+      // // Called when CAPTCHA is verified
+      // function captchaVerified() {
+      //   $("#captchaModal").modal("hide");
+
+      //   const netloggContract = "NETLOGG-CON-0001";
+      //   const customerPO = "NETLOGG-CON-1453";
+
+      //   const input = searchValue;
+
+      //   const matchesContract =
+      //     netloggContract.toUpperCase().includes(input) ||
+      //     netloggContract.slice(-4) === input.slice(-4);
+
+      //   const matchesPO =
+      //     customerPO.toUpperCase().includes(input) ||
+      //     customerPO.slice(-4) === input.slice(-4);
+
+      //   if (matchesContract || matchesPO) {
+      //     $("#certificateDiv").show();
+      //     $("#invalidMessage").hide();
+      //   } else {
+      //     $("#certificateDiv").hide();
+      //     $("#invalidMessage").show();
+      //   }
+
+      //   grecaptcha.reset(); // Reset CAPTCHA
+      // }
+
+      let searchValue = "";
+
+      $(document).ready(function () {
+        // Hide certificate if input is cleared or edited
+        $("#searchInput").on("input", function () {
+          const inputVal = $(this).val().trim();
+          if (inputVal === "") {
+            $("#certificateDiv").hide();
+            $("#invalidMessage").hide();
+          }
+        });
+
+        $("#searchBtn").click(function () {
+          searchValue = $("#searchInput").val().trim().toUpperCase();
+
+          if (searchValue === "") {
+            $("#certificateDiv").hide();
+            $("#invalidMessage").hide();
+            return;
+          }
+
+          // Show CAPTCHA modal
+          $("#captchaModal").modal("show");
+        });
       });
 
-      myCarousel.addEventListener("slide.bs.carousel", function (e) {
-        let index = e.to;
-        fillCarouselIndicator(++index);
-      });
+      // Called when CAPTCHA is verified
+      function captchaVerified() {
+        $("#captchaModal").modal("hide");
 
-      function fillCarouselIndicator(index) {
-        let i = 0;
-        for (const carouselIndicator of carouselIndicators) {
-          carouselIndicator.style.width = 0;
-          carouselIndicator.style.transition = "width 0.05s linear";
+        const netloggContract = "NETLOGG-CON-0001";
+        const customerPO = "NETLOGG-CON-1453";
+
+        const input = searchValue;
+
+        const inputLast4 = input.slice(-4);
+        const contractLast4 = netloggContract.slice(-4);
+        const poLast4 = customerPO.slice(-4);
+
+        const isMatch = inputLast4 === contractLast4 || inputLast4 === poLast4;
+
+        if (isMatch) {
+          $("#certificateDiv").show();
+          $("#invalidMessage").hide();
+        } else {
+          $("#certificateDiv").hide();
+          $("#invalidMessage").show();
         }
-        clearInterval(intervalID);
-        carousel.pause();
 
-        intervalID = setInterval(function () {
-          i++;
-
-          if (i <= 100) {
-            myCarousel.querySelector(
-              ".carousel-indicators .active span"
-            ).style.width = i + "%";
-          }
-
-          if (i >= 100) {
-            setTimeout(() => {
-              carousel.next();
-            }, 70);
-          }
-        }, 60);
+        grecaptcha.reset(); // Reset CAPTCHA
       }
-
-      function updateCarouselCount(index) {
-        countDisplay.textContent = `${index + 1} / ${totalSlides}`;
-      }
-
-      updateCarouselCount(0);
-
-      myCarousel.addEventListener("slide.bs.carousel", function (e) {
-        updateCarouselCount(e.to);
-      });
     </script>
-    <!-- script for section 1 End -->
+
+    <!-- Showing license certificate -->
 
     <!-- Footer For mobile Accordian script -->
     <script>

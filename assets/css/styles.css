@@ -953,8 +953,8 @@ nav.scrolled .dropdown .dropbtn {
 .contact-button {
   display: block;
   text-align: center;
-  width: 133px;
-  padding: 10px 18px 10px 10px;
+  width: auto;
+  padding: 10px 10px 10px 10px;
   background: #1b1aff;
   border: 1px solid #1b1aff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -965,8 +965,8 @@ nav.scrolled .dropdown .dropbtn {
 .contact-button:hover {
   display: block;
   text-align: center;
-  width: 133px;
-  padding: 10px 18px 10px 10px;
+  width: auto;
+  padding: 10px 10px 10px 10px;
   background: #1b1aff;
   border: 1px solid #1b1aff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -5276,6 +5276,91 @@ textarea {
   font-weight: 500;
   line-height: normal;
 }
+/* Licenses Section */
+.license_section {
+  padding: 100px 130px 100px 96px;
+}
+.license_text {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #000;
+}
+
+.certificate {
+  max-width: 900px;
+  margin: auto;
+  display: none;
+}
+.content h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.certificate .footer-text {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.certificate footer {
+  margin-top: 40px;
+  font-size: 12px;
+  text-align: left;
+  color: #555;
+}
+#captchaModal .modal-dialog .modal-content {
+  text-align: center;
+  text-align: -webkit-center;
+}
+.searchBtn,
+.searchBtn:hover {
+  display: block;
+  text-align: center;
+  width: auto;
+  padding: 10px 18px 10px 10px;
+  background: #1b1aff;
+  border: 1px solid #1b1aff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+.modal-header {
+  border: 0 !important;
+}
+/* 
+.page-number {
+  text-align: right;
+  margin-top: -20px;
+} */
+/* Licenses Section End*/
 @media (max-width: 768px) {
   .for-caseStudy-details {
     width: 100% !important;
